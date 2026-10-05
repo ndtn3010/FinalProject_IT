@@ -1,0 +1,373 @@
+[
+  {
+    "id": "hoan-kiem-lake",
+    "type": "lake",
+    "district": "Hoàn Kiếm",
+    "lat": 21.0288,
+    "lng": 105.8525,
+    "hours": "24/7 (walking street Fri–Sun evening)",
+    "ticket": 0,
+    "duration": 60,
+    "name": {
+      "vi": "Hồ Hoàn Kiếm",
+      "en": "Hoan Kiem Lake",
+      "zh": "还剑湖"
+    },
+    "desc": {
+      "vi": "Trái tim của Hà Nội với Tháp Rùa, cầu Thê Húc và đền Ngọc Sơn. Cuối tuần thành phố đi bộ quanh hồ.",
+      "en": "The heart of Hanoi with Turtle Tower, the red The Huc bridge and Ngoc Son Temple. Pedestrian street on weekend evenings.",
+      "zh": "河内的心脏，有龟塔、红色的栖旭桥和玉山祠。周末晚上成为步行街。"
+    },
+    "tip": {
+      "vi": "Đi sáng sớm 5–7h để thấy người dân tập thể dục.",
+      "en": "Come at 5–7 am to watch locals exercising.",
+      "zh": "早上5–7点来看当地人晨练。"
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Thap_Rua.jpg/960px-Thap_Rua.jpg",
+    "wiki": {
+      "vi": "Hồ_Hoàn_Kiếm",
+      "en": "Hoàn_Kiếm_Lake",
+      "zh": "还剑湖"
+    }
+  },
+  {
+    "id": "temple-of-literature",
+    "type": "historic",
+    "district": "Đống Đa",
+    "lat": 21.0277,
+    "lng": 105.8355,
+    "hours": "08:00–17:00",
+    "ticket": 70000,
+    "duration": 90,
+    "name": {
+      "vi": "Văn Miếu – Quốc Tử Giám",
+      "en": "Temple of Literature",
+      "zh": "文庙–国子监"
+    },
+    "desc": {
+      "vi": "Trường đại học đầu tiên của Việt Nam (1076), thờ Khổng Tử, nổi tiếng với 82 bia tiến sĩ.",
+      "en": "Vietnam's first university (1076), dedicated to Confucius, famous for 82 doctors' stelae.",
+      "zh": "越南第一所大学（1076年），供奉孔子，以82块进士碑闻名。"
+    },
+    "tip": {
+      "vi": "Mặc lịch sự, tránh giờ trưa nắng.",
+      "en": "Dress modestly, avoid midday heat.",
+      "zh": "着装得体，避开中午高温。"
+    },
+    "ticketUrl": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Hanoi_Temple_of_Literature_%28cropped%29.jpg/960px-Hanoi_Temple_of_Literature_%28cropped%29.jpg",
+    "wiki": {
+      "vi": "Văn_Miếu_–_Quốc_Tử_Giám",
+      "en": "Temple_of_Literature,_Hanoi",
+      "zh": "河内文庙"
+    }
+  },
+  {
+    "id": "imperial-citadel",
+    "type": "historic",
+    "district": "Ba Đình",
+    "lat": 21.0342,
+    "lng": 105.84,
+    "hours": "08:00–17:00 (closed Mon)",
+    "ticket": 100000,
+    "duration": 120,
+    "name": {
+      "vi": "Hoàng thành Thăng Long",
+      "en": "Imperial Citadel of Thang Long",
+      "zh": "升龙皇城"
+    },
+    "desc": {
+      "vi": "Di sản thế giới UNESCO, trung tâm quyền lực suốt 13 thế kỷ, có Đoan Môn, Cột Cờ và hầm D67.",
+      "en": "UNESCO World Heritage site, seat of power for 13 centuries, with Doan Mon gate, Flag Tower and D67 bunker.",
+      "zh": "联合国教科文组织世界遗产，13个世纪的权力中心，有端门、旗塔和D67地堡。"
+    },
+    "tip": {
+      "vi": "Kết hợp với Lăng Bác và Bảo tàng Lịch sử Quân sự gần đó.",
+      "en": "Combine with Ho Chi Minh Mausoleum nearby.",
+      "zh": "可与附近的胡志明陵一同参观。"
+    },
+    "image": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/%C4%90oan%20M%C3%B4n%2C%20Ho%C3%A0ng%20th%C3%A0nh%20Th%C4%83ng%20Long%2C%20H%C3%A0%20N%E1%BB%99i%20001.JPG&width=960",
+    "wiki": {
+      "vi": "Hoàng_thành_Thăng_Long",
+      "en": "Imperial_Citadel_of_Thăng_Long",
+      "zh": "升龙皇城"
+    }
+  },
+  {
+    "id": "old-quarter",
+    "type": "oldquarter",
+    "district": "Hoàn Kiếm",
+    "lat": 21.034,
+    "lng": 105.85,
+    "hours": "24/7",
+    "ticket": 0,
+    "duration": 180,
+    "name": {
+      "vi": "Phố cổ Hà Nội",
+      "en": "Hanoi Old Quarter",
+      "zh": "河内老城区"
+    },
+    "desc": {
+      "vi": "36 phố phường với nghề truyền thống theo tên phố: Hàng Bạc, Hàng Mã, Hàng Gai… Chợ đêm cuối tuần.",
+      "en": "The 36 guild streets named after their trades: Hang Bac (silver), Hang Ma (paper), Hang Gai (silk). Weekend night market.",
+      "zh": "以行业命名的36条老街：行银街、行码街、行盖街……周末有夜市。"
+    },
+    "tip": {
+      "vi": "Cẩn thận xe máy, đi bộ sát vỉa hè.",
+      "en": "Watch for motorbikes, walk close to the kerb.",
+      "zh": "注意摩托车，靠路边行走。"
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Old_Quarter_Street_Scene_-_Hanoi_-_Vietnam_%2848256301206%29.jpg/960px-Old_Quarter_Street_Scene_-_Hanoi_-_Vietnam_%2848256301206%29.jpg",
+    "wiki": {
+      "vi": "Phố_cổ_Hà_Nội",
+      "en": "Hanoi_Old_Quarter",
+      "zh": "河内老城区"
+    }
+  },
+  {
+    "id": "train-street",
+    "type": "oldquarter",
+    "district": "Hoàn Kiếm",
+    "lat": 21.0245,
+    "lng": 105.843,
+    "hours": "Cafés 08:00–22:00",
+    "ticket": 0,
+    "duration": 45,
+    "name": {
+      "vi": "Phố cà phê đường tàu",
+      "en": "Hanoi Train Street",
+      "zh": "火车街"
+    },
+    "desc": {
+      "vi": "Những quán cà phê sát đường ray, tàu chạy qua cách vài chục cm. Có thể bị hạn chế ra vào tùy thời điểm.",
+      "en": "Cafés right beside the tracks; trains pass centimetres away. Access is sometimes restricted.",
+      "zh": "紧邻铁轨的咖啡馆，火车近距离驶过。有时会限制进入。"
+    },
+    "tip": {
+      "vi": "Hỏi chủ quán giờ tàu; đứng sát tường khi tàu đến.",
+      "en": "Ask café owners for train times; stand against the wall.",
+      "zh": "向店主询问火车时间；火车来时靠墙站立。"
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Hanoi_Train_Street_%2820231225b%29_%2853489076293%29.jpg/960px-Hanoi_Train_Street_%2820231225b%29_%2853489076293%29.jpg",
+    "wiki": {
+      "vi": "",
+      "en": "Hanoi_Train_Street",
+      "zh": ""
+    }
+  },
+  {
+    "id": "ho-chi-minh-mausoleum",
+    "type": "historic",
+    "district": "Ba Đình",
+    "lat": 21.0369,
+    "lng": 105.8347,
+    "hours": "Tue–Thu, Sat–Sun 07:30–10:30 (closed Mon, Fri)",
+    "ticket": 0,
+    "duration": 90,
+    "name": {
+      "vi": "Lăng Chủ tịch Hồ Chí Minh",
+      "en": "Ho Chi Minh Mausoleum",
+      "zh": "胡志明陵"
+    },
+    "desc": {
+      "vi": "Nơi an nghỉ của Chủ tịch Hồ Chí Minh tại Quảng trường Ba Đình. Lễ thượng cờ 6h sáng.",
+      "en": "Resting place of President Ho Chi Minh on Ba Dinh Square. Flag-raising ceremony at 6 am.",
+      "zh": "胡志明主席在巴亭广场的安息之地。早上6点有升旗仪式。"
+    },
+    "tip": {
+      "vi": "Không quần short, không chụp ảnh bên trong, giữ im lặng.",
+      "en": "No shorts, no photos inside, keep silent.",
+      "zh": "禁止穿短裤，内部禁止拍照，保持安静。"
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/L%C4%83ng_B%C3%A1c_-_NKS.jpg/960px-L%C4%83ng_B%C3%A1c_-_NKS.jpg",
+    "wiki": {
+      "vi": "Lăng_Chủ_tịch_Hồ_Chí_Minh",
+      "en": "Ho_Chi_Minh_Mausoleum",
+      "zh": "胡志明陵"
+    }
+  },
+  {
+    "id": "west-lake",
+    "type": "lake",
+    "district": "Tây Hồ",
+    "lat": 21.056,
+    "lng": 105.823,
+    "hours": "24/7",
+    "ticket": 0,
+    "duration": 120,
+    "name": {
+      "vi": "Hồ Tây",
+      "en": "West Lake",
+      "zh": "西湖"
+    },
+    "desc": {
+      "vi": "Hồ lớn nhất Hà Nội, chùa Trấn Quốc, phủ Tây Hồ, hoàng hôn đẹp và nhiều quán cà phê ven hồ.",
+      "en": "Hanoi's largest lake with Tran Quoc Pagoda, Tay Ho Temple, great sunsets and lakeside cafés.",
+      "zh": "河内最大的湖，有镇国寺、西湖府，日落美景和湖边咖啡馆。"
+    },
+    "tip": {
+      "vi": "Thuê xe đạp đi vòng hồ 17 km lúc chiều muộn.",
+      "en": "Rent a bicycle for the 17 km loop in the late afternoon.",
+      "zh": "傍晚租自行车环湖17公里。"
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/H%E1%BB%93_T%C3%A2y_ho%C3%A0ng_h%C3%B4n_-_NKS.jpg/960px-H%E1%BB%93_T%C3%A2y_ho%C3%A0ng_h%C3%B4n_-_NKS.jpg",
+    "wiki": {
+      "vi": "Hồ_Tây",
+      "en": "West_Lake_(Hanoi)",
+      "zh": "西湖_(河内)"
+    }
+  },
+  {
+    "id": "museum-of-ethnology",
+    "type": "museum",
+    "district": "Cầu Giấy",
+    "lat": 21.0405,
+    "lng": 105.7987,
+    "hours": "08:30–17:30 (closed Mon)",
+    "ticket": 40000,
+    "duration": 120,
+    "name": {
+      "vi": "Bảo tàng Dân tộc học Việt Nam",
+      "en": "Vietnam Museum of Ethnology",
+      "zh": "越南民族学博物馆"
+    },
+    "desc": {
+      "vi": "54 dân tộc Việt Nam qua hiện vật và nhà sàn thật ngoài trời. Có múa rối nước cuối tuần.",
+      "en": "Vietnam's 54 ethnic groups through artefacts and full-size traditional houses outdoors. Water puppets on weekends.",
+      "zh": "通过文物和户外真实传统民居展示越南54个民族。周末有水上木偶戏。"
+    },
+    "tip": {
+      "vi": "Lựa chọn tốt cho ngày mưa.",
+      "en": "A good rainy-day option.",
+      "zh": "雨天的好选择。"
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Dan_toc_hoc_1.jpg/960px-Dan_toc_hoc_1.jpg",
+    "wiki": {
+      "vi": "Bảo_tàng_Dân_tộc_học_Việt_Nam",
+      "en": "Vietnam_Museum_of_Ethnology",
+      "zh": "越南民族学博物馆"
+    }
+  },
+  {
+    "id": "hoa-lo-prison",
+    "type": "museum",
+    "district": "Hoàn Kiếm",
+    "lat": 21.0253,
+    "lng": 105.8464,
+    "hours": "08:00–17:00",
+    "ticket": 50000,
+    "duration": 90,
+    "name": {
+      "vi": "Nhà tù Hỏa Lò",
+      "en": "Hoa Lo Prison",
+      "zh": "火炉监狱"
+    },
+    "desc": {
+      "vi": "Nhà tù do Pháp xây năm 1896, nơi giam giữ các chiến sĩ cách mạng và sau này là phi công Mỹ (\"Hanoi Hilton\"). Trưng bày rất xúc động.",
+      "en": "Prison built by the French in 1896, later holding Vietnamese revolutionaries and then American pilots (the \"Hanoi Hilton\"). A moving exhibition.",
+      "zh": "法国人于1896年建造的监狱，曾关押越南革命者，后来关押美军飞行员（\"河内希尔顿\"）。展览令人动容。"
+    },
+    "tip": {
+      "vi": "Thuê audio guide (có tiếng Việt, Anh); tour đêm \"Đêm thiêng liêng\" cần đặt trước.",
+      "en": "Rent the audio guide (Vietnamese, English); the night tour needs advance booking.",
+      "zh": "建议租用语音导览（有越南语、英语）；夜间参观需提前预订。"
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/HanoiHilton.jpg/960px-HanoiHilton.jpg",
+    "wiki": {
+      "vi": "Nhà_tù_Hỏa_Lò",
+      "en": "Hỏa_Lò_Prison",
+      "zh": "火炉监狱"
+    }
+  },
+  {
+    "id": "st-josephs-cathedral",
+    "type": "historic",
+    "district": "Hoàn Kiếm",
+    "lat": 21.0288,
+    "lng": 105.849,
+    "hours": "08:00–11:00, 14:00–17:30 (ngoài giờ lễ)",
+    "ticket": 0,
+    "duration": 30,
+    "name": {
+      "vi": "Nhà thờ Lớn Hà Nội",
+      "en": "St. Joseph's Cathedral",
+      "zh": "河内大教堂"
+    },
+    "desc": {
+      "vi": "Nhà thờ Gothic khánh thành năm 1886, mặt tiền đá xám gợi nhớ Notre-Dame Paris. Quảng trường trước nhà thờ là phố trà chanh nổi tiếng.",
+      "en": "Neo-Gothic cathedral opened in 1886 with a grey stone facade reminiscent of Notre-Dame de Paris. The square in front is famous for lemon tea cafés.",
+      "zh": "1886年落成的新哥特式大教堂，灰石立面令人想起巴黎圣母院。教堂前广场以柠檬茶摊闻名。"
+    },
+    "tip": {
+      "vi": "Vào bằng cổng bên trái khi không có lễ; giữ yên lặng và ăn mặc lịch sự.",
+      "en": "Enter by the side gate outside mass times; keep quiet and dress modestly.",
+      "zh": "非弥撒时间从侧门进入；保持安静，着装得体。"
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/St._Joseph%27s_Cathedral_-_Hanoi%2C_Vietnam.jpg/960px-St._Joseph%27s_Cathedral_-_Hanoi%2C_Vietnam.jpg",
+    "wiki": {
+      "vi": "Nhà_thờ_Lớn_Hà_Nội",
+      "en": "St._Joseph's_Cathedral,_Hanoi",
+      "zh": "河内大教堂"
+    }
+  },
+  {
+    "id": "one-pillar-pagoda",
+    "type": "historic",
+    "district": "Ba Đình",
+    "lat": 21.0359,
+    "lng": 105.8336,
+    "hours": "07:00–18:00",
+    "ticket": 0,
+    "duration": 30,
+    "name": {
+      "vi": "Chùa Một Cột",
+      "en": "One Pillar Pagoda",
+      "zh": "独柱寺"
+    },
+    "desc": {
+      "vi": "Ngôi chùa hình bông sen trên một cột đá giữa hồ, xây năm 1049 thời Lý, biểu tượng của Hà Nội. Nằm trong quần thể Lăng Bác.",
+      "en": "Lotus-shaped shrine on a single stone pillar in a pond, built in 1049 under the Ly dynasty and a symbol of Hanoi. Inside the Ho Chi Minh Mausoleum complex.",
+      "zh": "建于1049年李朝的莲花形单柱寺，立于池中石柱之上，是河内的象征，位于胡志明陵园区内。"
+    },
+    "tip": {
+      "vi": "Ghé cùng Lăng Bác và Bảo tàng Hồ Chí Minh trong một buổi sáng.",
+      "en": "Combine with the Mausoleum and Ho Chi Minh Museum in one morning.",
+      "zh": "可与胡志明陵和胡志明博物馆安排在同一个上午。"
+    },
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Hanoi%2C_Vietnam_%2812041825854%29.jpg/960px-Hanoi%2C_Vietnam_%2812041825854%29.jpg",
+    "wiki": {
+      "vi": "Chùa_Một_Cột",
+      "en": "One_Pillar_Pagoda",
+      "zh": "独柱寺"
+    }
+  },
+  {
+    "id": "lenin-park",
+    "type": "lake",
+    "district": "Ba Đình",
+    "lat": 21.0322,
+    "lng": 105.8398,
+    "hours": "24/7",
+    "ticket": 0,
+    "duration": 30,
+    "name": {
+      "vi": "Vườn hoa Lê-nin",
+      "en": "Lenin Park (Lenin statue garden)",
+      "zh": "列宁花园"
+    },
+    "desc": {
+      "vi": "Công viên nhỏ với tượng Lê-nin đối diện Cột cờ Hà Nội và Bảo tàng Lịch sử Quân sự cũ. Chiều tối người dân tập thể dục, trượt patin, đá cầu.",
+      "en": "Small park with a Lenin statue facing the Hanoi Flag Tower and the old Military History Museum. In the evening locals exercise, skate and play shuttlecock here.",
+      "zh": "小公园内有列宁雕像，正对河内旗台和旧军事历史博物馆。傍晚当地人在此锻炼、轮滑、踢毽子。"
+    },
+    "tip": {
+      "vi": "Đừng nhầm với Công viên Thống Nhất (tên cũ là Công viên Lê-nin) ở phố Trần Nhân Tông.",
+      "en": "Not to be confused with Thong Nhat Park on Tran Nhan Tong street, formerly also called Lenin Park.",
+      "zh": "请勿与陈仁宗街的统一公园（旧称列宁公园）混淆。"
+    },
+    "image": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Statue%20of%20Lenin%20in%20Hanoi%2C%2010%20March%202019.jpg&width=960",
+    "wiki": {
+      "en": "Thống_Nhất_Park"
+    }
+  }
+]

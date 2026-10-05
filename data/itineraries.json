@@ -1,0 +1,19 @@
+[
+  {
+    "id": "one-day-old-quarter",
+    "style": "classic",
+    "title": { "vi": "1 ngày quanh Hồ Gươm & phố cổ", "en": "1 day around Hoan Kiem & Old Quarter", "zh": "还剑湖与老城区一日游" },
+    "days": [
+      { "items": ["hoan-kiem-lake", "old-quarter", "cafe-giang", "train-street", "cha-ca-thang-long", "bia-hoi-ta-hien"] }
+    ]
+  },
+  {
+    "id": "two-day-history",
+    "style": "history",
+    "title": { "vi": "2 ngày lịch sử Thăng Long", "en": "2 days of Thang Long history", "zh": "升龙历史两日游" },
+    "days": [
+      { "items": ["ho-chi-minh-mausoleum", "imperial-citadel", "pho-thin-lo-duc", "temple-of-literature"] },
+      { "items": ["museum-of-ethnology", "bun-cha-huong-lien", "west-lake"] }
+    ]
+  }
+]
