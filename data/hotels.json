@@ -1,0 +1,895 @@
+[
+  {
+    "id": "sofitel-legend-metropole",
+    "type": "hotel",
+    "area": "hoankiem",
+    "budget": "luxury",
+    "stars": 5,
+    "lat": 21.0256,
+    "lng": 105.8562,
+    "address": "15 Ngô Quyền, Hoàn Kiếm",
+    "price": {
+      "min": 6000000,
+      "max": 12000000
+    },
+    "name": {
+      "vi": "Sofitel Legend Metropole Hà Nội",
+      "en": "Sofitel Legend Metropole Hanoi",
+      "zh": "河内索菲特传奇大都市酒店"
+    },
+    "desc": {
+      "vi": "Khách sạn di sản từ 1901, kiến trúc Pháp thuộc, hầm trú bom lịch sử, cách Nhà hát Lớn 3 phút đi bộ.",
+      "en": "Heritage hotel from 1901 with French colonial architecture and a historic bomb shelter, 3 minutes' walk from the Opera House.",
+      "zh": "1901年开业的传奇酒店，法式殖民建筑，保留历史防空洞，步行3分钟到大剧院。"
+    },
+    "image": "",
+    "wiki": {
+      "en": "Sofitel_Legend_Metropole_Hanoi"
+    },
+    "links": {
+      "booking": "",
+      "agoda": "",
+      "traveloka": "",
+      "google": "",
+      "website": "https://www.sofitel-legend-metropole-hanoi.com/"
+    },
+    "source": "Booking.com, Wikipedia",
+    "updated": "2026-09-23",
+    "priceSource": "Momondo/Tripadvisor: từ $233–300, trung bình $349"
+  },
+  {
+    "id": "capella-hanoi",
+    "type": "hotel",
+    "area": "hoankiem",
+    "budget": "luxury",
+    "stars": 5,
+    "lat": 21.0245,
+    "lng": 105.858,
+    "address": "11 Lê Phụng Hiểu, Hoàn Kiếm",
+    "price": {
+      "min": 9500000,
+      "max": 16000000
+    },
+    "name": {
+      "vi": "Capella Hà Nội",
+      "en": "Capella Hanoi",
+      "zh": "河内嘉佩乐酒店"
+    },
+    "desc": {
+      "vi": "Khách sạn boutique 47 phòng do Bill Bensley thiết kế theo chủ đề opera, cạnh Nhà hát Lớn.",
+      "en": "47-room boutique hotel designed by Bill Bensley around an opera theme, next to the Opera House.",
+      "zh": "由Bill Bensley设计的47间客房精品酒店，以歌剧为主题，紧邻大剧院。"
+    },
+    "image": "",
+    "links": {
+      "booking": "",
+      "agoda": "",
+      "traveloka": "",
+      "google": "",
+      "website": "https://capellahotels.com/en/capella-hanoi"
+    },
+    "source": "Booking.com",
+    "updated": "2026-09-23",
+    "priceSource": "Kayak/Hotels.com: từ $370–427, có phòng $551"
+  },
+  {
+    "id": "hotel-de-l-opera",
+    "type": "hotel",
+    "area": "hoankiem",
+    "budget": "luxury",
+    "stars": 5,
+    "lat": 21.0242,
+    "lng": 105.857,
+    "address": "29 Tràng Tiền, Hoàn Kiếm",
+    "price": {
+      "min": 3300000,
+      "max": 5000000
+    },
+    "name": {
+      "vi": "Hotel de l'Opera Hà Nội MGallery",
+      "en": "Hotel de l'Opera Hanoi MGallery",
+      "zh": "河内歌剧院美憬阁酒店"
+    },
+    "desc": {
+      "vi": "Boutique phong cách Đông Dương trên phố Tràng Tiền, bể bơi trong nhà, sát Hồ Gươm.",
+      "en": "Indochine-style boutique hotel on Trang Tien street with an indoor pool, steps from Hoan Kiem Lake.",
+      "zh": "位于长钱街的印度支那风格精品酒店，设有室内泳池，紧邻还剑湖。"
+    },
+    "image": "",
+    "wiki": {
+      "en": "Hotel_de_l'Opera_Hanoi"
+    },
+    "links": {
+      "booking": "",
+      "agoda": "",
+      "traveloka": "",
+      "google": "",
+      "website": ""
+    },
+    "source": "Booking.com, Wikipedia",
+    "updated": "2026-09-23",
+    "priceSource": "HotelsCombined/Tripadvisor: từ $128, trung bình $179–189"
+  },
+  {
+    "id": "hilton-hanoi-opera",
+    "type": "hotel",
+    "area": "hoankiem",
+    "budget": "luxury",
+    "stars": 5,
+    "lat": 21.0238,
+    "lng": 105.858,
+    "address": "1 Lê Thánh Tông, Hoàn Kiếm",
+    "price": {
+      "min": 3000000,
+      "max": 4500000
+    },
+    "name": {
+      "vi": "Hilton Hanoi Opera",
+      "en": "Hilton Hanoi Opera",
+      "zh": "河内歌剧院希尔顿酒店"
+    },
+    "desc": {
+      "vi": "Khách sạn quốc tế nằm ngay sau Nhà hát Lớn, phòng rộng, phù hợp gia đình và công tác.",
+      "en": "International hotel right behind the Opera House with spacious rooms, good for families and business trips.",
+      "zh": "位于大剧院正后方的国际酒店，房间宽敞，适合家庭和商务出行。"
+    },
+    "image": "",
+    "wiki": {
+      "en": "Hilton_Hanoi_Opera"
+    },
+    "links": {
+      "booking": "",
+      "agoda": "",
+      "traveloka": "",
+      "google": "",
+      "website": ""
+    },
+    "source": "Booking.com",
+    "updated": "2026-09-23",
+    "priceSource": "Booking/hotel-rez: $143–158"
+  },
+  {
+    "id": "apricot-hotel",
+    "type": "hotel",
+    "area": "hoankiem",
+    "budget": "mid",
+    "stars": 5,
+    "lat": 21.028,
+    "lng": 105.8508,
+    "address": "136 Hàng Trống, Hoàn Kiếm",
+    "price": {
+      "min": 2800000,
+      "max": 4600000
+    },
+    "name": {
+      "vi": "Apricot Hotel",
+      "en": "Apricot Hotel",
+      "zh": "杏花酒店"
+    },
+    "desc": {
+      "vi": "Khách sạn nghệ thuật với hơn 600 tác phẩm hội hoạ, bể bơi trên sân thượng nhìn thẳng ra Hồ Gươm.",
+      "en": "Art hotel with over 600 paintings and a rooftop pool looking straight onto Hoan Kiem Lake.",
+      "zh": "艺术酒店，收藏600多幅画作，屋顶泳池正对还剑湖。"
+    },
+    "image": "",
+    "links": {
+      "booking": "",
+      "agoda": "",
+      "traveloka": "",
+      "google": "",
+      "website": "https://apricothotels.com/"
+    },
+    "source": "Booking.com",
+    "updated": "2026-09-23",
+    "priceSource": "Momondo/HotelsCombined: từ $109–118, trung bình $176"
+  },
+  {
+    "id": "movenpick-hanoi-centre",
+    "type": "hotel",
+    "area": "hoankiem",
+    "budget": "mid",
+    "stars": 5,
+    "lat": 21.0241,
+    "lng": 105.8462,
+    "address": "83A Lý Thường Kiệt, Hoàn Kiếm",
+    "price": {
+      "min": 1800000,
+      "max": 3900000
+    },
+    "name": {
+      "vi": "Mövenpick Hotel Hanoi Centre",
+      "en": "Mövenpick Hotel Hanoi Centre",
+      "zh": "河内中心瑞享酒店"
+    },
+    "desc": {
+      "vi": "Toà nhà Pháp cổ trong khu phố Pháp, yên tĩnh, đi bộ 10 phút tới Hồ Gươm.",
+      "en": "Old French building in the French Quarter, quiet, a 10-minute walk to Hoan Kiem Lake.",
+      "zh": "法国区内的老式法式建筑，环境安静，步行10分钟到还剑湖。"
+    },
+    "image": "",
+    "links": {
+      "booking": "",
+      "agoda": "",
+      "traveloka": "",
+      "google": "",
+      "website": ""
+    },
+    "source": "Booking.com",
+    "updated": "2026-09-23",
+    "priceSource": "h-rez: từ 1.832.791 ₫; Momondo: $114–149"
+  },
+  {
+    "id": "la-siesta-ma-may",
+    "type": "hotel",
+    "area": "oldquarter",
+    "budget": "mid",
+    "stars": 4,
+    "lat": 21.0355,
+    "lng": 105.8527,
+    "address": "94 Mã Mây, Hoàn Kiếm",
+    "price": {
+      "min": 2400000,
+      "max": 3200000
+    },
+    "name": {
+      "vi": "La Siesta Classic Mã Mây",
+      "en": "La Siesta Classic Ma May",
+      "zh": "拉西埃斯塔经典马麦酒店"
+    },
+    "desc": {
+      "vi": "Khách sạn boutique nổi tiếng nhất phố cổ, dịch vụ tận tình, spa và nhà hàng Red Bean ngay trong toà nhà.",
+      "en": "The Old Quarter's best-known boutique hotel, attentive service, in-house spa and Red Bean restaurant.",
+      "zh": "老城区最知名的精品酒店，服务周到，内设水疗和Red Bean餐厅。"
+    },
+    "image": "",
+    "links": {
+      "booking": "",
+      "agoda": "",
+      "traveloka": "",
+      "google": "",
+      "website": "https://hanoilasiestahotel.com/"
+    },
+    "source": "Booking.com",
+    "updated": "2026-09-23",
+    "priceSource": "Priceline/HotelsCombined: $93–121"
+  },
+  {
+    "id": "la-siesta-premium-hang-be",
+    "type": "hotel",
+    "area": "oldquarter",
+    "budget": "mid",
+    "stars": 4,
+    "lat": 21.0325,
+    "lng": 105.8542,
+    "address": "27 Hàng Bè, Hoàn Kiếm",
+    "price": {
+      "min": 2000000,
+      "max": 3200000
+    },
+    "name": {
+      "vi": "La Siesta Premium Hàng Bè",
+      "en": "La Siesta Premium Hang Be",
+      "zh": "拉西埃斯塔尊贵行贝酒店"
+    },
+    "desc": {
+      "vi": "Phiên bản cao cấp của La Siesta, quầy bar sân thượng nhìn ra Hồ Gươm, gần phố đi bộ.",
+      "en": "The premium sibling of La Siesta with a rooftop bar over Hoan Kiem Lake, near the walking street.",
+      "zh": "拉西埃斯塔的高端版本，屋顶酒吧俯瞰还剑湖，靠近步行街。"
+    },
+    "image": "",
+    "links": {
+      "booking": "",
+      "agoda": "",
+      "traveloka": "",
+      "google": "",
+      "website": ""
+    },
+    "source": "Booking.com",
+    "updated": "2026-09-23",
+    "priceSource": "Momondo/MakeMyTrip: $75–121"
+  },
+  {
+    "id": "peridot-grand",
+    "type": "hotel",
+    "area": "oldquarter",
+    "budget": "luxury",
+    "stars": 5,
+    "lat": 21.0331,
+    "lng": 105.8465,
+    "address": "33 Đường Thành, Hoàn Kiếm",
+    "price": {
+      "min": 3000000,
+      "max": 4800000
+    },
+    "name": {
+      "vi": "Peridot Grand Luxury Boutique Hotel",
+      "en": "Peridot Grand Luxury Boutique Hotel",
+      "zh": "橄榄石豪华精品酒店"
+    },
+    "desc": {
+      "vi": "Boutique 5 sao rìa phố cổ, bể bơi sân thượng, gần chợ Hàng Da và đền Bạch Mã.",
+      "en": "Five-star boutique on the edge of the Old Quarter with a rooftop pool, near Hang Da market and Bach Ma temple.",
+      "zh": "老城区边缘的五星精品酒店，设有屋顶泳池，靠近行多市场和白马庙。"
+    },
+    "image": "",
+    "links": {
+      "booking": "",
+      "agoda": "",
+      "traveloka": "",
+      "google": "",
+      "website": ""
+    },
+    "source": "Booking.com",
+    "updated": "2026-09-23",
+    "priceSource": "Hotels.com/Travelocity/MakeMyTrip: $119–185"
+  },
+  {
+    "id": "hanoi-pearl-hotel",
+    "type": "hotel",
+    "area": "oldquarter",
+    "budget": "mid",
+    "stars": 3,
+    "lat": 21.0296,
+    "lng": 105.8497,
+    "address": "6 Bảo Khánh, Hoàn Kiếm",
+    "price": {
+      "min": 1200000,
+      "max": 2200000
+    },
+    "name": {
+      "vi": "Hanoi Pearl Hotel",
+      "en": "Hanoi Pearl Hotel",
+      "zh": "河内珍珠酒店"
+    },
+    "desc": {
+      "vi": "Khách sạn 3 sao giá tốt trên ngõ yên tĩnh cách Hồ Gươm 2 phút, có đưa đón sân bay.",
+      "en": "Good-value 3-star on a quiet lane 2 minutes from Hoan Kiem Lake, airport pickup available.",
+      "zh": "性价比高的三星酒店，位于距还剑湖2分钟的安静小巷，提供机场接送。"
+    },
+    "image": "",
+    "links": {
+      "booking": "",
+      "agoda": "",
+      "traveloka": "",
+      "google": "",
+      "website": ""
+    },
+    "source": "Booking.com",
+    "updated": "2026-09-23",
+    "priceSource": "Priceline/Momondo: $45–84, phòng Premier $144"
+  },
+  {
+    "id": "little-charm-hostel",
+    "type": "hostel",
+    "area": "oldquarter",
+    "budget": "budget",
+    "stars": null,
+    "lat": 21.0343,
+    "lng": 105.848,
+    "address": "44 Hàng Bồ, Hoàn Kiếm",
+    "price": {
+      "min": 250000,
+      "max": 700000
+    },
+    "name": {
+      "vi": "Little Charm Hanoi Hostel",
+      "en": "Little Charm Hanoi Hostel",
+      "zh": "小魅力河内青年旅舍"
+    },
+    "desc": {
+      "vi": "Hostel có bể bơi trong nhà hiếm hoi ở phố cổ, giường tầng dạng pod, bữa sáng miễn phí.",
+      "en": "Rare Old Quarter hostel with an indoor pool, pod-style bunks and free breakfast.",
+      "zh": "老城区少见的带室内泳池的青年旅舍，太空舱式床位，免费早餐。"
+    },
+    "image": "",
+    "links": {
+      "booking": "",
+      "agoda": "",
+      "traveloka": "",
+      "google": "",
+      "website": ""
+    },
+    "source": "Booking.com",
+    "updated": "2026-09-23",
+    "priceSource": "Hostelworld: giường dorm từ $9–13 (~350.000 ₫)"
+  },
+  {
+    "id": "old-quarter-view-hostel",
+    "type": "hostel",
+    "area": "oldquarter",
+    "budget": "budget",
+    "stars": null,
+    "lat": 21.0317,
+    "lng": 105.8525,
+    "address": "12 Ngõ Trung Yên, Hoàn Kiếm",
+    "price": {
+      "min": 160000,
+      "max": 500000
+    },
+    "name": {
+      "vi": "Old Quarter View Hanoi Hostel",
+      "en": "Old Quarter View Hanoi Hostel",
+      "zh": "老城景观河内青年旅舍"
+    },
+    "desc": {
+      "vi": "Hostel xã hội với tour đi bộ và bia hơi buổi tối, sân thượng nhìn xuống mái ngói phố cổ.",
+      "en": "Social hostel with walking tours and evening bia hoi, rooftop over the Old Quarter tiles.",
+      "zh": "社交型青年旅舍，提供徒步游和晚间鲜啤活动，屋顶可俯瞰老城区瓦顶。"
+    },
+    "image": "",
+    "links": {
+      "booking": "",
+      "agoda": "",
+      "traveloka": "",
+      "google": "",
+      "website": ""
+    },
+    "source": "Booking.com",
+    "updated": "2026-09-23",
+    "priceSource": "Momondo/Brokepackr: dorm $6–12"
+  },
+  {
+    "id": "nexy-hostel",
+    "type": "hostel",
+    "area": "oldquarter",
+    "budget": "budget",
+    "stars": null,
+    "lat": 21.0298,
+    "lng": 105.8452,
+    "address": "12 Tống Duy Tân, Hoàn Kiếm",
+    "price": {
+      "min": 160000,
+      "max": 950000
+    },
+    "name": {
+      "vi": "Nexy Hostel",
+      "en": "Nexy Hostel",
+      "zh": "Nexy青年旅舍"
+    },
+    "desc": {
+      "vi": "Hostel hiện đại trên phố ẩm thực Tống Duy Tân, có phòng riêng, khu làm việc chung.",
+      "en": "Modern hostel on Tong Duy Tan food street with private rooms and a co-working area.",
+      "zh": "位于宋维新美食街的现代青年旅舍，有独立房间和共享办公区。"
+    },
+    "image": "",
+    "links": {
+      "booking": "",
+      "agoda": "",
+      "traveloka": "",
+      "google": "",
+      "website": ""
+    },
+    "source": "Booking.com",
+    "updated": "2026-09-23",
+    "priceSource": "Trip.com/HotelsCombined: dorm từ $6, phòng đôi $27–36"
+  },
+  {
+    "id": "hanoi-old-quarter-homestay",
+    "type": "homestay",
+    "area": "oldquarter",
+    "budget": "budget",
+    "stars": null,
+    "lat": 21.034,
+    "lng": 105.85,
+    "address": "Khu phố cổ, Hoàn Kiếm",
+    "price": {
+      "min": 400000,
+      "max": 800000
+    },
+    "name": {
+      "vi": "Hanoi Old Quarter Homestay",
+      "en": "Hanoi Old Quarter Homestay",
+      "zh": "河内老城区民宿"
+    },
+    "desc": {
+      "vi": "Homestay gia đình giữa phố cổ, chủ nhà mời bữa tối Việt Nam ngày đầu tiên cho khách mới đến.",
+      "en": "Family-run homestay in the heart of the Old Quarter; hosts cook a Vietnamese dinner for guests on arrival day.",
+      "zh": "老城区中心的家庭民宿，房东为到达当天的客人准备越南晚餐。"
+    },
+    "image": "",
+    "links": {
+      "booking": "",
+      "agoda": "https://www.agoda.com/hanoi-old-quarter-homestay/hotel/hanoi-vn.html",
+      "traveloka": "",
+      "google": "",
+      "website": ""
+    },
+    "source": "Agoda, Tripadvisor",
+    "updated": "2026-09-23",
+    "priceSource": "Chưa xác minh được giá 09/2026 (Agoda chặn đọc); giữ giá tham khảo"
+  },
+  {
+    "id": "khai-homestay",
+    "type": "homestay",
+    "area": "oldquarter",
+    "budget": "budget",
+    "stars": null,
+    "lat": 21.0375,
+    "lng": 105.8495,
+    "address": "Ngõ gần chợ Đồng Xuân, Hoàn Kiếm",
+    "price": {
+      "min": 400000,
+      "max": 700000
+    },
+    "name": {
+      "vi": "Khai Homestay",
+      "en": "Khai Homestay",
+      "zh": "Khai民宿"
+    },
+    "desc": {
+      "vi": "Homestay nhỏ trong ngõ cách chợ Đồng Xuân vài phút, phòng có điều hoà, phòng khách chung.",
+      "en": "Small homestay in an alley minutes from Dong Xuan market, air-conditioned rooms and a shared lounge.",
+      "zh": "距同春市场几分钟的小巷民宿，房间有空调，设有共享客厅。"
+    },
+    "image": "",
+    "links": {
+      "booking": "",
+      "agoda": "",
+      "traveloka": "",
+      "google": "",
+      "website": ""
+    },
+    "source": "Agoda",
+    "updated": "2026-09-23",
+    "priceSource": "hotels-in-hanoi.net: từ $16"
+  },
+  {
+    "id": "intercontinental-westlake",
+    "type": "hotel",
+    "area": "westlake",
+    "budget": "luxury",
+    "stars": 5,
+    "lat": 21.059,
+    "lng": 105.837,
+    "address": "5 Từ Hoa, Tây Hồ",
+    "price": {
+      "min": 3000000,
+      "max": 5000000
+    },
+    "name": {
+      "vi": "InterContinental Hanoi Westlake",
+      "en": "InterContinental Hanoi Westlake",
+      "zh": "河内西湖洲际酒店"
+    },
+    "desc": {
+      "vi": "Khách sạn xây trên mặt nước Hồ Tây, các dãy phòng nổi nối bằng cầu, cạnh chùa Kim Liên.",
+      "en": "Built over the water of West Lake with floating room wings linked by walkways, next to Kim Lien pagoda.",
+      "zh": "建于西湖水面之上，漂浮客房区由栈桥相连，紧邻金莲寺。"
+    },
+    "image": "",
+    "links": {
+      "booking": "",
+      "agoda": "",
+      "traveloka": "",
+      "google": "",
+      "website": ""
+    },
+    "source": "Booking.com",
+    "updated": "2026-09-23",
+    "priceSource": "Momondo/HotelsCombined: $119–155"
+  },
+  {
+    "id": "pan-pacific-hanoi",
+    "type": "hotel",
+    "area": "westlake",
+    "budget": "mid",
+    "stars": 5,
+    "lat": 21.0447,
+    "lng": 105.8392,
+    "address": "1 Thanh Niên, Ba Đình",
+    "price": {
+      "min": 1600000,
+      "max": 3400000
+    },
+    "name": {
+      "vi": "Pan Pacific Hà Nội",
+      "en": "Pan Pacific Hanoi",
+      "zh": "河内泛太平洋酒店"
+    },
+    "desc": {
+      "vi": "Đầu đường Thanh Niên giữa Hồ Tây và hồ Trúc Bạch, bể bơi trong nhà, tầng cao nhìn hoàng hôn.",
+      "en": "At the head of Thanh Nien road between West Lake and Truc Bach lake, indoor pool, sunset views from upper floors.",
+      "zh": "位于西湖与竹帛湖之间的青年路口，室内泳池，高层可看日落。"
+    },
+    "image": "",
+    "links": {
+      "booking": "",
+      "agoda": "",
+      "traveloka": "",
+      "google": "",
+      "website": ""
+    },
+    "source": "Booking.com",
+    "updated": "2026-09-23",
+    "priceSource": "h-rez: từ 1.577.076 ₫; HotelsCombined: $72–131"
+  },
+  {
+    "id": "sheraton-hanoi",
+    "type": "hotel",
+    "area": "westlake",
+    "budget": "luxury",
+    "stars": 5,
+    "lat": 21.0655,
+    "lng": 105.831,
+    "address": "K5 Nghi Tàm, 11 Xuân Diệu, Tây Hồ",
+    "price": {
+      "min": 3500000,
+      "max": 5500000
+    },
+    "name": {
+      "vi": "Sheraton Hanoi Hotel",
+      "en": "Sheraton Hanoi Hotel",
+      "zh": "河内喜来登酒店"
+    },
+    "desc": {
+      "vi": "Khu nghỉ rộng ven Hồ Tây với vườn và bể bơi ngoài trời, gần phố Xuân Diệu nhiều quán cà phê.",
+      "en": "Spacious lakeside resort-style hotel with gardens and an outdoor pool, near café-lined Xuan Dieu street.",
+      "zh": "西湖畔的度假式酒店，有花园和室外泳池，靠近咖啡馆林立的春妙街。"
+    },
+    "image": "",
+    "links": {
+      "booking": "",
+      "agoda": "",
+      "traveloka": "",
+      "google": "",
+      "website": ""
+    },
+    "source": "Booking.com",
+    "updated": "2026-09-23",
+    "priceSource": "HotelsCombined: từ $134, trung bình $209"
+  },
+  {
+    "id": "lotte-hotel-hanoi",
+    "type": "hotel",
+    "area": "badinh",
+    "budget": "mid",
+    "stars": 5,
+    "lat": 21.0322,
+    "lng": 105.8117,
+    "address": "54 Liễu Giai, Ba Đình",
+    "price": {
+      "min": 2400000,
+      "max": 5200000
+    },
+    "name": {
+      "vi": "Lotte Hotel Hà Nội",
+      "en": "Lotte Hotel Hanoi",
+      "zh": "河内乐天酒店"
+    },
+    "desc": {
+      "vi": "Tầng 33 đến 38 của toà Lotte Center, đài quan sát và bể bơi vô cực nhìn toàn thành phố.",
+      "en": "Floors 33 to 38 of Lotte Center, with an observation deck and infinity pool overlooking the whole city.",
+      "zh": "位于乐天中心33至38层，设有观景台和无边泳池，俯瞰全城。"
+    },
+    "image": "",
+    "wiki": {
+      "en": "Lotte_Center_Hanoi"
+    },
+    "links": {
+      "booking": "",
+      "agoda": "",
+      "traveloka": "",
+      "google": "",
+      "website": ""
+    },
+    "source": "Booking.com, Wikipedia",
+    "updated": "2026-09-23",
+    "priceSource": "Momondo/HotelsCombined: $91–199"
+  },
+  {
+    "id": "hanoi-daewoo-hotel",
+    "type": "hotel",
+    "area": "badinh",
+    "budget": "mid",
+    "stars": 5,
+    "lat": 21.0308,
+    "lng": 105.81,
+    "address": "360 Kim Mã, Ba Đình",
+    "price": {
+      "min": 1900000,
+      "max": 2700000
+    },
+    "name": {
+      "vi": "Khách sạn Hanoi Daewoo",
+      "en": "Hanoi Daewoo Hotel",
+      "zh": "河内大宇酒店"
+    },
+    "desc": {
+      "vi": "Khách sạn 5 sao lâu đời với bể bơi ngoài trời lớn nhất nội thành, gần công viên Thủ Lệ.",
+      "en": "Long-established 5-star with the largest outdoor pool in the inner city, near Thu Le park.",
+      "zh": "历史悠久的五星酒店，拥有市区最大的室外泳池，靠近首丽公园。"
+    },
+    "image": "",
+    "wiki": {
+      "en": "Hanoi_Daewoo_Hotel"
+    },
+    "links": {
+      "booking": "",
+      "agoda": "",
+      "traveloka": "",
+      "google": "",
+      "website": ""
+    },
+    "source": "Booking.com",
+    "updated": "2026-09-23",
+    "priceSource": "Tripadvisor: ~2.000.000 ₫; HotelsCombined: $74–102"
+  },
+  {
+    "id": "jw-marriott-hanoi",
+    "type": "hotel",
+    "area": "badinh",
+    "budget": "luxury",
+    "stars": 5,
+    "lat": 21.0073,
+    "lng": 105.7825,
+    "address": "8 Đỗ Đức Dục, Nam Từ Liêm",
+    "price": {
+      "min": 3900000,
+      "max": 7300000
+    },
+    "name": {
+      "vi": "JW Marriott Hà Nội",
+      "en": "JW Marriott Hotel Hanoi",
+      "zh": "河内JW万豪酒店"
+    },
+    "desc": {
+      "vi": "Kiến trúc hình con rồng cạnh Trung tâm Hội nghị Quốc gia, hợp công tác và hội nghị, xa trung tâm.",
+      "en": "Dragon-shaped architecture next to the National Convention Centre, ideal for business and events, far from the centre.",
+      "zh": "龙形建筑，紧邻国家会议中心，适合商务和会议，距市中心较远。"
+    },
+    "image": "",
+    "wiki": {
+      "en": "JW_Marriott_Hotel_Hanoi"
+    },
+    "links": {
+      "booking": "",
+      "agoda": "",
+      "traveloka": "",
+      "google": "",
+      "website": ""
+    },
+    "source": "Booking.com, Wikipedia",
+    "updated": "2026-09-23",
+    "priceSource": "HotelsCombined/Trivago: $149–281, trung bình $216"
+  },
+  {
+    "id": "noi-bai-horizon",
+    "type": "hotel",
+    "area": "noibai",
+    "budget": "budget",
+    "stars": 3,
+    "lat": 21.21,
+    "lng": 105.8,
+    "address": "Phú Cường, Sóc Sơn (gần sân bay Nội Bài)",
+    "price": {
+      "min": 1000000,
+      "max": 1600000
+    },
+    "name": {
+      "vi": "Noi Bai Horizon Hotel & Spa",
+      "en": "Noi Bai Horizon Hotel & Spa",
+      "zh": "内排地平线酒店"
+    },
+    "desc": {
+      "vi": "Khách sạn cách sân bay 10 phút, đưa đón miễn phí, tiện cho chuyến bay sớm hoặc nối chuyến.",
+      "en": "10 minutes from the airport with free shuttle, convenient for early flights or layovers.",
+      "zh": "距机场10分钟，免费接送，适合早班机或中转。"
+    },
+    "image": "",
+    "links": {
+      "booking": "",
+      "agoda": "",
+      "traveloka": "",
+      "google": "",
+      "website": ""
+    },
+    "source": "Booking.com",
+    "updated": "2026-09-23",
+    "priceSource": "Booking (trang Nội Bài): từ $42"
+  },
+  {
+    "id": "paragon-noi-bai",
+    "type": "hotel",
+    "area": "noibai",
+    "budget": "budget",
+    "stars": 3,
+    "lat": 21.2075,
+    "lng": 105.7995,
+    "address": "Phú Cường, Sóc Sơn (gần sân bay Nội Bài)",
+    "price": {
+      "min": 750000,
+      "max": 1000000
+    },
+    "name": {
+      "vi": "Paragon Noi Bai Hotel & Pool",
+      "en": "Paragon Noi Bai Hotel & Pool",
+      "zh": "内排百乐宫酒店"
+    },
+    "desc": {
+      "vi": "Khách sạn gần sân bay có bể bơi ngoài trời, đưa đón 24/7, giá dễ chịu.",
+      "en": "Airport hotel with an outdoor pool, 24/7 shuttle and friendly prices.",
+      "zh": "机场附近酒店，设有室外泳池，24小时接送，价格实惠。"
+    },
+    "image": "",
+    "links": {
+      "booking": "",
+      "agoda": "",
+      "traveloka": "",
+      "google": "",
+      "website": ""
+    },
+    "source": "Agoda",
+    "updated": "2026-09-23",
+    "priceSource": "Expedia/MakeMyTrip: $30–38"
+  },
+  {
+    "id": "vatc-sleep-pod-t1",
+    "type": "hostel",
+    "area": "noibai",
+    "budget": "budget",
+    "stars": null,
+    "lat": 21.22,
+    "lng": 105.806,
+    "address": "Nhà ga T1, sân bay Nội Bài",
+    "price": {
+      "min": 550000,
+      "max": 1000000
+    },
+    "name": {
+      "vi": "VATC SleepPod Nhà ga T1",
+      "en": "VATC SleepPod Terminal 1",
+      "zh": "VATC胶囊旅馆T1航站楼"
+    },
+    "desc": {
+      "vi": "Phòng ngủ dạng khoang ngay trong nhà ga nội địa, tính theo giờ, hợp nối chuyến đêm.",
+      "en": "Capsule pods inside the domestic terminal, charged by the hour, ideal for overnight connections.",
+      "zh": "国内航站楼内的胶囊客房，按小时计费，适合夜间中转。"
+    },
+    "image": "",
+    "links": {
+      "booking": "",
+      "agoda": "",
+      "traveloka": "",
+      "google": "",
+      "website": "https://hanoiairporthotels.vn/en"
+    },
+    "source": "hanoiairporthotels.vn",
+    "updated": "2026-09-23",
+    "priceSource": "Hostelworld/Kayak: $22–38/đêm, khoảng $10/giờ"
+  },
+  {
+    "id": "grand-dragon-noi-bai",
+    "type": "hotel",
+    "area": "noibai",
+    "budget": "budget",
+    "stars": 3,
+    "lat": 21.205,
+    "lng": 105.799,
+    "address": "Phú Minh, Sóc Sơn (gần sân bay Nội Bài)",
+    "price": {
+      "min": 650000,
+      "max": 900000
+    },
+    "name": {
+      "vi": "Grand Dragon Noi Bai Hotel",
+      "en": "Grand Dragon Noi Bai Hotel",
+      "zh": "内排大龙酒店"
+    },
+    "desc": {
+      "vi": "Khách sạn gia đình cách sân bay khoảng 5 km, đưa đón miễn phí, có nhà hàng.",
+      "en": "Family-run hotel about 5 km from the airport with free shuttle and a restaurant.",
+      "zh": "距机场约5公里的家庭式酒店，免费接送，设有餐厅。"
+    },
+    "image": "",
+    "links": {
+      "booking": "",
+      "agoda": "",
+      "traveloka": "",
+      "google": "",
+      "website": ""
+    },
+    "source": "Agoda",
+    "updated": "2026-09-23",
+    "priceSource": "Planet of Hotels/hanoi-hotels.org: $26–28"
+  }
+]

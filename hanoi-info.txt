@@ -1,0 +1,1287 @@
+HÀ NỘI GUIDE — TỔNG HỢP THÔNG TIN VỀ HÀ NỘI
+Cẩm nang du lịch Hà Nội ba ngôn ngữ
+Nguồn: dữ liệu website Hà Nội Guide (data/*.json), trích xuất ngày 2026-10-05
+Tổng cộng: 12 địa điểm · 23 quán ăn · 25 chỗ nghỉ · 9 mốc lịch sử · 2 lịch trình mẫu
+
+==============================================================================
+1. GIỚI THIỆU HÀ NỘI
+==============================================================================
+Khám phá Hà Nội theo cách của bạn
+Nghìn năm văn hiến, phố cổ, ẩm thực và những câu chuyện chờ bạn.
+
+Hà Nội là thủ đô của Việt Nam, nằm ở miền Bắc, bên bờ sông Hồng. Tên "Hà Nội" (河內)
+nghĩa là "thành phố trong sông" (do vua Minh Mạng đặt năm 1831). Trước đó, kinh đô
+này mang tên Thăng Long ("Rồng bay lên") từ năm 1010 khi Lý Thái Tổ dời đô.
+
+Thành phố nổi tiếng với phố cổ 36 phố phường, Hồ Hoàn Kiếm, Văn Miếu – Quốc Tử Giám,
+Hoàng thành Thăng Long (Di sản thế giới UNESCO), Lăng Chủ tịch Hồ Chí Minh và nền
+ẩm thực đường phố đặc sắc: phở, bún chả, cà phê trứng, bia hơi…
+
+==============================================================================
+2. DÒNG LỊCH SỬ THĂNG LONG – HÀ NỘI
+==============================================================================
+
+[1010] Lý Thái Tổ dời đô về Thăng Long / Ly Thai To moves the capital to Thang Long / 李太祖迁都升龙
+  VI: Chiếu dời đô, đặt tên Thăng Long – Rồng bay lên.
+  EN: The Edict on the Transfer of the Capital names the city Thang Long – 'Ascending Dragon'.
+  ZH: 颁布迁都诏，命名升龙——飞龙升天。
+
+[1070–1076] Xây Văn Miếu, lập Quốc Tử Giám / Temple of Literature and first university founded / 建文庙，设国子监
+  VI: Trường đại học đầu tiên của Việt Nam.
+  EN: Vietnam's first university.
+  ZH: 越南第一所大学。
+
+[1428] Lê Lợi đánh bại quân Minh / Le Loi defeats the Ming / 黎利击败明军
+  VI: Truyền thuyết trả gươm thần cho Rùa Vàng – tên gọi Hồ Hoàn Kiếm.
+  EN: Legend of returning the magic sword to the Golden Turtle – origin of Hoan Kiem Lake's name.
+  ZH: 还剑给金龟的传说——还剑湖名称的由来。
+
+[1831] Vua Minh Mạng đặt tên Hà Nội / Emperor Minh Mang names the city Hanoi / 明命帝命名河内
+  VI: Hà Nội – thành phố trong sông.
+  EN: Hanoi – 'the city inside the river'.
+  ZH: 河内——河流之中的城市。
+
+[1902] Thủ đô Đông Dương thuộc Pháp / Capital of French Indochina / 法属印度支那首府
+  VI: Nhà hát Lớn, cầu Long Biên, khu phố Pháp ra đời.
+  EN: The Opera House, Long Bien Bridge and French Quarter are built.
+  ZH: 歌剧院、龙编桥和法国区建成。
+
+[1945] Tuyên ngôn Độc lập tại Ba Đình / Declaration of Independence at Ba Dinh Square / 巴亭广场宣读独立宣言
+  VI: Ngày 2/9/1945, Chủ tịch Hồ Chí Minh đọc Tuyên ngôn Độc lập.
+  EN: On 2 September 1945 Ho Chi Minh proclaims independence.
+  ZH: 1945年9月2日，胡志明宣读独立宣言。
+
+[1954] Giải phóng Thủ đô / Liberation of the capital / 首都解放
+  VI: Ngày 10/10/1954, bộ đội tiếp quản Hà Nội.
+  EN: On 10 October 1954 Vietnamese forces take over Hanoi.
+  ZH: 1954年10月10日，越南军队接管河内。
+
+[2008] Mở rộng địa giới / City boundaries expanded / 扩大市域
+  VI: Sáp nhập Hà Tây, Hà Nội trở thành một trong những thủ đô lớn nhất thế giới về diện tích.
+  EN: Ha Tay is merged; Hanoi becomes one of the world's largest capitals by area.
+  ZH: 合并河西省，河内成为世界面积最大的首都之一。
+
+[2010] Đại lễ 1000 năm Thăng Long – Hà Nội / 1000-year anniversary of Thang Long – Hanoi / 升龙–河内建城一千年大庆
+  VI: Hoàng thành Thăng Long được UNESCO công nhận Di sản Thế giới.
+  EN: The Imperial Citadel is inscribed as a UNESCO World Heritage site.
+  ZH: 升龙皇城被列入联合国教科文组织世界遗产。
+
+==============================================================================
+3. ĐỊA ĐIỂM NỔI BẬT (12 địa điểm)
+==============================================================================
+
+------------------------------------------------------------------------------
+[hoan-kiem-lake]  Hồ Hoàn Kiếm / Hoan Kiem Lake / 还剑湖
+------------------------------------------------------------------------------
+Loại:       Hồ & công viên
+Quận:       Hoàn Kiếm
+Toạ độ:     21.0288, 105.8525
+Giờ mở:     24/7 (walking street Fri–Sun evening)
+Vé:         Miễn phí
+Tham quan:  ~60 phút
+
+Mô tả:
+  VI: Trái tim của Hà Nội với Tháp Rùa, cầu Thê Húc và đền Ngọc Sơn. Cuối tuần thành phố đi bộ quanh hồ.
+  EN: The heart of Hanoi with Turtle Tower, the red The Huc bridge and Ngoc Son Temple. Pedestrian street on weekend evenings.
+  ZH: 河内的心脏，有龟塔、红色的栖旭桥和玉山祠。周末晚上成为步行街。
+
+Gợi ý:
+  VI: Đi sáng sớm 5–7h để thấy người dân tập thể dục.
+  EN: Come at 5–7 am to watch locals exercising.
+  ZH: 早上5–7点来看当地人晨练。
+
+Wiki (VI): https://vi.wikipedia.org/wiki/Hồ_Hoàn_Kiếm
+Wiki (EN): https://en.wikipedia.org/wiki/Hoàn_Kiếm_Lake
+Google Maps: https://www.google.com/maps/search/?api=1&query=21.0288,105.8525
+
+------------------------------------------------------------------------------
+[temple-of-literature]  Văn Miếu – Quốc Tử Giám / Temple of Literature / 文庙–国子监
+------------------------------------------------------------------------------
+Loại:       Di tích lịch sử
+Quận:       Đống Đa
+Toạ độ:     21.0277, 105.8355
+Giờ mở:     08:00–17:00
+Vé:         70.000 ₫
+Tham quan:  ~90 phút
+
+Mô tả:
+  VI: Trường đại học đầu tiên của Việt Nam (1076), thờ Khổng Tử, nổi tiếng với 82 bia tiến sĩ.
+  EN: Vietnam's first university (1076), dedicated to Confucius, famous for 82 doctors' stelae.
+  ZH: 越南第一所大学（1076年），供奉孔子，以82块进士碑闻名。
+
+Gợi ý:
+  VI: Mặc lịch sự, tránh giờ trưa nắng.
+  EN: Dress modestly, avoid midday heat.
+  ZH: 着装得体，避开中午高温。
+
+Wiki (VI): https://vi.wikipedia.org/wiki/Văn_Miếu_–_Quốc_Tử_Giám
+Wiki (EN): https://en.wikipedia.org/wiki/Temple_of_Literature,_Hanoi
+Google Maps: https://www.google.com/maps/search/?api=1&query=21.0277,105.8355
+
+------------------------------------------------------------------------------
+[imperial-citadel]  Hoàng thành Thăng Long / Imperial Citadel of Thang Long / 升龙皇城
+------------------------------------------------------------------------------
+Loại:       Di tích lịch sử
+Quận:       Ba Đình
+Toạ độ:     21.0342, 105.84
+Giờ mở:     08:00–17:00 (closed Mon)
+Vé:         100.000 ₫
+Tham quan:  ~120 phút
+
+Mô tả:
+  VI: Di sản thế giới UNESCO, trung tâm quyền lực suốt 13 thế kỷ, có Đoan Môn, Cột Cờ và hầm D67.
+  EN: UNESCO World Heritage site, seat of power for 13 centuries, with Doan Mon gate, Flag Tower and D67 bunker.
+  ZH: 联合国教科文组织世界遗产，13个世纪的权力中心，有端门、旗塔和D67地堡。
+
+Gợi ý:
+  VI: Kết hợp với Lăng Bác và Bảo tàng Lịch sử Quân sự gần đó.
+  EN: Combine with Ho Chi Minh Mausoleum nearby.
+  ZH: 可与附近的胡志明陵一同参观。
+
+Wiki (VI): https://vi.wikipedia.org/wiki/Hoàng_thành_Thăng_Long
+Wiki (EN): https://en.wikipedia.org/wiki/Imperial_Citadel_of_Thăng_Long
+Google Maps: https://www.google.com/maps/search/?api=1&query=21.0342,105.84
+
+------------------------------------------------------------------------------
+[old-quarter]  Phố cổ Hà Nội / Hanoi Old Quarter / 河内老城区
+------------------------------------------------------------------------------
+Loại:       Phố cổ
+Quận:       Hoàn Kiếm
+Toạ độ:     21.034, 105.85
+Giờ mở:     24/7
+Vé:         Miễn phí
+Tham quan:  ~180 phút
+
+Mô tả:
+  VI: 36 phố phường với nghề truyền thống theo tên phố: Hàng Bạc, Hàng Mã, Hàng Gai… Chợ đêm cuối tuần.
+  EN: The 36 guild streets named after their trades: Hang Bac (silver), Hang Ma (paper), Hang Gai (silk). Weekend night market.
+  ZH: 以行业命名的36条老街：行银街、行码街、行盖街……周末有夜市。
+
+Gợi ý:
+  VI: Cẩn thận xe máy, đi bộ sát vỉa hè.
+  EN: Watch for motorbikes, walk close to the kerb.
+  ZH: 注意摩托车，靠路边行走。
+
+Wiki (VI): https://vi.wikipedia.org/wiki/Phố_cổ_Hà_Nội
+Wiki (EN): https://en.wikipedia.org/wiki/Hanoi_Old_Quarter
+Google Maps: https://www.google.com/maps/search/?api=1&query=21.034,105.85
+
+------------------------------------------------------------------------------
+[train-street]  Phố cà phê đường tàu / Hanoi Train Street / 火车街
+------------------------------------------------------------------------------
+Loại:       Phố cổ
+Quận:       Hoàn Kiếm
+Toạ độ:     21.0245, 105.843
+Giờ mở:     Cafés 08:00–22:00
+Vé:         Miễn phí
+Tham quan:  ~45 phút
+
+Mô tả:
+  VI: Những quán cà phê sát đường ray, tàu chạy qua cách vài chục cm. Có thể bị hạn chế ra vào tùy thời điểm.
+  EN: Cafés right beside the tracks; trains pass centimetres away. Access is sometimes restricted.
+  ZH: 紧邻铁轨的咖啡馆，火车近距离驶过。有时会限制进入。
+
+Gợi ý:
+  VI: Hỏi chủ quán giờ tàu; đứng sát tường khi tàu đến.
+  EN: Ask café owners for train times; stand against the wall.
+  ZH: 向店主询问火车时间；火车来时靠墙站立。
+Wiki (EN): https://en.wikipedia.org/wiki/Hanoi_Train_Street
+Google Maps: https://www.google.com/maps/search/?api=1&query=21.0245,105.843
+
+------------------------------------------------------------------------------
+[ho-chi-minh-mausoleum]  Lăng Chủ tịch Hồ Chí Minh / Ho Chi Minh Mausoleum / 胡志明陵
+------------------------------------------------------------------------------
+Loại:       Di tích lịch sử
+Quận:       Ba Đình
+Toạ độ:     21.0369, 105.8347
+Giờ mở:     Tue–Thu, Sat–Sun 07:30–10:30 (closed Mon, Fri)
+Vé:         Miễn phí
+Tham quan:  ~90 phút
+
+Mô tả:
+  VI: Nơi an nghỉ của Chủ tịch Hồ Chí Minh tại Quảng trường Ba Đình. Lễ thượng cờ 6h sáng.
+  EN: Resting place of President Ho Chi Minh on Ba Dinh Square. Flag-raising ceremony at 6 am.
+  ZH: 胡志明主席在巴亭广场的安息之地。早上6点有升旗仪式。
+
+Gợi ý:
+  VI: Không quần short, không chụp ảnh bên trong, giữ im lặng.
+  EN: No shorts, no photos inside, keep silent.
+  ZH: 禁止穿短裤，内部禁止拍照，保持安静。
+
+Wiki (VI): https://vi.wikipedia.org/wiki/Lăng_Chủ_tịch_Hồ_Chí_Minh
+Wiki (EN): https://en.wikipedia.org/wiki/Ho_Chi_Minh_Mausoleum
+Google Maps: https://www.google.com/maps/search/?api=1&query=21.0369,105.8347
+
+------------------------------------------------------------------------------
+[west-lake]  Hồ Tây / West Lake / 西湖
+------------------------------------------------------------------------------
+Loại:       Hồ & công viên
+Quận:       Tây Hồ
+Toạ độ:     21.056, 105.823
+Giờ mở:     24/7
+Vé:         Miễn phí
+Tham quan:  ~120 phút
+
+Mô tả:
+  VI: Hồ lớn nhất Hà Nội, chùa Trấn Quốc, phủ Tây Hồ, hoàng hôn đẹp và nhiều quán cà phê ven hồ.
+  EN: Hanoi's largest lake with Tran Quoc Pagoda, Tay Ho Temple, great sunsets and lakeside cafés.
+  ZH: 河内最大的湖，有镇国寺、西湖府，日落美景和湖边咖啡馆。
+
+Gợi ý:
+  VI: Thuê xe đạp đi vòng hồ 17 km lúc chiều muộn.
+  EN: Rent a bicycle for the 17 km loop in the late afternoon.
+  ZH: 傍晚租自行车环湖17公里。
+
+Wiki (VI): https://vi.wikipedia.org/wiki/Hồ_Tây
+Wiki (EN): https://en.wikipedia.org/wiki/West_Lake_(Hanoi)
+Google Maps: https://www.google.com/maps/search/?api=1&query=21.056,105.823
+
+------------------------------------------------------------------------------
+[museum-of-ethnology]  Bảo tàng Dân tộc học Việt Nam / Vietnam Museum of Ethnology / 越南民族学博物馆
+------------------------------------------------------------------------------
+Loại:       Bảo tàng
+Quận:       Cầu Giấy
+Toạ độ:     21.0405, 105.7987
+Giờ mở:     08:30–17:30 (closed Mon)
+Vé:         40.000 ₫
+Tham quan:  ~120 phút
+
+Mô tả:
+  VI: 54 dân tộc Việt Nam qua hiện vật và nhà sàn thật ngoài trời. Có múa rối nước cuối tuần.
+  EN: Vietnam's 54 ethnic groups through artefacts and full-size traditional houses outdoors. Water puppets on weekends.
+  ZH: 通过文物和户外真实传统民居展示越南54个民族。周末有水上木偶戏。
+
+Gợi ý:
+  VI: Lựa chọn tốt cho ngày mưa.
+  EN: A good rainy-day option.
+  ZH: 雨天的好选择。
+
+Wiki (VI): https://vi.wikipedia.org/wiki/Bảo_tàng_Dân_tộc_học_Việt_Nam
+Wiki (EN): https://en.wikipedia.org/wiki/Vietnam_Museum_of_Ethnology
+Google Maps: https://www.google.com/maps/search/?api=1&query=21.0405,105.7987
+
+------------------------------------------------------------------------------
+[hoa-lo-prison]  Nhà tù Hỏa Lò / Hoa Lo Prison / 火炉监狱
+------------------------------------------------------------------------------
+Loại:       Bảo tàng
+Quận:       Hoàn Kiếm
+Toạ độ:     21.0253, 105.8464
+Giờ mở:     08:00–17:00
+Vé:         50.000 ₫
+Tham quan:  ~90 phút
+
+Mô tả:
+  VI: Nhà tù do Pháp xây năm 1896, nơi giam giữ các chiến sĩ cách mạng và sau này là phi công Mỹ ("Hanoi Hilton"). Trưng bày rất xúc động.
+  EN: Prison built by the French in 1896, later holding Vietnamese revolutionaries and then American pilots (the "Hanoi Hilton"). A moving exhibition.
+  ZH: 法国人于1896年建造的监狱，曾关押越南革命者，后来关押美军飞行员（"河内希尔顿"）。展览令人动容。
+
+Gợi ý:
+  VI: Thuê audio guide (có tiếng Việt, Anh); tour đêm "Đêm thiêng liêng" cần đặt trước.
+  EN: Rent the audio guide (Vietnamese, English); the night tour needs advance booking.
+  ZH: 建议租用语音导览（有越南语、英语）；夜间参观需提前预订。
+
+Wiki (VI): https://vi.wikipedia.org/wiki/Nhà_tù_Hỏa_Lò
+Wiki (EN): https://en.wikipedia.org/wiki/Hỏa_Lò_Prison
+Google Maps: https://www.google.com/maps/search/?api=1&query=21.0253,105.8464
+
+------------------------------------------------------------------------------
+[st-josephs-cathedral]  Nhà thờ Lớn Hà Nội / St. Joseph's Cathedral / 河内大教堂
+------------------------------------------------------------------------------
+Loại:       Di tích lịch sử
+Quận:       Hoàn Kiếm
+Toạ độ:     21.0288, 105.849
+Giờ mở:     08:00–11:00, 14:00–17:30 (ngoài giờ lễ)
+Vé:         Miễn phí
+Tham quan:  ~30 phút
+
+Mô tả:
+  VI: Nhà thờ Gothic khánh thành năm 1886, mặt tiền đá xám gợi nhớ Notre-Dame Paris. Quảng trường trước nhà thờ là phố trà chanh nổi tiếng.
+  EN: Neo-Gothic cathedral opened in 1886 with a grey stone facade reminiscent of Notre-Dame de Paris. The square in front is famous for lemon tea cafés.
+  ZH: 1886年落成的新哥特式大教堂，灰石立面令人想起巴黎圣母院。教堂前广场以柠檬茶摊闻名。
+
+Gợi ý:
+  VI: Vào bằng cổng bên trái khi không có lễ; giữ yên lặng và ăn mặc lịch sự.
+  EN: Enter by the side gate outside mass times; keep quiet and dress modestly.
+  ZH: 非弥撒时间从侧门进入；保持安静，着装得体。
+
+Wiki (VI): https://vi.wikipedia.org/wiki/Nhà_thờ_Lớn_Hà_Nội
+Wiki (EN): https://en.wikipedia.org/wiki/St._Joseph's_Cathedral,_Hanoi
+Google Maps: https://www.google.com/maps/search/?api=1&query=21.0288,105.849
+
+------------------------------------------------------------------------------
+[one-pillar-pagoda]  Chùa Một Cột / One Pillar Pagoda / 独柱寺
+------------------------------------------------------------------------------
+Loại:       Di tích lịch sử
+Quận:       Ba Đình
+Toạ độ:     21.0359, 105.8336
+Giờ mở:     07:00–18:00
+Vé:         Miễn phí
+Tham quan:  ~30 phút
+
+Mô tả:
+  VI: Ngôi chùa hình bông sen trên một cột đá giữa hồ, xây năm 1049 thời Lý, biểu tượng của Hà Nội. Nằm trong quần thể Lăng Bác.
+  EN: Lotus-shaped shrine on a single stone pillar in a pond, built in 1049 under the Ly dynasty and a symbol of Hanoi. Inside the Ho Chi Minh Mausoleum complex.
+  ZH: 建于1049年李朝的莲花形单柱寺，立于池中石柱之上，是河内的象征，位于胡志明陵园区内。
+
+Gợi ý:
+  VI: Ghé cùng Lăng Bác và Bảo tàng Hồ Chí Minh trong một buổi sáng.
+  EN: Combine with the Mausoleum and Ho Chi Minh Museum in one morning.
+  ZH: 可与胡志明陵和胡志明博物馆安排在同一个上午。
+
+Wiki (VI): https://vi.wikipedia.org/wiki/Chùa_Một_Cột
+Wiki (EN): https://en.wikipedia.org/wiki/One_Pillar_Pagoda
+Google Maps: https://www.google.com/maps/search/?api=1&query=21.0359,105.8336
+
+------------------------------------------------------------------------------
+[lenin-park]  Vườn hoa Lê-nin / Lenin Park (Lenin statue garden) / 列宁花园
+------------------------------------------------------------------------------
+Loại:       Hồ & công viên
+Quận:       Ba Đình
+Toạ độ:     21.0322, 105.8398
+Giờ mở:     24/7
+Vé:         Miễn phí
+Tham quan:  ~30 phút
+
+Mô tả:
+  VI: Công viên nhỏ với tượng Lê-nin đối diện Cột cờ Hà Nội và Bảo tàng Lịch sử Quân sự cũ. Chiều tối người dân tập thể dục, trượt patin, đá cầu.
+  EN: Small park with a Lenin statue facing the Hanoi Flag Tower and the old Military History Museum. In the evening locals exercise, skate and play shuttlecock here.
+  ZH: 小公园内有列宁雕像，正对河内旗台和旧军事历史博物馆。傍晚当地人在此锻炼、轮滑、踢毽子。
+
+Gợi ý:
+  VI: Đừng nhầm với Công viên Thống Nhất (tên cũ là Công viên Lê-nin) ở phố Trần Nhân Tông.
+  EN: Not to be confused with Thong Nhat Park on Tran Nhan Tong street, formerly also called Lenin Park.
+  ZH: 请勿与陈仁宗街的统一公园（旧称列宁公园）混淆。
+Wiki (EN): https://en.wikipedia.org/wiki/Thống_Nhất_Park
+Google Maps: https://www.google.com/maps/search/?api=1&query=21.0322,105.8398
+
+==============================================================================
+4. ẨM THỰC HÀ NỘI (23 quán)
+==============================================================================
+
+
+### Nhóm: Phở, bún & cơm (13 quán)
+
+------------------------------------------------------------------------------
+[pho-thin-lo-duc]  Phở Thìn Lò Đúc / Pho Thin Lo Duc / 禄德真河粉
+------------------------------------------------------------------------------
+Món:        Phở
+Địa chỉ:    13 Lò Đúc, Hai Bà Trưng
+Toạ độ:     21.0142, 105.8564
+Giờ mở:     06:00–21:00
+Giá:        60.000 ₫ – 90.000 ₫
+
+Mô tả:
+  VI: Phở bò tái lăn xào với tỏi, nước dùng béo, nhiều hành. Quán từ 1979.
+  EN: Stir-fried beef pho with garlic, rich broth and lots of spring onion. Open since 1979.
+  ZH: 蒜香爆炒牛肉河粉，汤浓郁，葱多。1979年开业。
+
+Liên kết:
+  Google Maps: https://www.google.com/maps/search/?api=1&query=21.0142,105.8564
+  GrabFood:    https://food.grab.com/vn/vi/restaurants?search=Ph%E1%BB%9F%20Th%C3%ACn%20L%C3%B2%20%C4%90%C3%BAc
+  ShopeeFood:  https://shopeefood.vn/ha-noi/danh-sach-dia-diem-giao-tan-noi?q=Ph%E1%BB%9F%20Th%C3%ACn%20L%C3%B2%20%C4%90%C3%BAc
+
+------------------------------------------------------------------------------
+[bun-cha-huong-lien]  Bún chả Hương Liên (Bún chả Obama) / Bun Cha Huong Lien (Obama Bun Cha) / 香莲烤肉米线（奥巴马烤肉米线）
+------------------------------------------------------------------------------
+Món:        Bún chả
+Địa chỉ:    24 Lê Văn Hưu, Hai Bà Trưng
+Toạ độ:     21.0163, 105.852
+Giờ mở:     08:00–20:30
+Giá:        50.000 ₫ – 100.000 ₫
+
+Mô tả:
+  VI: Bún chả nổi tiếng sau bữa ăn của Tổng thống Obama và Anthony Bourdain năm 2016.
+  EN: Famous since President Obama and Anthony Bourdain ate here in 2016.
+  ZH: 2016年奥巴马总统和安东尼·波登在此用餐后闻名。
+
+Liên kết:
+  Google Maps: https://www.google.com/maps/search/?api=1&query=21.0163,105.8520
+  GrabFood:    https://food.grab.com/vn/vi/restaurants?search=B%C3%BAn%20ch%E1%BA%A3%20H%C6%B0%C6%A1ng%20Li%C3%AAn
+  ShopeeFood:  https://shopeefood.vn/ha-noi/danh-sach-dia-diem-giao-tan-noi?q=B%C3%BAn%20ch%E1%BA%A3%20H%C6%B0%C6%A1ng%20Li%C3%AAn
+
+------------------------------------------------------------------------------
+[cha-ca-thang-long]  Chả cá Thăng Long / Cha Ca Thang Long (grilled turmeric fish) / 升龙烤鱼
+------------------------------------------------------------------------------
+Món:        Chả cá
+Địa chỉ:    6B Đường Thành, Hoàn Kiếm
+Toạ độ:     21.0332, 105.8465
+Giờ mở:     10:00–21:30
+Giá:        120.000 ₫ – 180.000 ₫
+
+Mô tả:
+  VI: Cá lăng ướp nghệ, nướng rồi rán tại bàn với thì là, ăn cùng bún, lạc, mắm tôm.
+  EN: Turmeric-marinated fish fried at your table with dill, served with noodles, peanuts and shrimp paste.
+  ZH: 姜黄腌制的鱼在桌上与莳萝一起煎，配米线、花生和虾酱。
+
+Liên kết:
+  Google Maps: https://www.google.com/maps/search/?api=1&query=21.0332,105.8465
+  GrabFood:    https://food.grab.com/vn/vi/restaurants?search=Ch%E1%BA%A3%20c%C3%A1%20Th%C4%83ng%20Long
+  ShopeeFood:  https://shopeefood.vn/ha-noi/danh-sach-dia-diem-giao-tan-noi?q=Ch%E1%BA%A3%20c%C3%A1%20Th%C4%83ng%20Long
+
+------------------------------------------------------------------------------
+[com-chay-loving-hut]  Nhà hàng chay Loving Hut Tây Hồ / Loving Hut vegan restaurant (West Lake) / 爱家素食餐厅（西湖）
+------------------------------------------------------------------------------
+Món:        Đồ chay
+Địa chỉ:    2 Đặng Thai Mai, Tây Hồ
+Toạ độ:     21.057, 105.8265
+Giờ mở:     09:00–21:00
+Giá:        50.000 ₫ – 120.000 ₫
+Chế độ ăn:  vegetarian, vegan
+
+Mô tả:
+  VI: Đồ chay thuần Việt và Á, giá dễ chịu, gần chùa Trấn Quốc.
+  EN: Vietnamese and Asian vegan dishes, affordable, near Tran Quoc Pagoda.
+  ZH: 越南和亚洲纯素菜肴，价格实惠，靠近镇国寺。
+
+Liên kết:
+  Google Maps: https://www.google.com/maps/search/?api=1&query=21.0570,105.8265
+  GrabFood:    https://food.grab.com/vn/vi/restaurants?search=Nh%C3%A0%20h%C3%A0ng%20chay%20Loving%20Hut%20T%C3%A2y%20H%E1%BB%93
+  ShopeeFood:  https://shopeefood.vn/ha-noi/danh-sach-dia-diem-giao-tan-noi?q=Nh%C3%A0%20h%C3%A0ng%20chay%20Loving%20Hut%20T%C3%A2y%20H%E1%BB%93
+
+------------------------------------------------------------------------------
+[bun-thang-ba-duc]  Bún thang Bà Đức / Bun Thang Ba Duc / 德婆汤米线
+------------------------------------------------------------------------------
+Món:        Bún thang
+Địa chỉ:    48 Cầu Gỗ, Hoàn Kiếm
+Toạ độ:     21.0316, 105.8537
+Giờ mở:     07:00–22:00
+Giá:        45.000 ₫ – 70.000 ₫
+
+Mô tả:
+  VI: Bún thang Hà Nội chuẩn vị: nước dùng gà trong, trứng thái chỉ, giò lụa, ruốc tôm, chút mắm tôm.
+  EN: Classic Hanoi bun thang: clear chicken broth with shredded egg, pork roll and dried shrimp, a dab of shrimp paste.
+  ZH: 正宗河内汤米线：清澈鸡汤配蛋丝、猪肉卷和虾松，加少许虾酱。
+
+Liên kết:
+  Google Maps: https://www.google.com/maps/search/?api=1&query=21.0316,105.8537
+  GrabFood:    (tự sinh link tìm kiếm theo tên)
+  ShopeeFood:  (tự sinh link tìm kiếm theo tên)
+
+------------------------------------------------------------------------------
+[bun-rieu-hang-bac]  Bún riêu cua Hàng Bạc / Bun Rieu Cua Hang Bac / 行银街蟹肉米线
+------------------------------------------------------------------------------
+Món:        Bún riêu
+Địa chỉ:    11 Hàng Bạc, Hoàn Kiếm
+Toạ độ:     21.0331, 105.853
+Giờ mở:     07:00–20:00
+Giá:        35.000 ₫ – 55.000 ₫
+
+Mô tả:
+  VI: Bún riêu cua đồng nước chua thanh, gạch cua, đậu rán, cà chua, ăn kèm rau sống.
+  EN: Freshwater crab noodle soup with a light tomato tang, crab roe, fried tofu and fresh herbs.
+  ZH: 田蟹米线，番茄汤微酸，配蟹膏、炸豆腐和新鲜香草。
+
+Liên kết:
+  Google Maps: https://www.google.com/maps/search/?api=1&query=21.0331,105.853
+  GrabFood:    (tự sinh link tìm kiếm theo tên)
+  ShopeeFood:  (tự sinh link tìm kiếm theo tên)
+
+------------------------------------------------------------------------------
+[bun-dau-trung-huong]  Bún đậu mắm tôm Trung Hương / Bun Dau Mam Tom Trung Huong / 忠香虾酱豆腐米线
+------------------------------------------------------------------------------
+Món:        Bún đậu mắm tôm
+Địa chỉ:    49 Ngõ Phất Lộc, Hoàn Kiếm
+Toạ độ:     21.0335, 105.8543
+Giờ mở:     09:00–21:00
+Giá:        40.000 ₫ – 80.000 ₫
+
+Mô tả:
+  VI: Mẹt bún đậu đầy đủ: đậu rán, chả cốm, thịt luộc, dồi, chấm mắm tôm đánh chanh ớt.
+  EN: Full bun dau platter: fried tofu, young-rice pork patties, boiled pork and sausage with whipped shrimp paste.
+  ZH: 全套虾酱豆腐米线：炸豆腐、青糯米肉饼、白切肉和血肠，蘸打发的虾酱。
+
+Liên kết:
+  Google Maps: https://www.google.com/maps/search/?api=1&query=21.0335,105.8543
+  GrabFood:    (tự sinh link tìm kiếm theo tên)
+  ShopeeFood:  (tự sinh link tìm kiếm theo tên)
+
+------------------------------------------------------------------------------
+[pho-ga-nguyet]  Phở gà Nguyệt / Pho Ga Nguyet (chicken pho) / 月姐鸡肉河粉
+------------------------------------------------------------------------------
+Món:        Phở
+Địa chỉ:    5B Phủ Doãn, Hoàn Kiếm
+Toạ độ:     21.03, 105.847
+Giờ mở:     06:00–23:00
+Giá:        50.000 ₫ – 80.000 ₫
+
+Mô tả:
+  VI: Phở gà ta nước trong, thêm trứng non, tràng, phao câu theo sở thích. Đông khách khuya.
+  EN: Free-range chicken pho with clear broth; add unlaid eggs or giblets to taste. Busy late at night.
+  ZH: 土鸡河粉汤清味鲜，可加鸡蛋黄或鸡杂，深夜也很热闹。
+
+Liên kết:
+  Google Maps: https://www.google.com/maps/search/?api=1&query=21.03,105.847
+  GrabFood:    (tự sinh link tìm kiếm theo tên)
+  ShopeeFood:  (tự sinh link tìm kiếm theo tên)
+
+------------------------------------------------------------------------------
+[pho-bat-dan]  Phở gia truyền Bát Đàn / Pho Bat Dan / 钵坛街祖传河粉
+------------------------------------------------------------------------------
+Món:        Phở
+Địa chỉ:    49 Bát Đàn, Hoàn Kiếm
+Toạ độ:     21.0338, 105.8465
+Giờ mở:     06:00–10:00, 18:00–20:30
+Giá:        50.000 ₫ – 70.000 ₫
+
+Mô tả:
+  VI: Phở bò kiểu xếp hàng tự bưng, nước dùng ninh xương đậm đà, quán lâu đời nhất nhì Hà Nội.
+  EN: Queue-and-carry beef pho with a deep bone broth, one of the oldest pho houses in Hanoi.
+  ZH: 排队自取的牛肉河粉，骨汤浓郁，是河内最老的河粉店之一。
+
+Liên kết:
+  Google Maps: https://www.google.com/maps/search/?api=1&query=21.0338,105.8465
+  GrabFood:    (quán không giao hàng)
+  ShopeeFood:  (quán không giao hàng)
+
+------------------------------------------------------------------------------
+[pho-cuon-hung-ben]  Phở cuốn Hưng Bền / Pho Cuon Hung Ben / 兴坚河粉卷
+------------------------------------------------------------------------------
+Món:        Phở cuốn
+Địa chỉ:    33 Ngũ Xã, Ba Đình
+Toạ độ:     21.045, 105.841
+Giờ mở:     09:00–22:00
+Giá:        50.000 ₫ – 120.000 ₫
+
+Mô tả:
+  VI: Phở cuốn thịt bò, rau thơm cuộn bánh phở, chấm nước mắm chua ngọt. Làng Ngũ Xã là nơi khai sinh món này.
+  EN: Beef and herbs rolled in fresh pho sheets with sweet-sour fish sauce. Ngu Xa village is where the dish was born.
+  ZH: 牛肉和香草卷在新鲜河粉皮里，蘸酸甜鱼露。五社村是这道菜的发源地。
+
+Liên kết:
+  Google Maps: https://www.google.com/maps/search/?api=1&query=21.045,105.841
+  GrabFood:    (tự sinh link tìm kiếm theo tên)
+  ShopeeFood:  (tự sinh link tìm kiếm theo tên)
+
+------------------------------------------------------------------------------
+[mien-luon-dong-thinh]  Miến lươn Đông Thịnh / Mien Luon Dong Thinh (eel noodles) / 东盛鳝鱼粉丝
+------------------------------------------------------------------------------
+Món:        Miến lươn
+Địa chỉ:    87 Hàng Điếu, Hoàn Kiếm
+Toạ độ:     21.0335, 105.847
+Giờ mở:     07:00–22:00
+Giá:        40.000 ₫ – 70.000 ₫
+
+Mô tả:
+  VI: Miến lươn nước hoặc trộn, lươn chiên giòn hoặc mềm, nước dùng xương ngọt thanh.
+  EN: Glass noodles with eel, in broth or tossed, with crispy or soft eel and a light bone stock.
+  ZH: 鳝鱼粉丝，汤粉或拌粉，鳝鱼可选酥炸或软嫩，骨汤清甜。
+
+Liên kết:
+  Google Maps: https://www.google.com/maps/search/?api=1&query=21.0335,105.847
+  GrabFood:    (tự sinh link tìm kiếm theo tên)
+  ShopeeFood:  (tự sinh link tìm kiếm theo tên)
+
+------------------------------------------------------------------------------
+[bun-bo-nam-bo-hang-dieu]  Bún bò Nam Bộ Hàng Điếu / Bun Bo Nam Bo Hang Dieu / 行烟街南部牛肉拌米线
+------------------------------------------------------------------------------
+Món:        Bún bò Nam Bộ
+Địa chỉ:    67 Hàng Điếu, Hoàn Kiếm
+Toạ độ:     21.0333, 105.8468
+Giờ mở:     07:00–22:00
+Giá:        50.000 ₫ – 80.000 ₫
+
+Mô tả:
+  VI: Bún trộn thịt bò xào, lạc rang, giá, rau thơm, hành phi và nước mắm chua ngọt, không có nước dùng.
+  EN: Dry-tossed noodles with stir-fried beef, roasted peanuts, bean sprouts, herbs and sweet-sour fish sauce.
+  ZH: 干拌米线配炒牛肉、花生、豆芽、香草和酸甜鱼露，无汤。
+
+Liên kết:
+  Google Maps: https://www.google.com/maps/search/?api=1&query=21.0333,105.8468
+  GrabFood:    (tự sinh link tìm kiếm theo tên)
+  ShopeeFood:  (tự sinh link tìm kiếm theo tên)
+
+------------------------------------------------------------------------------
+[com-chay-nang-tam]  Cơm chay Nàng Tấm / Nang Tam vegetarian restaurant / 娘心素食餐厅
+------------------------------------------------------------------------------
+Món:        Đồ chay
+Địa chỉ:    79A Trần Hưng Đạo, Hoàn Kiếm
+Toạ độ:     21.024, 105.85
+Giờ mở:     10:00–21:00
+Giá:        60.000 ₫ – 150.000 ₫
+Chế độ ăn:  vegetarian, vegan
+
+Mô tả:
+  VI: Nhà hàng chay lâu năm trong biệt thự Pháp cổ, món chay giả mặn tinh tế, hợp mời khách nước ngoài.
+  EN: Long-running vegetarian restaurant in an old French villa with refined mock-meat dishes, good for hosting foreign guests.
+  ZH: 位于法式老别墅的老牌素食餐厅，仿荤菜精致，适合招待外国客人。
+
+Liên kết:
+  Google Maps: https://www.google.com/maps/search/?api=1&query=21.024,105.85
+  GrabFood:    (tự sinh link tìm kiếm theo tên)
+  ShopeeFood:  (tự sinh link tìm kiếm theo tên)
+
+
+### Nhóm: Bánh & xôi (đồ đường phố) (5 quán)
+
+------------------------------------------------------------------------------
+[banh-cuon-ba-hoanh]  Bánh cuốn Bà Hoành / Banh Cuon Ba Hoanh / 幻婆卷粉
+------------------------------------------------------------------------------
+Món:        Bánh cuốn
+Địa chỉ:    66 Tô Hiến Thành, Hai Bà Trưng
+Toạ độ:     21.0132, 105.85
+Giờ mở:     06:00–13:00, 17:00–21:00
+Giá:        35.000 ₫ – 60.000 ₫
+
+Mô tả:
+  VI: Bánh cuốn tráng tay mỏng tang, nhân thịt mộc nhĩ, ăn kèm chả quế và nước chấm cà cuống.
+  EN: Paper-thin steamed rice rolls filled with pork and wood-ear mushroom, served with cinnamon pork roll and dipping sauce.
+  ZH: 手工蒸制的薄卷粉，猪肉木耳馅，配肉桂肉卷和蘸汁。
+
+Liên kết:
+  Google Maps: https://www.google.com/maps/search/?api=1&query=21.0132,105.85
+  GrabFood:    (tự sinh link tìm kiếm theo tên)
+  ShopeeFood:  (tự sinh link tìm kiếm theo tên)
+
+------------------------------------------------------------------------------
+[xoi-yen]  Xôi Yến / Xoi Yen (sticky rice) / 燕姐糯米饭
+------------------------------------------------------------------------------
+Món:        Xôi
+Địa chỉ:    35B Nguyễn Hữu Huân, Hoàn Kiếm
+Toạ độ:     21.0327, 105.8545
+Giờ mở:     06:00–23:00
+Giá:        25.000 ₫ – 60.000 ₫
+
+Mô tả:
+  VI: Xôi xéo, xôi ngô đầy đặn với đậu xanh, hành phi, ruốc, trứng kho, gà. Quán xôi nổi tiếng nhất phố cổ.
+  EN: Generous plates of sticky rice with mung bean, fried shallot, pork floss, braised egg or chicken. The Old Quarter's most famous xoi spot.
+  ZH: 份量十足的糯米饭配绿豆、炸葱、肉松、卤蛋或鸡肉，老城区最有名的糯米饭店。
+
+Liên kết:
+  Google Maps: https://www.google.com/maps/search/?api=1&query=21.0327,105.8545
+  GrabFood:    (tự sinh link tìm kiếm theo tên)
+  ShopeeFood:  (tự sinh link tìm kiếm theo tên)
+
+------------------------------------------------------------------------------
+[banh-mi-25]  Bánh Mì 25 / Banh Mi 25 / 25号越式法棍
+------------------------------------------------------------------------------
+Món:        Bánh mì
+Địa chỉ:    25 Hàng Cá, Hoàn Kiếm
+Toạ độ:     21.0355, 105.85
+Giờ mở:     07:00–21:00
+Giá:        25.000 ₫ – 45.000 ₫
+
+Mô tả:
+  VI: Bánh mì giòn với pate, thịt nướng, xá xíu hoặc nhân chay, ngồi ngay vỉa hè phố Hàng Cá.
+  EN: Crusty banh mi with pate, grilled pork, char siu or a vegetarian filling; sit on the pavement of Hang Ca street.
+  ZH: 酥脆法棍夹肝酱、烤肉、叉烧或素食馅料，在行鱼街人行道上用餐。
+
+Liên kết:
+  Google Maps: https://www.google.com/maps/search/?api=1&query=21.0355,105.85
+  GrabFood:    (tự sinh link tìm kiếm theo tên)
+  ShopeeFood:  (tự sinh link tìm kiếm theo tên)
+
+------------------------------------------------------------------------------
+[banh-tom-ho-tay]  Bánh tôm Hồ Tây / Banh Tom Ho Tay (shrimp cakes) / 西湖虾饼
+------------------------------------------------------------------------------
+Món:        Bánh tôm
+Địa chỉ:    1 Thanh Niên, Tây Hồ
+Toạ độ:     21.0448, 105.8385
+Giờ mở:     10:00–21:00
+Giá:        60.000 ₫ – 150.000 ₫
+
+Mô tả:
+  VI: Bánh tôm chiên giòn với khoai lang, ăn cùng bún, rau sống và nước chấm chua ngọt, nhìn ra Hồ Tây.
+  EN: Crispy shrimp and sweet-potato fritters with noodles, herbs and sweet-sour sauce, overlooking West Lake.
+  ZH: 酥脆的虾和红薯煎饼，配米线、香草和酸甜蘸汁，可眺望西湖。
+
+Liên kết:
+  Google Maps: https://www.google.com/maps/search/?api=1&query=21.0448,105.8385
+  GrabFood:    (tự sinh link tìm kiếm theo tên)
+  ShopeeFood:  (tự sinh link tìm kiếm theo tên)
+
+------------------------------------------------------------------------------
+[banh-goi-ly-quoc-su]  Bánh gối Gốc Đa Lý Quốc Sư / Banh Goi Goc Da (fried pillow cakes) / 李国师街榕树炸枕头饼
+------------------------------------------------------------------------------
+Món:        Bánh gối
+Địa chỉ:    52 Lý Quốc Sư, Hoàn Kiếm
+Toạ độ:     21.029, 105.849
+Giờ mở:     10:00–21:00
+Giá:        15.000 ₫ – 40.000 ₫
+
+Mô tả:
+  VI: Bánh gối, bánh rán mặn, nem chua rán nóng hổi dưới gốc đa cạnh Nhà thờ Lớn.
+  EN: Piping-hot fried pillow cakes, savoury doughnuts and fried fermented pork rolls under the banyan tree by St Joseph's Cathedral.
+  ZH: 大教堂旁榕树下的热腾腾炸枕头饼、咸炸糕和炸酸肉卷。
+
+Liên kết:
+  Google Maps: https://www.google.com/maps/search/?api=1&query=21.029,105.849
+  GrabFood:    (tự sinh link tìm kiếm theo tên)
+  ShopeeFood:  (tự sinh link tìm kiếm theo tên)
+
+
+### Nhóm: Cà phê & tráng miệng (5 quán)
+
+------------------------------------------------------------------------------
+[cafe-giang]  Cà phê Giảng – cà phê trứng / Cafe Giang – egg coffee / 江咖啡–鸡蛋咖啡
+------------------------------------------------------------------------------
+Món:        Cà phê trứng
+Địa chỉ:    39 Nguyễn Hữu Huân, Hoàn Kiếm
+Toạ độ:     21.0325, 105.854
+Giờ mở:     07:00–22:00
+Giá:        30.000 ₫ – 50.000 ₫
+Chế độ ăn:  vegetarian
+
+Mô tả:
+  VI: Nơi khai sinh cà phê trứng Hà Nội (1946): lòng đỏ trứng đánh bông với sữa đặc trên cà phê đen.
+  EN: Birthplace of Hanoi egg coffee (1946): whipped egg yolk and condensed milk over black coffee.
+  ZH: 河内鸡蛋咖啡的发源地（1946年）：打发的蛋黄和炼乳浇在黑咖啡上。
+
+Liên kết:
+  Google Maps: https://www.google.com/maps/search/?api=1&query=21.0325,105.8540
+  GrabFood:    https://food.grab.com/vn/vi/restaurants?search=C%C3%A0%20ph%C3%AA%20Gi%E1%BA%A3ng
+  ShopeeFood:  https://shopeefood.vn/ha-noi/danh-sach-dia-diem-giao-tan-noi?q=C%C3%A0%20ph%C3%AA%20Gi%E1%BA%A3ng
+
+------------------------------------------------------------------------------
+[bia-hoi-ta-hien]  Bia hơi ngã tư Tạ Hiện / Bia Hoi Corner, Ta Hien / 谢现街鲜啤角
+------------------------------------------------------------------------------
+Món:        Bia hơi
+Địa chỉ:    Ngã tư Tạ Hiện – Lương Ngọc Quyến, Hoàn Kiếm
+Toạ độ:     21.035, 105.852
+Giờ mở:     17:00–24:00
+Giá:        10.000 ₫ – 20.000 ₫
+
+Mô tả:
+  VI: Bia hơi tươi rẻ nhất thế giới, ghế nhựa vỉa hè, không khí sôi động mỗi tối.
+  EN: The world's cheapest fresh draught beer on plastic stools; lively every night.
+  ZH: 世界上最便宜的鲜啤，塑料凳，每晚热闹非凡。
+
+Liên kết:
+  Google Maps: https://www.google.com/maps/search/?api=1&query=21.0350,105.8520
+  GrabFood:    (quán không giao hàng)
+  ShopeeFood:  (quán không giao hàng)
+
+------------------------------------------------------------------------------
+[kem-trang-tien]  Kem Tràng Tiền / Trang Tien Ice Cream / 长钱冰淇淋
+------------------------------------------------------------------------------
+Món:        Kem
+Địa chỉ:    35 Tràng Tiền, Hoàn Kiếm
+Toạ độ:     21.025, 105.8555
+Giờ mở:     08:00–23:00
+Giá:        15.000 ₫ – 35.000 ₫
+Chế độ ăn:  vegetarian
+
+Mô tả:
+  VI: Kem que cốm, đậu xanh, sữa dừa từ năm 1958. Người Hà Nội đứng ăn ngay tại quầy.
+  EN: Ice-cream bars in young rice, mung bean and coconut flavours since 1958. Locals eat standing at the counter.
+  ZH: 自1958年起的雪糕，有青糯米、绿豆、椰奶口味，河内人习惯站在柜台前吃。
+
+Liên kết:
+  Google Maps: https://www.google.com/maps/search/?api=1&query=21.025,105.8555
+  GrabFood:    (quán không giao hàng)
+  ShopeeFood:  (quán không giao hàng)
+
+------------------------------------------------------------------------------
+[che-bon-mua]  Chè Bốn Mùa / Che Bon Mua (sweet soups) / 四季甜汤
+------------------------------------------------------------------------------
+Món:        Chè
+Địa chỉ:    4 Hàng Cân, Hoàn Kiếm
+Toạ độ:     21.0341, 105.8492
+Giờ mở:     09:00–23:00
+Giá:        20.000 ₫ – 40.000 ₫
+Chế độ ăn:  vegetarian
+
+Mô tả:
+  VI: Chè thập cẩm, chè sen, chè đỗ đen, xôi chè: hơn 30 loại chè truyền thống Hà Nội.
+  EN: More than 30 traditional Hanoi sweet soups: mixed che, lotus seed, black bean, sticky rice che.
+  ZH: 30多种河内传统甜汤：什锦甜汤、莲子、黑豆、糯米甜汤等。
+
+Liên kết:
+  Google Maps: https://www.google.com/maps/search/?api=1&query=21.0341,105.8492
+  GrabFood:    (tự sinh link tìm kiếm theo tên)
+  ShopeeFood:  (tự sinh link tìm kiếm theo tên)
+
+------------------------------------------------------------------------------
+[cafe-dinh]  Cà phê Đinh / Cafe Dinh / 丁咖啡
+------------------------------------------------------------------------------
+Món:        Cà phê trứng
+Địa chỉ:    13 Đinh Tiên Hoàng (tầng 2), Hoàn Kiếm
+Toạ độ:     21.03, 105.853
+Giờ mở:     07:00–23:00
+Giá:        25.000 ₫ – 50.000 ₫
+Chế độ ăn:  vegetarian
+
+Mô tả:
+  VI: Quán cà phê trứng trên gác nhìn ra Hồ Gươm, do con gái cụ Giảng mở, không gian cũ kỹ đậm chất Hà Nội.
+  EN: Upstairs egg-coffee café facing Hoan Kiem Lake, run by the daughter of Cafe Giang's founder, with a worn old-Hanoi feel.
+  ZH: 二楼鸡蛋咖啡馆正对还剑湖，由江咖啡创始人的女儿经营，充满旧河内韵味。
+
+Liên kết:
+  Google Maps: https://www.google.com/maps/search/?api=1&query=21.03,105.853
+  GrabFood:    (quán không giao hàng)
+  ShopeeFood:  (quán không giao hàng)
+
+==============================================================================
+5. CHỖ NGHỈ TẠI HÀ NỘI (25 chỗ)
+==============================================================================
+
+
+### Khu vực: Hoàn Kiếm & phố Pháp (6 chỗ)
+
+------------------------------------------------------------------------------
+[sofitel-legend-metropole]  Sofitel Legend Metropole Hà Nội / Sofitel Legend Metropole Hanoi / 河内索菲特传奇大都市酒店
+------------------------------------------------------------------------------
+Loại:       Khách sạn · 5 sao
+Ngân sách:  Cao cấp
+Địa chỉ:    15 Ngô Quyền, Hoàn Kiếm
+Toạ độ:     21.0256, 105.8562
+Giá/đêm:    6.000.000 ₫ – 12.000.000 ₫
+Nguồn giá:  Momondo/Tripadvisor: từ $233–300, trung bình $349
+Cập nhật:   2026-09-23
+
+Mô tả:
+  VI: Khách sạn di sản từ 1901, kiến trúc Pháp thuộc, hầm trú bom lịch sử, cách Nhà hát Lớn 3 phút đi bộ.
+  EN: Heritage hotel from 1901 with French colonial architecture and a historic bomb shelter, 3 minutes' walk from the Opera House.
+  ZH: 1901年开业的传奇酒店，法式殖民建筑，保留历史防空洞，步行3分钟到大剧院。
+
+Website:    https://www.sofitel-legend-metropole-hanoi.com/
+Wiki (EN):   https://en.wikipedia.org/wiki/Sofitel_Legend_Metropole_Hanoi
+
+------------------------------------------------------------------------------
+[capella-hanoi]  Capella Hà Nội / Capella Hanoi / 河内嘉佩乐酒店
+------------------------------------------------------------------------------
+Loại:       Khách sạn · 5 sao
+Ngân sách:  Cao cấp
+Địa chỉ:    11 Lê Phụng Hiểu, Hoàn Kiếm
+Toạ độ:     21.0245, 105.858
+Giá/đêm:    9.500.000 ₫ – 16.000.000 ₫
+Nguồn giá:  Kayak/Hotels.com: từ $370–427, có phòng $551
+Cập nhật:   2026-09-23
+
+Mô tả:
+  VI: Khách sạn boutique 47 phòng do Bill Bensley thiết kế theo chủ đề opera, cạnh Nhà hát Lớn.
+  EN: 47-room boutique hotel designed by Bill Bensley around an opera theme, next to the Opera House.
+  ZH: 由Bill Bensley设计的47间客房精品酒店，以歌剧为主题，紧邻大剧院。
+
+Website:    https://capellahotels.com/en/capella-hanoi
+
+------------------------------------------------------------------------------
+[hotel-de-l-opera]  Hotel de l'Opera Hà Nội MGallery / Hotel de l'Opera Hanoi MGallery / 河内歌剧院美憬阁酒店
+------------------------------------------------------------------------------
+Loại:       Khách sạn · 5 sao
+Ngân sách:  Cao cấp
+Địa chỉ:    29 Tràng Tiền, Hoàn Kiếm
+Toạ độ:     21.0242, 105.857
+Giá/đêm:    3.300.000 ₫ – 5.000.000 ₫
+Nguồn giá:  HotelsCombined/Tripadvisor: từ $128, trung bình $179–189
+Cập nhật:   2026-09-23
+
+Mô tả:
+  VI: Boutique phong cách Đông Dương trên phố Tràng Tiền, bể bơi trong nhà, sát Hồ Gươm.
+  EN: Indochine-style boutique hotel on Trang Tien street with an indoor pool, steps from Hoan Kiem Lake.
+  ZH: 位于长钱街的印度支那风格精品酒店，设有室内泳池，紧邻还剑湖。
+Wiki (EN):   https://en.wikipedia.org/wiki/Hotel_de_l'Opera_Hanoi
+
+------------------------------------------------------------------------------
+[hilton-hanoi-opera]  Hilton Hanoi Opera / Hilton Hanoi Opera / 河内歌剧院希尔顿酒店
+------------------------------------------------------------------------------
+Loại:       Khách sạn · 5 sao
+Ngân sách:  Cao cấp
+Địa chỉ:    1 Lê Thánh Tông, Hoàn Kiếm
+Toạ độ:     21.0238, 105.858
+Giá/đêm:    3.000.000 ₫ – 4.500.000 ₫
+Nguồn giá:  Booking/hotel-rez: $143–158
+Cập nhật:   2026-09-23
+
+Mô tả:
+  VI: Khách sạn quốc tế nằm ngay sau Nhà hát Lớn, phòng rộng, phù hợp gia đình và công tác.
+  EN: International hotel right behind the Opera House with spacious rooms, good for families and business trips.
+  ZH: 位于大剧院正后方的国际酒店，房间宽敞，适合家庭和商务出行。
+Wiki (EN):   https://en.wikipedia.org/wiki/Hilton_Hanoi_Opera
+
+------------------------------------------------------------------------------
+[apricot-hotel]  Apricot Hotel / Apricot Hotel / 杏花酒店
+------------------------------------------------------------------------------
+Loại:       Khách sạn · 5 sao
+Ngân sách:  Tầm trung
+Địa chỉ:    136 Hàng Trống, Hoàn Kiếm
+Toạ độ:     21.028, 105.8508
+Giá/đêm:    2.800.000 ₫ – 4.600.000 ₫
+Nguồn giá:  Momondo/HotelsCombined: từ $109–118, trung bình $176
+Cập nhật:   2026-09-23
+
+Mô tả:
+  VI: Khách sạn nghệ thuật với hơn 600 tác phẩm hội hoạ, bể bơi trên sân thượng nhìn thẳng ra Hồ Gươm.
+  EN: Art hotel with over 600 paintings and a rooftop pool looking straight onto Hoan Kiem Lake.
+  ZH: 艺术酒店，收藏600多幅画作，屋顶泳池正对还剑湖。
+
+Website:    https://apricothotels.com/
+
+------------------------------------------------------------------------------
+[movenpick-hanoi-centre]  Mövenpick Hotel Hanoi Centre / Mövenpick Hotel Hanoi Centre / 河内中心瑞享酒店
+------------------------------------------------------------------------------
+Loại:       Khách sạn · 5 sao
+Ngân sách:  Tầm trung
+Địa chỉ:    83A Lý Thường Kiệt, Hoàn Kiếm
+Toạ độ:     21.0241, 105.8462
+Giá/đêm:    1.800.000 ₫ – 3.900.000 ₫
+Nguồn giá:  h-rez: từ 1.832.791 ₫; Momondo: $114–149
+Cập nhật:   2026-09-23
+
+Mô tả:
+  VI: Toà nhà Pháp cổ trong khu phố Pháp, yên tĩnh, đi bộ 10 phút tới Hồ Gươm.
+  EN: Old French building in the French Quarter, quiet, a 10-minute walk to Hoan Kiem Lake.
+  ZH: 法国区内的老式法式建筑，环境安静，步行10分钟到还剑湖。
+
+
+### Khu vực: Phố cổ (9 chỗ)
+
+------------------------------------------------------------------------------
+[la-siesta-ma-may]  La Siesta Classic Mã Mây / La Siesta Classic Ma May / 拉西埃斯塔经典马麦酒店
+------------------------------------------------------------------------------
+Loại:       Khách sạn · 4 sao
+Ngân sách:  Tầm trung
+Địa chỉ:    94 Mã Mây, Hoàn Kiếm
+Toạ độ:     21.0355, 105.8527
+Giá/đêm:    2.400.000 ₫ – 3.200.000 ₫
+Nguồn giá:  Priceline/HotelsCombined: $93–121
+Cập nhật:   2026-09-23
+
+Mô tả:
+  VI: Khách sạn boutique nổi tiếng nhất phố cổ, dịch vụ tận tình, spa và nhà hàng Red Bean ngay trong toà nhà.
+  EN: The Old Quarter's best-known boutique hotel, attentive service, in-house spa and Red Bean restaurant.
+  ZH: 老城区最知名的精品酒店，服务周到，内设水疗和Red Bean餐厅。
+
+Website:    https://hanoilasiestahotel.com/
+
+------------------------------------------------------------------------------
+[la-siesta-premium-hang-be]  La Siesta Premium Hàng Bè / La Siesta Premium Hang Be / 拉西埃斯塔尊贵行贝酒店
+------------------------------------------------------------------------------
+Loại:       Khách sạn · 4 sao
+Ngân sách:  Tầm trung
+Địa chỉ:    27 Hàng Bè, Hoàn Kiếm
+Toạ độ:     21.0325, 105.8542
+Giá/đêm:    2.000.000 ₫ – 3.200.000 ₫
+Nguồn giá:  Momondo/MakeMyTrip: $75–121
+Cập nhật:   2026-09-23
+
+Mô tả:
+  VI: Phiên bản cao cấp của La Siesta, quầy bar sân thượng nhìn ra Hồ Gươm, gần phố đi bộ.
+  EN: The premium sibling of La Siesta with a rooftop bar over Hoan Kiem Lake, near the walking street.
+  ZH: 拉西埃斯塔的高端版本，屋顶酒吧俯瞰还剑湖，靠近步行街。
+
+------------------------------------------------------------------------------
+[peridot-grand]  Peridot Grand Luxury Boutique Hotel / Peridot Grand Luxury Boutique Hotel / 橄榄石豪华精品酒店
+------------------------------------------------------------------------------
+Loại:       Khách sạn · 5 sao
+Ngân sách:  Cao cấp
+Địa chỉ:    33 Đường Thành, Hoàn Kiếm
+Toạ độ:     21.0331, 105.8465
+Giá/đêm:    3.000.000 ₫ – 4.800.000 ₫
+Nguồn giá:  Hotels.com/Travelocity/MakeMyTrip: $119–185
+Cập nhật:   2026-09-23
+
+Mô tả:
+  VI: Boutique 5 sao rìa phố cổ, bể bơi sân thượng, gần chợ Hàng Da và đền Bạch Mã.
+  EN: Five-star boutique on the edge of the Old Quarter with a rooftop pool, near Hang Da market and Bach Ma temple.
+  ZH: 老城区边缘的五星精品酒店，设有屋顶泳池，靠近行多市场和白马庙。
+
+------------------------------------------------------------------------------
+[hanoi-pearl-hotel]  Hanoi Pearl Hotel / Hanoi Pearl Hotel / 河内珍珠酒店
+------------------------------------------------------------------------------
+Loại:       Khách sạn · 3 sao
+Ngân sách:  Tầm trung
+Địa chỉ:    6 Bảo Khánh, Hoàn Kiếm
+Toạ độ:     21.0296, 105.8497
+Giá/đêm:    1.200.000 ₫ – 2.200.000 ₫
+Nguồn giá:  Priceline/Momondo: $45–84, phòng Premier $144
+Cập nhật:   2026-09-23
+
+Mô tả:
+  VI: Khách sạn 3 sao giá tốt trên ngõ yên tĩnh cách Hồ Gươm 2 phút, có đưa đón sân bay.
+  EN: Good-value 3-star on a quiet lane 2 minutes from Hoan Kiem Lake, airport pickup available.
+  ZH: 性价比高的三星酒店，位于距还剑湖2分钟的安静小巷，提供机场接送。
+
+------------------------------------------------------------------------------
+[little-charm-hostel]  Little Charm Hanoi Hostel / Little Charm Hanoi Hostel / 小魅力河内青年旅舍
+------------------------------------------------------------------------------
+Loại:       Hostel
+Ngân sách:  Tiết kiệm
+Địa chỉ:    44 Hàng Bồ, Hoàn Kiếm
+Toạ độ:     21.0343, 105.848
+Giá/đêm:    250.000 ₫ – 700.000 ₫
+Nguồn giá:  Hostelworld: giường dorm từ $9–13 (~350.000 ₫)
+Cập nhật:   2026-09-23
+
+Mô tả:
+  VI: Hostel có bể bơi trong nhà hiếm hoi ở phố cổ, giường tầng dạng pod, bữa sáng miễn phí.
+  EN: Rare Old Quarter hostel with an indoor pool, pod-style bunks and free breakfast.
+  ZH: 老城区少见的带室内泳池的青年旅舍，太空舱式床位，免费早餐。
+
+------------------------------------------------------------------------------
+[old-quarter-view-hostel]  Old Quarter View Hanoi Hostel / Old Quarter View Hanoi Hostel / 老城景观河内青年旅舍
+------------------------------------------------------------------------------
+Loại:       Hostel
+Ngân sách:  Tiết kiệm
+Địa chỉ:    12 Ngõ Trung Yên, Hoàn Kiếm
+Toạ độ:     21.0317, 105.8525
+Giá/đêm:    160.000 ₫ – 500.000 ₫
+Nguồn giá:  Momondo/Brokepackr: dorm $6–12
+Cập nhật:   2026-09-23
+
+Mô tả:
+  VI: Hostel xã hội với tour đi bộ và bia hơi buổi tối, sân thượng nhìn xuống mái ngói phố cổ.
+  EN: Social hostel with walking tours and evening bia hoi, rooftop over the Old Quarter tiles.
+  ZH: 社交型青年旅舍，提供徒步游和晚间鲜啤活动，屋顶可俯瞰老城区瓦顶。
+
+------------------------------------------------------------------------------
+[nexy-hostel]  Nexy Hostel / Nexy Hostel / Nexy青年旅舍
+------------------------------------------------------------------------------
+Loại:       Hostel
+Ngân sách:  Tiết kiệm
+Địa chỉ:    12 Tống Duy Tân, Hoàn Kiếm
+Toạ độ:     21.0298, 105.8452
+Giá/đêm:    160.000 ₫ – 950.000 ₫
+Nguồn giá:  Trip.com/HotelsCombined: dorm từ $6, phòng đôi $27–36
+Cập nhật:   2026-09-23
+
+Mô tả:
+  VI: Hostel hiện đại trên phố ẩm thực Tống Duy Tân, có phòng riêng, khu làm việc chung.
+  EN: Modern hostel on Tong Duy Tan food street with private rooms and a co-working area.
+  ZH: 位于宋维新美食街的现代青年旅舍，有独立房间和共享办公区。
+
+------------------------------------------------------------------------------
+[hanoi-old-quarter-homestay]  Hanoi Old Quarter Homestay / Hanoi Old Quarter Homestay / 河内老城区民宿
+------------------------------------------------------------------------------
+Loại:       Homestay
+Ngân sách:  Tiết kiệm
+Địa chỉ:    Khu phố cổ, Hoàn Kiếm
+Toạ độ:     21.034, 105.85
+Giá/đêm:    400.000 ₫ – 800.000 ₫
+Nguồn giá:  Chưa xác minh được giá 09/2026 (Agoda chặn đọc); giữ giá tham khảo
+Cập nhật:   2026-09-23
+
+Mô tả:
+  VI: Homestay gia đình giữa phố cổ, chủ nhà mời bữa tối Việt Nam ngày đầu tiên cho khách mới đến.
+  EN: Family-run homestay in the heart of the Old Quarter; hosts cook a Vietnamese dinner for guests on arrival day.
+  ZH: 老城区中心的家庭民宿，房东为到达当天的客人准备越南晚餐。
+
+------------------------------------------------------------------------------
+[khai-homestay]  Khai Homestay / Khai Homestay / Khai民宿
+------------------------------------------------------------------------------
+Loại:       Homestay
+Ngân sách:  Tiết kiệm
+Địa chỉ:    Ngõ gần chợ Đồng Xuân, Hoàn Kiếm
+Toạ độ:     21.0375, 105.8495
+Giá/đêm:    400.000 ₫ – 700.000 ₫
+Nguồn giá:  hotels-in-hanoi.net: từ $16
+Cập nhật:   2026-09-23
+
+Mô tả:
+  VI: Homestay nhỏ trong ngõ cách chợ Đồng Xuân vài phút, phòng có điều hoà, phòng khách chung.
+  EN: Small homestay in an alley minutes from Dong Xuan market, air-conditioned rooms and a shared lounge.
+  ZH: 距同春市场几分钟的小巷民宿，房间有空调，设有共享客厅。
+
+
+### Khu vực: Hồ Tây (3 chỗ)
+
+------------------------------------------------------------------------------
+[intercontinental-westlake]  InterContinental Hanoi Westlake / InterContinental Hanoi Westlake / 河内西湖洲际酒店
+------------------------------------------------------------------------------
+Loại:       Khách sạn · 5 sao
+Ngân sách:  Cao cấp
+Địa chỉ:    5 Từ Hoa, Tây Hồ
+Toạ độ:     21.059, 105.837
+Giá/đêm:    3.000.000 ₫ – 5.000.000 ₫
+Nguồn giá:  Momondo/HotelsCombined: $119–155
+Cập nhật:   2026-09-23
+
+Mô tả:
+  VI: Khách sạn xây trên mặt nước Hồ Tây, các dãy phòng nổi nối bằng cầu, cạnh chùa Kim Liên.
+  EN: Built over the water of West Lake with floating room wings linked by walkways, next to Kim Lien pagoda.
+  ZH: 建于西湖水面之上，漂浮客房区由栈桥相连，紧邻金莲寺。
+
+------------------------------------------------------------------------------
+[pan-pacific-hanoi]  Pan Pacific Hà Nội / Pan Pacific Hanoi / 河内泛太平洋酒店
+------------------------------------------------------------------------------
+Loại:       Khách sạn · 5 sao
+Ngân sách:  Tầm trung
+Địa chỉ:    1 Thanh Niên, Ba Đình
+Toạ độ:     21.0447, 105.8392
+Giá/đêm:    1.600.000 ₫ – 3.400.000 ₫
+Nguồn giá:  h-rez: từ 1.577.076 ₫; HotelsCombined: $72–131
+Cập nhật:   2026-09-23
+
+Mô tả:
+  VI: Đầu đường Thanh Niên giữa Hồ Tây và hồ Trúc Bạch, bể bơi trong nhà, tầng cao nhìn hoàng hôn.
+  EN: At the head of Thanh Nien road between West Lake and Truc Bach lake, indoor pool, sunset views from upper floors.
+  ZH: 位于西湖与竹帛湖之间的青年路口，室内泳池，高层可看日落。
+
+------------------------------------------------------------------------------
+[sheraton-hanoi]  Sheraton Hanoi Hotel / Sheraton Hanoi Hotel / 河内喜来登酒店
+------------------------------------------------------------------------------
+Loại:       Khách sạn · 5 sao
+Ngân sách:  Cao cấp
+Địa chỉ:    K5 Nghi Tàm, 11 Xuân Diệu, Tây Hồ
+Toạ độ:     21.0655, 105.831
+Giá/đêm:    3.500.000 ₫ – 5.500.000 ₫
+Nguồn giá:  HotelsCombined: từ $134, trung bình $209
+Cập nhật:   2026-09-23
+
+Mô tả:
+  VI: Khu nghỉ rộng ven Hồ Tây với vườn và bể bơi ngoài trời, gần phố Xuân Diệu nhiều quán cà phê.
+  EN: Spacious lakeside resort-style hotel with gardens and an outdoor pool, near café-lined Xuan Dieu street.
+  ZH: 西湖畔的度假式酒店，有花园和室外泳池，靠近咖啡馆林立的春妙街。
+
+
+### Khu vực: Ba Đình & phía Tây (3 chỗ)
+
+------------------------------------------------------------------------------
+[lotte-hotel-hanoi]  Lotte Hotel Hà Nội / Lotte Hotel Hanoi / 河内乐天酒店
+------------------------------------------------------------------------------
+Loại:       Khách sạn · 5 sao
+Ngân sách:  Tầm trung
+Địa chỉ:    54 Liễu Giai, Ba Đình
+Toạ độ:     21.0322, 105.8117
+Giá/đêm:    2.400.000 ₫ – 5.200.000 ₫
+Nguồn giá:  Momondo/HotelsCombined: $91–199
+Cập nhật:   2026-09-23
+
+Mô tả:
+  VI: Tầng 33 đến 38 của toà Lotte Center, đài quan sát và bể bơi vô cực nhìn toàn thành phố.
+  EN: Floors 33 to 38 of Lotte Center, with an observation deck and infinity pool overlooking the whole city.
+  ZH: 位于乐天中心33至38层，设有观景台和无边泳池，俯瞰全城。
+Wiki (EN):   https://en.wikipedia.org/wiki/Lotte_Center_Hanoi
+
+------------------------------------------------------------------------------
+[hanoi-daewoo-hotel]  Khách sạn Hanoi Daewoo / Hanoi Daewoo Hotel / 河内大宇酒店
+------------------------------------------------------------------------------
+Loại:       Khách sạn · 5 sao
+Ngân sách:  Tầm trung
+Địa chỉ:    360 Kim Mã, Ba Đình
+Toạ độ:     21.0308, 105.81
+Giá/đêm:    1.900.000 ₫ – 2.700.000 ₫
+Nguồn giá:  Tripadvisor: ~2.000.000 ₫; HotelsCombined: $74–102
+Cập nhật:   2026-09-23
+
+Mô tả:
+  VI: Khách sạn 5 sao lâu đời với bể bơi ngoài trời lớn nhất nội thành, gần công viên Thủ Lệ.
+  EN: Long-established 5-star with the largest outdoor pool in the inner city, near Thu Le park.
+  ZH: 历史悠久的五星酒店，拥有市区最大的室外泳池，靠近首丽公园。
+Wiki (EN):   https://en.wikipedia.org/wiki/Hanoi_Daewoo_Hotel
+
+------------------------------------------------------------------------------
+[jw-marriott-hanoi]  JW Marriott Hà Nội / JW Marriott Hotel Hanoi / 河内JW万豪酒店
+------------------------------------------------------------------------------
+Loại:       Khách sạn · 5 sao
+Ngân sách:  Cao cấp
+Địa chỉ:    8 Đỗ Đức Dục, Nam Từ Liêm
+Toạ độ:     21.0073, 105.7825
+Giá/đêm:    3.900.000 ₫ – 7.300.000 ₫
+Nguồn giá:  HotelsCombined/Trivago: $149–281, trung bình $216
+Cập nhật:   2026-09-23
+
+Mô tả:
+  VI: Kiến trúc hình con rồng cạnh Trung tâm Hội nghị Quốc gia, hợp công tác và hội nghị, xa trung tâm.
+  EN: Dragon-shaped architecture next to the National Convention Centre, ideal for business and events, far from the centre.
+  ZH: 龙形建筑，紧邻国家会议中心，适合商务和会议，距市中心较远。
+Wiki (EN):   https://en.wikipedia.org/wiki/JW_Marriott_Hotel_Hanoi
+
+
+### Khu vực: Gần sân bay Nội Bài (4 chỗ)
+
+------------------------------------------------------------------------------
+[noi-bai-horizon]  Noi Bai Horizon Hotel & Spa / Noi Bai Horizon Hotel & Spa / 内排地平线酒店
+------------------------------------------------------------------------------
+Loại:       Khách sạn · 3 sao
+Ngân sách:  Tiết kiệm
+Địa chỉ:    Phú Cường, Sóc Sơn (gần sân bay Nội Bài)
+Toạ độ:     21.21, 105.8
+Giá/đêm:    1.000.000 ₫ – 1.600.000 ₫
+Nguồn giá:  Booking (trang Nội Bài): từ $42
+Cập nhật:   2026-09-23
+
+Mô tả:
+  VI: Khách sạn cách sân bay 10 phút, đưa đón miễn phí, tiện cho chuyến bay sớm hoặc nối chuyến.
+  EN: 10 minutes from the airport with free shuttle, convenient for early flights or layovers.
+  ZH: 距机场10分钟，免费接送，适合早班机或中转。
+
+------------------------------------------------------------------------------
+[paragon-noi-bai]  Paragon Noi Bai Hotel & Pool / Paragon Noi Bai Hotel & Pool / 内排百乐宫酒店
+------------------------------------------------------------------------------
+Loại:       Khách sạn · 3 sao
+Ngân sách:  Tiết kiệm
+Địa chỉ:    Phú Cường, Sóc Sơn (gần sân bay Nội Bài)
+Toạ độ:     21.2075, 105.7995
+Giá/đêm:    750.000 ₫ – 1.000.000 ₫
+Nguồn giá:  Expedia/MakeMyTrip: $30–38
+Cập nhật:   2026-09-23
+
+Mô tả:
+  VI: Khách sạn gần sân bay có bể bơi ngoài trời, đưa đón 24/7, giá dễ chịu.
+  EN: Airport hotel with an outdoor pool, 24/7 shuttle and friendly prices.
+  ZH: 机场附近酒店，设有室外泳池，24小时接送，价格实惠。
+
+------------------------------------------------------------------------------
+[vatc-sleep-pod-t1]  VATC SleepPod Nhà ga T1 / VATC SleepPod Terminal 1 / VATC胶囊旅馆T1航站楼
+------------------------------------------------------------------------------
+Loại:       Hostel
+Ngân sách:  Tiết kiệm
+Địa chỉ:    Nhà ga T1, sân bay Nội Bài
+Toạ độ:     21.22, 105.806
+Giá/đêm:    550.000 ₫ – 1.000.000 ₫
+Nguồn giá:  Hostelworld/Kayak: $22–38/đêm, khoảng $10/giờ
+Cập nhật:   2026-09-23
+
+Mô tả:
+  VI: Phòng ngủ dạng khoang ngay trong nhà ga nội địa, tính theo giờ, hợp nối chuyến đêm.
+  EN: Capsule pods inside the domestic terminal, charged by the hour, ideal for overnight connections.
+  ZH: 国内航站楼内的胶囊客房，按小时计费，适合夜间中转。
+
+Website:    https://hanoiairporthotels.vn/en
+
+------------------------------------------------------------------------------
+[grand-dragon-noi-bai]  Grand Dragon Noi Bai Hotel / Grand Dragon Noi Bai Hotel / 内排大龙酒店
+------------------------------------------------------------------------------
+Loại:       Khách sạn · 3 sao
+Ngân sách:  Tiết kiệm
+Địa chỉ:    Phú Minh, Sóc Sơn (gần sân bay Nội Bài)
+Toạ độ:     21.205, 105.799
+Giá/đêm:    650.000 ₫ – 900.000 ₫
+Nguồn giá:  Planet of Hotels/hanoi-hotels.org: $26–28
+Cập nhật:   2026-09-23
+
+Mô tả:
+  VI: Khách sạn gia đình cách sân bay khoảng 5 km, đưa đón miễn phí, có nhà hàng.
+  EN: Family-run hotel about 5 km from the airport with free shuttle and a restaurant.
+  ZH: 距机场约5公里的家庭式酒店，免费接送，设有餐厅。
+
+==============================================================================
+6. LỊCH TRÌNH GỢI Ý (2 mẫu)
+==============================================================================
+
+------------------------------------------------------------------------------
+[one-day-old-quarter]  1 ngày quanh Hồ Gươm & phố cổ / 1 day around Hoan Kiem & Old Quarter / 还剑湖与老城区一日游
+------------------------------------------------------------------------------
+Phong cách: classic
+
+Ngày 1:
+  • Hồ Hoàn Kiếm (Hoan Kiem Lake)
+  • Phố cổ Hà Nội (Hanoi Old Quarter)
+  • Cà phê Giảng – cà phê trứng (Cafe Giang – egg coffee)
+  • Phố cà phê đường tàu (Hanoi Train Street)
+  • Chả cá Thăng Long (Cha Ca Thang Long (grilled turmeric fish))
+  • Bia hơi ngã tư Tạ Hiện (Bia Hoi Corner, Ta Hien)
+
+------------------------------------------------------------------------------
+[two-day-history]  2 ngày lịch sử Thăng Long / 2 days of Thang Long history / 升龙历史两日游
+------------------------------------------------------------------------------
+Phong cách: history
+
+Ngày 1:
+  • Lăng Chủ tịch Hồ Chí Minh (Ho Chi Minh Mausoleum)
+  • Hoàng thành Thăng Long (Imperial Citadel of Thang Long)
+  • Phở Thìn Lò Đúc (Pho Thin Lo Duc)
+  • Văn Miếu – Quốc Tử Giám (Temple of Literature)
+
+Ngày 2:
+  • Bảo tàng Dân tộc học Việt Nam (Vietnam Museum of Ethnology)
+  • Bún chả Hương Liên (Bún chả Obama) (Bun Cha Huong Lien (Obama Bun Cha))
+  • Hồ Tây (West Lake)
+
+==============================================================================
+GHI CHÚ
+==============================================================================
+• Giá vé và giờ mở cửa có thể thay đổi theo thực tế.
+• Ảnh địa điểm/món ăn trong website lấy từ Wikimedia Commons (CC).
+• Thời tiết & AQI: Open-Meteo. Bản đồ: OpenStreetMap.
+• File txt này tổng hợp từ 5 file JSON gốc: places / foods / hotels / history / itineraries.

@@ -1,0 +1,20 @@
+[
+  { "year": "1010", "title": { "vi": "Lý Thái Tổ dời đô về Thăng Long", "en": "Ly Thai To moves the capital to Thang Long", "zh": "李太祖迁都升龙" },
+    "desc": { "vi": "Chiếu dời đô, đặt tên Thăng Long – Rồng bay lên.", "en": "The Edict on the Transfer of the Capital names the city Thang Long – 'Ascending Dragon'.", "zh": "颁布迁都诏，命名升龙——飞龙升天。" } },
+  { "year": "1070–1076", "title": { "vi": "Xây Văn Miếu, lập Quốc Tử Giám", "en": "Temple of Literature and first university founded", "zh": "建文庙，设国子监" },
+    "desc": { "vi": "Trường đại học đầu tiên của Việt Nam.", "en": "Vietnam's first university.", "zh": "越南第一所大学。" } },
+  { "year": "1428", "title": { "vi": "Lê Lợi đánh bại quân Minh", "en": "Le Loi defeats the Ming", "zh": "黎利击败明军" },
+    "desc": { "vi": "Truyền thuyết trả gươm thần cho Rùa Vàng – tên gọi Hồ Hoàn Kiếm.", "en": "Legend of returning the magic sword to the Golden Turtle – origin of Hoan Kiem Lake's name.", "zh": "还剑给金龟的传说——还剑湖名称的由来。" } },
+  { "year": "1831", "title": { "vi": "Vua Minh Mạng đặt tên Hà Nội", "en": "Emperor Minh Mang names the city Hanoi", "zh": "明命帝命名河内" },
+    "desc": { "vi": "Hà Nội – thành phố trong sông.", "en": "Hanoi – 'the city inside the river'.", "zh": "河内——河流之中的城市。" } },
+  { "year": "1902", "title": { "vi": "Thủ đô Đông Dương thuộc Pháp", "en": "Capital of French Indochina", "zh": "法属印度支那首府" },
+    "desc": { "vi": "Nhà hát Lớn, cầu Long Biên, khu phố Pháp ra đời.", "en": "The Opera House, Long Bien Bridge and French Quarter are built.", "zh": "歌剧院、龙编桥和法国区建成。" } },
+  { "year": "1945", "title": { "vi": "Tuyên ngôn Độc lập tại Ba Đình", "en": "Declaration of Independence at Ba Dinh Square", "zh": "巴亭广场宣读独立宣言" },
+    "desc": { "vi": "Ngày 2/9/1945, Chủ tịch Hồ Chí Minh đọc Tuyên ngôn Độc lập.", "en": "On 2 September 1945 Ho Chi Minh proclaims independence.", "zh": "1945年9月2日，胡志明宣读独立宣言。" } },
+  { "year": "1954", "title": { "vi": "Giải phóng Thủ đô", "en": "Liberation of the capital", "zh": "首都解放" },
+    "desc": { "vi": "Ngày 10/10/1954, bộ đội tiếp quản Hà Nội.", "en": "On 10 October 1954 Vietnamese forces take over Hanoi.", "zh": "1954年10月10日，越南军队接管河内。" } },
+  { "year": "2008", "title": { "vi": "Mở rộng địa giới", "en": "City boundaries expanded", "zh": "扩大市域" },
+    "desc": { "vi": "Sáp nhập Hà Tây, Hà Nội trở thành một trong những thủ đô lớn nhất thế giới về diện tích.", "en": "Ha Tay is merged; Hanoi becomes one of the world's largest capitals by area.", "zh": "合并河西省，河内成为世界面积最大的首都之一。" } },
+  { "year": "2010", "title": { "vi": "Đại lễ 1000 năm Thăng Long – Hà Nội", "en": "1000-year anniversary of Thang Long – Hanoi", "zh": "升龙–河内建城一千年大庆" },
+    "desc": { "vi": "Hoàng thành Thăng Long được UNESCO công nhận Di sản Thế giới.", "en": "The Imperial Citadel is inscribed as a UNESCO World Heritage site.", "zh": "升龙皇城被列入联合国教科文组织世界遗产。" } }
+]
