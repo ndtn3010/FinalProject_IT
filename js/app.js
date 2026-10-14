@@ -1,30 +1,22 @@
 // app.js – khởi tạo chung cho mọi trang + logic theo data-page
-import { detectLang, loadLang, initLangSwitcher, t, L, formatVND, locale } from './i18n.js';
+import { loadStrings, t, L, formatVND, fold } from './i18n.js';
 import * as api from './api.js';
 import { placeCard, foodCard, hotelCard, sampleCard, skeletonCards, emptyState, hydrateImages, bindAddButtons, toast, icon } from './render.js';
-import { getItinerary, removeFromItinerary, clearItinerary, setItinerary, getTrip, setTrip } from './storage.js';
-import { initChatbot } from './chatbot.js';
-import { initIntro } from './intro.js';
+import { getItinerary, removeFromItinerary, clearItinerary, setItinerary, KEY_ITIN } from './storage.js';
 import { initTripPanel } from './trip.js';
 
 const page = document.body.dataset.page;
 const pages = { home, places, food, hotels, history, itinerary };
 
 (async function boot() {
-  initLangSwitcher();
-  initTheme();
   initMenu();
   initPageTransitions();
-  await loadLang(detectLang());
-  initIntro();
-  initChatbot();
+  await loadStrings();
   initTripPanel();
   markActiveNav();
   initNavIndicator();
   initReveal();
-  document.querySelectorAll('[data-open-chat]').forEach((b) => b.addEventListener('click', () => document.querySelector('#hg-chat .chat-fab')?.click()));
   if (pages[page]) await safe(pages[page]);
-  document.addEventListener('langchange', () => { if (pages[page]) safe(pages[page]); });
 })();
 
 /** Không để lỗi JS làm trang trắng: log và hiện thông báo nhẹ */
@@ -37,20 +29,6 @@ function markActiveNav() {
     const on = a.dataset.page === page;
     a.classList.toggle('active', on);
     if (on) a.setAttribute('aria-current', 'page');
-  });
-}
-
-function initTheme() {
-  const root = document.documentElement;
-  if (!root.dataset.theme) {
-    let saved = null;
-    try { saved = localStorage.getItem('theme'); } catch {}
-    root.dataset.theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  }
-  document.querySelector('[data-theme-toggle]')?.addEventListener('click', () => {
-    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
-    root.dataset.theme = next;
-    try { localStorage.setItem('theme', next); } catch {}
   });
 }
 
@@ -116,7 +94,6 @@ function initNavIndicator() {
     if (cur) try { sessionStorage.setItem(KEY, JSON.stringify({ ...rectOf(cur), vw: innerWidth })); } catch {}
   }));
   addEventListener('resize', () => place(false));
-  document.addEventListener('langchange', () => requestAnimationFrame(() => place(true)));
   document.fonts?.ready.then(() => place(ind.classList.contains('is-animating')));
 }
 
@@ -154,7 +131,7 @@ async function renderWeather() {
     const lab = api.aqiLabel(aqi);
     const days = w.daily.time.slice(1, 5).map((d, i) => {
       const idx = i + 1;
-      const dt = new Date(d).toLocaleDateString(locale(), { weekday: 'short' });
+      const dt = new Date(d).toLocaleDateString('vi-VN', { weekday: 'short' });
       return `<div class="day"><b>${dt}</b><span class="glyph">${api.weatherIcon(w.daily.weather_code[idx])}</span><span>${Math.round(w.daily.temperature_2m_min[idx])}° / ${Math.round(w.daily.temperature_2m_max[idx])}°</span><span class="muted">${icon('drop')} ${w.daily.precipitation_probability_max[idx]}%</span></div>`;
     }).join('');
     box.innerHTML = `
@@ -175,122 +152,47 @@ async function renderWeather() {
 }
 
 /* ---------------- PLACES ---------------- */
-let placeFilter = 'all', userPos = null;
+/** Lọc theo ô tìm kiếm (không phân biệt dấu); gõ tới đâu lọc tới đó */
+function searchable(input, render) {
+  if (input && !input.dataset.bound) { input.dataset.bound = '1'; input.addEventListener('input', render); }
+  const q = fold(input?.value.trim());
+  return (texts) => !q || texts.some((x) => fold(x).includes(q));
+}
+
 async function places() {
   const grid = document.getElementById('places-grid');
-  const filters = document.getElementById('place-filters');
   const count = document.getElementById('place-count');
   if (!grid.children.length) grid.innerHTML = skeletonCards(6);
   const all = await api.getPlaces();
-
-  const types = ['all', ...new Set(all.map((p) => p.type))];
-  filters.innerHTML = types.map((ty) => `<button type="button" class="chip ${placeFilter === ty ? 'active' : ''}" data-filter="${ty}">${t('places.' + ty)}</button>`).join('') +
-    `<button type="button" class="chip ${userPos ? 'active' : ''}" id="near-me">${icon('locate')} ${t('places.nearme')}</button>`;
-  filters.querySelectorAll('[data-filter]').forEach((b) => b.addEventListener('click', () => { placeFilter = b.dataset.filter; places(); }));
-  filters.querySelector('#near-me').addEventListener('click', () => {
-    if (userPos) { userPos = null; places(); return; }
-    if (!navigator.geolocation) { toast(t('places.geoDenied')); return; }
-    navigator.geolocation.getCurrentPosition(
-      (pos) => { userPos = { lat: pos.coords.latitude, lng: pos.coords.longitude }; places(); },
-      () => toast(t('places.geoDenied'))
-    );
-  });
-
-  let list = placeFilter === 'all' ? all : all.filter((p) => p.type === placeFilter);
-  const q = (document.getElementById('place-search')?.value || '').trim().toLowerCase();
-  if (q) list = list.filter((p) => ['vi', 'en', 'zh'].some((l) => (p.name[l] || '').toLowerCase().includes(q)));
-  if (userPos) list = list.map((p) => ({ ...p, _d: api.distanceKm(userPos, p) })).sort((a, b) => a._d - b._d);
+  const match = searchable(document.getElementById('place-search'), places);
+  const list = all.filter((p) => match([p.name?.vi, p.name?.en]));
 
   count.textContent = t('places.count', { n: list.length });
-  grid.innerHTML = list.map((p) => placeCard(p, { distance: p._d })).join('') || emptyState(t('places.empty'));
+  grid.innerHTML = list.map((p) => placeCard(p)).join('') || emptyState(t('places.empty'));
   bindAddButtons(grid);
   hydrateImages(grid);
-
-  const search = document.getElementById('place-search');
-  if (search && !search.dataset.bound) { search.dataset.bound = '1'; search.addEventListener('input', places); }
 }
 
 /* ---------------- FOOD ---------------- */
-let foodCat = 'all';
 async function food() {
   const grid = document.getElementById('food-grid');
   const count = document.getElementById('food-count');
   if (!grid.children.length) grid.innerHTML = skeletonCards(6);
   const foods = await api.getFoods();
-  const list = foodCat === 'all' ? foods
-    : foodCat === 'vegetarian' ? foods.filter((f) => f.diet?.includes('vegetarian'))
-    : foods.filter((f) => f.cat === foodCat);
+  const match = searchable(document.getElementById('food-search'), food);
+  const list = foods.filter((f) => match([f.name?.vi, f.name?.en, t('dish.' + f.dish), f.address]));
   count.textContent = t('food.count', { n: list.length });
   grid.innerHTML = list.map(foodCard).join('') || emptyState(t('food.empty'));
   bindAddButtons(grid);
   hydrateImages(grid);
-  document.querySelectorAll('[data-cat]').forEach((b) => {
-    b.classList.toggle('active', b.dataset.cat === foodCat);
-    if (!b.dataset.bound) { b.dataset.bound = '1'; b.addEventListener('click', () => { foodCat = b.dataset.cat; food(); }); }
-  });
 }
 
 /* ---------------- HOTELS ---------------- */
-const hotelFilter = { area: 'all', budget: 'all', type: 'all' };
-const AREAS = ['all', 'oldquarter', 'hoankiem', 'westlake', 'badinh', 'noibai'];
-const BUDGETS = ['all', 'budget', 'mid', 'luxury'];
-const TYPES = ['all', 'hotel', 'hostel', 'homestay'];
-
-/** Ngày mặc định khi My Trip chưa có: mai -> 3 ngày sau (không lưu cho tới khi người dùng đổi) */
-function defaultTrip() {
-  const trip = getTrip();
-  const iso = (d) => d.toISOString().slice(0, 10);
-  if (!api.nightsBetween(trip.start, trip.end)) {
-    const a = new Date(); a.setDate(a.getDate() + 1);
-    const b = new Date(a); b.setDate(b.getDate() + 2);
-    return { ...trip, start: iso(a), end: iso(b) };
-  }
-  return trip;
-}
-
 async function hotels() {
   const grid = document.getElementById('hotels-grid');
-  const count = document.getElementById('hotel-count');
-  const form = document.getElementById('trip-bar');
-  const ci = form.checkin, co = form.checkout, gu = form.guests;
-  if (!grid.children.length) grid.innerHTML = skeletonCards(6);
-
-  // Trip bar: điền từ My Trip, thay đổi -> lưu lại và render lại link
-  if (!form.dataset.bound) {
-    form.dataset.bound = '1';
-    const trip = defaultTrip();
-    ci.value = trip.start; co.value = trip.end; gu.value = String(trip.guests || 2);
-    const today = new Date().toISOString().slice(0, 10);
-    ci.min = today;
-    form.addEventListener('submit', (e) => e.preventDefault());
-    form.addEventListener('change', () => {
-      if (co.value <= ci.value) { const d = new Date(ci.value); d.setDate(d.getDate() + 1); co.value = d.toISOString().slice(0, 10); }
-      co.min = ci.value;
-      setTrip({ start: ci.value, end: co.value, guests: +gu.value });
-      toast(t('hotels.saved'));
-      hotels();
-    });
-  }
-  const trip = { start: ci.value, end: co.value, guests: +gu.value };
-  document.getElementById('trip-nights').textContent = t('hotels.nights', { n: api.nightsBetween(trip.start, trip.end) });
-
-  // Chips lọc
-  const chips = (id, key, values, prefix) => {
-    const box = document.getElementById(id);
-    box.innerHTML = values.map((v) => `<button type="button" class="chip ${hotelFilter[key] === v ? 'active' : ''}" data-v="${v}">${t(prefix + v)}</button>`).join('');
-    box.querySelectorAll('[data-v]').forEach((b) => b.addEventListener('click', () => { hotelFilter[key] = b.dataset.v; hotels(); }));
-  };
-  chips('hotel-area', 'area', AREAS, 'hotels.area.');
-  chips('hotel-budget', 'budget', BUDGETS, 'hotels.budget.');
-  chips('hotel-type', 'type', TYPES, 'hotels.type.');
-
+  grid.innerHTML = skeletonCards(6);
   const all = await api.getHotels();
-  const list = all.filter((h) =>
-    (hotelFilter.area === 'all' || h.area === hotelFilter.area) &&
-    (hotelFilter.budget === 'all' || h.budget === hotelFilter.budget) &&
-    (hotelFilter.type === 'all' || h.type === hotelFilter.type));
-  count.textContent = t('hotels.count', { n: list.length });
-  grid.innerHTML = list.map((h) => hotelCard(h, trip)).join('') || emptyState(t('hotels.empty'), { ic: 'bed' });
+  grid.innerHTML = all.map(hotelCard).join('') || emptyState(t('hotels.empty'), { ic: 'bed' });
   hydrateImages(grid);
 }
 
@@ -301,14 +203,64 @@ async function history() {
   tl.innerHTML = events.map((e, i) => `
     <li class="tl-item ${i % 2 ? 'right' : 'left'}">
       <div class="tl-year">${e.year}</div>
-      <div class="tl-card"><h3>${L(e.title)}</h3><p>${L(e.desc)}</p></div>
+      <article class="tl-card">
+        <h3 class="tl-title"><button type="button" class="tl-toggle" aria-expanded="false" aria-controls="tl-more-${i}">
+          <span>${L(e.title)}</span>${icon('chevron', 'tl-chevron')}
+        </button></h3>
+        <p class="tl-desc">${L(e.desc)}</p>
+        <div class="tl-more" id="tl-more-${i}">
+          <div class="tl-more-inner">
+            ${e.image ? `<img class="tl-img" src="${e.image}" alt="${e.imageAlt || ''}" loading="lazy" width="960" height="540" />` : ''}
+            ${e.detail ? `<p>${L(e.detail)}</p>` : ''}
+            ${e.fact ? `<p class="tl-fact">${icon('bulb')}<span><b>${t('history.fact')}</b> ${L(e.fact)}</span></p>` : ''}
+            <div class="actions">
+              ${e.wiki?.vi ? `<a class="btn btn-primary btn-sm" target="_blank" rel="noopener" href="${api.wikiLink(e.wiki.vi)}">${icon('external')} ${t('history.more')}</a>` : ''}
+              <a class="btn btn-outline btn-sm" target="_blank" rel="noopener" href="${api.googleSearch(L(e.title))}">${icon('l-google', 'ic-logo')} ${t('history.google')}</a>
+            </div>
+          </div>
+        </div>
+      </article>
     </li>`).join('');
+  tl.querySelectorAll('.tl-img').forEach((img) => img.addEventListener('error', () => img.remove(), { once: true }));
+  initTimelineCards(tl);
   const io = new IntersectionObserver((es) => es.forEach((x) => x.isIntersecting && x.target.classList.add('show')), { threshold: 0.2 });
   tl.querySelectorAll('.tl-item').forEach((el) => io.observe(el));
 }
 
+/** Ô mốc thời gian mở rộng khi bấm (giữ mở tới khi bấm lại) hoặc khi rê chuột (thiết bị có chuột) */
+function initTimelineCards(tl) {
+  const canHover = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  tl.querySelectorAll('.tl-card').forEach((card) => {
+    const btn = card.querySelector('.tl-toggle');
+    let pinned = false, timer = 0;
+    const set = (open) => { card.classList.toggle('is-open', open); btn.setAttribute('aria-expanded', String(open)); };
+    // Bấm vào bất cứ đâu trên ô (trừ link trong phần mở rộng): ghim mở / bỏ ghim và đóng
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('a')) return;
+      clearTimeout(timer);
+      pinned = !pinned;
+      set(pinned);
+    });
+    if (canHover) {
+      card.addEventListener('mouseenter', () => { clearTimeout(timer); timer = setTimeout(() => set(true), 120); });
+      card.addEventListener('mouseleave', () => { clearTimeout(timer); if (!pinned) set(false); });
+    }
+  });
+}
+
 /* ---------------- ITINERARY ---------------- */
 async function itinerary() {
+  const root = document.getElementById('itinerary');
+  if (!root.dataset.bound) {
+    root.dataset.bound = '1';
+    document.addEventListener('storagechange', (e) => { if (e.detail?.key === KEY_ITIN) safe(renderItinerary); });
+  }
+  await renderItinerary();
+  const samples = document.getElementById('itin-samples');
+  if (samples) await renderSamples(samples, false);
+}
+
+async function renderItinerary() {
   const root = document.getElementById('itinerary');
   const it = getItinerary();
   const items = await Promise.all(it.days.map((d) => Promise.all(d.map(api.findItem))));
@@ -335,8 +287,8 @@ async function itinerary() {
       </section>`;
     }).join('') + `<div class="itin-foot"><button type="button" class="btn btn-danger" id="clear-itin">${icon('trash')} ${t('itinerary.clear')}</button></div>`;
 
-    root.querySelectorAll('[data-rm]').forEach((b) => b.addEventListener('click', () => { removeFromItinerary(b.dataset.rm, +b.dataset.day); itinerary(); }));
-    root.querySelector('#clear-itin').addEventListener('click', () => { if (confirm(t('itinerary.confirmClear'))) { clearItinerary(); itinerary(); } });
+    root.querySelectorAll('[data-rm]').forEach((b) => b.addEventListener('click', () => removeFromItinerary(b.dataset.rm, +b.dataset.day)));
+    root.querySelector('#clear-itin').addEventListener('click', () => { if (confirm(t('itinerary.confirmClear'))) clearItinerary(); });
 
     // Kéo-thả bằng SortableJS nếu đã nạp (CDN), không có thì bỏ qua
     if (window.Sortable) {
@@ -344,14 +296,11 @@ async function itinerary() {
         group: 'itin', animation: 150, handle: '.drag',
         onEnd: () => {
           const days = [...root.querySelectorAll('.day-list')].map((l) => [...l.querySelectorAll('li')].map((li) => li.dataset.id));
-          setItinerary({ days }); itinerary();
+          setItinerary({ days });
         },
       }));
     }
   }
-
-  const samples = document.getElementById('itin-samples');
-  if (samples) await renderSamples(samples, false);
 }
 
 /** Lịch trình mẫu từ itineraries.json; onHome: bấm "Dùng" thì chuyển sang trang lịch trình */
@@ -368,6 +317,6 @@ async function renderSamples(box, onHome) {
     setItinerary({ days: it.days.map((d) => [...d.items]) });
     toast(t('itinerary.applied'));
     if (onHome) location.href = 'pages/itinerary.html';
-    else { itinerary(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+    else window.scrollTo({ top: 0, behavior: 'smooth' });
   }));
 }

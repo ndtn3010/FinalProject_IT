@@ -1,5 +1,5 @@
 // render.js – tạo card địa điểm / món ăn / khách sạn / lịch trình mẫu + skeleton, empty state
-import { t, L, has, formatVND, getLang } from './i18n.js';
+import { t, L, has, formatVND } from './i18n.js';
 import { mapsDirections, isMobile, distanceKm, hotelLinks, deliveryLink, HANOI, wikiThumb } from './api.js';
 import { addToItinerary, isInItinerary } from './storage.js';
 
@@ -10,14 +10,12 @@ export const icon = (name, cls = '') => `<svg class="ic ${cls}" aria-hidden="tru
 
 const imgStyle = (url) => (url ? `style="background-image:url('${esc(url)}')"` : '');
 
-export function placeCard(p, { distance } = {}) {
-  const added = isInItinerary(p.id);
+export function placeCard(p) {
   return `
   <article class="card" data-id="${esc(p.id)}">
     <div class="card-img" ${imgStyle(p.image)} data-wiki="${esc(p.wiki?.en || '')}" role="img" aria-label="${esc(L(p.name))}">
       <span class="ph">${icon('pin')}</span>
       <span class="badge">${t('places.' + p.type)}</span>
-      ${distance != null ? `<span class="badge badge-dist">${distance.toFixed(1)} km</span>` : ''}
     </div>
     <div class="card-body">
       <h3>${esc(L(p.name))}</h3>
@@ -30,9 +28,7 @@ export function placeCard(p, { distance } = {}) {
       ${p.tip ? `<p class="tip">${icon('info')}<span>${esc(L(p.tip))}</span></p>` : ''}
       <div class="actions">
         <a class="btn btn-outline btn-sm" target="_blank" rel="noopener" href="${mapsDirections(p.lat, p.lng)}">${icon('pin')} ${t('places.directions')}</a>
-        <button type="button" class="btn btn-sm ${added ? 'btn-done' : 'btn-primary'}" data-add="${esc(p.id)}" ${added ? 'disabled' : ''}>
-          ${icon(added ? 'check' : 'plus')} ${t(added ? 'places.added' : 'places.add')}
-        </button>
+        ${addButton(p.id)}
       </div>
     </div>
   </article>`;
@@ -44,7 +40,6 @@ export function foodCard(f) {
   const mobile = isMobile();
   const link = (url, label, ic, cls) =>
     url ? `<a class="btn btn-sm ${cls}" target="_blank" rel="noopener" href="${esc(url)}">${ic ? icon(ic, 'ic-logo') : ''}${label}</a>` : '';
-  const added = isInItinerary(f.id);
   const veg = f.diet?.includes('vegetarian');
   return `
   <article class="card card-food" data-id="${esc(f.id)}">
@@ -66,17 +61,15 @@ export function foodCard(f) {
         ${link(deliveryLink('grab', f.links?.grabfood, f.name?.vi), t('food.grab'), 'l-grab', 'btn-brand btn-grab' + (mobile ? '' : ' btn-desktop'))}
         ${link(deliveryLink('shopee', f.links?.shopeefood, f.name?.vi), t('food.shopee'), 'l-shopee', 'btn-brand btn-shopee' + (mobile ? '' : ' btn-desktop'))}
         ${!f.links?.grabfood && !f.links?.shopeefood ? `<span class="tag">${t('food.noDelivery')}</span>` : ''}
-        <button type="button" class="btn btn-sm ${added ? 'btn-done' : 'btn-primary'}" data-add="${esc(f.id)}" ${added ? 'disabled' : ''}>
-          ${icon(added ? 'check' : 'plus')} ${t(added ? 'places.added' : 'places.add')}
-        </button>
+        ${addButton(f.id)}
       </div>
     </div>
   </article>`;
 }
 
-/** Card khách sạn: nút đặt phòng lấy ngày/số khách từ My Trip */
-export function hotelCard(h, trip) {
-  const links = hotelLinks(h, trip, getLang());
+/** Card khách sạn: nút đặt phòng mở trang tìm kiếm theo tên khách sạn */
+export function hotelCard(h) {
+  const links = hotelLinks(h);
   const km = distanceKm(HANOI, h);
   const stars = h.stars ? `<span class="stars" aria-label="${t('hotels.stars', { n: h.stars })}">${icon('star', 'ic-fill').repeat(h.stars)}</span>` : '';
   const book = (url, label, cls, ic) => `<a class="btn btn-sm btn-brand ${cls}" target="_blank" rel="noopener" href="${esc(url)}">${ic ? icon(ic, 'ic-logo') : ''}${label}</a>`;
@@ -127,23 +120,6 @@ export function sampleCard(it, names) {
   </article>`;
 }
 
-/** Card gọn cho chatbot */
-export function miniCard(item) {
-  const isFood = !!item.links;
-  const url = isFood ? item.links.maps : mapsDirections(item.lat, item.lng);
-  return `
-  <div class="mini-card" data-id="${esc(item.id)}">
-    <strong>${esc(L(item.name))}</strong>
-    <span class="muted">${esc(item.hours || '')}${item.ticket != null && !isFood ? ' · ' + (item.ticket ? formatVND(item.ticket) : t('places.free')) : ''}${isFood && item.price ? ' · ' + formatVND(item.price.min) + '+' : ''}</span>
-    <div class="mini-actions">
-      <a target="_blank" rel="noopener" href="${esc(url)}" title="${t('food.maps')}">${icon('l-googlemaps', 'ic-logo')}</a>
-      ${isFood && item.links.grabfood ? `<a target="_blank" rel="noopener" href="${esc(deliveryLink('grab', item.links.grabfood, item.name?.vi))}" title="GrabFood">${icon('l-grab', 'ic-logo')}</a>` : ''}
-      ${isFood && item.links.shopeefood ? `<a target="_blank" rel="noopener" href="${esc(deliveryLink('shopee', item.links.shopeefood, item.name?.vi))}" title="ShopeeFood">${icon('l-shopee', 'ic-logo')}</a>` : ''}
-      <button type="button" data-add="${esc(item.id)}" title="${t('places.add')}">${icon('plus')}</button>
-    </div>
-  </div>`;
-}
-
 /** Skeleton card trong lúc tải */
 export function skeletonCards(n = 6, withImg = true) {
   return Array.from({ length: n }, () => `
@@ -167,6 +143,21 @@ export function hydrateImages(root = document) {
   });
 }
 
+/** Nút "Thêm vào lịch trình"; trạng thái theo lịch trình hiện tại */
+function addButton(id) {
+  const added = isInItinerary(id);
+  return `<button type="button" class="btn btn-sm ${added ? 'btn-done' : 'btn-primary'}" data-add="${esc(id)}" ${added ? 'disabled' : ''}>
+          ${icon(added ? 'check' : 'plus')} ${t(added ? 'places.added' : 'places.add')}
+        </button>`;
+}
+
+function setAddState(btn, added) {
+  btn.disabled = added;
+  btn.classList.toggle('btn-primary', !added);
+  btn.classList.toggle('btn-done', added);
+  btn.innerHTML = `${icon(added ? 'check' : 'plus')} ${t(added ? 'places.added' : 'places.add')}`;
+}
+
 /** Gắn handler cho tất cả nút "Thêm vào lịch trình" trong root */
 export function bindAddButtons(root = document) {
   root.querySelectorAll('[data-add]').forEach((btn) => {
@@ -174,14 +165,15 @@ export function bindAddButtons(root = document) {
     btn.dataset.bound = '1';
     btn.addEventListener('click', () => {
       addToItinerary(btn.dataset.add, 1);
-      btn.disabled = true;
-      btn.classList.remove('btn-primary');
-      btn.classList.add('btn-done');
-      btn.innerHTML = `${icon('check')} ${t('places.added')}`;
-      toast(t('chat.added'));
+      toast(t('itinerary.added'));
     });
   });
 }
+
+// Xoá điểm ở cửa sổ Lịch trình / trang Lịch trình / tab khác thì nút trên card phải bấm lại được
+document.addEventListener('storagechange', () => {
+  document.querySelectorAll('[data-add]').forEach((btn) => setAddState(btn, isInItinerary(btn.dataset.add)));
+});
 
 export function toast(msg) {
   let el = document.querySelector('.toast');

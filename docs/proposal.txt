@@ -1,450 +1,61 @@
-================================================================================
-                          PROJECT PROPOSAL
-================================================================================
+ĐỀ XUẤT ĐỀ TÀI: TRANG WEB DU LỊCH HÀ NỘI
 
-Course        : ______________________________
-Class / Group : ______________________________
-Instructor    : ______________________________
-Submitted on  : ____ / ____ / 2026
+Môn học: Introduction to Information Technology
+Giảng viên: Nguyễn Đăng Quang
+Nhóm: 2
+Ngày nộp: ...... / ...... / 2026
 
-Team members
-  1. ______________________  Student ID ____________  Leader
-  2. ______________________  Student ID ____________
-  3. ______________________  Student ID ____________
-  4. ______________________  Student ID ____________
-
-
-1. TITLE
---------------------------------------------------------------------------------
-HANOI GUIDE – An Interactive Multilingual Travel Guide Website for Hanoi
-(Front-end web project using HTML, CSS, JavaScript with public API integration
-and an AI chatbot)
-
-Project type : Design a simple website using HTML, CSS, JS – Travel guide
-Team size    : 4 members
-Duration     : 8 weeks
-Repository   : GitHub (public), deployed with GitHub Pages
-Chatbot proxy: Cloudflare Workers (free tier)
+Thành viên nhóm:
+1. Vũ Quang Minh, MSSV 26110145
+2. Nguyễn Đăng Trọng Nghĩa, MSSV 26110150
+3. Văn Phước Vinh, MSSV 26110203
+4. Nguyễn Thanh Nhàn, MSSV 26110115
+5. Vi Phước Thiện, MSSV 26110084
+6. Nguyễn Hoàng, MSSV 26110096
 
 
-2. OBJECTIVES
---------------------------------------------------------------------------------
-General objective
-  Build a responsive, multilingual travel-guide website that helps domestic and
-  foreign tourists discover Hanoi's history, attractions and cuisine, plan a
-  trip, and get instant answers from an AI assistant.
+1. Giới thiệu
 
-Specific objectives
-  O1. Present Hanoi's history, tourist attractions and food & drink in a
-      structured, visually attractive way (Vietnamese / English / Chinese).
-  O2. Integrate public APIs so the content is live and interactive instead of
-      static text: weather, air quality, maps, exchange rate, Wikipedia
-      summaries.
-  O3. Let users build and save a personal itinerary, and open places directly
-      in Google Maps, GrabFood and ShopeeFood from their phone.
-  O4. Provide an AI chatbot (LLM through a secure server-side proxy) that
-      answers travel questions in the user's language and can interact with
-      the website (show place cards, add items to the itinerary).
-  O5. Apply good front-end engineering practice: data-driven rendering from
-      JSON, modular JavaScript, i18n, responsive mobile-first layout, Git
-      workflow, and deployment to a public URL.
-
-Learning objectives
-  - Practise semantic HTML5, modern CSS (Flexbox/Grid, responsive design,
-    dark mode) and vanilla ES modules without a framework.
-  - Learn to consume REST APIs with fetch, handle async errors and rate limits.
-  - Understand why API keys must not be exposed in client code and how a
-    serverless proxy solves this.
-  - Practise teamwork with Git branches, pull requests and issue tracking.
+Nhóm xây dựng "Hà Nội Guide", một trang web giúp khách du lịch tìm hiểu lịch sử, địa điểm tham quan, món ăn và chỗ nghỉ ở Hà Nội, đồng thời tự lên lịch trình cho chuyến đi. Trang web viết bằng HTML, CSS và JavaScript thuần, không dùng framework, giao diện tiếng Việt, nền tối, và được đưa lên GitHub Pages để ai cũng truy cập được.
 
 
-3. SCOPE
---------------------------------------------------------------------------------
-3.1 In scope
-  Content modules (all in 3 languages: vi / en / zh-CN)
-    - Home page: hero banner, live weather + AQI widget, quick search,
-      highlights of the month.
-    - History: interactive timeline (Thang Long 1010 -> Hanoi today),
-      "then & now" photo comparison, Wikipedia summaries.
-    - Attractions: filterable card grid (historic sites, Old Quarter, museums,
-      lakes & parks, markets, cafés), detail page with hours, ticket price,
-      suggested visit duration, tips, gallery, embedded map, "Buy ticket /
-      Book tour" link where available (official site, Klook, GetYourGuide),
-      "Add to itinerary" and "Favourite".
-    - Food & Drink: dishes and recommended restaurants with price range,
-      opening hours, and deep-link buttons: Google Maps (directions),
-      GrabFood, ShopeeFood, Apple Maps.
-    - Itinerary: 3-4 sample itineraries (1/2/3 days), drag-and-drop builder,
-      automatic cost + distance + total time estimate (visit duration +
-      travel time) with an "over-packed day" warning, saved in localStorage,
-      export to PDF, "Open route in Google Maps".
-    - Interactive map (Leaflet + OpenStreetMap) with category markers and
-      "near me" sorting via browser Geolocation.
-    - Accommodation: curated hotels/hostels/homestays by area and budget
-      (Old Quarter, Hoan Kiem, West Lake, near Noi Bai), with price range,
-      star rating, distance to centre, and "Book on" buttons that deep-link
-      to Booking.com, Agoda, Traveloka and Google Hotels with the selected
-      check-in / check-out dates and number of guests pre-filled. A date
-      picker on the page passes the dates into the links.
-    - Transport & Getting around: airport-to-city options, ride-hailing
-      buttons (Grab, Xanh SM, Be), public bus/metro (Cat Linh–Ha Dong,
-      Nhon–Hanoi station lines) with route info, motorbike/bike rental tips,
-      walking-distance chart between attractions.
-    - Events & Festivals: month-by-month calendar (Tet, Mid-Autumn, Old
-      Quarter weekend walking street, Hanoi Pride-free cultural events,
-      concerts), filter by the user's travel dates.
-    - Shopping & Nightlife: markets (Dong Xuan, night market), craft
-      villages (Bat Trang, Van Phuc), souvenirs, bia hoi corner, rooftop bars,
-      water puppet show with ticket-booking link.
-    - Nearby day trips: Ninh Binh, Ha Long, Duong Lam, Ba Vi – distance,
-      travel time, suggested tour links.
-    - Practical guide: budget calculator with live exchange rate, SIM/eSIM
-      & Wi-Fi, visa summary with official link, emergency numbers (113/114/115),
-      tourist police, hospitals & 24h pharmacies, embassies, tipping &
-      bargaining etiquette, temple dress code, best time to visit, packing
-      checklist.
-    - Common scams & safety: illustrated list of frequent tourist scams in
-      Hanoi (unmetered taxis, cyclo overcharging, shoe-shine, money changers,
-      look-alike 20k/500k notes, "the temple is closed" touts) with how to
-      avoid each; recommended taxi/ride apps and official exchange points.
-    - Reviews & Ratings: users rate places/foods (1–5 stars + comment),
-      stored in localStorage (optional Firebase Realtime DB for shared
-      reviews).
-    - Photo Gallery: seasonal albums with lightbox; user can upload photos
-      to a "My trip" album stored locally.
-    - About / Contact page with team info and feedback form.
+2. Mục tiêu
 
-  Interaction & integration
-    - "My Trip" context: the user enters travel dates, group size, budget
-      level and interests once (stored in localStorage); every module reads
-      it – events and weather forecast filtered to those dates, hotel links
-      pre-filled, itinerary suggestions and chatbot answers personalised.
-    - Multilingual UI (JSON dictionaries + data-i18n attributes), language
-      auto-detected from browser, remembered in localStorage.
-    - AI chatbot widget: streaming answers, quick-reply chips, multilingual,
-      grounded in the site's own JSON data and live weather; returns
-      structured actions (show_places, add_to_itinerary) handled by the
-      front-end.
-    - Serverless proxy (Cloudflare Worker) that hides the LLM API key,
-      enforces CORS whitelist and per-IP rate limiting.
-    - Dark mode, favourites, search with autocomplete, trip checklist.
-    - Share itinerary: encode the plan into a URL (base64) + QR code so
-      friends can open it; "Add to Google Calendar" link per day.
-    - Weather-aware suggestions: rainy day -> museums/cafés, hot day ->
-      lakes/evening walking street; AQI warning banner when unhealthy.
-    - PWA: installable on phone, offline caching of pages and JSON data.
-    - Read-aloud (Web Speech API) for place descriptions in 3 languages.
-    - "What kind of traveller are you?" quiz that recommends an itinerary.
-    - Phrasebook: ~60 essential Vietnamese phrases (greetings, ordering food,
-      bargaining, taxi, emergency) with EN/ZH meaning, pronunciation guide
-      and text-to-speech playback.
-    - Dietary filters on Food page: vegetarian, halal, no-pork, not spicy,
-      allergen notes.
-    - "Open now" badge computed from opening hours in Hanoi time (UTC+7),
-      plus Tet / public-holiday closure notes.
-    - Hanoi local clock, sunrise/sunset time (Open-Meteo) for photo spots.
-    - Contact form via a static-site form service (Formspree / Web3Forms).
-    - Custom 404 page, loading skeletons, empty states, price disclaimer,
-      OpenStreetMap attribution, clear permission prompt before geolocation.
-    - SEO & sharing: meta description, Open Graph / Twitter cards per page,
-      sitemap.xml, hreflang tags for vi/en/zh.
-
-  APIs used (all free tier)
-    - Open-Meteo (weather, air quality) – no key
-    - Leaflet + OpenStreetMap tiles, Nominatim geocoding – no key
-    - Wikipedia REST API (vi/en/zh summaries) – no key
-    - open.er-api.com (exchange rate VND/USD/CNY) – no key
-    - Google Maps / Apple Maps URL schemes, GrabFood & ShopeeFood web links
-    - Hotel deep links: Booking.com, Agoda, Traveloka, Google Hotels
-      (URL parameters for dates/guests; optional Booking.com Affiliate or
-      Travelpayouts API for live prices if approved)
-    - Ride-hailing links: Grab (grab://), Xanh SM, Be
-    - Google Calendar "add event" URL, QR code library (qrcode.js)
-    - Google Gemini API or Anthropic Claude API (via Worker) – key kept
-      server-side
-    - Optional: Firebase Realtime Database (shared reviews), Unsplash/Pexels
-      API (photos)
-    - Browser APIs: Geolocation, localStorage, Web Speech (read aloud),
-      Service Worker (PWA offline), Web Share API
-
-3.2 Out of scope
-  - User accounts/login and server-side database (except optional Firebase
-    for reviews).
-  - Processing bookings or payments ourselves: hotels, tours, food orders and
-    rides are handed off to the partner apps/websites via deep links; the
-    site does not hold booking data or money.
-  - Native mobile app; the site is a responsive PWA.
-  - Content for provinces outside Hanoi.
-  - Guaranteed 100% accuracy of third-party data (prices/hours are
-    reference values, with a disclaimer).
-
-3.3 Constraints & assumptions
-  - Front-end must be pure HTML/CSS/JS (no React/Vue build step), hosted as
-    a static site.
-  - Only free-tier APIs; total cost = 0 VND.
-  - Chinese content is Simplified Chinese (zh-CN).
-  - Target browsers: latest Chrome, Edge, Firefox, Safari (desktop + mobile).
+Giới thiệu Hà Nội một cách trực quan, dễ dùng trên cả điện thoại lẫn máy tính. Dùng các API miễn phí để nội dung sống động hơn, như thời tiết, chất lượng không khí, bản đồ và ảnh từ Wikipedia. Cho phép người dùng lưu lịch trình riêng và mở nhanh Google Maps, GrabFood, ShopeeFood hay các trang đặt phòng. Qua đề tài, nhóm luyện tập HTML, CSS, JavaScript, cách gọi API và làm việc nhóm với Git.
 
 
-4. WHAT MUST BE IMPLEMENTED – FINAL DELIVERY
---------------------------------------------------------------------------------
-4.1 Functional requirements (must have)
-  F01 Responsive multi-page website (>= 8 pages) with shared header/footer,
-      navigation and language switcher.
-  F02 i18n engine supporting vi / en / zh for both UI strings and content.
-  F03 Data-driven rendering: places, foods, itineraries and history events
-      loaded from JSON files (>= 30 places, >= 20 foods/restaurants,
-      >= 4 itineraries, >= 10 history milestones).
-  F04 Attractions list with category/district filter, text search and
-      "near me" sorting; attraction detail page.
-  F05 Food & Drink page with price, hours, and working deep-link buttons to
-      Google Maps, GrabFood, ShopeeFood (mobile shows app buttons, desktop
-      shows QR/web link).
-  F06 Interactive Leaflet map with category markers and popups.
-  F07 Itinerary builder: drag-and-drop, per-day grouping, cost, distance and
-      time estimate with over-packed warning, save/load (localStorage), PDF
-      export, Google Maps route link.
-  F07b "My Trip" context (dates, group size, budget, interests) shared by
-      all modules and the chatbot.
-  F08 Live widgets: current weather + 3-day forecast, AQI, exchange-rate
-      budget calculator.
-  F09 History timeline with scroll animation and then/now image slider.
-  F10 AI chatbot widget (floating button on every page): streaming replies,
-      language follows site setting, quick-reply chips, renders place cards
-      from actions, can add items to the itinerary on request, graceful
-      error handling (offline / rate-limited).
-  F11 Cloudflare Worker proxy: POST /chat, provider switch (Gemini/Claude),
-      system prompt built from site JSON + live weather, CORS whitelist,
-      rate limit, no key in client code.
-  F12 Favourites list, dark mode, contact/feedback form with validation.
-  F13 Accommodation page: >= 15 hotels/hostels/homestays, filter by area,
-      budget and type; date picker; "Book on" buttons generating valid
-      Booking.com / Agoda / Traveloka / Google Hotels URLs with dates and
-      guests pre-filled.
-  F14 Transport page: airport transfer options, ride-hailing buttons (Grab,
-      Xanh SM, Be), bus/metro route info, walking-time matrix.
-  F15 Events & Festivals calendar filtered by travel dates; Shopping &
-      Nightlife and Day-trips sections.
-  F16 Practical guide: SIM/visa/emergency info, packing checklist with saved
-      progress, tipping & etiquette, common-scams page.
-  F16b Attraction data includes visit duration and "Buy ticket / Book tour"
-      links (official site, Klook, GetYourGuide) where available.
-  F17 Reviews & ratings (localStorage; optional Firebase), photo gallery
-      with lightbox and local "My trip" album.
-  F18 Share itinerary via URL + QR code, Add-to-Google-Calendar links,
-      Web Share API on mobile.
-  F19 Weather-aware suggestions and AQI warning banner.
-  F20 PWA: manifest + service worker, installable, core pages and JSON
-      available offline.
-  F21 Traveller-type quiz recommending an itinerary; read-aloud button.
-  F22 Phrasebook with text-to-speech; dietary filters (vegetarian / halal /
-      not spicy) on the Food page.
-  F23 "Open now" status from Hanoi time, holiday closure notes, local clock
-      and sunrise/sunset.
-  F24 Site hygiene: 404 page, loading/empty states, disclaimers and data
-      attribution, SEO/Open Graph meta, sitemap, hreflang, form service.
+3. Nội dung trang web
 
-  Priority: F01–F13 are mandatory (MVP). F14–F24 are planned for weeks 5–7;
-  any not finished by week 7 is documented as future work.
+Trang chủ hiển thị ảnh giới thiệu, thời tiết và chỉ số chất lượng không khí của Hà Nội, cùng một số địa điểm, quán ăn và lịch trình mẫu nổi bật.
 
-4.2 Non-functional requirements
-  N01 Mobile-first responsive layout (320 px – 1920 px), no horizontal scroll.
-  N02 Lighthouse: Performance >= 85, Accessibility >= 90, Best Practices >= 90.
-  N03 All external calls handle failure (fallback text, retry or cached data).
-  N04 No API key committed to the repository; secrets stored as Worker
-      secrets.
-  N05 Code organised in ES modules (api.js, i18n.js, render.js, storage.js,
-      map.js, chatbot.js), consistent naming, comments in English.
-  N06 Semantic HTML, alt text for images, keyboard-navigable chatbot.
+Trang Địa điểm có 12 điểm tham quan kèm ảnh, giờ mở cửa, giá vé, thời gian tham quan gợi ý và nút chỉ đường. Có ô tìm kiếm, gõ không dấu vẫn tìm được.
 
-4.3 Final deliverables
-  D1. Source code on GitHub (front-end + /worker), with README (setup,
-      deploy, API list, folder structure) and .gitignore.
-  D2. Live website deployed on GitHub Pages (public URL).
-  D3. Deployed Cloudflare Worker endpoint for the chatbot.
-  D4. Data set: places.json, foods.json, hotels.json, transport.json,
-      events.json, itineraries.json, history.json, i18n/vi.json, en.json,
-      zh.json.
-  D5. Final report (PDF/DOCX): introduction, requirements, design
-      (site map, wireframes, data model, architecture diagram), implementation,
-      API integration, chatbot design (prompt + action protocol + security),
-      testing, results, limitations, future work, member contribution table.
-  D6. Presentation slides + 5-7 minute live demo (desktop + mobile view).
-  D7. Test log: manual test cases for each functional requirement (F01–F12),
-      responsive test on 3 screen sizes, Lighthouse report screenshots.
+Trang Ẩm thực có 23 quán ăn với địa chỉ, giờ mở cửa, khoảng giá, cùng nút mở Google Maps, GrabFood và ShopeeFood. Cũng có ô tìm kiếm theo tên quán hoặc món.
 
-4.4 Technology stack & tools
-  Front-end   HTML5, CSS3 (custom properties, Flexbox/Grid), JavaScript ES2020
-              modules – no framework, no build step
-  Libraries   Leaflet 1.9 (map), SortableJS (drag-drop), Swiper (sliders),
-              Chart.js (weather/AQI charts), jsPDF + html2canvas (PDF export),
-              qrcode.js (QR), marked.js (chatbot markdown), AOS (scroll
-              animation) – all loaded from CDN with pinned versions
-  Backend     Cloudflare Workers (JavaScript) + Wrangler CLI for the chatbot
-              proxy; Formspree/Web3Forms for the contact form
-  AI          Google Gemini API (gemini-2.5-flash) – primary; Anthropic Claude
-              API – switchable via env var
-  Data        Static JSON files in /data and /i18n
-  Design      Figma (wireframes, mock-ups), Google Fonts (Be Vietnam Pro,
-              Noto Sans SC)
-  Dev tools   VS Code, Git + GitHub (issues, project board, pull requests),
-              GitHub Pages, Chrome DevTools, Lighthouse, W3C validators
-  Testing     Manual test cases, responsive testing on 3 breakpoints, cross-
-              browser check (Chrome, Edge, Firefox, Safari iOS)
+Trang Khách sạn liệt kê 25 khách sạn, hostel và homestay với giá tham khảo mỗi đêm và nút mở trang đặt phòng Booking.com, Agoda, Traveloka hoặc Google Hotels, ngày ở và số khách thì chọn ngay trên trang đó.
 
-4.5 Success criteria
-  S1  All MVP requirements F01–F13 work on the live URL with no console
-      errors on desktop and mobile.
-  S2  Every page fully available in vi, en and zh with no untranslated
-      strings (checked by an automated i18n key-coverage script).
-  S3  Chatbot answers >= 90 % of a 30-question test set correctly (grounded
-      in site data) in each of the 3 languages, average first token < 3 s.
-  S4  Lighthouse scores meet N02 on the Home, Attractions and Food pages.
-  S5  All deep links (Maps, GrabFood, ShopeeFood, Booking, Agoda, Traveloka)
-      open the correct target on a real Android and iOS device.
-  S6  Zero secrets in the repository (checked with git-secrets / manual
-      review); Worker rejects requests from non-whitelisted origins.
-  S7  Report, slides and demo delivered on time; each member can explain and
-      demo his/her own module.
+Trang Lịch trình cho phép thêm địa điểm, quán ăn theo từng ngày, kéo thả để sắp xếp, tự tính chi phí và thời gian, cảnh báo khi một ngày quá dày, và mở toàn bộ tuyến đường trên Google Maps. Ở mọi trang đều có một cửa sổ nhỏ hiện lịch trình trên bản đồ.
 
-4.6 Risks & mitigation
-  R1  Third-party API down or rate-limited (Open-Meteo, Wikipedia, exchange
-      rate) -> cache last response in localStorage, show fallback text,
-      never block page render.
-  R2  LLM API quota exceeded or key leaked -> key stored only as Worker
-      secret; per-IP rate limit; provider switch (Gemini <-> Claude);
-      chatbot falls back to a rule-based FAQ mode when the proxy returns
-      an error.
-  R3  GrabFood / ShopeeFood / booking-site URL formats change -> links are
-      data-driven in JSON, one place to update; each button has a generic
-      search-page fallback.
-  R4  Chinese translation quality -> machine-translate first, then review
-      by a Chinese-speaking classmate or lecturer; keep sentences short.
-  R5  Content accuracy (prices, hours) -> record source and date for every
-      entry, show "last updated" and a disclaimer.
-  R6  Scope creep (24 features) -> strict MVP line (F01–F13); weekly review
-      moves unfinished optional features to future work.
-  R7  Member unavailable / uneven contribution -> shared task board, weekly
-      commits required, pair backup for each module (1<->4, 2<->3).
-  R8  Image copyright -> use own photos, Wikimedia Commons (CC) or Unsplash
-      / Pexels with attribution list in the footer and report.
-  R9  Browser differences (Safari Web Speech, iOS deep links) -> feature
-      detection and graceful degradation; test on real devices early
-      (week 3).
+Trang Lịch sử trình bày 9 mốc chính từ khi Lý Thái Tổ dời đô về Thăng Long năm 1010 đến Hà Nội ngày nay. Bấm hoặc rê chuột vào một mốc thì ô đó mở rộng, hiện thêm ảnh, phần kể chi tiết, một chuyện thú vị, và nút dẫn sang Wikipedia hoặc Google cho ai muốn tìm hiểu thêm.
 
-4.7 Communication & working plan
-  - Weekly 1-hour meeting (fixed day) + short async check-in mid-week.
-  - Communication: Discord/Zalo group; GitHub Issues for tasks; Google
-    Drive for report drafts and assets.
-  - Git workflow: main (deployed) <- dev <- feature/<module> branches; pull
-    request + 1 reviewer before merge; conventional commit messages.
-  - Definition of done for a feature: works on desktop + mobile, 3 languages,
-    no console errors, reviewed, test case written.
-
-4.8 Milestones
-  Week 1   Proposal, site map, wireframes, JSON data model, repo setup
-  Week 2   HTML/CSS skeleton, layout, i18n engine, navigation
-  Week 3   Attractions + Food pages, data rendering, deep-link buttons
-  Week 4   Map, weather/AQI/exchange-rate widgets, History timeline
-  Week 5   Itinerary builder, favourites, PDF export, Accommodation page
-           with booking deep links, Transport page
-  Week 6   Chatbot: Worker proxy + widget + action protocol; Events,
-           Shopping/Nightlife, Day trips, Practical guide
-  Week 7   Reviews, gallery, share/QR, PWA, quiz; content completion
-           (3 languages), testing, Lighthouse, bug fixing
-  Week 8   Deployment, report, slides, demo rehearsal
+Trang web không có tài khoản người dùng, không xử lý đặt phòng hay thanh toán. Mọi việc đặt chỗ, gọi món đều chuyển sang ứng dụng của đối tác. Giá và giờ mở cửa chỉ mang tính tham khảo.
 
 
-5. TASK DISTRIBUTION AMONG MEMBERS
---------------------------------------------------------------------------------
-Roles are cross-functional; every member writes HTML/CSS/JS for their module
-and reviews at least one pull request per week.
+4. Công nghệ sử dụng
 
-Member 1 – Team Leader / Front-end Architect          (Name: ______________)
-  - Project planning, GitHub repo, branch strategy, issue board, weekly review
-  - Global layout: header, footer, navigation, design tokens, dark mode,
-    responsive grid
-  - i18n engine (i18n.js), language switcher, vi/en/zh UI dictionaries
-  - Home page (hero, quick search, highlights), weather-aware suggestions
-    and AQI banner
-  - PWA (manifest, service worker, offline caching), Web Share / QR share
-  - Practical guide page (SIM, visa, emergency, packing checklist)
-  - Deployment to GitHub Pages; README; integration and final QA
-  - Report: Introduction, Design (site map, architecture), Conclusion
-
-Member 2 – Attractions, Map & History                  (Name: ______________)
-  - places.json + history.json data collection (>= 30 places, 3 languages)
-  - Attractions list page (filter, search, near-me with Geolocation) and
-    detail page
-  - Leaflet/OSM interactive map (map.js), category markers, popups
-  - History page: timeline, then/now slider, Wikipedia API summaries
-  - Events & Festivals calendar (events.json), Shopping & Nightlife,
-    Nearby day trips, photo gallery with lightbox
-  - Traveller-type quiz
-  - Report: Attractions, History, Events modules, Map API integration
-
-Member 3 – Food & Drink, Itinerary & Live Widgets     (Name: ______________)
-  - foods.json + itineraries.json data (>= 20 restaurants/dishes, 3
-    languages) including GrabFood / ShopeeFood / Google Maps links
-  - Food & Drink page with deep-link buttons (mobile/desktop detection)
-  - Itinerary builder: drag-and-drop, cost/distance/time estimate,
-    localStorage (storage.js), PDF export, Google Maps route link; favourites
-  - "My Trip" context module (trip.js) consumed by all pages and the chatbot
-  - Weather + AQI widget (Open-Meteo), exchange-rate budget calculator
-  - Accommodation page (hotels.json, >= 15 entries): filters, date picker,
-    booking deep-link builder for Booking.com / Agoda / Traveloka /
-    Google Hotels
-  - Transport page (transport.json): airport transfer, ride-hailing buttons,
-    bus/metro info; Add-to-Google-Calendar links
-  - Reviews & ratings module
-  - Report: Food, Accommodation, Transport, Itinerary and API widgets
-
-Member 4 – AI Chatbot & Backend Proxy                  (Name: ______________)
-  - Cloudflare Worker proxy: provider abstraction (Gemini/Claude), SSE
-    streaming, system prompt from site JSON + weather, CORS, rate limit,
-    secret management, deployment
-  - Chatbot widget (chatbot.js/css): streaming UI, markdown rendering,
-    quick replies, multilingual, action protocol (show_places,
-    add_to_itinerary) wired to Member 3's itinerary module
-  - Chatbot extra actions: show_hotels (hotel cards with booking links),
-    suggest_itinerary, weather answers from live data
-  - Prompt engineering and evaluation (test set of 30 questions x 3 languages)
-  - Test plan and test log for all modules; Lighthouse audit
-  - Report: Chatbot design, security, Testing & Results
-
-Shared responsibilities
-  - Each member: content proofreading for one language (vi / en / zh split
-    among members, with one member double-checking Chinese).
-  - Presentation slides: each member presents his/her own module in the demo.
-  - Weekly 1-hour meeting; progress tracked on the GitHub project board.
-
-Estimated effort split: Member 1 – 25 %, Member 2 – 25 %, Member 3 – 25 %,
-Member 4 – 25 %.
-
-Additional module owners (F22–F24)
-  - Phrasebook + text-to-speech, dietary filters ............ Member 3
-  - "Open now" logic, local clock, sunrise/sunset ........... Member 2
-  - 404 / loading states / SEO / attribution / form service . Member 1
-  - Chatbot fallback FAQ mode, i18n key-coverage script ..... Member 4
+HTML, CSS và JavaScript thuần. Dữ liệu lưu trong các file JSON. Thư viện Leaflet với bản đồ OpenStreetMap, và SortableJS để kéo thả. API thời tiết Open-Meteo và Wikipedia, đều miễn phí, không cần khoá. Lịch trình được lưu ngay trong trình duyệt bằng localStorage. Mã nguồn quản lý bằng Git và GitHub.
 
 
-6. REFERENCES & DATA SOURCES
---------------------------------------------------------------------------------
-  - Open-Meteo API docs            https://open-meteo.com/en/docs
-  - Leaflet documentation          https://leafletjs.com/reference.html
-  - OpenStreetMap & Nominatim usage policy
-                                   https://operations.osmfoundation.org/policies/
-  - Wikipedia REST API             https://www.mediawiki.org/wiki/API:REST_API
-  - ExchangeRate-API (open)        https://www.exchangerate-api.com/docs/free
-  - Google Maps URLs               https://developers.google.com/maps/documentation/urls
-  - Cloudflare Workers docs        https://developers.cloudflare.com/workers/
-  - Google Gemini API              https://ai.google.dev/gemini-api/docs
-  - Anthropic Claude API           https://docs.claude.com
-  - MDN Web Docs (Geolocation, Web Speech, Service Worker, Web Share)
-  - Hanoi Department of Tourism, Vietnam National Authority of Tourism
-    (official attraction info, ticket prices)
-  - Wikimedia Commons / Unsplash / Pexels (images, with licence attribution)
-  - Booking.com, Agoda, Traveloka, GrabFood, ShopeeFood public web pages
-    (deep-link targets only)
+5. Kế hoạch tiếp theo
 
-================================================================================
+Bổ sung dữ liệu lên ít nhất 30 địa điểm và 4 lịch trình mẫu, thêm ảnh cho khách sạn. Làm thêm trang cẩm nang (di chuyển, SIM, visa, số khẩn cấp, các chiêu lừa đảo thường gặp), bản đồ ở trang Địa điểm, và chức năng xuất lịch trình ra PDF. Cuối cùng là kiểm tra trên điện thoại thật, hoàn thiện báo cáo và chuẩn bị phần trình bày.
+
+
+6. Phân công
+
+Nhóm sẽ cập nhật phân công công việc sau.
+
+
+7. Sản phẩm nộp
+
+Mã nguồn trên GitHub, trang web chạy trên GitHub Pages, báo cáo và slide thuyết trình kèm phần demo trực tiếp.

@@ -22,9 +22,6 @@ export async function findItem(id) {
   const [p, f] = await Promise.all([getPlaces(), getFoods()]);
   return p.find((x) => x.id === id) || f.find((x) => x.id === id) || null;
 }
-export async function findHotel(id) {
-  return (await getHotels()).find((h) => h.id === id) || null;
-}
 
 export async function getWeather() {
   const u = `https://api.open-meteo.com/v1/forecast?latitude=${HANOI.lat}&longitude=${HANOI.lng}` +
@@ -55,17 +52,11 @@ export function weatherIcon(code, isDay = 1) {
 }
 export function aqiLabel(aqi) {
   if (aqi == null) return { text: '', cls: '' };
-  if (aqi <= 50) return { text: 'Good', cls: 'aqi-good' };
-  if (aqi <= 100) return { text: 'Moderate', cls: 'aqi-moderate' };
-  if (aqi <= 150) return { text: 'Unhealthy (sensitive)', cls: 'aqi-usg' };
-  if (aqi <= 200) return { text: 'Unhealthy', cls: 'aqi-unhealthy' };
-  return { text: 'Very unhealthy', cls: 'aqi-very' };
-}
-
-export async function getRates() {
-  const r = await fetch('https://open.er-api.com/v6/latest/VND');
-  if (!r.ok) throw new Error('rates');
-  return (await r.json()).rates;
+  if (aqi <= 50) return { text: 'Tốt', cls: 'aqi-good' };
+  if (aqi <= 100) return { text: 'Trung bình', cls: 'aqi-moderate' };
+  if (aqi <= 150) return { text: 'Kém (nhóm nhạy cảm)', cls: 'aqi-usg' };
+  if (aqi <= 200) return { text: 'Xấu', cls: 'aqi-unhealthy' };
+  return { text: 'Rất xấu', cls: 'aqi-very' };
 }
 
 export async function wikiSummary(title, lang = 'vi') {
@@ -96,6 +87,10 @@ export function distanceKm(a, b) {
   return 2 * R * Math.asin(Math.sqrt(h));
 }
 
+/** Link Wikipedia tiếng Việt: trùng tên bài thì mở thẳng bài, không thì ra trang kết quả tìm kiếm */
+export const wikiLink = (title) => `https://vi.wikipedia.org/w/index.php?title=Special:Search&go=Go&search=${encodeURIComponent(title)}`;
+export const googleSearch = (q) => `https://www.google.com/search?q=${encodeURIComponent(q)}`;
+
 export const isMobile = () => /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
 /* ---- Deep links: giao đồ ăn. Trang chủ chung -> đổi thành trang tìm kiếm theo tên quán ----
@@ -123,21 +118,15 @@ export function mapsRoute(points) {
     (wp ? `&waypoints=${encodeURIComponent(wp)}` : '') + `&travelmode=walking`;
 }
 
-/* ---- Deep links: đặt phòng (ngày & số khách lấy từ My Trip) ----
- * Định dạng:
- *  Booking   searchresults.html?ss=&checkin=YYYY-MM-DD&checkout=&group_adults=&no_rooms=1&group_children=0
- *  Agoda     search?city=2758(Hà Nội)&checkIn=&checkOut=&adults=&rooms=1&children=0&textToSearch=
- *  Traveloka hotel/search?spec=DD-MM-YYYY.DD-MM-YYYY.<đêm>.<phòng>.HOTEL_GEO.10009843.Hanoi.<khách>
- *  Google    travel/search?q=&check_in_date=&check_out_date=&adults=
+/* ---- Deep links: đặt phòng (trang tìm kiếm theo tên khách sạn, người dùng tự chọn ngày) ----
+ *  Booking   searchresults.html?ss=<tên>
+ *  Agoda     search?city=2758(Hà Nội)&textToSearch=<tên>
+ *  Traveloka hotel/vietnam/region/hanoi-10009843
+ *  Google    travel/search?q=<tên>
  */
 const AGODA_HANOI = '2758';
 const TRAVELOKA_HANOI = '10009843';
 
-export function nightsBetween(checkin, checkout) {
-  if (!checkin || !checkout) return 0;
-  const n = Math.round((new Date(checkout) - new Date(checkin)) / 86400000);
-  return n > 0 ? n : 0;
-}
 function withParams(url, params) {
   try {
     const u = new URL(url);
@@ -145,34 +134,16 @@ function withParams(url, params) {
     return u.toString();
   } catch { return url; }
 }
-const dmy = (iso) => { const [y, m, d] = iso.split('-'); return `${d}-${m}-${y}`; };
 
-export function hotelLinks(h, trip = {}, lang = 'vi') {
-  const checkin = trip.start || '', checkout = trip.end || '';
-  const guests = Math.max(1, +trip.guests || 2);
-  const hasDates = nightsBetween(checkin, checkout) > 0;
-  const nights = nightsBetween(checkin, checkout);
+export function hotelLinks(h) {
   const en = h.name?.en || '';
   const q = /hanoi/i.test(en) ? en : `${en} Hanoi`.trim();
   const l = h.links || {};
-
-  const booking = withParams(l.booking || 'https://www.booking.com/searchresults.html', {
-    ss: l.booking ? null : q,
-    checkin: hasDates ? checkin : null, checkout: hasDates ? checkout : null,
-    group_adults: guests, no_rooms: 1, group_children: 0,
-  });
-  const agoda = withParams(l.agoda || 'https://www.agoda.com/search', {
-    city: l.agoda ? null : AGODA_HANOI, textToSearch: l.agoda ? null : h.name?.en,
-    checkIn: hasDates ? checkin : null, checkOut: hasDates ? checkout : null,
-    adults: guests, rooms: 1, children: 0,
-  });
-  const tvLocale = lang === 'vi' ? 'vi-vn' : 'en-vn';
-  const traveloka = l.traveloka || (hasDates
-    ? `https://www.traveloka.com/${tvLocale}/hotel/search?spec=${dmy(checkin)}.${dmy(checkout)}.${nights}.1.HOTEL_GEO.${TRAVELOKA_HANOI}.Hanoi.${guests}`
-    : `https://www.traveloka.com/${tvLocale}/hotel/vietnam/region/hanoi-${TRAVELOKA_HANOI}`);
-  const google = withParams(l.google || 'https://www.google.com/travel/search', {
-    q: l.google ? null : q,
-    check_in_date: hasDates ? checkin : null, check_out_date: hasDates ? checkout : null, adults: guests,
-  });
-  return { booking, agoda, traveloka, google, maps: mapsSearch(h.lat, h.lng) };
+  return {
+    booking: l.booking || withParams('https://www.booking.com/searchresults.html', { ss: q }),
+    agoda: l.agoda || withParams('https://www.agoda.com/search', { city: AGODA_HANOI, textToSearch: en }),
+    traveloka: l.traveloka || `https://www.traveloka.com/vi-vn/hotel/vietnam/region/hanoi-${TRAVELOKA_HANOI}`,
+    google: l.google || withParams('https://www.google.com/travel/search', { q }),
+    maps: mapsSearch(h.lat, h.lng),
+  };
 }

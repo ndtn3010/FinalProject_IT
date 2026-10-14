@@ -1,13 +1,9 @@
 # secrets
-worker/.dev.vars
 .env
 *.pem
 
 # node
 node_modules/
-worker/node_modules/
-.wrangler/
-worker/.wrangler/
 
 # os / editor
 .DS_Store

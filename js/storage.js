@@ -1,7 +1,5 @@
-// storage.js – lịch trình, yêu thích, My Trip (localStorage)
-const KEY_ITIN = 'hg.itinerary.v1';
-const KEY_FAV = 'hg.favourites.v1';
-const KEY_TRIP = 'hg.trip.v1';
+// storage.js – lịch trình (localStorage)
+export const KEY_ITIN = 'hg.itinerary.v1';
 
 function read(key, fallback) {
   try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; }
@@ -10,6 +8,15 @@ function write(key, value) {
   try { localStorage.setItem(key, JSON.stringify(value)); } catch {}
   document.dispatchEvent(new CustomEvent('storagechange', { detail: { key } }));
 }
+
+// Lịch trình có thể đổi ở tab khác, hoặc ở trang khác rồi bấm Back (trang cũ lấy lại từ bfcache)
+// -> báo cho giao diện vẽ lại theo dữ liệu mới
+addEventListener('storage', (e) => {
+  if (e.key == null || e.key.startsWith('hg.')) document.dispatchEvent(new CustomEvent('storagechange', { detail: { key: e.key } }));
+});
+addEventListener('pageshow', (e) => {
+  if (e.persisted) document.dispatchEvent(new CustomEvent('storagechange', { detail: { key: KEY_ITIN } }));
+});
 
 /* ---- Itinerary: { days: [ [id, id], [id] ] } ---- */
 export function getItinerary() {
@@ -35,18 +42,3 @@ export function setItinerary(it) { write(KEY_ITIN, it); }
 export function clearItinerary() { write(KEY_ITIN, { days: [[]] }); }
 export function isInItinerary(id) { return getItinerary().days.some((d) => d.includes(id)); }
 
-/* ---- Favourites ---- */
-export function getFavourites() { return read(KEY_FAV, []); }
-export function toggleFavourite(id) {
-  const f = getFavourites();
-  const i = f.indexOf(id);
-  if (i >= 0) f.splice(i, 1); else f.push(id);
-  write(KEY_FAV, f);
-  return i < 0;
-}
-
-/* ---- My Trip context ---- */
-export function getTrip() {
-  return read(KEY_TRIP, { start: '', end: '', guests: 2, budget: 'mid', interests: [] });
-}
-export function setTrip(patch) { write(KEY_TRIP, { ...getTrip(), ...patch }); }
