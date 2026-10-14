@@ -87,10 +87,6 @@ export function distanceKm(a, b) {
   return 2 * R * Math.asin(Math.sqrt(h));
 }
 
-/** Link Wikipedia tiếng Việt: trùng tên bài thì mở thẳng bài, không thì ra trang kết quả tìm kiếm */
-export const wikiLink = (title) => `https://vi.wikipedia.org/w/index.php?title=Special:Search&go=Go&search=${encodeURIComponent(title)}`;
-export const googleSearch = (q) => `https://www.google.com/search?q=${encodeURIComponent(q)}`;
-
 export const isMobile = () => /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
 /* ---- Deep links: giao đồ ăn. Trang chủ chung -> đổi thành trang tìm kiếm theo tên quán ----

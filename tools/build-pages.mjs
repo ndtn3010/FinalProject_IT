@@ -28,7 +28,6 @@ const ICONS = `
   <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></symbol>
   <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></symbol>
   <symbol id="i-expand" viewBox="0 0 24 24"><path d="M4 9V4h5M20 15v5h-5M20 9V4h-5M4 15v5h5"/></symbol>
-  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
   <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></symbol>
   <symbol id="i-lantern" viewBox="0 0 24 24"><path d="M9 2.5h6M12 2.5V5M8 5h8M8 19h8M12 19v2.5M9 21.5h6"/><path d="M6 9a6 4 0 0 1 12 0v6a6 4 0 0 1-12 0z"/><path d="M12 5v14M9 6.2v11.6M15 6.2v11.6"/></symbol>
   <!-- Logo thương hiệu: Simple Icons (CC0), fill theo currentColor -->
@@ -244,7 +243,17 @@ const pages = {
         <p class="lead" data-i18n="history.pageDesc"></p>
       </div>
       <ol id="timeline" class="timeline"></ol>
-    </section>`,
+    </section>
+    <dialog id="tl-dialog" class="modal" aria-labelledby="tl-dialog-title">
+      <div class="modal-box">
+        <button type="button" class="modal-close" data-close data-i18n-aria="history.close" aria-label="Đóng"><svg class="ic"><use href="#i-x"/></svg></button>
+        <div class="modal-body"></div>
+        <footer class="modal-foot">
+          <button type="button" class="btn btn-outline btn-sm" data-step="-1"><svg class="ic ic-flip"><use href="#i-arrow"/></svg><span data-i18n="history.prev"></span></button>
+          <button type="button" class="btn btn-outline btn-sm" data-step="1"><span data-i18n="history.next"></span><svg class="ic"><use href="#i-arrow"/></svg></button>
+        </footer>
+      </div>
+    </dialog>`,
   },
 
   'pages/itinerary.html': {

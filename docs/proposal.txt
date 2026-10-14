@@ -36,7 +36,7 @@ Trang Khách sạn liệt kê 25 khách sạn, hostel và homestay với giá th
 
 Trang Lịch trình cho phép thêm địa điểm, quán ăn theo từng ngày, kéo thả để sắp xếp, tự tính chi phí và thời gian, cảnh báo khi một ngày quá dày, và mở toàn bộ tuyến đường trên Google Maps. Ở mọi trang đều có một cửa sổ nhỏ hiện lịch trình trên bản đồ.
 
-Trang Lịch sử trình bày 9 mốc chính từ khi Lý Thái Tổ dời đô về Thăng Long năm 1010 đến Hà Nội ngày nay. Bấm hoặc rê chuột vào một mốc thì ô đó mở rộng, hiện thêm ảnh, phần kể chi tiết, một chuyện thú vị, và nút dẫn sang Wikipedia hoặc Google cho ai muốn tìm hiểu thêm.
+Trang Lịch sử trình bày 9 mốc chính từ khi Lý Thái Tổ dời đô về Thăng Long năm 1010 đến Hà Nội ngày nay. Bấm vào một mốc sẽ mở một cửa sổ riêng trình bày đầy đủ: ảnh minh hoạ, thời gian, nhân vật, địa điểm, phần kể bối cảnh, diễn biến và ý nghĩa của sự kiện, cùng một chuyện thú vị. Trong cửa sổ có thể chuyển sang mốc trước hoặc mốc sau.
 
 Trang web không có tài khoản người dùng, không xử lý đặt phòng hay thanh toán. Mọi việc đặt chỗ, gọi món đều chuyển sang ứng dụng của đối tác. Giá và giờ mở cửa chỉ mang tính tham khảo.
 

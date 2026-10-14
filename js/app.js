@@ -197,55 +197,54 @@ async function hotels() {
 }
 
 /* ---------------- HISTORY ---------------- */
+let historyEvents = [];
 async function history() {
   const tl = document.getElementById('timeline');
-  const events = await api.getHistory();
+  const events = historyEvents = await api.getHistory();
   tl.innerHTML = events.map((e, i) => `
     <li class="tl-item ${i % 2 ? 'right' : 'left'}">
       <div class="tl-year">${e.year}</div>
-      <article class="tl-card">
-        <h3 class="tl-title"><button type="button" class="tl-toggle" aria-expanded="false" aria-controls="tl-more-${i}">
-          <span>${L(e.title)}</span>${icon('chevron', 'tl-chevron')}
-        </button></h3>
-        <p class="tl-desc">${L(e.desc)}</p>
-        <div class="tl-more" id="tl-more-${i}">
-          <div class="tl-more-inner">
-            ${e.image ? `<img class="tl-img" src="${e.image}" alt="${e.imageAlt || ''}" loading="lazy" width="960" height="540" />` : ''}
-            ${e.detail ? `<p>${L(e.detail)}</p>` : ''}
-            ${e.fact ? `<p class="tl-fact">${icon('bulb')}<span><b>${t('history.fact')}</b> ${L(e.fact)}</span></p>` : ''}
-            <div class="actions">
-              ${e.wiki?.vi ? `<a class="btn btn-primary btn-sm" target="_blank" rel="noopener" href="${api.wikiLink(e.wiki.vi)}">${icon('external')} ${t('history.more')}</a>` : ''}
-              <a class="btn btn-outline btn-sm" target="_blank" rel="noopener" href="${api.googleSearch(L(e.title))}">${icon('l-google', 'ic-logo')} ${t('history.google')}</a>
-            </div>
-          </div>
-        </div>
+      <article class="tl-card" data-i="${i}">
+        <h3 class="tl-title"><button type="button" class="tl-open" aria-haspopup="dialog">${L(e.title)}</button></h3>
+        <p>${L(e.desc)}</p>
+        <span class="tl-hint">${t('history.open')}${icon('arrow')}</span>
       </article>
     </li>`).join('');
-  tl.querySelectorAll('.tl-img').forEach((img) => img.addEventListener('error', () => img.remove(), { once: true }));
-  initTimelineCards(tl);
+  tl.querySelectorAll('.tl-card').forEach((card) => card.addEventListener('click', () => openHistory(+card.dataset.i)));
   const io = new IntersectionObserver((es) => es.forEach((x) => x.isIntersecting && x.target.classList.add('show')), { threshold: 0.2 });
   tl.querySelectorAll('.tl-item').forEach((el) => io.observe(el));
 }
 
-/** Ô mốc thời gian mở rộng khi bấm (giữ mở tới khi bấm lại) hoặc khi rê chuột (thiết bị có chuột) */
-function initTimelineCards(tl) {
-  const canHover = matchMedia('(hover: hover) and (pointer: fine)').matches;
-  tl.querySelectorAll('.tl-card').forEach((card) => {
-    const btn = card.querySelector('.tl-toggle');
-    let pinned = false, timer = 0;
-    const set = (open) => { card.classList.toggle('is-open', open); btn.setAttribute('aria-expanded', String(open)); };
-    // Bấm vào bất cứ đâu trên ô (trừ link trong phần mở rộng): ghim mở / bỏ ghim và đóng
-    card.addEventListener('click', (e) => {
-      if (e.target.closest('a')) return;
-      clearTimeout(timer);
-      pinned = !pinned;
-      set(pinned);
-    });
-    if (canHover) {
-      card.addEventListener('mouseenter', () => { clearTimeout(timer); timer = setTimeout(() => set(true), 120); });
-      card.addEventListener('mouseleave', () => { clearTimeout(timer); if (!pinned) set(false); });
-    }
-  });
+/** Cửa sổ chi tiết một mốc lịch sử (<dialog>: Esc / nút X / bấm ra ngoài để đóng, nút mốc trước / sau) */
+function openHistory(index) {
+  const dlg = document.getElementById('tl-dialog');
+  const body = dlg.querySelector('.modal-body');
+  const events = historyEvents;
+  const show = (i) => {
+    const e = events[i];
+    dlg.dataset.i = i;
+    const facts = [['history.when', e.when], ['history.who', e.who], ['history.where', e.where]].filter(([, v]) => v);
+    body.innerHTML = `
+      ${e.image ? `<figure class="modal-media"><img src="${e.image}" alt="${e.imageAlt || ''}" width="960" height="540" /><figcaption>${e.imageAlt ? e.imageAlt + '. ' : ''}${t('history.photo')}</figcaption></figure>` : ''}
+      <p class="modal-year">${e.year}</p>
+      <h2 id="tl-dialog-title">${L(e.title)}</h2>
+      ${facts.length ? `<dl class="modal-facts">${facts.map(([k, v]) => `<div><dt>${t(k)}</dt><dd>${v}</dd></div>`).join('')}</dl>` : ''}
+      ${(L(e.detail) || L(e.desc)).split(/\n{2,}/).map((p) => `<p>${p}</p>`).join('')}
+      ${e.fact ? `<p class="tl-fact">${icon('bulb')}<span><b>${t('history.fact')}</b> ${L(e.fact)}</span></p>` : ''}`;
+    body.querySelector('img')?.addEventListener('error', (ev) => ev.target.closest('figure').remove(), { once: true });
+    body.scrollTop = 0;
+    dlg.querySelector('[data-step="-1"]').disabled = i === 0;
+    dlg.querySelector('[data-step="1"]').disabled = i === events.length - 1;
+  };
+  if (!dlg.dataset.bound) {
+    dlg.dataset.bound = '1';
+    dlg.querySelector('[data-close]').addEventListener('click', () => dlg.close());
+    // Bấm vào nền mờ bên ngoài khung thì đóng
+    dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+    dlg.querySelectorAll('[data-step]').forEach((b) => b.addEventListener('click', () => openHistory(+dlg.dataset.i + +b.dataset.step)));
+  }
+  show(index);
+  if (!dlg.open) dlg.showModal();
 }
 
 /* ---------------- ITINERARY ---------------- */

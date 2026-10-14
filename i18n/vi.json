@@ -48,7 +48,7 @@
   "food.shopee": "ShopeeFood",
   "food.vegetarian": "Chay",
   "history.title": "Dòng lịch sử Thăng Long, Hà Nội",
-  "history.pageDesc": "Từ chiếu dời đô năm 1010 tới thủ đô hiện đại. Bấm hoặc rê chuột vào từng mốc để xem ảnh, chi tiết và chuyện thú vị.",
+  "history.pageDesc": "Từ chiếu dời đô năm 1010 tới thủ đô hiện đại. Bấm vào từng mốc để đọc chi tiết.",
   "itinerary.title": "Lịch trình của tôi",
   "itinerary.pageDesc": "Kéo thả để sắp xếp, xem chi phí và thời gian ước tính, mở tuyến đường trên Google Maps.",
   "itinerary.empty": "Chưa có địa điểm nào. Thêm từ trang Địa điểm, Ẩm thực hoặc chọn lịch trình mẫu bên dưới.",
@@ -128,6 +128,12 @@
   "food.search": "Tìm món hoặc quán…",
   "itinerary.added": "Đã thêm vào lịch trình",
   "history.fact": "Có thể bạn chưa biết:",
-  "history.more": "Tìm hiểu thêm",
-  "history.google": "Tìm trên Google"
+  "history.open": "Xem chi tiết",
+  "history.close": "Đóng",
+  "history.prev": "Mốc trước",
+  "history.next": "Mốc sau",
+  "history.when": "Thời gian",
+  "history.who": "Nhân vật",
+  "history.where": "Địa điểm",
+  "history.photo": "Ảnh: Wikimedia Commons"
 }

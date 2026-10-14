@@ -11,17 +11,17 @@
       "en": "The Edict on the Transfer of the Capital names the city Thang Long – 'Ascending Dragon'.",
       "zh": "颁布迁都诏，命名升龙——飞龙升天。"
     },
+    "when": "Mùa thu năm 1010",
+    "who": "Vua Lý Thái Tổ (Lý Công Uẩn)",
+    "where": "Từ Hoa Lư (Ninh Bình) ra thành Đại La",
     "detail": {
-      "vi": "Mùa thu năm 1010, vua Lý Thái Tổ rời kinh đô Hoa Lư (Ninh Bình) ra thành Đại La. Trong Chiếu dời đô, nhà vua khen vùng đất này ở giữa trời đất, có thế rồng cuộn hổ ngồi, tiện hướng nhìn sông dựa núi, xứng đáng làm kinh đô muôn đời."
+      "vi": "Cuối năm 1009, Lý Công Uẩn lên ngôi, mở đầu nhà Lý. Kinh đô Hoa Lư của hai triều Đinh, Tiền Lê nằm giữa vùng núi đá vôi hiểm trở, dễ phòng thủ nhưng chật hẹp, khó mở mang và buôn bán.\n\nĐầu năm 1010, nhà vua ban Chiếu dời đô. Trong chiếu, vua cho rằng thành Đại La ở giữa trời đất, có thế rồng cuộn hổ ngồi, đất rộng mà bằng phẳng, cao mà thoáng, dân cư không khổ vì ngập lụt, muôn vật tốt tươi, xứng đáng làm kinh đô muôn đời. Mùa thu năm ấy, triều đình dời ra Đại La.\n\nViệc dời đô mở ra thời kỳ phát triển lâu dài của Đại Việt. Thăng Long là kinh đô của phần lớn các triều đại cho tới đầu thế kỷ 19, và năm 2010 Hà Nội kỷ niệm tròn 1000 năm sự kiện này."
     },
     "fact": {
       "vi": "Tương truyền khi thuyền vua cập thành Đại La thì thấy rồng vàng bay lên, vì vậy vua đổi tên thành là Thăng Long, nghĩa là \"rồng bay lên\"."
     },
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/T%C6%B0%E1%BB%A3ng_L%C3%BD_Th%C3%A1i_T%E1%BB%95_2.jpg/960px-T%C6%B0%E1%BB%A3ng_L%C3%BD_Th%C3%A1i_T%E1%BB%95_2.jpg",
-    "imageAlt": "Tượng vua Lý Thái Tổ bên hồ Hoàn Kiếm",
-    "wiki": {
-      "vi": "Chiếu dời đô"
-    }
+    "imageAlt": "Tượng vua Lý Thái Tổ bên hồ Hoàn Kiếm"
   },
   {
     "year": "1070–1076",
@@ -35,17 +35,17 @@
       "en": "Vietnam's first university.",
       "zh": "越南第一所大学。"
     },
+    "when": "Năm 1070 (Văn Miếu) và năm 1076 (Quốc Tử Giám)",
+    "who": "Vua Lý Thánh Tông, vua Lý Nhân Tông",
+    "where": "Phía nam kinh thành Thăng Long, nay ở phố Quốc Tử Giám",
     "detail": {
-      "vi": "Năm 1070, vua Lý Thánh Tông cho xây Văn Miếu để thờ Khổng Tử. Năm 1076, vua Lý Nhân Tông lập Quốc Tử Giám ngay bên cạnh, ban đầu dạy con em hoàng tộc và quan lại, về sau nhận cả người học giỏi xuất thân thường dân."
+      "vi": "Năm 1070, vua Lý Thánh Tông cho dựng Văn Miếu, đắp tượng Khổng Tử, Chu Công và Tứ phối, vẽ tượng 72 người hiền để thờ. Hoàng thái tử cũng đến đây học.\n\nNăm 1075, triều Lý mở khoa thi Nho học đầu tiên. Một năm sau, vua Lý Nhân Tông lập Quốc Tử Giám ngay cạnh Văn Miếu. Đây được xem là trường đại học đầu tiên của Việt Nam, lúc đầu chỉ dạy con em vua quan.\n\nThời Lê sơ, Quốc Tử Giám được mở rộng và nhận cả con nhà thường dân học giỏi. Từ năm 1484, vua Lê Thánh Tông cho dựng bia khắc tên những người đỗ tiến sĩ. Ngày nay khu di tích gồm năm lớp sân, nổi bật là Khuê Văn Các, hình ảnh được chọn làm biểu tượng của Thủ đô."
     },
     "fact": {
       "vi": "Văn Miếu còn giữ 82 tấm bia tiến sĩ đặt trên lưng rùa đá, khắc tên những người đỗ đạt trong các khoa thi từ năm 1442 đến 1779. Các bia này đã được UNESCO ghi danh là Di sản tư liệu thế giới."
     },
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Hanoi_Temple_of_Literature_%28cropped%29.jpg/960px-Hanoi_Temple_of_Literature_%28cropped%29.jpg",
-    "imageAlt": "Khuê Văn Các trong Văn Miếu",
-    "wiki": {
-      "vi": "Văn Miếu – Quốc Tử Giám"
-    }
+    "imageAlt": "Khuê Văn Các trong Văn Miếu"
   },
   {
     "year": "1428",
@@ -59,17 +59,17 @@
       "en": "Legend of returning the magic sword to the Golden Turtle – origin of Hoan Kiem Lake's name.",
       "zh": "还剑给金龟的传说——还剑湖名称的由来。"
     },
+    "when": "Khởi nghĩa 1418 đến 1427, lên ngôi năm 1428",
+    "who": "Lê Lợi (vua Lê Thái Tổ), Nguyễn Trãi",
+    "where": "Từ Lam Sơn (Thanh Hóa) về thành Đông Quan",
     "detail": {
-      "vi": "Sau 10 năm khởi nghĩa Lam Sơn (1418–1427), Lê Lợi đánh đuổi quân Minh, lên ngôi hoàng đế năm 1428, lập ra nhà Hậu Lê và tiếp tục đóng đô ở Thăng Long, lúc này đổi tên là Đông Kinh."
+      "vi": "Năm 1407, nhà Minh đánh bại nhà Hồ và đặt ách đô hộ lên Đại Việt, đổi tên Thăng Long thành Đông Quan. Năm 1418, Lê Lợi dựng cờ khởi nghĩa ở Lam Sơn (Thanh Hóa), xưng là Bình Định Vương.\n\nSau gần 10 năm chiến đấu, nghĩa quân thắng lớn ở Tốt Động, Chúc Động cuối năm 1426, rồi Chi Lăng, Xương Giang năm 1427, buộc quân Minh rút về nước. Nguyễn Trãi thay Lê Lợi viết Bình Ngô đại cáo, tuyên bố nền độc lập.\n\nNăm 1428, Lê Lợi lên ngôi ở Thăng Long, lập ra nhà Hậu Lê và đổi tên kinh thành là Đông Kinh."
     },
     "fact": {
       "vi": "Theo truyền thuyết, khi vua dạo thuyền trên hồ Lục Thủy, Rùa Vàng nổi lên xin lại thanh gươm thần Thuận Thiên. Từ đó hồ được gọi là Hoàn Kiếm, nghĩa là \"trả gươm\"."
     },
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Hoan_Kiem_10082026.jpg/960px-Hoan_Kiem_10082026.jpg",
-    "imageAlt": "Hồ Hoàn Kiếm và Tháp Rùa",
-    "wiki": {
-      "vi": "Lê Thái Tổ"
-    }
+    "imageAlt": "Hồ Hoàn Kiếm và Tháp Rùa"
   },
   {
     "year": "1831",
@@ -83,17 +83,17 @@
       "en": "Hanoi – 'the city inside the river'.",
       "zh": "河内——河流之中的城市。"
     },
+    "when": "Năm 1831 (năm Minh Mạng thứ 12)",
+    "who": "Vua Minh Mạng",
+    "where": "Thành Thăng Long cũ và các phủ xung quanh",
     "detail": {
-      "vi": "Trong cuộc cải cách hành chính năm 1831, vua Minh Mạng lập tỉnh Hà Nội gồm thành Thăng Long cũ và các phủ huyện xung quanh. Khi đó kinh đô nhà Nguyễn đã ở Huế, nên Thăng Long chỉ còn là một tỉnh thành."
+      "vi": "Năm 1802, vua Gia Long lập nhà Nguyễn và đóng đô ở Phú Xuân (Huế). Thăng Long không còn là kinh đô, chỉ là trung tâm của Bắc Thành.\n\nNăm 1831, trong cuộc cải cách hành chính lớn, vua Minh Mạng bỏ Bắc Thành và chia cả nước thành các tỉnh. Tỉnh Hà Nội ra đời, gồm thành Thăng Long cũ và bốn phủ Hoài Đức, Thường Tín, Ứng Hòa, Lý Nhân.\n\nĐây là lần đầu cái tên Hà Nội xuất hiện. Thành Hà Nội khi đó là tỉnh lỵ, và tên gọi này được dùng cho tới ngày nay."
     },
     "fact": {
       "vi": "Hà Nội (河內) nghĩa là \"phía trong sông\", ý nói vùng đất được các con sông bao quanh, lớn nhất là sông Hồng."
     },
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Hanoi_Province_1891.jpg/960px-Hanoi_Province_1891.jpg",
-    "imageAlt": "Bản đồ tỉnh Hà Nội năm 1891",
-    "wiki": {
-      "vi": "Hà Nội (tỉnh)"
-    }
+    "imageAlt": "Bản đồ tỉnh Hà Nội năm 1891"
   },
   {
     "year": "1902",
@@ -107,17 +107,17 @@
       "en": "The Opera House, Long Bien Bridge and French Quarter are built.",
       "zh": "歌剧院、龙编桥和法国区建成。"
     },
+    "when": "Từ năm 1902",
+    "who": "Toàn quyền Đông Dương Paul Doumer",
+    "where": "Khu phố Pháp phía nam hồ Hoàn Kiếm, sông Hồng",
     "detail": {
-      "vi": "Năm 1902, Hà Nội trở thành thủ phủ của Liên bang Đông Dương thuộc Pháp. Người Pháp quy hoạch khu phố mới phía nam hồ Hoàn Kiếm với đại lộ rợp cây và biệt thự, xây Phủ Toàn quyền, cầu Long Biên, rồi Nhà hát Lớn vài năm sau đó."
+      "vi": "Sau khi chiếm toàn bộ Việt Nam, Pháp lập Liên bang Đông Dương gồm Bắc Kỳ, Trung Kỳ, Nam Kỳ, Lào và Campuchia. Năm 1902, thủ phủ của liên bang được chuyển từ Sài Gòn ra Hà Nội.\n\nNgười Pháp quy hoạch lại thành phố: lấp nhiều ao hồ, mở các đại lộ rợp cây và xây khu phố Pháp phía nam hồ Hoàn Kiếm với biệt thự, công sở. Nhiều công trình còn đến nay ra đời trong giai đoạn này, như Phủ Toàn quyền (nay là Phủ Chủ tịch), cầu Long Biên (1902) và Nhà hát Lớn (1911).\n\nThành Hà Nội thời Nguyễn bị phá dỡ gần hết từ cuối thế kỷ 19 để lấy đất xây dựng, chỉ còn lại Cột Cờ, Cửa Bắc và vài dấu tích nhỏ."
     },
     "fact": {
       "vi": "Cầu Long Biên khánh thành năm 1902 với tên cầu Doumer, theo tên Toàn quyền Paul Doumer, và từng là một trong những cây cầu dài nhất châu Á thời bấy giờ."
     },
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Long_bien_bridge.jpg/960px-Long_bien_bridge.jpg",
-    "imageAlt": "Cầu Long Biên bắc qua sông Hồng",
-    "wiki": {
-      "vi": "Liên bang Đông Dương"
-    }
+    "imageAlt": "Cầu Long Biên bắc qua sông Hồng"
   },
   {
     "year": "1945",
@@ -131,17 +131,17 @@
       "en": "On 2 September 1945 Ho Chi Minh proclaims independence.",
       "zh": "1945年9月2日，胡志明宣读独立宣言。"
     },
+    "when": "Chiều ngày 2/9/1945",
+    "who": "Chủ tịch Hồ Chí Minh",
+    "where": "Quảng trường Ba Đình",
     "detail": {
-      "vi": "Chiều 2/9/1945, tại quảng trường Ba Đình, Chủ tịch Hồ Chí Minh đọc bản Tuyên ngôn Độc lập trước hàng chục vạn người, khai sinh nước Việt Nam Dân chủ Cộng hòa. Ngày 2/9 trở thành Quốc khánh."
+      "vi": "Tháng 8/1945, Nhật đầu hàng Đồng minh. Ngày 19/8, nhân dân Hà Nội giành chính quyền, góp phần vào thắng lợi của Cách mạng tháng Tám trên cả nước.\n\nChủ tịch Hồ Chí Minh soạn bản Tuyên ngôn Độc lập tại căn nhà số 48 Hàng Ngang. Chiều 2/9/1945, trước hàng chục vạn người tại quảng trường Ba Đình, Người đọc bản Tuyên ngôn, khai sinh nước Việt Nam Dân chủ Cộng hòa.\n\nNgày 2/9 trở thành ngày Quốc khánh. Quảng trường Ba Đình về sau là nơi đặt Lăng Chủ tịch Hồ Chí Minh, khánh thành năm 1975."
     },
     "fact": {
       "vi": "Câu mở đầu bản Tuyên ngôn trích từ Tuyên ngôn Độc lập năm 1776 của Mỹ: \"Tất cả mọi người đều sinh ra có quyền bình đẳng.\""
     },
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Ba_Dinh_Square_September_2nd%2C_1945.jpg/960px-Ba_Dinh_Square_September_2nd%2C_1945.jpg",
-    "imageAlt": "Quảng trường Ba Đình ngày 2/9/1945",
-    "wiki": {
-      "vi": "Tuyên ngôn độc lập (Việt Nam Dân chủ Cộng hòa)"
-    }
+    "imageAlt": "Quảng trường Ba Đình ngày 2/9/1945"
   },
   {
     "year": "1954",
@@ -155,17 +155,17 @@
       "en": "On 10 October 1954 Vietnamese forces take over Hanoi.",
       "zh": "1954年10月10日，越南军队接管河内。"
     },
+    "when": "Ngày 10/10/1954",
+    "who": "Quân đội nhân dân Việt Nam (Đại đoàn 308)",
+    "where": "Các cửa ô và sân Cột cờ Hà Nội",
     "detail": {
-      "vi": "Sau chiến thắng Điện Biên Phủ và Hiệp định Genève, ngày 10/10/1954 các đơn vị Quân đội nhân dân tiến vào tiếp quản Hà Nội. Chiều cùng ngày, lễ chào cờ được tổ chức tại sân Cột cờ Hà Nội."
+      "vi": "Sau chiến thắng Điện Biên Phủ ngày 7/5/1954, Hiệp định Genève được ký vào tháng 7, buộc quân Pháp rút khỏi miền Bắc.\n\nSáng 10/10/1954, các đơn vị của Đại đoàn 308 chia nhiều ngả tiến vào tiếp quản Hà Nội trong sự chào đón của người dân. 15 giờ chiều cùng ngày, lễ chào cờ được tổ chức trọng thể tại sân Cột cờ.\n\nNgày 10/10 trở thành Ngày Giải phóng Thủ đô. Hà Nội tiếp tục là thủ đô của nước Việt Nam Dân chủ Cộng hòa, rồi của nước Cộng hòa xã hội chủ nghĩa Việt Nam từ năm 1976."
     },
     "fact": {
       "vi": "Cột cờ Hà Nội được xây từ đầu thế kỷ 19 thời vua Gia Long và là một trong số ít công trình của thành Hà Nội cũ còn gần như nguyên vẹn đến nay."
     },
     "image": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Flag_tower%2C_Hanoi.jpg",
-    "imageAlt": "Cột cờ Hà Nội",
-    "wiki": {
-      "vi": "Ngày Giải phóng Thủ đô"
-    }
+    "imageAlt": "Cột cờ Hà Nội"
   },
   {
     "year": "2008",
@@ -179,17 +179,17 @@
       "en": "Ha Tay is merged; Hanoi becomes one of the world's largest capitals by area.",
       "zh": "合并河西省，河内成为世界面积最大的首都之一。"
     },
+    "when": "Ngày 1/8/2008",
+    "who": "Quốc hội khóa XII",
+    "where": "Hà Tây, Mê Linh (Vĩnh Phúc) và 4 xã của Lương Sơn (Hòa Bình)",
     "detail": {
-      "vi": "Ngày 1/8/2008, toàn bộ tỉnh Hà Tây, huyện Mê Linh (Vĩnh Phúc) và 4 xã của huyện Lương Sơn (Hòa Bình) được sáp nhập vào Hà Nội. Diện tích thủ đô tăng lên hơn 3.300 km², gấp hơn ba lần trước đó."
+      "vi": "Ngày 29/5/2008, Quốc hội thông qua nghị quyết điều chỉnh địa giới hành chính Thủ đô, có hiệu lực từ ngày 1/8/2008.\n\nToàn bộ tỉnh Hà Tây, huyện Mê Linh của Vĩnh Phúc và 4 xã thuộc huyện Lương Sơn của Hòa Bình được nhập vào Hà Nội. Diện tích thành phố tăng từ khoảng 920 km² lên hơn 3.300 km², dân số lên khoảng 6,2 triệu người.\n\nThủ đô có thêm nhiều vùng nông thôn và làng nghề truyền thống, như làng lụa Vạn Phúc ở Hà Đông."
     },
     "fact": {
       "vi": "Nhờ đợt mở rộng này mà núi Ba Vì và chùa Hương, vốn thuộc tỉnh Hà Tây, nay đều nằm trong địa giới Hà Nội."
     },
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Hanoi_skyline_with_Ba_Vi_Mountain.jpg/960px-Hanoi_skyline_with_Ba_Vi_Mountain.jpg",
-    "imageAlt": "Hà Nội nhìn về phía núi Ba Vì",
-    "wiki": {
-      "vi": "Hà Tây (tỉnh)"
-    }
+    "imageAlt": "Hà Nội nhìn về phía núi Ba Vì"
   },
   {
     "year": "2010",
@@ -203,16 +203,16 @@
       "en": "The Imperial Citadel is inscribed as a UNESCO World Heritage site.",
       "zh": "升龙皇城被列入联合国教科文组织世界遗产。"
     },
+    "when": "Đại lễ từ ngày 1 đến 10/10/2010",
+    "who": "Thành phố Hà Nội và nhân dân cả nước",
+    "where": "Quảng trường Ba Đình và khắp Hà Nội",
     "detail": {
-      "vi": "Tháng 10/2010, Hà Nội tổ chức Đại lễ kỷ niệm 1000 năm Thăng Long với diễu binh, diễu hành, bắn pháo hoa và nhiều hoạt động văn hóa. Trước đó, ngày 31/7/2010, khu trung tâm Hoàng thành Thăng Long được UNESCO công nhận là Di sản văn hóa thế giới."
+      "vi": "Năm 2010 tròn 1000 năm kể từ khi Lý Thái Tổ dời đô về Thăng Long. Đại lễ chính diễn ra từ ngày 1 đến 10/10/2010, cao điểm là lễ mít tinh, diễu binh, diễu hành tại quảng trường Ba Đình sáng 10/10.\n\nNhiều công trình được hoàn thành dịp này, như Đại lộ Thăng Long nối trung tâm với Hòa Lạc, Bảo tàng Hà Nội và con đường gốm sứ ven sông Hồng.\n\nTrước đó, ngày 31/7/2010, khu trung tâm Hoàng thành Thăng Long được UNESCO công nhận là Di sản văn hóa thế giới, với dấu tích kiến trúc chồng lên nhau qua nhiều thời kỳ, từ trước thời Lý cho tới thời Nguyễn."
     },
     "fact": {
       "vi": "Con đường gốm sứ ven sông Hồng, hoàn thành dịp đại lễ, được Tổ chức Kỷ lục Guinness công nhận là bức tranh gốm ghép dài nhất thế giới."
     },
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Millennial_Anniversary_of_Hanoi.jpg/960px-Millennial_Anniversary_of_Hanoi.jpg",
-    "imageAlt": "Đại lễ 1000 năm Thăng Long – Hà Nội",
-    "wiki": {
-      "vi": "Đại lễ 1000 năm Thăng Long – Hà Nội"
-    }
+    "imageAlt": "Đại lễ 1000 năm Thăng Long – Hà Nội"
   }
 ]
