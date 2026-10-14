@@ -11,7 +11,7 @@ Viết bằng HTML, CSS, JavaScript thuần (không framework), tiếng Việt, 
 | Module | Mô tả |
 |---|---|
 | Trang chủ | Hero, thời tiết + AQI Hà Nội (Open-Meteo), địa điểm nổi bật, ẩm thực, lịch trình mẫu |
-| Lịch sử | Timeline 9 mốc Thăng Long → Hà Nội. Bấm hoặc rê chuột vào một mốc để mở rộng: ảnh, chi tiết, fun fact, nút "Tìm hiểu thêm" (Wikipedia) và "Tìm trên Google" |
+| Lịch sử | Timeline 9 mốc Thăng Long → Hà Nội. Bấm vào một mốc để mở cửa sổ chi tiết: ảnh, thời gian / nhân vật / địa điểm, 3 đoạn kể bối cảnh, diễn biến, ý nghĩa và một fun fact; chuyển mốc trước / sau ngay trong cửa sổ |
 | Địa điểm | 12 địa điểm có ảnh Wikimedia, tìm kiếm (không phân biệt dấu), chỉ đường Google Maps, thêm vào lịch trình |
 | Ẩm thực | 23 quán có ảnh món, tìm kiếm theo tên quán / món, nút Google Maps / GrabFood / ShopeeFood mở thẳng trang tìm kiếm tên quán |
 | Lịch trình | Kéo-thả (SortableJS), tính chi phí + thời gian, cảnh báo ngày quá dày, mở tuyến đường Google Maps, nạp lịch trình mẫu. Cửa sổ nổi trên mọi trang với bản đồ Leaflet/OSM, danh sách điểm theo ngày, xoá nhanh |
@@ -79,7 +79,7 @@ Người dùng chọn ngày và số khách ngay trên trang đặt phòng. Nế
 ## API sử dụng
 
 - [Open-Meteo](https://open-meteo.com/) – thời tiết, AQI (không cần key)
-- [Wikipedia REST API](https://www.mediawiki.org/wiki/API:REST_API) – ảnh cho địa điểm / quán chưa có ảnh; trang Lịch sử link sang Wikipedia tiếng Việt
+- [Wikipedia REST API](https://www.mediawiki.org/wiki/API:REST_API) – ảnh cho địa điểm / quán chưa có ảnh
 - Google Maps URLs, GrabFood, ShopeeFood – deep link
 - [Leaflet](https://leafletjs.com/) + OpenStreetMap tiles – bản đồ trong cửa sổ lịch trình
 - Browser: localStorage, sessionStorage

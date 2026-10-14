@@ -1,7 +1,7 @@
 // tools/build-info.mjs – sinh hanoi-info.txt (bản tổng hợp tiếng Việt) từ data/*.json
 // Chạy lại sau khi sửa dữ liệu: node tools/build-info.mjs
 import { readFileSync, writeFileSync } from 'node:fs';
-import { deliveryLink, hotelLinks, mapsSearch, wikiLink } from '../js/api.js';
+import { deliveryLink, hotelLinks, mapsSearch } from '../js/api.js';
 
 const read = (f) => JSON.parse(readFileSync(new URL(`../${f}`, import.meta.url), 'utf8'));
 const places = read('data/places.json');
@@ -28,9 +28,12 @@ section('1. Dòng lịch sử Thăng Long, Hà Nội');
 for (const e of history) {
   line(`${e.year}: ${vi(e.title)}`);
   line(vi(e.desc));
-  if (e.detail) line(vi(e.detail));
-  if (e.fact) line(`Có thể bạn chưa biết: ${vi(e.fact)}`);
-  if (e.wiki?.vi) line(`Tìm hiểu thêm: ${wikiLink(e.wiki.vi)}`);
+  field('Thời gian', e.when);
+  field('Nhân vật', e.who);
+  field('Địa điểm', e.where);
+  line();
+  for (const p of vi(e.detail).split(/\n{2,}/).filter(Boolean)) { line(p); line(); }
+  if (e.fact) { line(`Có thể bạn chưa biết: ${vi(e.fact)}`); line(); }
   line();
 }
 

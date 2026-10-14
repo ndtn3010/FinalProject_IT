@@ -36,10 +36,10 @@ Proposal ngắn bằng tiếng Việt (mục tiêu, nội dung, kế hoạch, ph
   **Trang Khách sạn chỉ liệt kê**, không lọc/sắp xếp, không form ngày (link đặt phòng chỉ tìm theo tên, người dùng tự chọn ngày trên trang đặt phòng).
 - Nút "Thêm vào lịch trình" vẽ theo `isInItinerary()` và tự đồng bộ qua sự kiện `storagechange` (`render.js`);
   `storage.js` phát lại sự kiện này khi tab khác đổi dữ liệu và khi trang được lấy lại từ bfcache. Trang Lịch trình cũng vẽ lại theo sự kiện đó.
-- **Trang Lịch sử**: mỗi mốc trong `history.json` có `title`, `desc` (luôn hiện) và `detail`, `fact`, `image` (thumbnail Wikimedia 960px,
-  hoặc file gốc nếu ảnh nhỏ hơn 960px), `imageAlt`, `wiki.vi` (tên bài Wikipedia tiếng Việt) hiện khi mở rộng. Trường mới chỉ cần `vi`.
-  `initTimelineCards()` trong `app.js`: bấm để ghim mở / đóng, rê chuột (thiết bị có chuột) để mở tạm. Nút "Tìm hiểu thêm" dùng `wikiLink()`
-  (trang tìm kiếm Wikipedia có `go=Go`, trùng tên bài thì mở thẳng bài).
+- **Trang Lịch sử**: mỗi mốc trong `history.json` có `year`, `title`, `desc` (hiện trên ô timeline) và `when`, `who`, `where`,
+  `detail.vi` (các đoạn cách nhau bằng dòng trống), `fact`, `image` (thumbnail Wikimedia 960px, hoặc file gốc nếu ảnh nhỏ hơn), `imageAlt` (làm chú thích ảnh).
+  Trường mới chỉ cần `vi`. Bấm ô mở cửa sổ `<dialog id="tl-dialog">` (markup trong `build-pages.mjs`, logic `openHistory()` trong `app.js`):
+  Esc / nút X / bấm nền để đóng, nút mốc trước / sau. Nội dung viết đầy đủ trong dữ liệu, không link ra Wikipedia/Google.
 - Mọi lời gọi API ngoài phải có fallback khi lỗi (không làm trang trắng).
 - Comment code bằng tiếng Việt hoặc Anh đều được; commit message tiếng Anh, ngắn gọn.
 
