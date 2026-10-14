@@ -40,6 +40,8 @@ Proposal ngắn bằng tiếng Việt (mục tiêu, nội dung, kế hoạch, ph
   `detail.vi` (các đoạn cách nhau bằng dòng trống), `fact`, `image` (thumbnail Wikimedia 960px, hoặc file gốc nếu ảnh nhỏ hơn), `imageAlt` (làm chú thích ảnh).
   Trường mới chỉ cần `vi`. Bấm ô mở cửa sổ `<dialog id="tl-dialog">` (markup trong `build-pages.mjs`, logic `openHistory()` trong `app.js`):
   Esc / nút X / bấm nền để đóng, nút mốc trước / sau. Nội dung viết đầy đủ trong dữ liệu, không link ra Wikipedia/Google.
+- **Chống cache**: `build-pages.mjs` tính `VERSION` (hash css/js/data/i18n), gắn `?v=` vào style.css, app.js, import map cho mọi module
+  trong `js/` và `<meta name="hg-version">`; `versioned()` trong `i18n.js` gắn mã đó vào fetch JSON. Thêm file JS mới thì import map tự có.
 - Mọi lời gọi API ngoài phải có fallback khi lỗi (không làm trang trắng).
 - Comment code bằng tiếng Việt hoặc Anh đều được; commit message tiếng Anh, ngắn gọn.
 
@@ -56,7 +58,7 @@ Proposal ngắn bằng tiếng Việt (mục tiêu, nội dung, kế hoạch, ph
 ## Chạy & kiểm tra
 ```bash
 node tools/serve.mjs             # ES modules không chạy qua file://
-node tools/build-pages.mjs       # sau khi sửa layout chung
+node tools/build-pages.mjs       # sau khi sửa layout chung HOẶC bất kỳ file css/ js/ data/ i18n/ (cập nhật mã ?v= chống cache)
 node tools/build-info.mjs        # sau khi sửa data/*.json (sinh lại hanoi-info.txt, không sửa tay file đó)
 node --check js/*.js             # kiểm tra cú pháp
 ```

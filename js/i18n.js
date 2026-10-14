@@ -3,7 +3,7 @@ let dict = {};
 
 export async function loadStrings() {
   try {
-    const res = await fetch(`${baseUrl()}i18n/vi.json`);
+    const res = await fetch(versioned(`${baseUrl()}i18n/vi.json`));
     dict = await res.json();
   } catch { dict = {}; }
   applyDom();
@@ -42,6 +42,12 @@ export function formatVND(n) {
 /** Chuẩn hoá để tìm kiếm không dấu: "Hồ Gươm" ~ "ho guom" */
 export function fold(s) {
   return String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/gi, 'd').toLowerCase();
+}
+
+/** Gắn mã phiên bản (meta hg-version do build-pages.mjs sinh) để không dùng nhầm file JSON cũ trong cache */
+export function versioned(url) {
+  const v = document.querySelector('meta[name="hg-version"]')?.content;
+  return v ? `${url}?v=${v}` : url;
 }
 
 /** Thư mục gốc của site (để chạy được cả ở /repo-name/ trên GitHub Pages và ở /pages/xxx.html) */

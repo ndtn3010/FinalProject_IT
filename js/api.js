@@ -1,11 +1,11 @@
-import { baseUrl } from './i18n.js';
+import { baseUrl, versioned } from './i18n.js';
 
 export const HANOI = { lat: 21.0285, lng: 105.8542 }; // Hồ Hoàn Kiếm
 
 const cache = {};
 async function loadJson(name) {
   if (!cache[name]) {
-    cache[name] = fetch(`${baseUrl()}data/${name}.json`).then((r) => {
+    cache[name] = fetch(versioned(`${baseUrl()}data/${name}.json`)).then((r) => {
       if (!r.ok) throw new Error(`Cannot load ${name}.json`);
       return r.json();
     }).catch((err) => { delete cache[name]; throw err; });
