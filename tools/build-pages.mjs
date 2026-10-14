@@ -1,5 +1,18 @@
 // tools/build-pages.mjs – sinh các trang HTML từ một layout chung (chạy: node tools/build-pages.mjs)
-import { writeFileSync, mkdirSync } from 'node:fs';
+import { writeFileSync, mkdirSync, readFileSync, readdirSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+
+/* Mã phiên bản = hash nội dung CSS/JS/dữ liệu. Gắn vào link (?v=) để trình duyệt tải bản mới sau mỗi lần deploy
+   thay vì dùng file cũ trong cache (GitHub Pages cho cache 10 phút). Sửa css/js/data xong phải chạy lại script này. */
+const MODULES = readdirSync('js').filter((f) => f.endsWith('.js')).sort();
+const VERSION = (() => {
+  const h = createHash('sha1');
+  // Bỏ \r để máy Windows (CRLF) và Linux (LF) ra cùng một mã
+  for (const dir of ['css', 'js', 'data', 'i18n']) for (const f of readdirSync(dir).sort()) h.update(f).update(readFileSync(`${dir}/${f}`, 'utf8').replace(/\r/g, ''));
+  return h.digest('hex').slice(0, 8);
+})();
+/** Import map: mọi module trong js/ (kể cả khi import lẫn nhau) đều được tải kèm ?v= */
+const importMap = (base) => JSON.stringify({ imports: Object.fromEntries(MODULES.map((m) => [`${base}js/${m}`, `${base}js/${m}?v=${VERSION}`])) });
 
 /* Sprite icon dùng chung (nét 24px, ghép từ hình cơ bản). Dùng: <svg class="ic"><use href="#i-clock"/></svg> */
 const ICONS = `
@@ -64,7 +77,9 @@ const layout = ({ page, title, base, body, extraHead = '' }) => `<!DOCTYPE html>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;800&display=swap" rel="stylesheet" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23b6262c'/%3E%3Cpath d='M22 12h20M32 12v6M20 18h24M20 46h24M32 46v6M22 52h20M17 25a15 8 0 0 1 30 0v14a15 8 0 0 1-30 0z' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
-  <link rel="stylesheet" href="${base}css/style.css" />
+  <meta name="hg-version" content="${VERSION}" />
+  <link rel="stylesheet" href="${base}css/style.css?v=${VERSION}" />
+  <script type="importmap">${importMap(base)}</script>
   ${extraHead}
 </head>
 <body data-page="${page}" data-base="${base}">
@@ -130,7 +145,7 @@ ${body}
     </div>
   </footer>
 
-  <script type="module" src="${base}js/app.js"></script>
+  <script type="module" src="${base}js/app.js?v=${VERSION}"></script>
 </body>
 </html>
 `;
@@ -281,3 +296,4 @@ for (const [file, cfg] of Object.entries(pages)) {
   writeFileSync(file, layout(cfg));
   console.log('wrote', file);
 }
+console.log('version', VERSION);

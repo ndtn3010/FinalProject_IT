@@ -4,7 +4,7 @@
 Gồm lịch sử Thăng Long, địa điểm tham quan, quán ăn ngon, khách sạn và công cụ lên lịch trình kèm bản đồ, thời tiết và chất lượng không khí.
 Viết bằng HTML, CSS, JavaScript thuần (không framework), tiếng Việt, giao diện tối, dùng API miễn phí.
 
-**Live demo:** https://<username>.github.io/hanoi-guide/ *(cập nhật sau khi bật GitHub Pages)*
+**Live demo:** https://ndtn3010.github.io/FinalProject_IT/
 
 ## Tính năng
 
@@ -51,11 +51,13 @@ node tools/serve.mjs        # http://localhost:8080 và in ra địa chỉ LAN c
 Mở http://localhost:8080. Người cùng mạng Wi-Fi mở địa chỉ `http://<IP máy bạn>:8080/` mà script in ra
 (Windows: lần đầu chạy Node có thể hiện hộp thoại Firewall, chọn Allow).
 
-Sau khi sửa layout chung trong `tools/build-pages.mjs`:
+Sau khi sửa layout chung trong `tools/build-pages.mjs`, hoặc sửa bất kỳ file nào trong `css/`, `js/`, `data/`, `i18n/`:
 
 ```bash
 node tools/build-pages.mjs
 ```
+
+Script gắn mã phiên bản (hash nội dung) vào link CSS, JS và JSON (`?v=...`), để người xem tải bản mới ngay sau khi deploy thay vì dùng file cũ trong cache của trình duyệt (GitHub Pages cho cache 10 phút).
 
 Sau khi sửa `data/*.json`, chạy lại `node tools/build-info.mjs` để `hanoi-info.txt` khớp với dữ liệu mới.
 
