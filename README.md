@@ -1,7 +1,8 @@
 # Hà Nội Guide 🏮
 
-Website hướng dẫn du lịch Hà Nội đa ngôn ngữ (VI / EN / 中文) – đồ án môn học.
-HTML, CSS, JavaScript thuần, không framework, tích hợp API miễn phí và chatbot AI.
+**Bài tập cuối kì nhóm 2: Trang web du lịch Hà Nội.**
+Gồm lịch sử Thăng Long, địa điểm tham quan, quán ăn ngon, khách sạn và công cụ lên lịch trình kèm bản đồ, thời tiết và chất lượng không khí.
+Viết bằng HTML, CSS, JavaScript thuần (không framework), tiếng Việt, giao diện tối, dùng API miễn phí.
 
 **Live demo:** https://<username>.github.io/hanoi-guide/ *(cập nhật sau khi bật GitHub Pages)*
 
@@ -9,15 +10,12 @@ HTML, CSS, JavaScript thuần, không framework, tích hợp API miễn phí và
 
 | Module | Mô tả |
 |---|---|
-| Trang chủ | Màn hình mở đầu quả địa cầu 3D dạng vector (globe.gl + GeoJSON quốc gia, xoay được, chạm điểm Hà Nội để zoom và vào web, 1 lần/phiên, có nút bỏ qua), hero, thời tiết + AQI Hà Nội (Open-Meteo), địa điểm nổi bật, ẩm thực, lịch trình mẫu |
-| Lịch sử | Timeline Thăng Long → Hà Nội, animation khi cuộn |
-| Địa điểm | 12 địa điểm có ảnh Wikimedia, lọc theo loại, tìm kiếm, "Gần tôi" (Geolocation), chỉ đường Google Maps, thêm vào lịch trình |
-| Ẩm thực | 23 quán có ảnh món, lọc theo nhóm món / chay, nút Google Maps / GrabFood / ShopeeFood mở thẳng trang tìm kiếm tên quán |
+| Trang chủ | Hero, thời tiết + AQI Hà Nội (Open-Meteo), địa điểm nổi bật, ẩm thực, lịch trình mẫu |
+| Lịch sử | Timeline 9 mốc Thăng Long → Hà Nội. Bấm hoặc rê chuột vào một mốc để mở rộng: ảnh, chi tiết, fun fact, nút "Tìm hiểu thêm" (Wikipedia) và "Tìm trên Google" |
+| Địa điểm | 12 địa điểm có ảnh Wikimedia, tìm kiếm (không phân biệt dấu), chỉ đường Google Maps, thêm vào lịch trình |
+| Ẩm thực | 23 quán có ảnh món, tìm kiếm theo tên quán / món, nút Google Maps / GrabFood / ShopeeFood mở thẳng trang tìm kiếm tên quán |
 | Lịch trình | Kéo-thả (SortableJS), tính chi phí + thời gian, cảnh báo ngày quá dày, mở tuyến đường Google Maps, nạp lịch trình mẫu. Cửa sổ nổi trên mọi trang với bản đồ Leaflet/OSM, danh sách điểm theo ngày, xoá nhanh |
-| Khách sạn | 25 khách sạn / hostel / homestay theo khu vực, ngân sách, loại; chọn ngày & số khách (lưu vào My Trip); nút Booking.com / Agoda / Traveloka / Google Hotels tự điền ngày và số khách |
-| Chatbot | LLM (Gemini/Claude) qua Cloudflare Worker, streaming, trả lời 3 thứ tiếng, hiện card địa điểm, tự thêm vào lịch trình. Không có Worker → tự chuyển sang chế độ rule-based |
-| Đa ngôn ngữ | `i18n/*.json` cho giao diện, `{vi,en,zh}` trong dữ liệu |
-| Dark mode | Lưu localStorage |
+| Khách sạn | Danh sách 25 khách sạn / hostel / homestay; nút Booking.com / Agoda / Traveloka / Google Hotels |
 
 ## Cấu trúc
 
@@ -27,17 +25,17 @@ pages/                places, food, hotels, itinerary, history
 css/style.css
 js/
   app.js              Khởi tạo + logic từng trang
-  i18n.js             Đa ngôn ngữ
-  api.js              Open-Meteo, tỷ giá, Wikipedia, deep links, Haversine
-  storage.js          Lịch trình / yêu thích / My Trip (localStorage)
-  render.js           Card địa điểm, món ăn, mini-card chatbot
-  chatbot.js          Widget chatbot (streaming + fallback)
+  i18n.js             Chuỗi giao diện (vi.json), tìm kiếm không dấu
+  api.js              Open-Meteo, Wikipedia, deep links, Haversine
+  storage.js          Lịch trình (localStorage)
+  render.js           Card địa điểm, món ăn, khách sạn
   trip.js             Cửa sổ nổi lịch trình + bản đồ Leaflet
-  intro.js            Màn hình mở đầu quả địa cầu (globe.gl)
 data/                 places.json, foods.json, hotels.json, itineraries.json, history.json
-i18n/                 vi.json, en.json, zh.json
-worker/               Cloudflare Worker – proxy chatbot (giấu API key)
+i18n/                 vi.json
 tools/build-pages.mjs Sinh HTML từ layout chung (chạy lại sau khi sửa header/footer)
+tools/build-info.mjs  Sinh hanoi-info.txt (bản tổng hợp dữ liệu tiếng Việt) từ data/*.json
+tools/serve.mjs       Server tĩnh để chạy local
+hanoi-info.txt        Bản tổng hợp dữ liệu (file sinh tự động)
 docs/proposal.txt     Proposal
 ```
 
@@ -59,68 +57,45 @@ Sau khi sửa layout chung trong `tools/build-pages.mjs`:
 node tools/build-pages.mjs
 ```
 
+Sau khi sửa `data/*.json`, chạy lại `node tools/build-info.mjs` để `hanoi-info.txt` khớp với dữ liệu mới.
+
 ## Deploy web lên GitHub Pages
 
 1. Push code lên GitHub.
 2. Repo → **Settings → Pages → Source: Deploy from a branch → `main` / `/ (root)`** → Save.
 3. Sau ~1 phút site chạy tại `https://<username>.github.io/<repo>/`.
 
-## Deploy chatbot (Cloudflare Worker)
-
-```bash
-cd worker
-npm install -g wrangler
-wrangler login
-# Sửa SITE_ORIGIN và ALLOWED_ORIGINS trong wrangler.toml cho đúng domain GitHub Pages
-wrangler secret put GEMINI_API_KEY      # lấy key miễn phí tại https://aistudio.google.com/apikey
-wrangler deploy
-```
-
-Worker in ra URL dạng `https://hanoi-guide-chatbot.<account>.workers.dev`.
-Dán URL đó vào `window.HG_CHAT_ENDPOINT = "..."` trong `tools/build-pages.mjs`, chạy `node tools/build-pages.mjs`, commit & push.
-
-Dùng Claude thay Gemini: đặt `PROVIDER = "claude"` trong `wrangler.toml` và `wrangler secret put CLAUDE_API_KEY`.
-
-Chạy Worker local: copy `.dev.vars.example` → `.dev.vars`, điền key, `wrangler dev`.
-
-### Giao thức chatbot
-
-`POST /chat` `{ messages: [{role, content}], lang: "vi"|"en"|"zh" }` → SSE `data: {"t":"..."}` … `data: [DONE]`.
-
-Model có thể thêm dòng cuối `@@ACTIONS@@[...]` với:
-- `{"type":"show_places","ids":[...]}` → web hiện mini-card có nút Maps / Grab / Shopee / ＋
-- `{"type":"add_to_itinerary","ids":[...],"day":1}` → web tự thêm vào lịch trình
-
 ## Deep link đặt phòng (js/api.js → hotelLinks)
 
 | Nền tảng | URL sinh ra |
 |---|---|
-| Booking.com | `searchresults.html?ss=<tên>&checkin=&checkout=&group_adults=&no_rooms=1` |
-| Agoda | `search?city=2758&textToSearch=<tên>&checkIn=&checkOut=&adults=&rooms=1` |
-| Traveloka | `hotel/search?spec=DD-MM-YYYY.DD-MM-YYYY.<đêm>.1.HOTEL_GEO.10009843.Hanoi.<khách>` |
-| Google Hotels | `travel/search?q=<tên>&check_in_date=&check_out_date=&adults=` |
+| Booking.com | `searchresults.html?ss=<tên>` |
+| Agoda | `search?city=2758&textToSearch=<tên>` |
+| Traveloka | `hotel/vietnam/region/hanoi-10009843` (trang khách sạn Hà Nội) |
+| Google Hotels | `travel/search?q=<tên>` |
 
-Nếu `hotels.json` có `links.booking` / `links.agoda`… (trang riêng của khách sạn) thì dùng link đó và gắn thêm tham số ngày.
+Người dùng chọn ngày và số khách ngay trên trang đặt phòng. Nếu `hotels.json` có `links.booking` / `links.agoda`… (trang riêng của khách sạn) thì dùng thẳng link đó.
 
 ## API sử dụng
 
 - [Open-Meteo](https://open-meteo.com/) – thời tiết, AQI (không cần key)
-- [open.er-api.com](https://www.exchangerate-api.com/docs/free) – tỷ giá
-- [Wikipedia REST API](https://www.mediawiki.org/wiki/API:REST_API) – tóm tắt địa điểm
+- [Wikipedia REST API](https://www.mediawiki.org/wiki/API:REST_API) – ảnh cho địa điểm / quán chưa có ảnh; trang Lịch sử link sang Wikipedia tiếng Việt
 - Google Maps URLs, GrabFood, ShopeeFood – deep link
-- Google Gemini / Anthropic Claude – chatbot (qua Worker)
-- [globe.gl](https://globe.gl/) + GeoJSON Natural Earth (jsDelivr) – quả địa cầu vector mở đầu
 - [Leaflet](https://leafletjs.com/) + OpenStreetMap tiles – bản đồ trong cửa sổ lịch trình
-- Browser: Geolocation, localStorage, sessionStorage
+- Browser: localStorage, sessionStorage
 
 ## Thành viên
 
-| Tên | Vai trò |
-|---|---|
-| … | Leader / layout, i18n, deploy |
-| … | Địa điểm, bản đồ, lịch sử |
-| … | Ẩm thực, lịch trình, widgets |
-| … | Chatbot, Worker, testing |
+Nhóm 2:
+
+| STT | Họ tên | MSSV |
+|---|---|---|
+| 1 | Vũ Quang Minh | 26110145 |
+| 2 | Nguyễn Đăng Trọng Nghĩa | 26110150 |
+| 3 | Văn Phước Vinh | 26110203 |
+| 4 | Nguyễn Thanh Nhàn | 26110115 |
+| 5 | Vi Phước Thiện | 26110084 |
+| 6 | Nguyễn Hoàng | 26110096 |
 
 ## Giấy phép
 

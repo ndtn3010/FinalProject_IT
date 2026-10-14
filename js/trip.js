@@ -44,17 +44,12 @@ export function initTripPanel() {
   const setOpen = (open) => {
     panel.hidden = !open;
     fab.setAttribute('aria-expanded', String(open));
-    if (open) {
-      document.dispatchEvent(new CustomEvent('hg:panel', { detail: 'trip' }));
-      render(true);
-    }
+    if (open) render(true);
   };
   fab.addEventListener('click', () => setOpen(panel.hidden));
   root.querySelector('.trip-close').addEventListener('click', () => setOpen(false));
-  document.addEventListener('hg:panel', (e) => { if (e.detail !== 'trip') setOpen(false); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !panel.hidden) setOpen(false); });
   document.addEventListener('storagechange', () => render(!panel.hidden));
-  document.addEventListener('langchange', () => render(!panel.hidden));
 
   /** Vẽ lại danh sách; withMap=true thì cập nhật cả bản đồ (chỉ khi panel đang mở) */
   async function render(withMap) {

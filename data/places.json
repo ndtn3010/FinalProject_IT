@@ -5,7 +5,7 @@
     "district": "Hoàn Kiếm",
     "lat": 21.0288,
     "lng": 105.8525,
-    "hours": "24/7 (walking street Fri–Sun evening)",
+    "hours": "24/7 (phố đi bộ tối thứ 6 – chủ nhật)",
     "ticket": 0,
     "duration": 60,
     "name": {
@@ -68,7 +68,7 @@
     "district": "Ba Đình",
     "lat": 21.0342,
     "lng": 105.84,
-    "hours": "08:00–17:00 (closed Mon)",
+    "hours": "08:00–17:00 (nghỉ thứ 2)",
     "ticket": 100000,
     "duration": 120,
     "name": {
@@ -161,7 +161,7 @@
     "district": "Ba Đình",
     "lat": 21.0369,
     "lng": 105.8347,
-    "hours": "Tue–Thu, Sat–Sun 07:30–10:30 (closed Mon, Fri)",
+    "hours": "Thứ 3 – thứ 5, thứ 7 – chủ nhật 07:30–10:30 (nghỉ thứ 2, thứ 6)",
     "ticket": 0,
     "duration": 90,
     "name": {
@@ -223,7 +223,7 @@
     "district": "Cầu Giấy",
     "lat": 21.0405,
     "lng": 105.7987,
-    "hours": "08:30–17:30 (closed Mon)",
+    "hours": "08:30–17:30 (nghỉ thứ 2)",
     "ticket": 40000,
     "duration": 120,
     "name": {
