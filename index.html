@@ -14,9 +14,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;800&display=swap" rel="stylesheet" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23b6262c'/%3E%3Cpath d='M22 12h20M32 12v6M20 18h24M20 46h24M32 46v6M22 52h20M17 25a15 8 0 0 1 30 0v14a15 8 0 0 1-30 0z' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
-  <meta name="hg-version" content="fa6318ac" />
-  <link rel="stylesheet" href="./css/style.css?v=fa6318ac" />
-  <script type="importmap">{"imports":{"./js/api.js":"./js/api.js?v=fa6318ac","./js/app.js":"./js/app.js?v=fa6318ac","./js/i18n.js":"./js/i18n.js?v=fa6318ac","./js/render.js":"./js/render.js?v=fa6318ac","./js/storage.js":"./js/storage.js?v=fa6318ac","./js/trip.js":"./js/trip.js?v=fa6318ac"}}</script>
+  <meta name="hg-version" content="db3038cf" />
+  <link rel="stylesheet" href="./css/style.css?v=db3038cf" />
+  <script type="importmap">{"imports":{"./js/api.js":"./js/api.js?v=db3038cf","./js/app.js":"./js/app.js?v=db3038cf","./js/food.js":"./js/food.js?v=db3038cf","./js/history.js":"./js/history.js?v=db3038cf","./js/home.js":"./js/home.js?v=db3038cf","./js/hotels.js":"./js/hotels.js?v=db3038cf","./js/itinerary.js":"./js/itinerary.js?v=db3038cf","./js/labels.js":"./js/labels.js?v=db3038cf","./js/places.js":"./js/places.js?v=db3038cf","./js/render.js":"./js/render.js?v=db3038cf","./js/storage.js":"./js/storage.js?v=db3038cf","./js/trip.js":"./js/trip.js?v=db3038cf","./js/utils.js":"./js/utils.js?v=db3038cf"}}</script>
   
 </head>
 <body data-page="home" data-base="./">
@@ -59,19 +59,19 @@
     <div class="container header-inner">
       <a class="logo" href="./index.html" aria-label="Hà Nội Guide">
         <span class="logo-mark"><svg class="ic"><use href="#i-lantern"/></svg></span>
-        <span class="logo-text" data-i18n="site.name">Hà Nội Guide</span>
+        <span class="logo-text">Hà Nội Guide</span>
       </a>
       <nav class="nav" id="site-nav" aria-label="Main">
         <span class="nav-indicator" aria-hidden="true"></span>
-        <a href="./index.html" data-page="home" data-i18n="nav.home"></a>
-        <a href="./pages/places.html" data-page="places" data-i18n="nav.places"></a>
-        <a href="./pages/food.html" data-page="food" data-i18n="nav.food"></a>
-        <a href="./pages/hotels.html" data-page="hotels" data-i18n="nav.hotels"></a>
-        <a href="./pages/itinerary.html" data-page="itinerary" data-i18n="nav.itinerary"></a>
-        <a href="./pages/history.html" data-page="history" data-i18n="nav.history"></a>
+        <a href="./index.html" data-page="home">Trang chủ</a>
+        <a href="./pages/places.html" data-page="places">Địa điểm</a>
+        <a href="./pages/food.html" data-page="food">Ẩm thực</a>
+        <a href="./pages/hotels.html" data-page="hotels">Khách sạn</a>
+        <a href="./pages/itinerary.html" data-page="itinerary">Lịch trình</a>
+        <a href="./pages/history.html" data-page="history">Lịch sử</a>
       </nav>
       <div class="header-actions">
-        <button type="button" class="icon-btn menu-btn" data-menu-toggle aria-expanded="false" aria-controls="site-nav" data-i18n-aria="nav.menu" aria-label="Menu">
+        <button type="button" class="icon-btn menu-btn" data-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Mở menu">
           <svg class="ic ic-menu"><use href="#i-menu"/></svg><svg class="ic ic-x"><use href="#i-x"/></svg>
         </button>
       </div>
@@ -83,48 +83,48 @@
     <section class="hero container">
       <div class="hero-grid">
         <div>
-          <h1 data-i18n="hero.title"></h1>
-          <p class="lead" data-i18n="hero.subtitle"></p>
+          <h1>Khám phá Hà Nội theo cách của bạn</h1>
+          <p class="lead">Nghìn năm văn hiến, phố cổ, ẩm thực và những câu chuyện chờ bạn.</p>
           <div class="hero-cta">
-            <a class="btn btn-primary btn-lg" href="pages/places.html"><span data-i18n="hero.cta"></span><svg class="ic"><use href="#i-arrow"/></svg></a>
-            <a class="btn btn-outline btn-lg" href="pages/itinerary.html" data-i18n="hero.cta2"></a>
+            <a class="btn btn-primary btn-lg" href="pages/places.html"><span>Bắt đầu khám phá</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-outline btn-lg" href="pages/itinerary.html">Xem lịch trình mẫu</a>
           </div>
         </div>
         <div class="hero-media">
           <div class="hero-img hero-img-main">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Thap_Rua.jpg/1280px-Thap_Rua.jpg" alt="" data-i18n-alt="hero.imgAlt" width="1280" height="1100" fetchpriority="high" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Thap_Rua.jpg/1280px-Thap_Rua.jpg" alt="Tháp Rùa giữa hồ Hoàn Kiếm" width="1280" height="1100" fetchpriority="high" />
           </div>
           <div class="hero-img hero-img-small">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Hanoi_Temple_of_Literature_%28cropped%29.jpg/960px-Hanoi_Temple_of_Literature_%28cropped%29.jpg" alt="" data-i18n-alt="hero.imgAlt2" width="960" height="448" loading="lazy" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Hanoi_Temple_of_Literature_%28cropped%29.jpg/960px-Hanoi_Temple_of_Literature_%28cropped%29.jpg" alt="Cổng Văn Miếu Quốc Tử Giám" width="960" height="448" loading="lazy" />
           </div>
         </div>
       </div>
     </section>
 
     <section class="section container reveal">
-      <div class="section-head"><h2 data-i18n="weather.title"></h2></div>
+      <div class="section-head"><h2>Thời tiết Hà Nội</h2></div>
       <div id="weather" class="weather"></div>
     </section>
 
     <section class="section container reveal">
       <div class="section-head">
-        <div><h2 data-i18n="home.places.title"></h2><p data-i18n="home.places.desc"></p></div>
-        <a class="more" href="pages/places.html"><span data-i18n="common.viewAll"></span><svg class="ic"><use href="#i-arrow"/></svg></a>
+        <div><h2>Địa điểm nổi bật</h2><p>Những điểm đến không thể bỏ qua trong lần đầu tới Hà Nội.</p></div>
+        <a class="more" href="pages/places.html"><span>Xem tất cả</span><svg class="ic"><use href="#i-arrow"/></svg></a>
       </div>
       <div id="home-places" class="grid grid-feature"></div>
     </section>
 
     <section class="section container reveal">
       <div class="section-head">
-        <div><h2 data-i18n="home.food.title"></h2><p data-i18n="home.food.desc"></p></div>
-        <a class="more" href="pages/food.html"><span data-i18n="common.viewAll"></span><svg class="ic"><use href="#i-arrow"/></svg></a>
+        <div><h2>Ăn gì hôm nay?</h2><p>Quán ăn nổi tiếng, có nút đặt qua GrabFood và ShopeeFood.</p></div>
+        <a class="more" href="pages/food.html"><span>Xem tất cả</span><svg class="ic"><use href="#i-arrow"/></svg></a>
       </div>
       <div id="home-food" class="scroller"></div>
     </section>
 
     <section class="section container reveal">
       <div class="section-head">
-        <div><h2 data-i18n="home.itin.title"></h2><p data-i18n="home.itin.desc"></p></div>
+        <div><h2>Lịch trình gợi ý</h2><p>Chọn một lịch trình mẫu rồi chỉnh sửa theo ý bạn.</p></div>
       </div>
       <div id="home-itins" class="sample-grid"></div>
     </section>
@@ -134,9 +134,9 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <a class="logo" href="./index.html"><span class="logo-mark"><svg class="ic"><use href="#i-lantern"/></svg></span><span data-i18n="site.name">Hà Nội Guide</span></a>
-          <p class="footer-about" data-i18n="footer.about"></p>
-          <p class="footer-members-title" data-i18n="footer.members"></p>
+          <a class="logo" href="./index.html"><span class="logo-mark"><svg class="ic"><use href="#i-lantern"/></svg></span><span>Hà Nội Guide</span></a>
+          <p class="footer-about">Bài tập cuối kì nhóm 2: Trang web du lịch Hà Nội</p>
+          <p class="footer-members-title">Thành viên nhóm:</p>
           <ul class="footer-members">
             <li>Vũ Quang Minh – 26110145</li>
             <li>Nguyễn Đăng Trọng Nghĩa – 26110150</li>
@@ -147,28 +147,28 @@
           </ul>
         </div>
         <div>
-          <h4 data-i18n="footer.explore"></h4>
+          <h4>Khám phá</h4>
           <ul>
-            <li><a href="./pages/places.html" data-i18n="nav.places"></a></li>
-            <li><a href="./pages/food.html" data-i18n="nav.food"></a></li>
-            <li><a href="./pages/hotels.html" data-i18n="nav.hotels"></a></li>
-            <li><a href="./pages/itinerary.html" data-i18n="nav.itinerary"></a></li>
-            <li><a href="./pages/history.html" data-i18n="nav.history"></a></li>
+            <li><a href="./pages/places.html">Địa điểm</a></li>
+            <li><a href="./pages/food.html">Ẩm thực</a></li>
+            <li><a href="./pages/hotels.html">Khách sạn</a></li>
+            <li><a href="./pages/itinerary.html">Lịch trình</a></li>
+            <li><a href="./pages/history.html">Lịch sử</a></li>
           </ul>
         </div>
         <div>
-          <h4 data-i18n="footer.data"></h4>
+          <h4>Dữ liệu &amp; nguồn</h4>
           <ul>
-            <li data-i18n="footer.weather"></li>
-            <li data-i18n="footer.osm"></li>
-            <li data-i18n="footer.photos"></li>
+            <li>Thời tiết &amp; AQI: Open-Meteo</li>
+            <li>Bản đồ © OpenStreetMap contributors</li>
+            <li>Ảnh: Wikimedia Commons (CC)</li>
           </ul>
         </div>
       </div>
-      <div class="footer-bottom"><p data-i18n="footer.text"></p></div>
+      <div class="footer-bottom"><p>Dữ liệu tham khảo, giá và giờ mở cửa có thể thay đổi.</p></div>
     </div>
   </footer>
 
-  <script type="module" src="./js/app.js?v=fa6318ac"></script>
+  <script type="module" src="./js/app.js?v=db3038cf"></script>
 </body>
 </html>

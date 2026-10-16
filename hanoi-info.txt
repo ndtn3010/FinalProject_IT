@@ -1,5 +1,5 @@
 HÀ NỘI GUIDE: TỔNG HỢP THÔNG TIN DU LỊCH HÀ NỘI
-Sinh tự động từ dữ liệu website (data/*.json) ngày 2026-10-14 bằng tools/build-info.mjs, không sửa tay file này.
+Sinh tự động từ dữ liệu website (data/*.json) ngày 2026-10-16 bằng tools/build-info.mjs, không sửa tay file này.
 Gồm 12 địa điểm, 23 quán ăn, 25 chỗ nghỉ, 9 mốc lịch sử, 2 lịch trình mẫu.
 
 
@@ -150,7 +150,7 @@ Vé: Miễn phí
 Thời gian tham quan: khoảng 60 phút
 Mô tả: Trái tim của Hà Nội với Tháp Rùa, cầu Thê Húc và đền Ngọc Sơn. Cuối tuần thành phố đi bộ quanh hồ.
 Gợi ý: Đi sáng sớm 5–7h để thấy người dân tập thể dục.
-Wikipedia: https://vi.wikipedia.org/wiki/Hồ_Hoàn_Kiếm
+Wikipedia: https://en.wikipedia.org/wiki/Hoàn_Kiếm_Lake
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0288,105.8525
 
 Văn Miếu – Quốc Tử Giám (temple-of-literature)
@@ -161,7 +161,7 @@ Vé: 70.000 ₫
 Thời gian tham quan: khoảng 90 phút
 Mô tả: Trường đại học đầu tiên của Việt Nam (1076), thờ Khổng Tử, nổi tiếng với 82 bia tiến sĩ.
 Gợi ý: Mặc lịch sự, tránh giờ trưa nắng.
-Wikipedia: https://vi.wikipedia.org/wiki/Văn_Miếu_–_Quốc_Tử_Giám
+Wikipedia: https://en.wikipedia.org/wiki/Temple_of_Literature,_Hanoi
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0277,105.8355
 
 Hoàng thành Thăng Long (imperial-citadel)
@@ -172,7 +172,7 @@ Vé: 100.000 ₫
 Thời gian tham quan: khoảng 120 phút
 Mô tả: Di sản thế giới UNESCO, trung tâm quyền lực suốt 13 thế kỷ, có Đoan Môn, Cột Cờ và hầm D67.
 Gợi ý: Kết hợp với Lăng Bác và Bảo tàng Lịch sử Quân sự gần đó.
-Wikipedia: https://vi.wikipedia.org/wiki/Hoàng_thành_Thăng_Long
+Wikipedia: https://en.wikipedia.org/wiki/Imperial_Citadel_of_Thăng_Long
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0342,105.84
 
 Phố cổ Hà Nội (old-quarter)
@@ -183,7 +183,7 @@ Vé: Miễn phí
 Thời gian tham quan: khoảng 180 phút
 Mô tả: 36 phố phường với nghề truyền thống theo tên phố: Hàng Bạc, Hàng Mã, Hàng Gai… Chợ đêm cuối tuần.
 Gợi ý: Cẩn thận xe máy, đi bộ sát vỉa hè.
-Wikipedia: https://vi.wikipedia.org/wiki/Phố_cổ_Hà_Nội
+Wikipedia: https://en.wikipedia.org/wiki/Hanoi_Old_Quarter
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.034,105.85
 
 Phố cà phê đường tàu (train-street)
@@ -194,6 +194,7 @@ Vé: Miễn phí
 Thời gian tham quan: khoảng 45 phút
 Mô tả: Những quán cà phê sát đường ray, tàu chạy qua cách vài chục cm. Có thể bị hạn chế ra vào tùy thời điểm.
 Gợi ý: Hỏi chủ quán giờ tàu; đứng sát tường khi tàu đến.
+Wikipedia: https://en.wikipedia.org/wiki/Hanoi_Train_Street
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0245,105.843
 
 Lăng Chủ tịch Hồ Chí Minh (ho-chi-minh-mausoleum)
@@ -204,7 +205,7 @@ Vé: Miễn phí
 Thời gian tham quan: khoảng 90 phút
 Mô tả: Nơi an nghỉ của Chủ tịch Hồ Chí Minh tại Quảng trường Ba Đình. Lễ thượng cờ 6h sáng.
 Gợi ý: Không quần short, không chụp ảnh bên trong, giữ im lặng.
-Wikipedia: https://vi.wikipedia.org/wiki/Lăng_Chủ_tịch_Hồ_Chí_Minh
+Wikipedia: https://en.wikipedia.org/wiki/Ho_Chi_Minh_Mausoleum
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0369,105.8347
 
 Hồ Tây (west-lake)
@@ -215,7 +216,7 @@ Vé: Miễn phí
 Thời gian tham quan: khoảng 120 phút
 Mô tả: Hồ lớn nhất Hà Nội, chùa Trấn Quốc, phủ Tây Hồ, hoàng hôn đẹp và nhiều quán cà phê ven hồ.
 Gợi ý: Thuê xe đạp đi vòng hồ 17 km lúc chiều muộn.
-Wikipedia: https://vi.wikipedia.org/wiki/Hồ_Tây
+Wikipedia: https://en.wikipedia.org/wiki/West_Lake_(Hanoi)
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.056,105.823
 
 Bảo tàng Dân tộc học Việt Nam (museum-of-ethnology)
@@ -226,7 +227,7 @@ Vé: 40.000 ₫
 Thời gian tham quan: khoảng 120 phút
 Mô tả: 54 dân tộc Việt Nam qua hiện vật và nhà sàn thật ngoài trời. Có múa rối nước cuối tuần.
 Gợi ý: Lựa chọn tốt cho ngày mưa.
-Wikipedia: https://vi.wikipedia.org/wiki/Bảo_tàng_Dân_tộc_học_Việt_Nam
+Wikipedia: https://en.wikipedia.org/wiki/Vietnam_Museum_of_Ethnology
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0405,105.7987
 
 Nhà tù Hỏa Lò (hoa-lo-prison)
@@ -237,7 +238,7 @@ Vé: 50.000 ₫
 Thời gian tham quan: khoảng 90 phút
 Mô tả: Nhà tù do Pháp xây năm 1896, nơi giam giữ các chiến sĩ cách mạng và sau này là phi công Mỹ ("Hanoi Hilton"). Trưng bày rất xúc động.
 Gợi ý: Thuê audio guide (có tiếng Việt, Anh); tour đêm "Đêm thiêng liêng" cần đặt trước.
-Wikipedia: https://vi.wikipedia.org/wiki/Nhà_tù_Hỏa_Lò
+Wikipedia: https://en.wikipedia.org/wiki/Hỏa_Lò_Prison
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0253,105.8464
 
 Nhà thờ Lớn Hà Nội (st-josephs-cathedral)
@@ -248,7 +249,7 @@ Vé: Miễn phí
 Thời gian tham quan: khoảng 30 phút
 Mô tả: Nhà thờ Gothic khánh thành năm 1886, mặt tiền đá xám gợi nhớ Notre-Dame Paris. Quảng trường trước nhà thờ là phố trà chanh nổi tiếng.
 Gợi ý: Vào bằng cổng bên trái khi không có lễ; giữ yên lặng và ăn mặc lịch sự.
-Wikipedia: https://vi.wikipedia.org/wiki/Nhà_thờ_Lớn_Hà_Nội
+Wikipedia: https://en.wikipedia.org/wiki/St._Joseph's_Cathedral,_Hanoi
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0288,105.849
 
 Chùa Một Cột (one-pillar-pagoda)
@@ -259,7 +260,7 @@ Vé: Miễn phí
 Thời gian tham quan: khoảng 30 phút
 Mô tả: Ngôi chùa hình bông sen trên một cột đá giữa hồ, xây năm 1049 thời Lý, biểu tượng của Hà Nội. Nằm trong quần thể Lăng Bác.
 Gợi ý: Ghé cùng Lăng Bác và Bảo tàng Hồ Chí Minh trong một buổi sáng.
-Wikipedia: https://vi.wikipedia.org/wiki/Chùa_Một_Cột
+Wikipedia: https://en.wikipedia.org/wiki/One_Pillar_Pagoda
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0359,105.8336
 
 Vườn hoa Lê-nin (lenin-park)
@@ -270,6 +271,7 @@ Vé: Miễn phí
 Thời gian tham quan: khoảng 30 phút
 Mô tả: Công viên nhỏ với tượng Lê-nin đối diện Cột cờ Hà Nội và Bảo tàng Lịch sử Quân sự cũ. Chiều tối người dân tập thể dục, trượt patin, đá cầu.
 Gợi ý: Đừng nhầm với Công viên Thống Nhất (tên cũ là Công viên Lê-nin) ở phố Trần Nhân Tông.
+Wikipedia: https://en.wikipedia.org/wiki/Thống_Nhất_Park
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0322,105.8398
 
 
@@ -525,7 +527,7 @@ Giá mỗi đêm: 6.000.000 ₫ đến 12.000.000 ₫
 Nguồn giá: Momondo/Tripadvisor: từ $233–300, trung bình $349 (cập nhật 2026-09-23)
 Mô tả: Khách sạn di sản từ 1901, kiến trúc Pháp thuộc, hầm trú bom lịch sử, cách Nhà hát Lớn 3 phút đi bộ.
 Website: https://www.sofitel-legend-metropole-hanoi.com/
-Booking.com: https://www.booking.com/searchresults.html?ss=Sofitel+Legend+Metropole+Hanoi
+Booking.com: https://www.booking.com/searchresults.html?ss=Sofitel%20Legend%20Metropole%20Hanoi
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0256,105.8562
 
 Capella Hà Nội (capella-hanoi)
@@ -537,7 +539,7 @@ Giá mỗi đêm: 9.500.000 ₫ đến 16.000.000 ₫
 Nguồn giá: Kayak/Hotels.com: từ $370–427, có phòng $551 (cập nhật 2026-09-23)
 Mô tả: Khách sạn boutique 47 phòng do Bill Bensley thiết kế theo chủ đề opera, cạnh Nhà hát Lớn.
 Website: https://capellahotels.com/en/capella-hanoi
-Booking.com: https://www.booking.com/searchresults.html?ss=Capella+Hanoi
+Booking.com: https://www.booking.com/searchresults.html?ss=Capella%20Hanoi
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0245,105.858
 
 Hotel de l'Opera Hà Nội MGallery (hotel-de-l-opera)
@@ -548,7 +550,7 @@ Ngân sách: Cao cấp
 Giá mỗi đêm: 3.300.000 ₫ đến 5.000.000 ₫
 Nguồn giá: HotelsCombined/Tripadvisor: từ $128, trung bình $179–189 (cập nhật 2026-09-23)
 Mô tả: Boutique phong cách Đông Dương trên phố Tràng Tiền, bể bơi trong nhà, sát Hồ Gươm.
-Booking.com: https://www.booking.com/searchresults.html?ss=Hotel+de+l%27Opera+Hanoi+MGallery
+Booking.com: https://www.booking.com/searchresults.html?ss=Hotel%20de%20l'Opera%20Hanoi%20MGallery
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0242,105.857
 
 Hilton Hanoi Opera (hilton-hanoi-opera)
@@ -559,7 +561,7 @@ Ngân sách: Cao cấp
 Giá mỗi đêm: 3.000.000 ₫ đến 4.500.000 ₫
 Nguồn giá: Booking/hotel-rez: $143–158 (cập nhật 2026-09-23)
 Mô tả: Khách sạn quốc tế nằm ngay sau Nhà hát Lớn, phòng rộng, phù hợp gia đình và công tác.
-Booking.com: https://www.booking.com/searchresults.html?ss=Hilton+Hanoi+Opera
+Booking.com: https://www.booking.com/searchresults.html?ss=Hilton%20Hanoi%20Opera
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0238,105.858
 
 Apricot Hotel (apricot-hotel)
@@ -571,7 +573,7 @@ Giá mỗi đêm: 2.800.000 ₫ đến 4.600.000 ₫
 Nguồn giá: Momondo/HotelsCombined: từ $109–118, trung bình $176 (cập nhật 2026-09-23)
 Mô tả: Khách sạn nghệ thuật với hơn 600 tác phẩm hội hoạ, bể bơi trên sân thượng nhìn thẳng ra Hồ Gươm.
 Website: https://apricothotels.com/
-Booking.com: https://www.booking.com/searchresults.html?ss=Apricot+Hotel+Hanoi
+Booking.com: https://www.booking.com/searchresults.html?ss=Apricot%20Hotel%20Hanoi
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.028,105.8508
 
 Mövenpick Hotel Hanoi Centre (movenpick-hanoi-centre)
@@ -582,7 +584,7 @@ Ngân sách: Tầm trung
 Giá mỗi đêm: 1.800.000 ₫ đến 3.900.000 ₫
 Nguồn giá: h-rez: từ 1.832.791 ₫; Momondo: $114–149 (cập nhật 2026-09-23)
 Mô tả: Toà nhà Pháp cổ trong khu phố Pháp, yên tĩnh, đi bộ 10 phút tới Hồ Gươm.
-Booking.com: https://www.booking.com/searchresults.html?ss=M%C3%B6venpick+Hotel+Hanoi+Centre
+Booking.com: https://www.booking.com/searchresults.html?ss=M%C3%B6venpick%20Hotel%20Hanoi%20Centre
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0241,105.8462
 
 La Siesta Classic Mã Mây (la-siesta-ma-may)
@@ -594,7 +596,7 @@ Giá mỗi đêm: 2.400.000 ₫ đến 3.200.000 ₫
 Nguồn giá: Priceline/HotelsCombined: $93–121 (cập nhật 2026-09-23)
 Mô tả: Khách sạn boutique nổi tiếng nhất phố cổ, dịch vụ tận tình, spa và nhà hàng Red Bean ngay trong toà nhà.
 Website: https://hanoilasiestahotel.com/
-Booking.com: https://www.booking.com/searchresults.html?ss=La+Siesta+Classic+Ma+May+Hanoi
+Booking.com: https://www.booking.com/searchresults.html?ss=La%20Siesta%20Classic%20Ma%20May%20Hanoi
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0355,105.8527
 
 La Siesta Premium Hàng Bè (la-siesta-premium-hang-be)
@@ -605,7 +607,7 @@ Ngân sách: Tầm trung
 Giá mỗi đêm: 2.000.000 ₫ đến 3.200.000 ₫
 Nguồn giá: Momondo/MakeMyTrip: $75–121 (cập nhật 2026-09-23)
 Mô tả: Phiên bản cao cấp của La Siesta, quầy bar sân thượng nhìn ra Hồ Gươm, gần phố đi bộ.
-Booking.com: https://www.booking.com/searchresults.html?ss=La+Siesta+Premium+Hang+Be+Hanoi
+Booking.com: https://www.booking.com/searchresults.html?ss=La%20Siesta%20Premium%20Hang%20Be%20Hanoi
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0325,105.8542
 
 Peridot Grand Luxury Boutique Hotel (peridot-grand)
@@ -616,7 +618,7 @@ Ngân sách: Cao cấp
 Giá mỗi đêm: 3.000.000 ₫ đến 4.800.000 ₫
 Nguồn giá: Hotels.com/Travelocity/MakeMyTrip: $119–185 (cập nhật 2026-09-23)
 Mô tả: Boutique 5 sao rìa phố cổ, bể bơi sân thượng, gần chợ Hàng Da và đền Bạch Mã.
-Booking.com: https://www.booking.com/searchresults.html?ss=Peridot+Grand+Luxury+Boutique+Hotel+Hanoi
+Booking.com: https://www.booking.com/searchresults.html?ss=Peridot%20Grand%20Luxury%20Boutique%20Hotel%20Hanoi
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0331,105.8465
 
 Hanoi Pearl Hotel (hanoi-pearl-hotel)
@@ -627,7 +629,7 @@ Ngân sách: Tầm trung
 Giá mỗi đêm: 1.200.000 ₫ đến 2.200.000 ₫
 Nguồn giá: Priceline/Momondo: $45–84, phòng Premier $144 (cập nhật 2026-09-23)
 Mô tả: Khách sạn 3 sao giá tốt trên ngõ yên tĩnh cách Hồ Gươm 2 phút, có đưa đón sân bay.
-Booking.com: https://www.booking.com/searchresults.html?ss=Hanoi+Pearl+Hotel
+Booking.com: https://www.booking.com/searchresults.html?ss=Hanoi%20Pearl%20Hotel
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0296,105.8497
 
 Little Charm Hanoi Hostel (little-charm-hostel)
@@ -638,7 +640,7 @@ Ngân sách: Tiết kiệm
 Giá mỗi đêm: 250.000 ₫ đến 700.000 ₫
 Nguồn giá: Hostelworld: giường dorm từ $9–13 (~350.000 ₫) (cập nhật 2026-09-23)
 Mô tả: Hostel có bể bơi trong nhà hiếm hoi ở phố cổ, giường tầng dạng pod, bữa sáng miễn phí.
-Booking.com: https://www.booking.com/searchresults.html?ss=Little+Charm+Hanoi+Hostel
+Booking.com: https://www.booking.com/searchresults.html?ss=Little%20Charm%20Hanoi%20Hostel
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0343,105.848
 
 Old Quarter View Hanoi Hostel (old-quarter-view-hostel)
@@ -649,7 +651,7 @@ Ngân sách: Tiết kiệm
 Giá mỗi đêm: 160.000 ₫ đến 500.000 ₫
 Nguồn giá: Momondo/Brokepackr: dorm $6–12 (cập nhật 2026-09-23)
 Mô tả: Hostel xã hội với tour đi bộ và bia hơi buổi tối, sân thượng nhìn xuống mái ngói phố cổ.
-Booking.com: https://www.booking.com/searchresults.html?ss=Old+Quarter+View+Hanoi+Hostel
+Booking.com: https://www.booking.com/searchresults.html?ss=Old%20Quarter%20View%20Hanoi%20Hostel
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0317,105.8525
 
 Nexy Hostel (nexy-hostel)
@@ -660,7 +662,7 @@ Ngân sách: Tiết kiệm
 Giá mỗi đêm: 160.000 ₫ đến 950.000 ₫
 Nguồn giá: Trip.com/HotelsCombined: dorm từ $6, phòng đôi $27–36 (cập nhật 2026-09-23)
 Mô tả: Hostel hiện đại trên phố ẩm thực Tống Duy Tân, có phòng riêng, khu làm việc chung.
-Booking.com: https://www.booking.com/searchresults.html?ss=Nexy+Hostel+Hanoi
+Booking.com: https://www.booking.com/searchresults.html?ss=Nexy%20Hostel%20Hanoi
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0298,105.8452
 
 Hanoi Old Quarter Homestay (hanoi-old-quarter-homestay)
@@ -671,7 +673,7 @@ Ngân sách: Tiết kiệm
 Giá mỗi đêm: 400.000 ₫ đến 800.000 ₫
 Nguồn giá: Chưa xác minh được giá 09/2026 (Agoda chặn đọc); giữ giá tham khảo (cập nhật 2026-09-23)
 Mô tả: Homestay gia đình giữa phố cổ, chủ nhà mời bữa tối Việt Nam ngày đầu tiên cho khách mới đến.
-Booking.com: https://www.booking.com/searchresults.html?ss=Hanoi+Old+Quarter+Homestay
+Booking.com: https://www.booking.com/searchresults.html?ss=Hanoi%20Old%20Quarter%20Homestay
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.034,105.85
 
 Khai Homestay (khai-homestay)
@@ -682,7 +684,7 @@ Ngân sách: Tiết kiệm
 Giá mỗi đêm: 400.000 ₫ đến 700.000 ₫
 Nguồn giá: hotels-in-hanoi.net: từ $16 (cập nhật 2026-09-23)
 Mô tả: Homestay nhỏ trong ngõ cách chợ Đồng Xuân vài phút, phòng có điều hoà, phòng khách chung.
-Booking.com: https://www.booking.com/searchresults.html?ss=Khai+Homestay+Hanoi
+Booking.com: https://www.booking.com/searchresults.html?ss=Khai%20Homestay%20Hanoi
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0375,105.8495
 
 InterContinental Hanoi Westlake (intercontinental-westlake)
@@ -693,7 +695,7 @@ Ngân sách: Cao cấp
 Giá mỗi đêm: 3.000.000 ₫ đến 5.000.000 ₫
 Nguồn giá: Momondo/HotelsCombined: $119–155 (cập nhật 2026-09-23)
 Mô tả: Khách sạn xây trên mặt nước Hồ Tây, các dãy phòng nổi nối bằng cầu, cạnh chùa Kim Liên.
-Booking.com: https://www.booking.com/searchresults.html?ss=InterContinental+Hanoi+Westlake
+Booking.com: https://www.booking.com/searchresults.html?ss=InterContinental%20Hanoi%20Westlake
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.059,105.837
 
 Pan Pacific Hà Nội (pan-pacific-hanoi)
@@ -704,7 +706,7 @@ Ngân sách: Tầm trung
 Giá mỗi đêm: 1.600.000 ₫ đến 3.400.000 ₫
 Nguồn giá: h-rez: từ 1.577.076 ₫; HotelsCombined: $72–131 (cập nhật 2026-09-23)
 Mô tả: Đầu đường Thanh Niên giữa Hồ Tây và hồ Trúc Bạch, bể bơi trong nhà, tầng cao nhìn hoàng hôn.
-Booking.com: https://www.booking.com/searchresults.html?ss=Pan+Pacific+Hanoi
+Booking.com: https://www.booking.com/searchresults.html?ss=Pan%20Pacific%20Hanoi
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0447,105.8392
 
 Sheraton Hanoi Hotel (sheraton-hanoi)
@@ -715,7 +717,7 @@ Ngân sách: Cao cấp
 Giá mỗi đêm: 3.500.000 ₫ đến 5.500.000 ₫
 Nguồn giá: HotelsCombined: từ $134, trung bình $209 (cập nhật 2026-09-23)
 Mô tả: Khu nghỉ rộng ven Hồ Tây với vườn và bể bơi ngoài trời, gần phố Xuân Diệu nhiều quán cà phê.
-Booking.com: https://www.booking.com/searchresults.html?ss=Sheraton+Hanoi+Hotel
+Booking.com: https://www.booking.com/searchresults.html?ss=Sheraton%20Hanoi%20Hotel
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0655,105.831
 
 Lotte Hotel Hà Nội (lotte-hotel-hanoi)
@@ -726,7 +728,7 @@ Ngân sách: Tầm trung
 Giá mỗi đêm: 2.400.000 ₫ đến 5.200.000 ₫
 Nguồn giá: Momondo/HotelsCombined: $91–199 (cập nhật 2026-09-23)
 Mô tả: Tầng 33 đến 38 của toà Lotte Center, đài quan sát và bể bơi vô cực nhìn toàn thành phố.
-Booking.com: https://www.booking.com/searchresults.html?ss=Lotte+Hotel+Hanoi
+Booking.com: https://www.booking.com/searchresults.html?ss=Lotte%20Hotel%20Hanoi
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0322,105.8117
 
 Khách sạn Hanoi Daewoo (hanoi-daewoo-hotel)
@@ -737,7 +739,7 @@ Ngân sách: Tầm trung
 Giá mỗi đêm: 1.900.000 ₫ đến 2.700.000 ₫
 Nguồn giá: Tripadvisor: ~2.000.000 ₫; HotelsCombined: $74–102 (cập nhật 2026-09-23)
 Mô tả: Khách sạn 5 sao lâu đời với bể bơi ngoài trời lớn nhất nội thành, gần công viên Thủ Lệ.
-Booking.com: https://www.booking.com/searchresults.html?ss=Hanoi+Daewoo+Hotel
+Booking.com: https://www.booking.com/searchresults.html?ss=Hanoi%20Daewoo%20Hotel
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0308,105.81
 
 JW Marriott Hà Nội (jw-marriott-hanoi)
@@ -748,7 +750,7 @@ Ngân sách: Cao cấp
 Giá mỗi đêm: 3.900.000 ₫ đến 7.300.000 ₫
 Nguồn giá: HotelsCombined/Trivago: $149–281, trung bình $216 (cập nhật 2026-09-23)
 Mô tả: Kiến trúc hình con rồng cạnh Trung tâm Hội nghị Quốc gia, hợp công tác và hội nghị, xa trung tâm.
-Booking.com: https://www.booking.com/searchresults.html?ss=JW+Marriott+Hotel+Hanoi
+Booking.com: https://www.booking.com/searchresults.html?ss=JW%20Marriott%20Hotel%20Hanoi
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.0073,105.7825
 
 Noi Bai Horizon Hotel & Spa (noi-bai-horizon)
@@ -759,7 +761,7 @@ Ngân sách: Tiết kiệm
 Giá mỗi đêm: 1.000.000 ₫ đến 1.600.000 ₫
 Nguồn giá: Booking (trang Nội Bài): từ $42 (cập nhật 2026-09-23)
 Mô tả: Khách sạn cách sân bay 10 phút, đưa đón miễn phí, tiện cho chuyến bay sớm hoặc nối chuyến.
-Booking.com: https://www.booking.com/searchresults.html?ss=Noi+Bai+Horizon+Hotel+%26+Spa+Hanoi
+Booking.com: https://www.booking.com/searchresults.html?ss=Noi%20Bai%20Horizon%20Hotel%20%26%20Spa%20Hanoi
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.21,105.8
 
 Paragon Noi Bai Hotel & Pool (paragon-noi-bai)
@@ -770,7 +772,7 @@ Ngân sách: Tiết kiệm
 Giá mỗi đêm: 750.000 ₫ đến 1.000.000 ₫
 Nguồn giá: Expedia/MakeMyTrip: $30–38 (cập nhật 2026-09-23)
 Mô tả: Khách sạn gần sân bay có bể bơi ngoài trời, đưa đón 24/7, giá dễ chịu.
-Booking.com: https://www.booking.com/searchresults.html?ss=Paragon+Noi+Bai+Hotel+%26+Pool+Hanoi
+Booking.com: https://www.booking.com/searchresults.html?ss=Paragon%20Noi%20Bai%20Hotel%20%26%20Pool%20Hanoi
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.2075,105.7995
 
 VATC SleepPod Nhà ga T1 (vatc-sleep-pod-t1)
@@ -782,7 +784,7 @@ Giá mỗi đêm: 550.000 ₫ đến 1.000.000 ₫
 Nguồn giá: Hostelworld/Kayak: $22–38/đêm, khoảng $10/giờ (cập nhật 2026-09-23)
 Mô tả: Phòng ngủ dạng khoang ngay trong nhà ga nội địa, tính theo giờ, hợp nối chuyến đêm.
 Website: https://hanoiairporthotels.vn/en
-Booking.com: https://www.booking.com/searchresults.html?ss=VATC+SleepPod+Terminal+1+Hanoi
+Booking.com: https://www.booking.com/searchresults.html?ss=VATC%20SleepPod%20Terminal%201%20Hanoi
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.22,105.806
 
 Grand Dragon Noi Bai Hotel (grand-dragon-noi-bai)
@@ -793,7 +795,7 @@ Ngân sách: Tiết kiệm
 Giá mỗi đêm: 650.000 ₫ đến 900.000 ₫
 Nguồn giá: Planet of Hotels/hanoi-hotels.org: $26–28 (cập nhật 2026-09-23)
 Mô tả: Khách sạn gia đình cách sân bay khoảng 5 km, đưa đón miễn phí, có nhà hàng.
-Booking.com: https://www.booking.com/searchresults.html?ss=Grand+Dragon+Noi+Bai+Hotel+Hanoi
+Booking.com: https://www.booking.com/searchresults.html?ss=Grand%20Dragon%20Noi%20Bai%20Hotel%20Hanoi
 Google Maps: https://www.google.com/maps/search/?api=1&query=21.205,105.799
 
 

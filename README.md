@@ -24,14 +24,15 @@ index.html            Trang chủ
 pages/                places, food, hotels, itinerary, history
 css/style.css
 js/
-  app.js              Khởi tạo + logic từng trang
-  i18n.js             Chuỗi giao diện (vi.json), tìm kiếm không dấu
-  api.js              Open-Meteo, Wikipedia, deep links, Haversine
+  app.js              Chạy trên mọi trang (menu, chuyển trang) rồi gọi file của trang đang mở
+  home.js, places.js, food.js, hotels.js, history.js, itinerary.js
+                      Mỗi trang một file
+  api.js              Tải dữ liệu, Open-Meteo, Wikipedia, link Google Maps / Grab / Booking, Haversine
   storage.js          Lịch trình (localStorage)
-  render.js           Card địa điểm, món ăn, khách sạn
+  render.js           HTML cho các thẻ địa điểm, món ăn, khách sạn
   trip.js             Cửa sổ nổi lịch trình + bản đồ Leaflet
+  utils.js, labels.js Hàm nhỏ dùng chung (tiền, bỏ dấu…) và tên tiếng Việt của các mã
 data/                 places.json, foods.json, hotels.json, itineraries.json, history.json
-i18n/                 vi.json
 tools/build-pages.mjs Sinh HTML từ layout chung (chạy lại sau khi sửa header/footer)
 tools/build-info.mjs  Sinh hanoi-info.txt (bản tổng hợp dữ liệu tiếng Việt) từ data/*.json
 tools/serve.mjs       Server tĩnh để chạy local
@@ -51,7 +52,7 @@ node tools/serve.mjs        # http://localhost:8080 và in ra địa chỉ LAN c
 Mở http://localhost:8080. Người cùng mạng Wi-Fi mở địa chỉ `http://<IP máy bạn>:8080/` mà script in ra
 (Windows: lần đầu chạy Node có thể hiện hộp thoại Firewall, chọn Allow).
 
-Sau khi sửa layout chung trong `tools/build-pages.mjs`, hoặc sửa bất kỳ file nào trong `css/`, `js/`, `data/`, `i18n/`:
+Sau khi sửa layout chung trong `tools/build-pages.mjs`, hoặc sửa bất kỳ file nào trong `css/`, `js/`, `data/`:
 
 ```bash
 node tools/build-pages.mjs

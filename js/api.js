@@ -1,44 +1,60 @@
-import { baseUrl, versioned } from './i18n.js';
+// api.js – tải dữ liệu, gọi dịch vụ bên ngoài (thời tiết, Wikipedia) và tạo các đường link
+import { baseUrl, withVersion } from './utils.js';
 
-export const HANOI = { lat: 21.0285, lng: 105.8542 }; // Hồ Hoàn Kiếm
+// Toạ độ Hồ Hoàn Kiếm, dùng làm "trung tâm Hà Nội"
+export const HANOI = { lat: 21.0285, lng: 105.8542 };
 
-const cache = {};
+/* ---------- Dữ liệu trong thư mục data/ ---------- */
+
+// Nhớ các file đã tải để không phải tải lại
+const loadedFiles = {};
+
 async function loadJson(name) {
-  if (!cache[name]) {
-    cache[name] = fetch(versioned(`${baseUrl()}data/${name}.json`)).then((r) => {
-      if (!r.ok) throw new Error(`Cannot load ${name}.json`);
-      return r.json();
-    }).catch((err) => { delete cache[name]; throw err; });
+  if (!loadedFiles[name]) {
+    const response = await fetch(withVersion(baseUrl() + 'data/' + name + '.json'));
+    if (!response.ok) throw new Error('Không tải được ' + name + '.json');
+    loadedFiles[name] = await response.json();
   }
-  return cache[name];
+  return loadedFiles[name];
 }
-export const getPlaces = () => loadJson('places');
-export const getFoods = () => loadJson('foods');
-export const getHotels = () => loadJson('hotels');
-export const getItineraries = () => loadJson('itineraries');
-export const getHistory = () => loadJson('history');
 
+export function getPlaces() { return loadJson('places'); }
+export function getFoods() { return loadJson('foods'); }
+export function getHotels() { return loadJson('hotels'); }
+export function getItineraries() { return loadJson('itineraries'); }
+export function getHistory() { return loadJson('history'); }
+
+// Tìm một địa điểm hoặc quán ăn theo mã (id)
 export async function findItem(id) {
-  const [p, f] = await Promise.all([getPlaces(), getFoods()]);
-  return p.find((x) => x.id === id) || f.find((x) => x.id === id) || null;
+  const places = await getPlaces();
+  const foods = await getFoods();
+  return places.find((p) => p.id === id) || foods.find((f) => f.id === id) || null;
 }
+
+/* ---------- Thời tiết (Open-Meteo, miễn phí, không cần đăng ký) ---------- */
 
 export async function getWeather() {
-  const u = `https://api.open-meteo.com/v1/forecast?latitude=${HANOI.lat}&longitude=${HANOI.lng}` +
-    `&current=temperature_2m,relative_humidity_2m,weather_code,is_day` +
-    `&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code` +
-    `&timezone=Asia%2FBangkok&forecast_days=5`;
-  const r = await fetch(u);
-  if (!r.ok) throw new Error('weather');
-  return r.json();
-}
-export async function getAQI() {
-  const u = `https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${HANOI.lat}&longitude=${HANOI.lng}&current=us_aqi,pm2_5&timezone=Asia%2FBangkok`;
-  const r = await fetch(u);
-  if (!r.ok) throw new Error('aqi');
-  return r.json();
+  const url = 'https://api.open-meteo.com/v1/forecast'
+    + '?latitude=' + HANOI.lat + '&longitude=' + HANOI.lng
+    + '&current=temperature_2m,relative_humidity_2m,weather_code,is_day'
+    + '&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code'
+    + '&timezone=Asia%2FBangkok&forecast_days=5';
+  const response = await fetch(url);
+  if (!response.ok) throw new Error('Không lấy được thời tiết');
+  return response.json();
 }
 
+// Chỉ số chất lượng không khí (AQI)
+export async function getAirQuality() {
+  const url = 'https://air-quality-api.open-meteo.com/v1/air-quality'
+    + '?latitude=' + HANOI.lat + '&longitude=' + HANOI.lng
+    + '&current=us_aqi&timezone=Asia%2FBangkok';
+  const response = await fetch(url);
+  if (!response.ok) throw new Error('Không lấy được chỉ số AQI');
+  return response.json();
+}
+
+// Mã thời tiết của Open-Meteo -> biểu tượng
 export function weatherIcon(code, isDay = 1) {
   if (code === 0) return isDay ? '☀️' : '🌙';
   if (code <= 2) return '🌤️';
@@ -50,6 +66,8 @@ export function weatherIcon(code, isDay = 1) {
   if (code <= 84) return '🌧️';
   return '⛈️';
 }
+
+// Chỉ số AQI -> nhãn chữ và tên class CSS để tô màu
 export function aqiLabel(aqi) {
   if (aqi == null) return { text: '', cls: '' };
   if (aqi <= 50) return { text: 'Tốt', cls: 'aqi-good' };
@@ -59,87 +77,109 @@ export function aqiLabel(aqi) {
   return { text: 'Rất xấu', cls: 'aqi-very' };
 }
 
-export async function wikiSummary(title, lang = 'vi') {
-  if (!title) return null;
-  const r = await fetch(`https://${lang}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`);
-  return r.ok ? r.json() : null;
-}
+/* ---------- Ảnh từ Wikipedia (cho mục chưa có ảnh trong dữ liệu) ---------- */
 
-export async function wikiThumb(title, lang = 'en') {
+export async function wikiImage(title) {
   if (!title) return null;
-  const key = `hg.wiki.${lang}.${title}`;
-  try { const c = sessionStorage.getItem(key); if (c != null) return c || null; } catch {}
-  let url = null;
+
+  // Đã hỏi trong lần mở web này rồi thì dùng lại, không hỏi Wikipedia lần nữa
+  const cacheKey = 'hg.wiki.' + title;
+  const saved = sessionStorage.getItem(cacheKey);
+  if (saved !== null) return saved || null;
+
+  let imageUrl = null;
   try {
-    const s = await wikiSummary(title, lang);
-    url = s?.thumbnail?.source || s?.originalimage?.source || null;
-    // Wikipedia trả thumbnail ~320px; nâng lên 960px (Wikimedia chỉ cho phép một số bề rộng cố định: 960, 1280, 1920)
-    if (url) url = url.replace(/\/\d+px-/, '/960px-');
-  } catch { url = null; }
-  try { sessionStorage.setItem(key, url || ''); } catch {}
-  return url;
+    const response = await fetch('https://en.wikipedia.org/api/rest_v1/page/summary/' + encodeURIComponent(title));
+    if (response.ok) {
+      const summary = await response.json();
+      imageUrl = summary.thumbnail?.source || null;
+      // Wikipedia trả ảnh nhỏ (~320px); xin bản 960px (Wikimedia chỉ cho một số bề rộng cố định)
+      if (imageUrl) imageUrl = imageUrl.replace(/\/\d+px-/, '/960px-');
+    }
+  } catch {
+    imageUrl = null;
+  }
+  sessionStorage.setItem(cacheKey, imageUrl || '');
+  return imageUrl;
 }
 
+/* ---------- Khoảng cách ---------- */
+
+// Khoảng cách đường chim bay giữa hai toạ độ (km), công thức Haversine
 export function distanceKm(a, b) {
-  const R = 6371, toRad = (d) => (d * Math.PI) / 180;
-  const dLat = toRad(b.lat - a.lat), dLng = toRad(b.lng - a.lng);
-  const h = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(a.lat)) * Math.cos(toRad(b.lat)) * Math.sin(dLng / 2) ** 2;
-  return 2 * R * Math.asin(Math.sqrt(h));
+  const EARTH_RADIUS = 6371;
+  const toRadian = (degree) => degree * Math.PI / 180;
+  const dLat = toRadian(b.lat - a.lat);
+  const dLng = toRadian(b.lng - a.lng);
+  const h = Math.sin(dLat / 2) ** 2
+    + Math.cos(toRadian(a.lat)) * Math.cos(toRadian(b.lat)) * Math.sin(dLng / 2) ** 2;
+  return 2 * EARTH_RADIUS * Math.asin(Math.sqrt(h));
 }
 
-export const isMobile = () => /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-/* ---- Deep links: giao đồ ăn. Trang chủ chung -> đổi thành trang tìm kiếm theo tên quán ----
- *  GrabFood   https://food.grab.com/vn/vi/restaurants?search=<tên>   (đã kiểm tra 09/2026)
- *  ShopeeFood https://shopeefood.vn/ha-noi/danh-sach-dia-diem-giao-tan-noi?q=<tên>
- */
-export const grabFoodSearch = (q) => `https://food.grab.com/vn/vi/restaurants?search=${encodeURIComponent(q)}`;
-export const shopeeFoodSearch = (q) => `https://shopeefood.vn/ha-noi/danh-sach-dia-diem-giao-tan-noi?q=${encodeURIComponent(q)}`;
-/** Tên ngắn để tìm trên app giao đồ ăn: bỏ phần trong ngoặc / sau dấu gạch */
-export const searchName = (name) => String(name || '').split(/\s[–-]\s|\(/)[0].trim();
-/** Nếu link trong JSON chỉ là trang chủ chung (hoặc "auto") thì tự sinh link tìm kiếm */
-export function deliveryLink(kind, url, name) {
-  if (!url) return '';
-  const generic = url === 'auto' || /^https:\/\/(food\.grab\.com\/vn\/[a-z]{2}\/?|shopeefood\.vn\/ha-noi\/?)$/.test(url);
-  if (!generic) return url;
-  return kind === 'grab' ? grabFoodSearch(searchName(name)) : shopeeFoodSearch(searchName(name));
+export function isMobile() {
+  return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 }
-export function mapsSearch(lat, lng) { return `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`; }
-export function mapsDirections(lat, lng) { return `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&travelmode=walking`; }
+
+/* ---------- Link Google Maps ---------- */
+
+export function mapsSearch(lat, lng) {
+  return 'https://www.google.com/maps/search/?api=1&query=' + lat + ',' + lng;
+}
+
+// Chỉ đường đi bộ tới một điểm (điểm xuất phát là vị trí hiện tại của người dùng)
+export function mapsDirections(lat, lng) {
+  return 'https://www.google.com/maps/dir/?api=1&destination=' + lat + ',' + lng + '&travelmode=walking';
+}
+
+// Tuyến đường qua nhiều điểm: điểm đầu, các điểm dừng ở giữa, điểm cuối
 export function mapsRoute(points) {
-  if (points.length < 2) return points[0] ? mapsSearch(points[0].lat, points[0].lng) : '#';
-  const o = points[0], d = points[points.length - 1];
-  const wp = points.slice(1, -1).map((p) => `${p.lat},${p.lng}`).join('|');
-  return `https://www.google.com/maps/dir/?api=1&origin=${o.lat},${o.lng}&destination=${d.lat},${d.lng}` +
-    (wp ? `&waypoints=${encodeURIComponent(wp)}` : '') + `&travelmode=walking`;
+  if (points.length === 0) return '#';
+  if (points.length === 1) return mapsSearch(points[0].lat, points[0].lng);
+
+  const start = points[0];
+  const end = points[points.length - 1];
+  const middle = points.slice(1, -1).map((p) => p.lat + ',' + p.lng).join('|');
+
+  let url = 'https://www.google.com/maps/dir/?api=1'
+    + '&origin=' + start.lat + ',' + start.lng
+    + '&destination=' + end.lat + ',' + end.lng;
+  if (middle) url += '&waypoints=' + encodeURIComponent(middle);
+  return url + '&travelmode=walking';
 }
 
-/* ---- Deep links: đặt phòng (trang tìm kiếm theo tên khách sạn, người dùng tự chọn ngày) ----
- *  Booking   searchresults.html?ss=<tên>
- *  Agoda     search?city=2758(Hà Nội)&textToSearch=<tên>
- *  Traveloka hotel/vietnam/region/hanoi-10009843
- *  Google    travel/search?q=<tên>
- */
-const AGODA_HANOI = '2758';
-const TRAVELOKA_HANOI = '10009843';
+/* ---------- Link giao đồ ăn ---------- */
 
-function withParams(url, params) {
-  try {
-    const u = new URL(url);
-    for (const [k, v] of Object.entries(params)) if (v != null && v !== '') u.searchParams.set(k, v);
-    return u.toString();
-  } catch { return url; }
+// Tên ngắn để tìm trên app: "Bún chả Hương Liên (Bún chả Obama)" -> "Bún chả Hương Liên"
+function shortName(name) {
+  return String(name || '').split(' (')[0].split(' – ')[0].split(' - ')[0].trim();
 }
 
-export function hotelLinks(h) {
-  const en = h.name?.en || '';
-  const q = /hanoi/i.test(en) ? en : `${en} Hanoi`.trim();
-  const l = h.links || {};
+// kind là "grab" hoặc "shopee". Giá trị link trong foods.json:
+//   ""           -> quán không giao hàng, không có nút
+//   "auto"       -> tự tạo link tìm kiếm theo tên quán
+//   link cụ thể  -> dùng nguyên link đó
+export function deliveryLink(kind, link, restaurantName) {
+  if (!link) return '';
+  if (link !== 'auto') return link;
+
+  const keyword = encodeURIComponent(shortName(restaurantName));
+  if (kind === 'grab') return 'https://food.grab.com/vn/vi/restaurants?search=' + keyword;
+  return 'https://shopeefood.vn/ha-noi/danh-sach-dia-diem-giao-tan-noi?q=' + keyword;
+}
+
+/* ---------- Link đặt phòng khách sạn ---------- */
+
+// Mở trang tìm kiếm theo tên khách sạn; người dùng chọn ngày và số khách ngay trên trang đó
+export function hotelLinks(hotel) {
+  const englishName = hotel.nameEn || hotel.name;
+  const searchName = /hanoi/i.test(englishName) ? englishName : englishName + ' Hanoi';
+  const own = hotel.links || {};
+
   return {
-    booking: l.booking || withParams('https://www.booking.com/searchresults.html', { ss: q }),
-    agoda: l.agoda || withParams('https://www.agoda.com/search', { city: AGODA_HANOI, textToSearch: en }),
-    traveloka: l.traveloka || `https://www.traveloka.com/vi-vn/hotel/vietnam/region/hanoi-${TRAVELOKA_HANOI}`,
-    google: l.google || withParams('https://www.google.com/travel/search', { q }),
-    maps: mapsSearch(h.lat, h.lng),
+    booking: own.booking || 'https://www.booking.com/searchresults.html?ss=' + encodeURIComponent(searchName),
+    agoda: own.agoda || 'https://www.agoda.com/search?city=2758&textToSearch=' + encodeURIComponent(englishName),
+    traveloka: own.traveloka || 'https://www.traveloka.com/vi-vn/hotel/vietnam/region/hanoi-10009843',
+    google: own.google || 'https://www.google.com/travel/search?q=' + encodeURIComponent(searchName),
+    maps: mapsSearch(hotel.lat, hotel.lng),
   };
 }

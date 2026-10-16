@@ -1,28 +1,29 @@
-// trip.js – cửa sổ nổi "Lịch trình" trên mọi trang: bản đồ Leaflet (OSM) + danh sách điểm theo ngày,
-// xoá nhanh, mở tuyến đường Google Maps. Tự cập nhật khi lịch trình thay đổi (sự kiện storagechange).
-import { t, L as pick, applyDom, baseUrl } from './i18n.js';
+// trip.js – cửa sổ "Lịch trình" nổi ở góc dưới bên phải trên mọi trang:
+// bản đồ các điểm (Leaflet + OpenStreetMap), danh sách theo ngày, nút xoá, link tuyến đường Google Maps.
+import { escapeHtml, baseUrl } from './utils.js';
 import { getItinerary, removeFromItinerary } from './storage.js';
 import { findItem, mapsRoute, mapsDirections, HANOI } from './api.js';
 import { icon } from './render.js';
 
 const LEAFLET_CSS = 'https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css';
 const LEAFLET_JS = 'https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js';
-const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
-let map = null, layer = null, leaflet = null; // leaflet: promise nạp thư viện
-let day = 1;
+let map = null;          // bản đồ Leaflet, chỉ tạo khi mở cửa sổ lần đầu
+let markers = null;      // lớp chứa các điểm đánh số trên bản đồ
+let leafletLoading = null;
+let currentDay = 1;
 
 export function initTripPanel() {
   const root = document.createElement('div');
   root.id = 'hg-trip';
   root.innerHTML = `
-    <button type="button" class="trip-fab" data-i18n-aria="trip.open" aria-label="Itinerary" aria-expanded="false">
+    <button type="button" class="trip-fab" aria-label="Mở lịch trình của tôi" aria-expanded="false">
       ${icon('map')}<span class="trip-badge" hidden>0</span>
     </button>
-    <section class="trip-panel" hidden aria-label="Itinerary">
+    <section class="trip-panel" hidden aria-label="Lịch trình">
       <header>
-        <span class="trip-head">${icon('map')}<span data-i18n="trip.title"></span><span class="trip-count"></span></span>
-        <button type="button" class="trip-close" aria-label="Close">${icon('x')}</button>
+        <span class="trip-head">${icon('map')}<span>Lịch trình</span><span class="trip-count"></span></span>
+        <button type="button" class="trip-close" aria-label="Đóng">${icon('x')}</button>
       </header>
       <div class="trip-map" aria-hidden="true"></div>
       <div class="trip-days chips" hidden></div>
@@ -30,131 +31,182 @@ export function initTripPanel() {
       <footer class="trip-foot"></footer>
     </section>`;
   document.body.appendChild(root);
-  applyDom(root);
 
-  const fab = root.querySelector('.trip-fab');
+  const openButton = root.querySelector('.trip-fab');
   const panel = root.querySelector('.trip-panel');
   const badge = root.querySelector('.trip-badge');
   const count = root.querySelector('.trip-count');
-  const mapEl = root.querySelector('.trip-map');
-  const daysEl = root.querySelector('.trip-days');
-  const body = root.querySelector('.trip-body');
-  const foot = root.querySelector('.trip-foot');
+  const mapBox = root.querySelector('.trip-map');
+  const dayTabs = root.querySelector('.trip-days');
+  const list = root.querySelector('.trip-body');
+  const footer = root.querySelector('.trip-foot');
 
-  const setOpen = (open) => {
+  function setOpen(open) {
     panel.hidden = !open;
-    fab.setAttribute('aria-expanded', String(open));
-    if (open) render(true);
-  };
-  fab.addEventListener('click', () => setOpen(panel.hidden));
-  root.querySelector('.trip-close').addEventListener('click', () => setOpen(false));
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !panel.hidden) setOpen(false); });
-  document.addEventListener('storagechange', () => render(!panel.hidden));
-
-  /** Vẽ lại danh sách; withMap=true thì cập nhật cả bản đồ (chỉ khi panel đang mở) */
-  async function render(withMap) {
-    const it = getItinerary();
-    const days = await Promise.all(it.days.map((d) => Promise.all(d.map(findItem))));
-    const total = days.flat().filter(Boolean).length;
-
-    badge.hidden = total === 0;
-    badge.textContent = String(total);
-    count.textContent = total ? t('trip.stops', { n: total }) : '';
-
-    if (day > days.length) day = 1;
-    daysEl.hidden = days.length < 2;
-    daysEl.innerHTML = days.map((_, i) => `<button type="button" class="chip ${i + 1 === day ? 'active' : ''}" data-day="${i + 1}">${t('itinerary.day', { n: i + 1 })}</button>`).join('');
-    daysEl.querySelectorAll('[data-day]').forEach((b) => b.addEventListener('click', () => { day = +b.dataset.day; render(true); }));
-
-    const objs = days[day - 1].filter(Boolean);
-    if (!total) {
-      body.innerHTML = `<div class="trip-empty">${icon('map')}<p>${esc(t('itinerary.empty'))}</p><p class="muted">${esc(t('trip.emptyHint'))}</p></div>`;
-    } else if (!objs.length) {
-      body.innerHTML = `<div class="trip-empty"><p class="muted">${esc(t('trip.dayEmpty'))}</p></div>`;
-    } else {
-      body.innerHTML = `<ol class="trip-list">${objs.map((o, i) => `
-        <li data-id="${esc(o.id)}">
-          <span class="n">${i + 1}</span>
-          <div class="trip-item">
-            <strong>${esc(pick(o.name))}</strong>
-            <span class="muted">${esc(o.hours || o.address || '')}</span>
-          </div>
-          <a class="trip-go" target="_blank" rel="noopener" href="${esc(o.links?.maps || mapsDirections(o.lat, o.lng))}" title="${esc(t('places.directions'))}">${icon('pin')}</a>
-          <button type="button" class="rm" data-rm="${esc(o.id)}" aria-label="${esc(t('trip.remove'))}">${icon('x')}</button>
-        </li>`).join('')}</ol>`;
-      body.querySelectorAll('[data-rm]').forEach((b) => b.addEventListener('click', () => removeFromItinerary(b.dataset.rm, day)));
-    }
-
-    const pts = objs.filter((o) => o.lat).map((o) => ({ lat: o.lat, lng: o.lng }));
-    foot.innerHTML = `
-      ${pts.length ? `<a class="btn btn-outline btn-sm" target="_blank" rel="noopener" href="${mapsRoute(pts)}">${icon('map')} ${esc(t('itinerary.route'))}</a>` : ''}
-      <a class="btn btn-primary btn-sm" href="${baseUrl()}pages/itinerary.html">${icon('arrow')} ${esc(t('trip.page'))}</a>`;
-
-    if (withMap) updateMap(objs);
+    openButton.setAttribute('aria-expanded', String(open));
+    if (open) render();
   }
 
-  async function updateMap(objs) {
+  openButton.addEventListener('click', () => setOpen(panel.hidden));
+  root.querySelector('.trip-close').addEventListener('click', () => setOpen(false));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !panel.hidden) setOpen(false);
+  });
+  // Lịch trình đổi ở bất cứ đâu thì vẽ lại
+  document.addEventListener('storagechange', render);
+
+  async function render() {
+    // Đổi danh sách mã thành thông tin đầy đủ của từng điểm
+    const itinerary = getItinerary();
+    const days = [];
+    for (const ids of itinerary.days) {
+      const items = [];
+      for (const id of ids) {
+        const item = await findItem(id);
+        if (item) items.push(item);
+      }
+      days.push(items);
+    }
+
+    let total = 0;
+    for (const day of days) total += day.length;
+    badge.hidden = total === 0;
+    badge.textContent = total;
+    count.textContent = total > 0 ? total + ' điểm' : '';
+
+    // Các nút chọn ngày (chỉ hiện khi có từ 2 ngày)
+    if (currentDay > days.length) currentDay = 1;
+    dayTabs.hidden = days.length < 2;
+    dayTabs.innerHTML = days.map((_, index) => {
+      const active = index + 1 === currentDay ? 'active' : '';
+      return `<button type="button" class="chip ${active}" data-day="${index + 1}">Ngày ${index + 1}</button>`;
+    }).join('');
+    dayTabs.querySelectorAll('[data-day]').forEach((button) => {
+      button.addEventListener('click', () => {
+        currentDay = Number(button.dataset.day);
+        render();
+      });
+    });
+
+    // Danh sách điểm của ngày đang chọn
+    const items = days[currentDay - 1];
+    if (total === 0) {
+      list.innerHTML = `
+        <div class="trip-empty">${icon('map')}
+          <p>Chưa có địa điểm nào.</p>
+          <p class="muted">Bấm "Thêm vào lịch trình" ở một địa điểm hoặc quán ăn.</p>
+        </div>`;
+    } else if (items.length === 0) {
+      list.innerHTML = '<div class="trip-empty"><p class="muted">Ngày này chưa có điểm nào.</p></div>';
+    } else {
+      list.innerHTML = '<ol class="trip-list">' + items.map((item, index) => `
+        <li>
+          <span class="n">${index + 1}</span>
+          <div class="trip-item">
+            <strong>${escapeHtml(item.name)}</strong>
+            <span class="muted">${escapeHtml(item.hours || item.address || '')}</span>
+          </div>
+          <a class="trip-go" target="_blank" rel="noopener" href="${escapeHtml(item.links?.maps || mapsDirections(item.lat, item.lng))}" title="Chỉ đường">${icon('pin')}</a>
+          <button type="button" class="rm" data-remove="${escapeHtml(item.id)}" aria-label="Bỏ khỏi lịch trình">${icon('x')}</button>
+        </li>`).join('') + '</ol>';
+      list.querySelectorAll('[data-remove]').forEach((button) => {
+        button.addEventListener('click', () => removeFromItinerary(button.dataset.remove, currentDay));
+      });
+    }
+
+    const points = items.filter((item) => item.lat).map((item) => ({ lat: item.lat, lng: item.lng }));
+    const routeLink = points.length > 0
+      ? `<a class="btn btn-outline btn-sm" target="_blank" rel="noopener" href="${mapsRoute(points)}">${icon('map')} Mở tuyến đường trên Google Maps</a>`
+      : '';
+    footer.innerHTML = routeLink
+      + `<a class="btn btn-primary btn-sm" href="${baseUrl()}pages/itinerary.html">${icon('arrow')} Xem trang lịch trình</a>`;
+
+    // Bản đồ chỉ vẽ khi cửa sổ đang mở
+    if (!panel.hidden) drawMap(items);
+  }
+
+  async function drawMap(items) {
     try {
-      await ensureLeaflet();
+      await loadLeaflet();
     } catch {
-      mapEl.innerHTML = `<p class="muted trip-map-error">${esc(t('trip.mapError'))}</p>`;
+      mapBox.innerHTML = '<p class="muted trip-map-error">Không tải được bản đồ</p>';
       return;
     }
-    const Lf = window.L;
-    if (!map) {
-      // Zoom: nút +/−, chạm hai ngón, nhấp đúp; lăn chuột chỉ sau khi bấm vào bản đồ (để cuộn panel không bị "kẹt")
-      map = Lf.map(mapEl, { zoomControl: false, attributionControl: true, scrollWheelZoom: false, touchZoom: true, doubleClickZoom: true });
-      Lf.control.zoom({ position: 'topright' }).addTo(map);
-      map.on('click focus', () => map.scrollWheelZoom.enable());
-      map.on('mouseout blur', () => map.scrollWheelZoom.disable());
-      Lf.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>' }).addTo(map);
-      layer = Lf.layerGroup().addTo(map);
-      // Nút phóng to / thu nhỏ khung bản đồ
-      const expand = document.createElement('button');
-      expand.type = 'button';
-      expand.className = 'trip-map-expand';
-      expand.innerHTML = icon('expand');
-      expand.setAttribute('aria-label', t('trip.expand'));
-      expand.addEventListener('click', () => {
-        panel.classList.toggle('is-maplarge');
-        setTimeout(() => map.invalidateSize(), 320);
-      });
-      mapEl.addEventListener('transitionend', () => map.invalidateSize());
-      mapEl.appendChild(expand);
-    }
-    layer.clearLayers();
-    const pts = objs.filter((o) => o.lat);
-    pts.forEach((o, i) => {
-      Lf.marker([o.lat, o.lng], { icon: Lf.divIcon({ className: 'trip-marker', html: `<span>${i + 1}</span>`, iconSize: [26, 26], iconAnchor: [13, 13] }) })
-        .bindPopup(`<strong>${esc(pick(o.name))}</strong><br><span class="muted">${esc(o.hours || '')}</span>`)
-        .addTo(layer);
+    if (!map) createMap();
+
+    markers.clearLayers();
+    const points = items.filter((item) => item.lat);
+    points.forEach((item, index) => {
+      const numberIcon = window.L.divIcon({ className: 'trip-marker', html: `<span>${index + 1}</span>`, iconSize: [26, 26], iconAnchor: [13, 13] });
+      window.L.marker([item.lat, item.lng], { icon: numberIcon })
+        .bindPopup(`<strong>${escapeHtml(item.name)}</strong><br><span class="muted">${escapeHtml(item.hours || '')}</span>`)
+        .addTo(markers);
     });
-    if (pts.length > 1) Lf.polyline(pts.map((o) => [o.lat, o.lng]), { color: '#b6262c', weight: 3, opacity: .8, dashArray: '6 6' }).addTo(layer);
-    // Panel vừa hiện nên kích thước map mới có; đợi một frame rồi mới fit
+    // Nối các điểm bằng đường nét đứt theo thứ tự
+    if (points.length > 1) {
+      const line = points.map((item) => [item.lat, item.lng]);
+      window.L.polyline(line, { color: '#b6262c', weight: 3, opacity: 0.8, dashArray: '6 6' }).addTo(markers);
+    }
+
+    // Cửa sổ vừa hiện ra nên chờ một nhịp để bản đồ biết kích thước, rồi thu phóng vừa các điểm
     requestAnimationFrame(() => {
       map.invalidateSize();
-      if (pts.length) map.fitBounds(pts.map((o) => [o.lat, o.lng]), { padding: [28, 28], maxZoom: 15 });
+      if (points.length > 0) map.fitBounds(points.map((item) => [item.lat, item.lng]), { padding: [28, 28], maxZoom: 15 });
       else map.setView([HANOI.lat, HANOI.lng], 13);
     });
   }
 
-  // Badge sẵn sàng ngay khi tải trang (không cần mở panel)
-  render(false);
+  function createMap() {
+    // Lăn chuột để zoom chỉ bật sau khi bấm vào bản đồ, để cuộn danh sách không bị "kẹt" vào bản đồ
+    map = window.L.map(mapBox, { zoomControl: false, scrollWheelZoom: false });
+    window.L.control.zoom({ position: 'topright' }).addTo(map);
+    map.on('click focus', () => map.scrollWheelZoom.enable());
+    map.on('mouseout blur', () => map.scrollWheelZoom.disable());
+    window.L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>',
+    }).addTo(map);
+    markers = window.L.layerGroup().addTo(map);
+
+    // Nút phóng to / thu nhỏ khung bản đồ
+    const expandButton = document.createElement('button');
+    expandButton.type = 'button';
+    expandButton.className = 'trip-map-expand';
+    expandButton.innerHTML = icon('expand');
+    expandButton.setAttribute('aria-label', 'Phóng to / thu nhỏ bản đồ');
+    expandButton.addEventListener('click', () => {
+      panel.classList.toggle('is-maplarge');
+      // khung đổi kích thước xong thì báo bản đồ vẽ lại cho vừa
+      setTimeout(() => map.invalidateSize(), 320);
+    });
+    mapBox.appendChild(expandButton);
+  }
+
+  // Hiện số điểm trên nút tròn ngay khi tải trang
+  render();
 }
 
-function ensureLeaflet() {
-  if (window.L?.map) return Promise.resolve();
-  if (leaflet) return leaflet;
-  leaflet = new Promise((resolve, reject) => {
-    const link = document.createElement('link');
-    link.rel = 'stylesheet'; link.href = LEAFLET_CSS;
-    document.head.appendChild(link);
-    const s = document.createElement('script');
-    s.src = LEAFLET_JS; s.async = true;
-    s.onload = () => resolve();
-    s.onerror = () => { leaflet = null; reject(new Error('leaflet load failed')); };
-    document.head.appendChild(s);
-    setTimeout(() => reject(new Error('leaflet timeout')), 15000);
+// Tải thư viện bản đồ Leaflet lúc cần (lần đầu mở cửa sổ), để trang mở nhanh hơn
+function loadLeaflet() {
+  if (window.L && window.L.map) return Promise.resolve();
+  if (leafletLoading) return leafletLoading;
+
+  leafletLoading = new Promise((resolve, reject) => {
+    const css = document.createElement('link');
+    css.rel = 'stylesheet';
+    css.href = LEAFLET_CSS;
+    document.head.appendChild(css);
+
+    const script = document.createElement('script');
+    script.src = LEAFLET_JS;
+    script.onload = resolve;
+    script.onerror = () => {
+      leafletLoading = null;   // lần sau mở cửa sổ thì thử tải lại
+      reject(new Error('Không tải được Leaflet'));
+    };
+    document.head.appendChild(script);
+
+    setTimeout(() => reject(new Error('Tải Leaflet quá lâu')), 15000);
   });
-  return leaflet;
+  return leafletLoading;
 }

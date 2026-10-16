@@ -1,185 +1,234 @@
-// render.js – tạo card địa điểm / món ăn / khách sạn / lịch trình mẫu + skeleton, empty state
-import { t, L, has, formatVND } from './i18n.js';
-import { mapsDirections, isMobile, distanceKm, hotelLinks, deliveryLink, HANOI, wikiThumb } from './api.js';
+// render.js – tạo HTML cho các thẻ địa điểm, quán ăn, khách sạn, lịch trình mẫu và nút "Thêm vào lịch trình"
+import { formatVND, escapeHtml } from './utils.js';
+import { PLACE_TYPES, DISH_NAMES, HOTEL_TYPES, HOTEL_AREAS, HOTEL_BUDGETS } from './labels.js';
+import { mapsDirections, isMobile, distanceKm, hotelLinks, deliveryLink, HANOI, wikiImage } from './api.js';
 import { addToItinerary, isInItinerary } from './storage.js';
 
-const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+// Icon lấy từ bộ icon SVG chung trong trang: icon('clock') -> biểu tượng đồng hồ
+export function icon(name, extraClass = '') {
+  return `<svg class="ic ${extraClass}" aria-hidden="true"><use href="#i-${name}"/></svg>`;
+}
 
-/** Icon từ sprite trong layout: icon('clock') */
-export const icon = (name, cls = '') => `<svg class="ic ${cls}" aria-hidden="true"><use href="#i-${name}"/></svg>`;
-
-const imgStyle = (url) => (url ? `style="background-image:url('${esc(url)}')"` : '');
-
-export function placeCard(p) {
+// Khung ảnh của thẻ. Không có ảnh thì để trống; hàm loadMissingImages() sẽ thử lấy ảnh từ Wikipedia
+function cardImage(item, placeholderIcon, badges) {
+  const style = item.image ? `style="background-image:url('${escapeHtml(item.image)}')"` : '';
   return `
-  <article class="card" data-id="${esc(p.id)}">
-    <div class="card-img" ${imgStyle(p.image)} data-wiki="${esc(p.wiki?.en || '')}" role="img" aria-label="${esc(L(p.name))}">
-      <span class="ph">${icon('pin')}</span>
-      <span class="badge">${t('places.' + p.type)}</span>
-    </div>
+    <div class="card-img" ${style} data-wiki="${escapeHtml(item.wiki || '')}" role="img" aria-label="${escapeHtml(item.name)}">
+      <span class="ph">${icon(placeholderIcon)}</span>
+      ${badges}
+    </div>`;
+}
+
+// Link mở ở tab mới
+function linkButton(url, label, className, logo = '') {
+  if (!url) return '';
+  const logoIcon = logo ? icon(logo, 'ic-logo') : '';
+  return `<a class="btn btn-sm ${className}" target="_blank" rel="noopener" href="${escapeHtml(url)}">${logoIcon}${label}</a>`;
+}
+
+/* ---------- Địa điểm ---------- */
+
+export function placeCard(place) {
+  const ticket = place.ticket ? formatVND(place.ticket) : 'Miễn phí';
+  const duration = place.duration ? `<li>${icon('hourglass')} Tham quan ~${place.duration} phút</li>` : '';
+  const tip = place.tip ? `<p class="tip">${icon('info')}<span>${escapeHtml(place.tip)}</span></p>` : '';
+
+  return `
+  <article class="card">
+    ${cardImage(place, 'pin', `<span class="badge">${PLACE_TYPES[place.type] || ''}</span>`)}
     <div class="card-body">
-      <h3>${esc(L(p.name))}</h3>
-      <p class="desc">${esc(L(p.desc))}</p>
+      <h3>${escapeHtml(place.name)}</h3>
+      <p class="desc">${escapeHtml(place.desc)}</p>
       <ul class="meta">
-        <li>${icon('clock')} ${esc(p.hours || '')}</li>
-        <li>${icon('ticket')} ${p.ticket ? formatVND(p.ticket) : t('places.free')}</li>
-        ${p.duration ? `<li>${icon('hourglass')} ${t('places.duration', { n: p.duration })}</li>` : ''}
+        <li>${icon('clock')} ${escapeHtml(place.hours)}</li>
+        <li>${icon('ticket')} ${ticket}</li>
+        ${duration}
       </ul>
-      ${p.tip ? `<p class="tip">${icon('info')}<span>${esc(L(p.tip))}</span></p>` : ''}
+      ${tip}
       <div class="actions">
-        <a class="btn btn-outline btn-sm" target="_blank" rel="noopener" href="${mapsDirections(p.lat, p.lng)}">${icon('pin')} ${t('places.directions')}</a>
-        ${addButton(p.id)}
+        ${linkButton(mapsDirections(place.lat, place.lng), icon('pin') + ' Chỉ đường', 'btn-outline')}
+        ${addButton(place.id)}
       </div>
     </div>
   </article>`;
 }
 
-const dishLabel = (dish) => (has('dish.' + dish) ? t('dish.' + dish) : dish);
+/* ---------- Quán ăn ---------- */
 
-export function foodCard(f) {
-  const mobile = isMobile();
-  const link = (url, label, ic, cls) =>
-    url ? `<a class="btn btn-sm ${cls}" target="_blank" rel="noopener" href="${esc(url)}">${ic ? icon(ic, 'ic-logo') : ''}${label}</a>` : '';
-  const veg = f.diet?.includes('vegetarian');
+export function foodCard(food) {
+  const dish = DISH_NAMES[food.dish] || food.dish;
+  const isVegetarian = food.diet && food.diet.includes('vegetarian');
+  const vegBadge = isVegetarian ? `<span class="badge badge-dist tag-veg">${icon('leaf')} Chay</span>` : '';
+
+  const grab = deliveryLink('grab', food.links.grabfood, food.name);
+  const shopee = deliveryLink('shopee', food.links.shopeefood, food.name);
+  const desktop = isMobile() ? '' : ' btn-desktop';
+  const noDelivery = !grab && !shopee ? '<span class="tag">Quán không giao hàng, tới ăn tại chỗ</span>' : '';
+
   return `
-  <article class="card card-food" data-id="${esc(f.id)}">
-    <div class="card-img" ${imgStyle(f.image)} data-wiki="${esc(f.wiki?.en || '')}" role="img" aria-label="${esc(L(f.name))}">
-      <span class="ph">${icon('wallet')}</span>
-      <span class="badge">${esc(dishLabel(f.dish))}</span>
-      ${veg ? `<span class="badge badge-dist tag-veg">${icon('leaf')} ${t('food.vegetarian')}</span>` : ''}
-    </div>
+  <article class="card card-food">
+    ${cardImage(food, 'wallet', `<span class="badge">${escapeHtml(dish)}</span>${vegBadge}`)}
     <div class="card-body">
-      <h3>${esc(L(f.name))}</h3>
-      <p class="desc">${esc(L(f.desc))}</p>
+      <h3>${escapeHtml(food.name)}</h3>
+      <p class="desc">${escapeHtml(food.desc)}</p>
       <ul class="meta">
-        <li>${icon('pin')} ${esc(f.address)}</li>
-        <li>${icon('clock')} ${esc(f.hours)}</li>
-        <li>${icon('wallet')} ${formatVND(f.price?.min)} - ${formatVND(f.price?.max)}</li>
+        <li>${icon('pin')} ${escapeHtml(food.address)}</li>
+        <li>${icon('clock')} ${escapeHtml(food.hours)}</li>
+        <li>${icon('wallet')} ${formatVND(food.price.min)} - ${formatVND(food.price.max)}</li>
       </ul>
       <div class="actions">
-        ${link(f.links?.maps, t('food.maps'), 'l-googlemaps', 'btn-outline')}
-        ${link(deliveryLink('grab', f.links?.grabfood, f.name?.vi), t('food.grab'), 'l-grab', 'btn-brand btn-grab' + (mobile ? '' : ' btn-desktop'))}
-        ${link(deliveryLink('shopee', f.links?.shopeefood, f.name?.vi), t('food.shopee'), 'l-shopee', 'btn-brand btn-shopee' + (mobile ? '' : ' btn-desktop'))}
-        ${!f.links?.grabfood && !f.links?.shopeefood ? `<span class="tag">${t('food.noDelivery')}</span>` : ''}
-        ${addButton(f.id)}
+        ${linkButton(food.links.maps, 'Google Maps', 'btn-outline', 'l-googlemaps')}
+        ${linkButton(grab, 'GrabFood', 'btn-brand btn-grab' + desktop, 'l-grab')}
+        ${linkButton(shopee, 'ShopeeFood', 'btn-brand btn-shopee' + desktop, 'l-shopee')}
+        ${noDelivery}
+        ${addButton(food.id)}
       </div>
     </div>
   </article>`;
 }
 
-/** Card khách sạn: nút đặt phòng mở trang tìm kiếm theo tên khách sạn */
-export function hotelCard(h) {
-  const links = hotelLinks(h);
-  const km = distanceKm(HANOI, h);
-  const stars = h.stars ? `<span class="stars" aria-label="${t('hotels.stars', { n: h.stars })}">${icon('star', 'ic-fill').repeat(h.stars)}</span>` : '';
-  const book = (url, label, cls, ic) => `<a class="btn btn-sm btn-brand ${cls}" target="_blank" rel="noopener" href="${esc(url)}">${ic ? icon(ic, 'ic-logo') : ''}${label}</a>`;
+/* ---------- Khách sạn ---------- */
+
+export function hotelCard(hotel) {
+  const links = hotelLinks(hotel);
+  const km = distanceKm(HANOI, hotel);
+  const distance = km < 10 ? km.toFixed(1) : Math.round(km);
+  const stars = hotel.stars
+    ? `<span class="stars" aria-label="${hotel.stars} sao">${icon('star', 'ic-fill').repeat(hotel.stars)}</span>`
+    : '';
+  const badges = `<span class="badge">${HOTEL_TYPES[hotel.type]}</span><span class="badge badge-dist">${HOTEL_AREAS[hotel.area]}</span>`;
+
   return `
-  <article class="card card-hotel" data-id="${esc(h.id)}">
-    <div class="card-img" ${imgStyle(h.image)} data-wiki="${esc(h.wiki?.en || '')}" role="img" aria-label="${esc(L(h.name))}">
-      <span class="ph">${icon('bed')}</span>
-      <span class="badge">${t('hotels.type.' + h.type)}</span>
-      <span class="badge badge-dist">${t('hotels.area.' + h.area)}</span>
-    </div>
+  <article class="card card-hotel">
+    ${cardImage(hotel, 'bed', badges)}
     <div class="card-body">
-      <div class="card-top">${stars}<span class="tag">${t('hotels.budget.' + h.budget)}</span></div>
-      <h3>${esc(L(h.name))}</h3>
-      <p class="desc">${esc(L(h.desc))}</p>
+      <div class="card-top">${stars}<span class="tag">${HOTEL_BUDGETS[hotel.budget]}</span></div>
+      <h3>${escapeHtml(hotel.name)}</h3>
+      <p class="desc">${escapeHtml(hotel.desc)}</p>
       <ul class="meta">
-        <li>${icon('pin')} ${esc(h.address)}</li>
-        <li>${icon('locate')} ${t('hotels.center', { d: km < 10 ? km.toFixed(1) : Math.round(km) })}</li>
-        <li>${icon('map')} <a target="_blank" rel="noopener" href="${esc(links.maps)}">${t('hotels.map')}</a></li>
+        <li>${icon('pin')} ${escapeHtml(hotel.address)}</li>
+        <li>${icon('locate')} ${distance} km tới Hồ Gươm</li>
+        <li>${icon('map')} <a target="_blank" rel="noopener" href="${escapeHtml(links.maps)}">Bản đồ</a></li>
       </ul>
       <div class="price-row">
-        <span class="price">${t('hotels.from')} ${formatVND(h.price?.min)}</span><small class="muted">${t('hotels.perNight')}</small>
+        <span class="price">Từ ${formatVND(hotel.price.min)}</span><small class="muted">/ đêm</small>
       </div>
-      <span class="book-label">${t('hotels.book')}</span>
+      <span class="book-label">Đặt phòng trên</span>
       <div class="book-row">
-        ${book(links.booking, 'Booking.com', 'btn-booking', 'l-booking')}
-        ${book(links.agoda, 'Agoda', 'btn-agoda')}
-        ${book(links.traveloka, 'Traveloka', 'btn-traveloka')}
-        <a class="btn btn-sm btn-outline" target="_blank" rel="noopener" href="${esc(links.google)}">${icon('l-google', 'ic-logo')}Google Hotels</a>
+        ${linkButton(links.booking, 'Booking.com', 'btn-brand btn-booking', 'l-booking')}
+        ${linkButton(links.agoda, 'Agoda', 'btn-brand btn-agoda')}
+        ${linkButton(links.traveloka, 'Traveloka', 'btn-brand btn-traveloka')}
+        ${linkButton(links.google, 'Google Hotels', 'btn-outline', 'l-google')}
       </div>
     </div>
   </article>`;
 }
 
-/** Card lịch trình mẫu. names: map id -> tên đã dịch */
-export function sampleCard(it, names) {
-  const stops = it.days.reduce((s, d) => s + d.items.length, 0);
+/* ---------- Lịch trình mẫu ---------- */
+
+// names: bảng tra mã -> tên địa điểm / quán ăn
+export function sampleCard(sample, names) {
+  let stopCount = 0;
+  for (const day of sample.days) stopCount += day.items.length;
+
+  const days = sample.days.map((day, index) => {
+    const stops = day.items.map((id) => `<li>${escapeHtml(names[id] || id)}</li>`).join('');
+    return `<div><strong>Ngày ${index + 1}</strong><ol>${stops}</ol></div>`;
+  }).join('');
+
   return `
-  <article class="sample" data-sample="${esc(it.id)}">
+  <article class="sample">
     <div>
-      <h3>${esc(L(it.title))}</h3>
+      <h3>${escapeHtml(sample.title)}</h3>
       <ul class="meta">
-        <li>${icon('calendar')} ${t('itinerary.days', { n: it.days.length })}</li>
-        <li>${icon('pin')} ${t('itinerary.stops', { n: stops })}</li>
+        <li>${icon('calendar')} ${sample.days.length} ngày</li>
+        <li>${icon('pin')} ${stopCount} điểm dừng</li>
       </ul>
     </div>
-    ${it.days.map((d, i) => `<div><strong>${t('itinerary.day', { n: i + 1 })}</strong><ol>${d.items.map((id) => `<li>${esc(names[id] || id)}</li>`).join('')}</ol></div>`).join('')}
-    <div class="actions"><button type="button" class="btn btn-primary btn-sm" data-use-sample="${esc(it.id)}">${icon('arrow')} ${t('itinerary.use')}</button></div>
+    ${days}
+    <div class="actions">
+      <button type="button" class="btn btn-primary btn-sm" data-use-sample="${escapeHtml(sample.id)}">${icon('arrow')} Dùng lịch trình này</button>
+    </div>
   </article>`;
 }
 
-/** Skeleton card trong lúc tải */
-export function skeletonCards(n = 6, withImg = true) {
-  return Array.from({ length: n }, () => `
+/* ---------- Trạng thái tải và trống ---------- */
+
+// Các thẻ xám nhấp nháy trong lúc chờ tải dữ liệu
+export function skeletonCards(count = 6, withImage = true) {
+  const one = `
   <div class="skeleton" aria-hidden="true">
-    ${withImg ? '<div class="sk-img"></div>' : ''}
+    ${withImage ? '<div class="sk-img"></div>' : ''}
     <div class="sk-body"><div class="sk-line w60"></div><div class="sk-line w80"></div><div class="sk-line w40"></div></div>
-  </div>`).join('');
+  </div>`;
+  return one.repeat(count);
 }
 
-export function emptyState(msg, { href, label, ic = 'search' } = {}) {
-  return `<div class="empty">${icon(ic)}<p>${esc(msg)}</p>${href ? `<a class="btn btn-outline" href="${esc(href)}">${esc(label)}</a>` : ''}</div>`;
+export function emptyState(message, button = null, iconName = 'search') {
+  const link = button ? `<a class="btn btn-outline" href="${escapeHtml(button.href)}">${escapeHtml(button.label)}</a>` : '';
+  return `<div class="empty">${icon(iconName)}<p>${escapeHtml(message)}</p>${link}</div>`;
 }
 
-/** Nạp ảnh Wikipedia cho card chưa có ảnh (fallback, lỗi thì giữ placeholder) */
-export function hydrateImages(root = document) {
-  root.querySelectorAll('.card-img[data-wiki]').forEach(async (el) => {
-    const title = el.dataset.wiki;
-    if (!title || el.style.backgroundImage) return;
-    const url = await wikiThumb(title, 'en');
-    if (url) el.style.backgroundImage = `url('${url}')`;
+// Thẻ nào chưa có ảnh thì lấy ảnh từ Wikipedia; lỗi thì giữ biểu tượng mặc định
+export function loadMissingImages(container) {
+  container.querySelectorAll('.card-img[data-wiki]').forEach(async (box) => {
+    if (box.style.backgroundImage || !box.dataset.wiki) return;
+    const url = await wikiImage(box.dataset.wiki);
+    if (url) box.style.backgroundImage = `url('${url}')`;
   });
 }
 
-/** Nút "Thêm vào lịch trình"; trạng thái theo lịch trình hiện tại */
+/* ---------- Nút "Thêm vào lịch trình" ---------- */
+
+function addButtonContent(added) {
+  return added ? `${icon('check')} Đã thêm` : `${icon('plus')} Thêm vào lịch trình`;
+}
+
 function addButton(id) {
   const added = isInItinerary(id);
-  return `<button type="button" class="btn btn-sm ${added ? 'btn-done' : 'btn-primary'}" data-add="${esc(id)}" ${added ? 'disabled' : ''}>
-          ${icon(added ? 'check' : 'plus')} ${t(added ? 'places.added' : 'places.add')}
-        </button>`;
+  const style = added ? 'btn-done' : 'btn-primary';
+  return `<button type="button" class="btn btn-sm ${style}" data-add="${escapeHtml(id)}" ${added ? 'disabled' : ''}>${addButtonContent(added)}</button>`;
 }
 
-function setAddState(btn, added) {
-  btn.disabled = added;
-  btn.classList.toggle('btn-primary', !added);
-  btn.classList.toggle('btn-done', added);
-  btn.innerHTML = `${icon(added ? 'check' : 'plus')} ${t(added ? 'places.added' : 'places.add')}`;
+// Cập nhật một nút cho khớp với lịch trình hiện tại
+function refreshAddButton(button) {
+  const added = isInItinerary(button.dataset.add);
+  button.disabled = added;
+  button.classList.toggle('btn-primary', !added);
+  button.classList.toggle('btn-done', added);
+  button.innerHTML = addButtonContent(added);
 }
 
-/** Gắn handler cho tất cả nút "Thêm vào lịch trình" trong root */
-export function bindAddButtons(root = document) {
-  root.querySelectorAll('[data-add]').forEach((btn) => {
-    if (btn.dataset.bound) return;
-    btn.dataset.bound = '1';
-    btn.addEventListener('click', () => {
-      addToItinerary(btn.dataset.add, 1);
-      toast(t('itinerary.added'));
+// Bấm nút thì thêm vào ngày 1 của lịch trình
+export function bindAddButtons(container) {
+  container.querySelectorAll('[data-add]').forEach((button) => {
+    button.addEventListener('click', () => {
+      addToItinerary(button.dataset.add);
+      showToast('Đã thêm vào lịch trình');
     });
   });
 }
 
-// Xoá điểm ở cửa sổ Lịch trình / trang Lịch trình / tab khác thì nút trên card phải bấm lại được
+// Mỗi khi lịch trình đổi (thêm, xoá ở cửa sổ Lịch trình, ở tab khác…), mọi nút trên trang được cập nhật lại.
+// Nhờ vậy xoá một điểm thì nút của điểm đó bấm thêm lại được.
 document.addEventListener('storagechange', () => {
-  document.querySelectorAll('[data-add]').forEach((btn) => setAddState(btn, isInItinerary(btn.dataset.add)));
+  document.querySelectorAll('[data-add]').forEach(refreshAddButton);
 });
 
-export function toast(msg) {
-  let el = document.querySelector('.toast');
-  if (!el) { el = document.createElement('div'); el.className = 'toast'; el.setAttribute('role', 'status'); document.body.appendChild(el); }
-  el.textContent = msg;
-  el.classList.add('show');
-  clearTimeout(el._t);
-  el._t = setTimeout(() => el.classList.remove('show'), 2200);
+/* ---------- Thông báo nhỏ ở cuối màn hình ---------- */
+
+let toastTimer = null;
+
+export function showToast(message) {
+  let toast = document.querySelector('.toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.setAttribute('role', 'status');
+    document.body.appendChild(toast);
+  }
+  toast.textContent = message;
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
 }
