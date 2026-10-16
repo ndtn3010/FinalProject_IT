@@ -1,44 +1,63 @@
-// storage.js – lịch trình (localStorage)
-export const KEY_ITIN = 'hg.itinerary.v1';
+// storage.js – lưu lịch trình trong bộ nhớ của trình duyệt (localStorage)
+//
+// Lịch trình có dạng: { days: [ ['hoan-kiem-lake', 'cafe-giang'], ['west-lake'] ] }
+// mỗi ngày là một danh sách mã (id) địa điểm hoặc quán ăn.
 
-function read(key, fallback) {
-  try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; }
+export const ITINERARY_KEY = 'hg.itinerary.v1';
+
+function emptyItinerary() {
+  return { days: [[]] };
 }
-function write(key, value) {
-  try { localStorage.setItem(key, JSON.stringify(value)); } catch {}
-  document.dispatchEvent(new CustomEvent('storagechange', { detail: { key } }));
-}
 
-// Lịch trình có thể đổi ở tab khác, hoặc ở trang khác rồi bấm Back (trang cũ lấy lại từ bfcache)
-// -> báo cho giao diện vẽ lại theo dữ liệu mới
-addEventListener('storage', (e) => {
-  if (e.key == null || e.key.startsWith('hg.')) document.dispatchEvent(new CustomEvent('storagechange', { detail: { key: e.key } }));
-});
-addEventListener('pageshow', (e) => {
-  if (e.persisted) document.dispatchEvent(new CustomEvent('storagechange', { detail: { key: KEY_ITIN } }));
-});
-
-/* ---- Itinerary: { days: [ [id, id], [id] ] } ---- */
 export function getItinerary() {
-  const it = read(KEY_ITIN, { days: [[]] });
-  if (!Array.isArray(it.days) || !it.days.length) it.days = [[]];
-  return it;
+  try {
+    const saved = JSON.parse(localStorage.getItem(ITINERARY_KEY));
+    if (saved && Array.isArray(saved.days) && saved.days.length > 0) return saved;
+  } catch {
+    // dữ liệu hỏng thì coi như chưa có gì
+  }
+  return emptyItinerary();
 }
-export function addToItinerary(id, day = 1) {
-  const it = getItinerary();
-  while (it.days.length < day) it.days.push([]);
-  const list = it.days[day - 1];
-  if (!list.includes(id)) list.push(id);
-  write(KEY_ITIN, it);
-  return it;
-}
-export function removeFromItinerary(id, day) {
-  const it = getItinerary();
-  it.days[day - 1] = (it.days[day - 1] || []).filter((x) => x !== id);
-  write(KEY_ITIN, it);
-  return it;
-}
-export function setItinerary(it) { write(KEY_ITIN, it); }
-export function clearItinerary() { write(KEY_ITIN, { days: [[]] }); }
-export function isInItinerary(id) { return getItinerary().days.some((d) => d.includes(id)); }
 
+// Lưu lại rồi báo cho cả trang biết lịch trình vừa đổi (sự kiện "storagechange")
+export function setItinerary(itinerary) {
+  try {
+    localStorage.setItem(ITINERARY_KEY, JSON.stringify(itinerary));
+  } catch {
+    // trình duyệt chặn lưu (ví dụ chế độ ẩn danh) thì bỏ qua
+  }
+  document.dispatchEvent(new CustomEvent('storagechange'));
+}
+
+export function addToItinerary(id, dayNumber = 1) {
+  const itinerary = getItinerary();
+  while (itinerary.days.length < dayNumber) itinerary.days.push([]);
+
+  const day = itinerary.days[dayNumber - 1];
+  if (!day.includes(id)) day.push(id);
+  setItinerary(itinerary);
+}
+
+export function removeFromItinerary(id, dayNumber) {
+  const itinerary = getItinerary();
+  const day = itinerary.days[dayNumber - 1] || [];
+  itinerary.days[dayNumber - 1] = day.filter((itemId) => itemId !== id);
+  setItinerary(itinerary);
+}
+
+export function clearItinerary() {
+  setItinerary(emptyItinerary());
+}
+
+export function isInItinerary(id) {
+  return getItinerary().days.some((day) => day.includes(id));
+}
+
+// Lịch trình cũng có thể đổi ở một tab khác, hoặc ở trang khác rồi người dùng bấm Back.
+// Hai trường hợp này cũng phát "storagechange" để giao diện vẽ lại theo dữ liệu mới.
+window.addEventListener('storage', (event) => {
+  if (event.key === ITINERARY_KEY) document.dispatchEvent(new CustomEvent('storagechange'));
+});
+window.addEventListener('pageshow', (event) => {
+  if (event.persisted) document.dispatchEvent(new CustomEvent('storagechange'));
+});

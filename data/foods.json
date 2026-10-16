@@ -11,25 +11,15 @@
       "max": 90000
     },
     "diet": [],
-    "name": {
-      "vi": "Phở Thìn Lò Đúc",
-      "en": "Pho Thin Lo Duc",
-      "zh": "禄德真河粉"
-    },
-    "desc": {
-      "vi": "Phở bò tái lăn xào với tỏi, nước dùng béo, nhiều hành. Quán từ 1979.",
-      "en": "Stir-fried beef pho with garlic, rich broth and lots of spring onion. Open since 1979.",
-      "zh": "蒜香爆炒牛肉河粉，汤浓郁，葱多。1979年开业。"
-    },
+    "name": "Phở Thìn Lò Đúc",
+    "desc": "Phở bò tái lăn xào với tỏi, nước dùng béo, nhiều hành. Quán từ 1979.",
     "links": {
       "maps": "https://www.google.com/maps/search/?api=1&query=21.0142,105.8564",
       "grabfood": "https://food.grab.com/vn/vi/restaurants?search=Ph%E1%BB%9F%20Th%C3%ACn%20L%C3%B2%20%C4%90%C3%BAc",
       "shopeefood": "https://shopeefood.vn/ha-noi/danh-sach-dia-diem-giao-tan-noi?q=Ph%E1%BB%9F%20Th%C3%ACn%20L%C3%B2%20%C4%90%C3%BAc"
     },
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Bowl_of_Meatball_pho.jpg/960px-Bowl_of_Meatball_pho.jpg",
-    "wiki": {
-      "en": "Phở"
-    },
+    "wiki": "Phở",
     "imageNote": "Ảnh minh hoạ món ăn (Wikimedia Commons), không phải ảnh quán",
     "cat": "noodles"
   },
@@ -45,25 +35,15 @@
       "max": 100000
     },
     "diet": [],
-    "name": {
-      "vi": "Bún chả Hương Liên (Bún chả Obama)",
-      "en": "Bun Cha Huong Lien (Obama Bun Cha)",
-      "zh": "香莲烤肉米线（奥巴马烤肉米线）"
-    },
-    "desc": {
-      "vi": "Bún chả nổi tiếng sau bữa ăn của Tổng thống Obama và Anthony Bourdain năm 2016.",
-      "en": "Famous since President Obama and Anthony Bourdain ate here in 2016.",
-      "zh": "2016年奥巴马总统和安东尼·波登在此用餐后闻名。"
-    },
+    "name": "Bún chả Hương Liên (Bún chả Obama)",
+    "desc": "Bún chả nổi tiếng sau bữa ăn của Tổng thống Obama và Anthony Bourdain năm 2016.",
     "links": {
       "maps": "https://www.google.com/maps/search/?api=1&query=21.0163,105.8520",
       "grabfood": "https://food.grab.com/vn/vi/restaurants?search=B%C3%BAn%20ch%E1%BA%A3%20H%C6%B0%C6%A1ng%20Li%C3%AAn",
       "shopeefood": "https://shopeefood.vn/ha-noi/danh-sach-dia-diem-giao-tan-noi?q=B%C3%BAn%20ch%E1%BA%A3%20H%C6%B0%C6%A1ng%20Li%C3%AAn"
     },
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/B%C3%BAn_ch%E1%BA%A3_Vietnamese_food.jpg/960px-B%C3%BAn_ch%E1%BA%A3_Vietnamese_food.jpg",
-    "wiki": {
-      "en": "Bún_chả"
-    },
+    "wiki": "Bún_chả",
     "imageNote": "Ảnh minh hoạ món ăn (Wikimedia Commons), không phải ảnh quán",
     "cat": "noodles"
   },
@@ -81,25 +61,15 @@
     "diet": [
       "vegetarian"
     ],
-    "name": {
-      "vi": "Cà phê Giảng – cà phê trứng",
-      "en": "Cafe Giang – egg coffee",
-      "zh": "江咖啡–鸡蛋咖啡"
-    },
-    "desc": {
-      "vi": "Nơi khai sinh cà phê trứng Hà Nội (1946): lòng đỏ trứng đánh bông với sữa đặc trên cà phê đen.",
-      "en": "Birthplace of Hanoi egg coffee (1946): whipped egg yolk and condensed milk over black coffee.",
-      "zh": "河内鸡蛋咖啡的发源地（1946年）：打发的蛋黄和炼乳浇在黑咖啡上。"
-    },
+    "name": "Cà phê Giảng – cà phê trứng",
+    "desc": "Nơi khai sinh cà phê trứng Hà Nội (1946): lòng đỏ trứng đánh bông với sữa đặc trên cà phê đen.",
     "links": {
       "maps": "https://www.google.com/maps/search/?api=1&query=21.0325,105.8540",
       "grabfood": "https://food.grab.com/vn/vi/restaurants?search=C%C3%A0%20ph%C3%AA%20Gi%E1%BA%A3ng",
       "shopeefood": "https://shopeefood.vn/ha-noi/danh-sach-dia-diem-giao-tan-noi?q=C%C3%A0%20ph%C3%AA%20Gi%E1%BA%A3ng"
     },
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/C%C3%A0_ph%C3%AA_tr%E1%BB%A9ng.jpg/960px-C%C3%A0_ph%C3%AA_tr%E1%BB%A9ng.jpg",
-    "wiki": {
-      "en": "Egg_coffee"
-    },
+    "wiki": "Egg_coffee",
     "imageNote": "Ảnh minh hoạ món ăn (Wikimedia Commons), không phải ảnh quán",
     "cat": "dessert"
   },
@@ -115,25 +85,15 @@
       "max": 180000
     },
     "diet": [],
-    "name": {
-      "vi": "Chả cá Thăng Long",
-      "en": "Cha Ca Thang Long (grilled turmeric fish)",
-      "zh": "升龙烤鱼"
-    },
-    "desc": {
-      "vi": "Cá lăng ướp nghệ, nướng rồi rán tại bàn với thì là, ăn cùng bún, lạc, mắm tôm.",
-      "en": "Turmeric-marinated fish fried at your table with dill, served with noodles, peanuts and shrimp paste.",
-      "zh": "姜黄腌制的鱼在桌上与莳萝一起煎，配米线、花生和虾酱。"
-    },
+    "name": "Chả cá Thăng Long",
+    "desc": "Cá lăng ướp nghệ, nướng rồi rán tại bàn với thì là, ăn cùng bún, lạc, mắm tôm.",
     "links": {
       "maps": "https://www.google.com/maps/search/?api=1&query=21.0332,105.8465",
       "grabfood": "https://food.grab.com/vn/vi/restaurants?search=Ch%E1%BA%A3%20c%C3%A1%20Th%C4%83ng%20Long",
       "shopeefood": "https://shopeefood.vn/ha-noi/danh-sach-dia-diem-giao-tan-noi?q=Ch%E1%BA%A3%20c%C3%A1%20Th%C4%83ng%20Long"
     },
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Ch%E1%BA%A3_c%C3%A1_L%C3%A3_V%E1%BB%8Dng_H%C3%A0_N%E1%BB%99i.jpg/960px-Ch%E1%BA%A3_c%C3%A1_L%C3%A3_V%E1%BB%8Dng_H%C3%A0_N%E1%BB%99i.jpg",
-    "wiki": {
-      "en": "Chả_cá_Lã_Vọng"
-    },
+    "wiki": "Chả_cá_Lã_Vọng",
     "imageNote": "Ảnh minh hoạ món ăn (Wikimedia Commons), không phải ảnh quán",
     "cat": "noodles"
   },
@@ -149,25 +109,15 @@
       "max": 20000
     },
     "diet": [],
-    "name": {
-      "vi": "Bia hơi ngã tư Tạ Hiện",
-      "en": "Bia Hoi Corner, Ta Hien",
-      "zh": "谢现街鲜啤角"
-    },
-    "desc": {
-      "vi": "Bia hơi tươi rẻ nhất thế giới, ghế nhựa vỉa hè, không khí sôi động mỗi tối.",
-      "en": "The world's cheapest fresh draught beer on plastic stools; lively every night.",
-      "zh": "世界上最便宜的鲜啤，塑料凳，每晚热闹非凡。"
-    },
+    "name": "Bia hơi ngã tư Tạ Hiện",
+    "desc": "Bia hơi tươi rẻ nhất thế giới, ghế nhựa vỉa hè, không khí sôi động mỗi tối.",
     "links": {
       "maps": "https://www.google.com/maps/search/?api=1&query=21.0350,105.8520",
       "grabfood": "",
       "shopeefood": ""
     },
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Bia_hoi.jpg/960px-Bia_hoi.jpg",
-    "wiki": {
-      "en": "Bia_hơi"
-    },
+    "wiki": "Bia_hơi",
     "imageNote": "Ảnh minh hoạ món ăn (Wikimedia Commons), không phải ảnh quán",
     "cat": "dessert"
   },
@@ -186,25 +136,15 @@
       "vegetarian",
       "vegan"
     ],
-    "name": {
-      "vi": "Nhà hàng chay Loving Hut Tây Hồ",
-      "en": "Loving Hut vegan restaurant (West Lake)",
-      "zh": "爱家素食餐厅（西湖）"
-    },
-    "desc": {
-      "vi": "Đồ chay thuần Việt và Á, giá dễ chịu, gần chùa Trấn Quốc.",
-      "en": "Vietnamese and Asian vegan dishes, affordable, near Tran Quoc Pagoda.",
-      "zh": "越南和亚洲纯素菜肴，价格实惠，靠近镇国寺。"
-    },
+    "name": "Nhà hàng chay Loving Hut Tây Hồ",
+    "desc": "Đồ chay thuần Việt và Á, giá dễ chịu, gần chùa Trấn Quốc.",
     "links": {
       "maps": "https://www.google.com/maps/search/?api=1&query=21.0570,105.8265",
       "grabfood": "https://food.grab.com/vn/vi/restaurants?search=Nh%C3%A0%20h%C3%A0ng%20chay%20Loving%20Hut%20T%C3%A2y%20H%E1%BB%93",
       "shopeefood": "https://shopeefood.vn/ha-noi/danh-sach-dia-diem-giao-tan-noi?q=Nh%C3%A0%20h%C3%A0ng%20chay%20Loving%20Hut%20T%C3%A2y%20H%E1%BB%93"
     },
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Vegetarian_diet.jpg/960px-Vegetarian_diet.jpg",
-    "wiki": {
-      "en": "Vegetarian_cuisine"
-    },
+    "wiki": "Vegetarian_cuisine",
     "imageNote": "Ảnh minh hoạ món ăn (Wikimedia Commons), không phải ảnh quán",
     "cat": "noodles"
   },
@@ -221,16 +161,8 @@
       "max": 70000
     },
     "diet": [],
-    "name": {
-      "vi": "Bún thang Bà Đức",
-      "en": "Bun Thang Ba Duc",
-      "zh": "德婆汤米线"
-    },
-    "desc": {
-      "vi": "Bún thang Hà Nội chuẩn vị: nước dùng gà trong, trứng thái chỉ, giò lụa, ruốc tôm, chút mắm tôm.",
-      "en": "Classic Hanoi bun thang: clear chicken broth with shredded egg, pork roll and dried shrimp, a dab of shrimp paste.",
-      "zh": "正宗河内汤米线：清澈鸡汤配蛋丝、猪肉卷和虾松，加少许虾酱。"
-    },
+    "name": "Bún thang Bà Đức",
+    "desc": "Bún thang Hà Nội chuẩn vị: nước dùng gà trong, trứng thái chỉ, giò lụa, ruốc tôm, chút mắm tôm.",
     "links": {
       "maps": "https://www.google.com/maps/search/?api=1&query=21.0316,105.8537",
       "grabfood": "auto",
@@ -240,9 +172,7 @@
     "imageNote": "Ảnh minh hoạ món ăn (Wikimedia Commons), không phải ảnh quán",
     "source": "Google Maps, Foody (tham khảo)",
     "updated": "2026-09-23",
-    "wiki": {
-      "en": "Bún_thang"
-    }
+    "wiki": "Bún_thang"
   },
   {
     "id": "banh-cuon-ba-hoanh",
@@ -257,16 +187,8 @@
       "max": 60000
     },
     "diet": [],
-    "name": {
-      "vi": "Bánh cuốn Bà Hoành",
-      "en": "Banh Cuon Ba Hoanh",
-      "zh": "幻婆卷粉"
-    },
-    "desc": {
-      "vi": "Bánh cuốn tráng tay mỏng tang, nhân thịt mộc nhĩ, ăn kèm chả quế và nước chấm cà cuống.",
-      "en": "Paper-thin steamed rice rolls filled with pork and wood-ear mushroom, served with cinnamon pork roll and dipping sauce.",
-      "zh": "手工蒸制的薄卷粉，猪肉木耳馅，配肉桂肉卷和蘸汁。"
-    },
+    "name": "Bánh cuốn Bà Hoành",
+    "desc": "Bánh cuốn tráng tay mỏng tang, nhân thịt mộc nhĩ, ăn kèm chả quế và nước chấm cà cuống.",
     "links": {
       "maps": "https://www.google.com/maps/search/?api=1&query=21.0132,105.85",
       "grabfood": "auto",
@@ -276,9 +198,7 @@
     "imageNote": "Ảnh minh hoạ món ăn (Wikimedia Commons), không phải ảnh quán",
     "source": "Google Maps, Foody (tham khảo)",
     "updated": "2026-09-23",
-    "wiki": {
-      "en": "Bánh_cuốn"
-    }
+    "wiki": "Bánh_cuốn"
   },
   {
     "id": "xoi-yen",
@@ -293,16 +213,8 @@
       "max": 60000
     },
     "diet": [],
-    "name": {
-      "vi": "Xôi Yến",
-      "en": "Xoi Yen (sticky rice)",
-      "zh": "燕姐糯米饭"
-    },
-    "desc": {
-      "vi": "Xôi xéo, xôi ngô đầy đặn với đậu xanh, hành phi, ruốc, trứng kho, gà. Quán xôi nổi tiếng nhất phố cổ.",
-      "en": "Generous plates of sticky rice with mung bean, fried shallot, pork floss, braised egg or chicken. The Old Quarter's most famous xoi spot.",
-      "zh": "份量十足的糯米饭配绿豆、炸葱、肉松、卤蛋或鸡肉，老城区最有名的糯米饭店。"
-    },
+    "name": "Xôi Yến",
+    "desc": "Xôi xéo, xôi ngô đầy đặn với đậu xanh, hành phi, ruốc, trứng kho, gà. Quán xôi nổi tiếng nhất phố cổ.",
     "links": {
       "maps": "https://www.google.com/maps/search/?api=1&query=21.0327,105.8545",
       "grabfood": "auto",
@@ -312,9 +224,7 @@
     "imageNote": "Ảnh minh hoạ món ăn (Wikimedia Commons), không phải ảnh quán",
     "source": "Google Maps, Foody (tham khảo)",
     "updated": "2026-09-23",
-    "wiki": {
-      "en": "Xôi"
-    }
+    "wiki": "Xôi"
   },
   {
     "id": "bun-rieu-hang-bac",
@@ -329,16 +239,8 @@
       "max": 55000
     },
     "diet": [],
-    "name": {
-      "vi": "Bún riêu cua Hàng Bạc",
-      "en": "Bun Rieu Cua Hang Bac",
-      "zh": "行银街蟹肉米线"
-    },
-    "desc": {
-      "vi": "Bún riêu cua đồng nước chua thanh, gạch cua, đậu rán, cà chua, ăn kèm rau sống.",
-      "en": "Freshwater crab noodle soup with a light tomato tang, crab roe, fried tofu and fresh herbs.",
-      "zh": "田蟹米线，番茄汤微酸，配蟹膏、炸豆腐和新鲜香草。"
-    },
+    "name": "Bún riêu cua Hàng Bạc",
+    "desc": "Bún riêu cua đồng nước chua thanh, gạch cua, đậu rán, cà chua, ăn kèm rau sống.",
     "links": {
       "maps": "https://www.google.com/maps/search/?api=1&query=21.0331,105.853",
       "grabfood": "auto",
@@ -348,9 +250,7 @@
     "imageNote": "Ảnh minh hoạ món ăn (Wikimedia Commons), không phải ảnh quán",
     "source": "Google Maps, Foody (tham khảo)",
     "updated": "2026-09-23",
-    "wiki": {
-      "en": "Bún_riêu"
-    }
+    "wiki": "Bún_riêu"
   },
   {
     "id": "banh-mi-25",
@@ -365,16 +265,8 @@
       "max": 45000
     },
     "diet": [],
-    "name": {
-      "vi": "Bánh Mì 25",
-      "en": "Banh Mi 25",
-      "zh": "25号越式法棍"
-    },
-    "desc": {
-      "vi": "Bánh mì giòn với pate, thịt nướng, xá xíu hoặc nhân chay, ngồi ngay vỉa hè phố Hàng Cá.",
-      "en": "Crusty banh mi with pate, grilled pork, char siu or a vegetarian filling; sit on the pavement of Hang Ca street.",
-      "zh": "酥脆法棍夹肝酱、烤肉、叉烧或素食馅料，在行鱼街人行道上用餐。"
-    },
+    "name": "Bánh Mì 25",
+    "desc": "Bánh mì giòn với pate, thịt nướng, xá xíu hoặc nhân chay, ngồi ngay vỉa hè phố Hàng Cá.",
     "links": {
       "maps": "https://www.google.com/maps/search/?api=1&query=21.0355,105.85",
       "grabfood": "auto",
@@ -384,9 +276,7 @@
     "imageNote": "Ảnh minh hoạ món ăn (Wikimedia Commons), không phải ảnh quán",
     "source": "Google Maps, Foody (tham khảo)",
     "updated": "2026-09-23",
-    "wiki": {
-      "en": "Bánh_mì"
-    }
+    "wiki": "Bánh_mì"
   },
   {
     "id": "kem-trang-tien",
@@ -403,16 +293,8 @@
     "diet": [
       "vegetarian"
     ],
-    "name": {
-      "vi": "Kem Tràng Tiền",
-      "en": "Trang Tien Ice Cream",
-      "zh": "长钱冰淇淋"
-    },
-    "desc": {
-      "vi": "Kem que cốm, đậu xanh, sữa dừa từ năm 1958. Người Hà Nội đứng ăn ngay tại quầy.",
-      "en": "Ice-cream bars in young rice, mung bean and coconut flavours since 1958. Locals eat standing at the counter.",
-      "zh": "自1958年起的雪糕，有青糯米、绿豆、椰奶口味，河内人习惯站在柜台前吃。"
-    },
+    "name": "Kem Tràng Tiền",
+    "desc": "Kem que cốm, đậu xanh, sữa dừa từ năm 1958. Người Hà Nội đứng ăn ngay tại quầy.",
     "links": {
       "maps": "https://www.google.com/maps/search/?api=1&query=21.025,105.8555",
       "grabfood": "",
@@ -438,16 +320,8 @@
     "diet": [
       "vegetarian"
     ],
-    "name": {
-      "vi": "Chè Bốn Mùa",
-      "en": "Che Bon Mua (sweet soups)",
-      "zh": "四季甜汤"
-    },
-    "desc": {
-      "vi": "Chè thập cẩm, chè sen, chè đỗ đen, xôi chè: hơn 30 loại chè truyền thống Hà Nội.",
-      "en": "More than 30 traditional Hanoi sweet soups: mixed che, lotus seed, black bean, sticky rice che.",
-      "zh": "30多种河内传统甜汤：什锦甜汤、莲子、黑豆、糯米甜汤等。"
-    },
+    "name": "Chè Bốn Mùa",
+    "desc": "Chè thập cẩm, chè sen, chè đỗ đen, xôi chè: hơn 30 loại chè truyền thống Hà Nội.",
     "links": {
       "maps": "https://www.google.com/maps/search/?api=1&query=21.0341,105.8492",
       "grabfood": "auto",
@@ -471,16 +345,8 @@
       "max": 80000
     },
     "diet": [],
-    "name": {
-      "vi": "Bún đậu mắm tôm Trung Hương",
-      "en": "Bun Dau Mam Tom Trung Huong",
-      "zh": "忠香虾酱豆腐米线"
-    },
-    "desc": {
-      "vi": "Mẹt bún đậu đầy đủ: đậu rán, chả cốm, thịt luộc, dồi, chấm mắm tôm đánh chanh ớt.",
-      "en": "Full bun dau platter: fried tofu, young-rice pork patties, boiled pork and sausage with whipped shrimp paste.",
-      "zh": "全套虾酱豆腐米线：炸豆腐、青糯米肉饼、白切肉和血肠，蘸打发的虾酱。"
-    },
+    "name": "Bún đậu mắm tôm Trung Hương",
+    "desc": "Mẹt bún đậu đầy đủ: đậu rán, chả cốm, thịt luộc, dồi, chấm mắm tôm đánh chanh ớt.",
     "links": {
       "maps": "https://www.google.com/maps/search/?api=1&query=21.0335,105.8543",
       "grabfood": "auto",
@@ -490,9 +356,7 @@
     "imageNote": "Ảnh minh hoạ món ăn (Wikimedia Commons), không phải ảnh quán",
     "source": "Google Maps, Foody (tham khảo)",
     "updated": "2026-09-23",
-    "wiki": {
-      "en": "Bún_đậu_mắm_tôm"
-    }
+    "wiki": "Bún_đậu_mắm_tôm"
   },
   {
     "id": "pho-ga-nguyet",
@@ -507,16 +371,8 @@
       "max": 80000
     },
     "diet": [],
-    "name": {
-      "vi": "Phở gà Nguyệt",
-      "en": "Pho Ga Nguyet (chicken pho)",
-      "zh": "月姐鸡肉河粉"
-    },
-    "desc": {
-      "vi": "Phở gà ta nước trong, thêm trứng non, tràng, phao câu theo sở thích. Đông khách khuya.",
-      "en": "Free-range chicken pho with clear broth; add unlaid eggs or giblets to taste. Busy late at night.",
-      "zh": "土鸡河粉汤清味鲜，可加鸡蛋黄或鸡杂，深夜也很热闹。"
-    },
+    "name": "Phở gà Nguyệt",
+    "desc": "Phở gà ta nước trong, thêm trứng non, tràng, phao câu theo sở thích. Đông khách khuya.",
     "links": {
       "maps": "https://www.google.com/maps/search/?api=1&query=21.03,105.847",
       "grabfood": "auto",
@@ -526,9 +382,7 @@
     "imageNote": "Ảnh minh hoạ món ăn (Wikimedia Commons), không phải ảnh quán",
     "source": "Google Maps, Foody (tham khảo)",
     "updated": "2026-09-23",
-    "wiki": {
-      "en": "Phở"
-    }
+    "wiki": "Phở"
   },
   {
     "id": "pho-bat-dan",
@@ -543,16 +397,8 @@
       "max": 70000
     },
     "diet": [],
-    "name": {
-      "vi": "Phở gia truyền Bát Đàn",
-      "en": "Pho Bat Dan",
-      "zh": "钵坛街祖传河粉"
-    },
-    "desc": {
-      "vi": "Phở bò kiểu xếp hàng tự bưng, nước dùng ninh xương đậm đà, quán lâu đời nhất nhì Hà Nội.",
-      "en": "Queue-and-carry beef pho with a deep bone broth, one of the oldest pho houses in Hanoi.",
-      "zh": "排队自取的牛肉河粉，骨汤浓郁，是河内最老的河粉店之一。"
-    },
+    "name": "Phở gia truyền Bát Đàn",
+    "desc": "Phở bò kiểu xếp hàng tự bưng, nước dùng ninh xương đậm đà, quán lâu đời nhất nhì Hà Nội.",
     "links": {
       "maps": "https://www.google.com/maps/search/?api=1&query=21.0338,105.8465",
       "grabfood": "",
@@ -562,9 +408,7 @@
     "imageNote": "Ảnh minh hoạ món ăn (Wikimedia Commons), không phải ảnh quán",
     "source": "Google Maps, Foody (tham khảo)",
     "updated": "2026-09-23",
-    "wiki": {
-      "en": "Phở"
-    }
+    "wiki": "Phở"
   },
   {
     "id": "banh-tom-ho-tay",
@@ -579,16 +423,8 @@
       "max": 150000
     },
     "diet": [],
-    "name": {
-      "vi": "Bánh tôm Hồ Tây",
-      "en": "Banh Tom Ho Tay (shrimp cakes)",
-      "zh": "西湖虾饼"
-    },
-    "desc": {
-      "vi": "Bánh tôm chiên giòn với khoai lang, ăn cùng bún, rau sống và nước chấm chua ngọt, nhìn ra Hồ Tây.",
-      "en": "Crispy shrimp and sweet-potato fritters with noodles, herbs and sweet-sour sauce, overlooking West Lake.",
-      "zh": "酥脆的虾和红薯煎饼，配米线、香草和酸甜蘸汁，可眺望西湖。"
-    },
+    "name": "Bánh tôm Hồ Tây",
+    "desc": "Bánh tôm chiên giòn với khoai lang, ăn cùng bún, rau sống và nước chấm chua ngọt, nhìn ra Hồ Tây.",
     "links": {
       "maps": "https://www.google.com/maps/search/?api=1&query=21.0448,105.8385",
       "grabfood": "auto",
@@ -612,16 +448,8 @@
       "max": 120000
     },
     "diet": [],
-    "name": {
-      "vi": "Phở cuốn Hưng Bền",
-      "en": "Pho Cuon Hung Ben",
-      "zh": "兴坚河粉卷"
-    },
-    "desc": {
-      "vi": "Phở cuốn thịt bò, rau thơm cuộn bánh phở, chấm nước mắm chua ngọt. Làng Ngũ Xã là nơi khai sinh món này.",
-      "en": "Beef and herbs rolled in fresh pho sheets with sweet-sour fish sauce. Ngu Xa village is where the dish was born.",
-      "zh": "牛肉和香草卷在新鲜河粉皮里，蘸酸甜鱼露。五社村是这道菜的发源地。"
-    },
+    "name": "Phở cuốn Hưng Bền",
+    "desc": "Phở cuốn thịt bò, rau thơm cuộn bánh phở, chấm nước mắm chua ngọt. Làng Ngũ Xã là nơi khai sinh món này.",
     "links": {
       "maps": "https://www.google.com/maps/search/?api=1&query=21.045,105.841",
       "grabfood": "auto",
@@ -645,16 +473,8 @@
       "max": 70000
     },
     "diet": [],
-    "name": {
-      "vi": "Miến lươn Đông Thịnh",
-      "en": "Mien Luon Dong Thinh (eel noodles)",
-      "zh": "东盛鳝鱼粉丝"
-    },
-    "desc": {
-      "vi": "Miến lươn nước hoặc trộn, lươn chiên giòn hoặc mềm, nước dùng xương ngọt thanh.",
-      "en": "Glass noodles with eel, in broth or tossed, with crispy or soft eel and a light bone stock.",
-      "zh": "鳝鱼粉丝，汤粉或拌粉，鳝鱼可选酥炸或软嫩，骨汤清甜。"
-    },
+    "name": "Miến lươn Đông Thịnh",
+    "desc": "Miến lươn nước hoặc trộn, lươn chiên giòn hoặc mềm, nước dùng xương ngọt thanh.",
     "links": {
       "maps": "https://www.google.com/maps/search/?api=1&query=21.0335,105.847",
       "grabfood": "auto",
@@ -680,16 +500,8 @@
     "diet": [
       "vegetarian"
     ],
-    "name": {
-      "vi": "Cà phê Đinh",
-      "en": "Cafe Dinh",
-      "zh": "丁咖啡"
-    },
-    "desc": {
-      "vi": "Quán cà phê trứng trên gác nhìn ra Hồ Gươm, do con gái cụ Giảng mở, không gian cũ kỹ đậm chất Hà Nội.",
-      "en": "Upstairs egg-coffee café facing Hoan Kiem Lake, run by the daughter of Cafe Giang's founder, with a worn old-Hanoi feel.",
-      "zh": "二楼鸡蛋咖啡馆正对还剑湖，由江咖啡创始人的女儿经营，充满旧河内韵味。"
-    },
+    "name": "Cà phê Đinh",
+    "desc": "Quán cà phê trứng trên gác nhìn ra Hồ Gươm, do con gái cụ Giảng mở, không gian cũ kỹ đậm chất Hà Nội.",
     "links": {
       "maps": "https://www.google.com/maps/search/?api=1&query=21.03,105.853",
       "grabfood": "",
@@ -699,9 +511,7 @@
     "imageNote": "Ảnh minh hoạ món ăn (Wikimedia Commons), không phải ảnh quán",
     "source": "Google Maps, Foody (tham khảo)",
     "updated": "2026-09-23",
-    "wiki": {
-      "en": "Egg_coffee"
-    }
+    "wiki": "Egg_coffee"
   },
   {
     "id": "bun-bo-nam-bo-hang-dieu",
@@ -716,16 +526,8 @@
       "max": 80000
     },
     "diet": [],
-    "name": {
-      "vi": "Bún bò Nam Bộ Hàng Điếu",
-      "en": "Bun Bo Nam Bo Hang Dieu",
-      "zh": "行烟街南部牛肉拌米线"
-    },
-    "desc": {
-      "vi": "Bún trộn thịt bò xào, lạc rang, giá, rau thơm, hành phi và nước mắm chua ngọt, không có nước dùng.",
-      "en": "Dry-tossed noodles with stir-fried beef, roasted peanuts, bean sprouts, herbs and sweet-sour fish sauce.",
-      "zh": "干拌米线配炒牛肉、花生、豆芽、香草和酸甜鱼露，无汤。"
-    },
+    "name": "Bún bò Nam Bộ Hàng Điếu",
+    "desc": "Bún trộn thịt bò xào, lạc rang, giá, rau thơm, hành phi và nước mắm chua ngọt, không có nước dùng.",
     "links": {
       "maps": "https://www.google.com/maps/search/?api=1&query=21.0333,105.8468",
       "grabfood": "auto",
@@ -749,16 +551,8 @@
       "max": 40000
     },
     "diet": [],
-    "name": {
-      "vi": "Bánh gối Gốc Đa Lý Quốc Sư",
-      "en": "Banh Goi Goc Da (fried pillow cakes)",
-      "zh": "李国师街榕树炸枕头饼"
-    },
-    "desc": {
-      "vi": "Bánh gối, bánh rán mặn, nem chua rán nóng hổi dưới gốc đa cạnh Nhà thờ Lớn.",
-      "en": "Piping-hot fried pillow cakes, savoury doughnuts and fried fermented pork rolls under the banyan tree by St Joseph's Cathedral.",
-      "zh": "大教堂旁榕树下的热腾腾炸枕头饼、咸炸糕和炸酸肉卷。"
-    },
+    "name": "Bánh gối Gốc Đa Lý Quốc Sư",
+    "desc": "Bánh gối, bánh rán mặn, nem chua rán nóng hổi dưới gốc đa cạnh Nhà thờ Lớn.",
     "links": {
       "maps": "https://www.google.com/maps/search/?api=1&query=21.029,105.849",
       "grabfood": "auto",
@@ -785,16 +579,8 @@
       "vegetarian",
       "vegan"
     ],
-    "name": {
-      "vi": "Cơm chay Nàng Tấm",
-      "en": "Nang Tam vegetarian restaurant",
-      "zh": "娘心素食餐厅"
-    },
-    "desc": {
-      "vi": "Nhà hàng chay lâu năm trong biệt thự Pháp cổ, món chay giả mặn tinh tế, hợp mời khách nước ngoài.",
-      "en": "Long-running vegetarian restaurant in an old French villa with refined mock-meat dishes, good for hosting foreign guests.",
-      "zh": "位于法式老别墅的老牌素食餐厅，仿荤菜精致，适合招待外国客人。"
-    },
+    "name": "Cơm chay Nàng Tấm",
+    "desc": "Nhà hàng chay lâu năm trong biệt thự Pháp cổ, món chay giả mặn tinh tế, hợp mời khách nước ngoài.",
     "links": {
       "maps": "https://www.google.com/maps/search/?api=1&query=21.024,105.85",
       "grabfood": "auto",
@@ -804,8 +590,6 @@
     "imageNote": "Ảnh minh hoạ món ăn (Wikimedia Commons), không phải ảnh quán",
     "source": "Google Maps, Foody (tham khảo)",
     "updated": "2026-09-23",
-    "wiki": {
-      "en": "Vegetarian_cuisine"
-    }
+    "wiki": "Vegetarian_cuisine"
   }
 ]

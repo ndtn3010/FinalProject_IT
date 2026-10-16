@@ -2,13 +2,13 @@
 import { writeFileSync, mkdirSync, readFileSync, readdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 
-/* Mã phiên bản = hash nội dung CSS/JS/dữ liệu. Gắn vào link (?v=) để trình duyệt tải bản mới sau mỗi lần deploy
+/* Mã phiên bản = hash nội dung CSS, JS và dữ liệu. Gắn vào link (?v=) để trình duyệt tải bản mới sau mỗi lần deploy
    thay vì dùng file cũ trong cache (GitHub Pages cho cache 10 phút). Sửa css/js/data xong phải chạy lại script này. */
 const MODULES = readdirSync('js').filter((f) => f.endsWith('.js')).sort();
 const VERSION = (() => {
   const h = createHash('sha1');
   // Bỏ \r để máy Windows (CRLF) và Linux (LF) ra cùng một mã
-  for (const dir of ['css', 'js', 'data', 'i18n']) for (const f of readdirSync(dir).sort()) h.update(f).update(readFileSync(`${dir}/${f}`, 'utf8').replace(/\r/g, ''));
+  for (const dir of ['css', 'js', 'data']) for (const f of readdirSync(dir).sort()) h.update(f).update(readFileSync(`${dir}/${f}`, 'utf8').replace(/\r/g, ''));
   return h.digest('hex').slice(0, 8);
 })();
 /** Import map: mọi module trong js/ (kể cả khi import lẫn nhau) đều được tải kèm ?v= */
@@ -88,19 +88,19 @@ ${ICONS}
     <div class="container header-inner">
       <a class="logo" href="${base}index.html" aria-label="Hà Nội Guide">
         <span class="logo-mark"><svg class="ic"><use href="#i-lantern"/></svg></span>
-        <span class="logo-text" data-i18n="site.name">Hà Nội Guide</span>
+        <span class="logo-text">Hà Nội Guide</span>
       </a>
       <nav class="nav" id="site-nav" aria-label="Main">
         <span class="nav-indicator" aria-hidden="true"></span>
-        <a href="${base}index.html" data-page="home" data-i18n="nav.home"></a>
-        <a href="${base}pages/places.html" data-page="places" data-i18n="nav.places"></a>
-        <a href="${base}pages/food.html" data-page="food" data-i18n="nav.food"></a>
-        <a href="${base}pages/hotels.html" data-page="hotels" data-i18n="nav.hotels"></a>
-        <a href="${base}pages/itinerary.html" data-page="itinerary" data-i18n="nav.itinerary"></a>
-        <a href="${base}pages/history.html" data-page="history" data-i18n="nav.history"></a>
+        <a href="${base}index.html" data-page="home">Trang chủ</a>
+        <a href="${base}pages/places.html" data-page="places">Địa điểm</a>
+        <a href="${base}pages/food.html" data-page="food">Ẩm thực</a>
+        <a href="${base}pages/hotels.html" data-page="hotels">Khách sạn</a>
+        <a href="${base}pages/itinerary.html" data-page="itinerary">Lịch trình</a>
+        <a href="${base}pages/history.html" data-page="history">Lịch sử</a>
       </nav>
       <div class="header-actions">
-        <button type="button" class="icon-btn menu-btn" data-menu-toggle aria-expanded="false" aria-controls="site-nav" data-i18n-aria="nav.menu" aria-label="Menu">
+        <button type="button" class="icon-btn menu-btn" data-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Mở menu">
           <svg class="ic ic-menu"><use href="#i-menu"/></svg><svg class="ic ic-x"><use href="#i-x"/></svg>
         </button>
       </div>
@@ -115,33 +115,33 @@ ${body}
     <div class="container">
       <div class="footer-grid">
         <div>
-          <a class="logo" href="${base}index.html"><span class="logo-mark"><svg class="ic"><use href="#i-lantern"/></svg></span><span data-i18n="site.name">Hà Nội Guide</span></a>
-          <p class="footer-about" data-i18n="footer.about"></p>
-          <p class="footer-members-title" data-i18n="footer.members"></p>
+          <a class="logo" href="${base}index.html"><span class="logo-mark"><svg class="ic"><use href="#i-lantern"/></svg></span><span>Hà Nội Guide</span></a>
+          <p class="footer-about">Bài tập cuối kì nhóm 2: Trang web du lịch Hà Nội</p>
+          <p class="footer-members-title">Thành viên nhóm:</p>
           <ul class="footer-members">
             ${MEMBERS.map((m) => `<li>${m.name} – ${m.id}</li>`).join('\n            ')}
           </ul>
         </div>
         <div>
-          <h4 data-i18n="footer.explore"></h4>
+          <h4>Khám phá</h4>
           <ul>
-            <li><a href="${base}pages/places.html" data-i18n="nav.places"></a></li>
-            <li><a href="${base}pages/food.html" data-i18n="nav.food"></a></li>
-            <li><a href="${base}pages/hotels.html" data-i18n="nav.hotels"></a></li>
-            <li><a href="${base}pages/itinerary.html" data-i18n="nav.itinerary"></a></li>
-            <li><a href="${base}pages/history.html" data-i18n="nav.history"></a></li>
+            <li><a href="${base}pages/places.html">Địa điểm</a></li>
+            <li><a href="${base}pages/food.html">Ẩm thực</a></li>
+            <li><a href="${base}pages/hotels.html">Khách sạn</a></li>
+            <li><a href="${base}pages/itinerary.html">Lịch trình</a></li>
+            <li><a href="${base}pages/history.html">Lịch sử</a></li>
           </ul>
         </div>
         <div>
-          <h4 data-i18n="footer.data"></h4>
+          <h4>Dữ liệu &amp; nguồn</h4>
           <ul>
-            <li data-i18n="footer.weather"></li>
-            <li data-i18n="footer.osm"></li>
-            <li data-i18n="footer.photos"></li>
+            <li>Thời tiết &amp; AQI: Open-Meteo</li>
+            <li>Bản đồ © OpenStreetMap contributors</li>
+            <li>Ảnh: Wikimedia Commons (CC)</li>
           </ul>
         </div>
       </div>
-      <div class="footer-bottom"><p data-i18n="footer.text"></p></div>
+      <div class="footer-bottom"><p>Dữ liệu tham khảo, giá và giờ mở cửa có thể thay đổi.</p></div>
     </div>
   </footer>
 
@@ -157,48 +157,48 @@ const pages = {
     <section class="hero container">
       <div class="hero-grid">
         <div>
-          <h1 data-i18n="hero.title"></h1>
-          <p class="lead" data-i18n="hero.subtitle"></p>
+          <h1>Khám phá Hà Nội theo cách của bạn</h1>
+          <p class="lead">Nghìn năm văn hiến, phố cổ, ẩm thực và những câu chuyện chờ bạn.</p>
           <div class="hero-cta">
-            <a class="btn btn-primary btn-lg" href="pages/places.html"><span data-i18n="hero.cta"></span><svg class="ic"><use href="#i-arrow"/></svg></a>
-            <a class="btn btn-outline btn-lg" href="pages/itinerary.html" data-i18n="hero.cta2"></a>
+            <a class="btn btn-primary btn-lg" href="pages/places.html"><span>Bắt đầu khám phá</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-outline btn-lg" href="pages/itinerary.html">Xem lịch trình mẫu</a>
           </div>
         </div>
         <div class="hero-media">
           <div class="hero-img hero-img-main">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Thap_Rua.jpg/1280px-Thap_Rua.jpg" alt="" data-i18n-alt="hero.imgAlt" width="1280" height="1100" fetchpriority="high" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Thap_Rua.jpg/1280px-Thap_Rua.jpg" alt="Tháp Rùa giữa hồ Hoàn Kiếm" width="1280" height="1100" fetchpriority="high" />
           </div>
           <div class="hero-img hero-img-small">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Hanoi_Temple_of_Literature_%28cropped%29.jpg/960px-Hanoi_Temple_of_Literature_%28cropped%29.jpg" alt="" data-i18n-alt="hero.imgAlt2" width="960" height="448" loading="lazy" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Hanoi_Temple_of_Literature_%28cropped%29.jpg/960px-Hanoi_Temple_of_Literature_%28cropped%29.jpg" alt="Cổng Văn Miếu Quốc Tử Giám" width="960" height="448" loading="lazy" />
           </div>
         </div>
       </div>
     </section>
 
     <section class="section container reveal">
-      <div class="section-head"><h2 data-i18n="weather.title"></h2></div>
+      <div class="section-head"><h2>Thời tiết Hà Nội</h2></div>
       <div id="weather" class="weather"></div>
     </section>
 
     <section class="section container reveal">
       <div class="section-head">
-        <div><h2 data-i18n="home.places.title"></h2><p data-i18n="home.places.desc"></p></div>
-        <a class="more" href="pages/places.html"><span data-i18n="common.viewAll"></span><svg class="ic"><use href="#i-arrow"/></svg></a>
+        <div><h2>Địa điểm nổi bật</h2><p>Những điểm đến không thể bỏ qua trong lần đầu tới Hà Nội.</p></div>
+        <a class="more" href="pages/places.html"><span>Xem tất cả</span><svg class="ic"><use href="#i-arrow"/></svg></a>
       </div>
       <div id="home-places" class="grid grid-feature"></div>
     </section>
 
     <section class="section container reveal">
       <div class="section-head">
-        <div><h2 data-i18n="home.food.title"></h2><p data-i18n="home.food.desc"></p></div>
-        <a class="more" href="pages/food.html"><span data-i18n="common.viewAll"></span><svg class="ic"><use href="#i-arrow"/></svg></a>
+        <div><h2>Ăn gì hôm nay?</h2><p>Quán ăn nổi tiếng, có nút đặt qua GrabFood và ShopeeFood.</p></div>
+        <a class="more" href="pages/food.html"><span>Xem tất cả</span><svg class="ic"><use href="#i-arrow"/></svg></a>
       </div>
       <div id="home-food" class="scroller"></div>
     </section>
 
     <section class="section container reveal">
       <div class="section-head">
-        <div><h2 data-i18n="home.itin.title"></h2><p data-i18n="home.itin.desc"></p></div>
+        <div><h2>Lịch trình gợi ý</h2><p>Chọn một lịch trình mẫu rồi chỉnh sửa theo ý bạn.</p></div>
       </div>
       <div id="home-itins" class="sample-grid"></div>
     </section>`,
@@ -209,11 +209,11 @@ const pages = {
     body: `
     <section class="container">
       <div class="page-head">
-        <h1 data-i18n="places.pageTitle"></h1>
-        <p class="lead" data-i18n="places.pageDesc"></p>
+        <h1>Địa điểm ở Hà Nội</h1>
+        <p class="lead">Di tích, phố cổ, bảo tàng, hồ và công viên. Gõ tên để tìm nhanh, có dấu hay không dấu đều được.</p>
       </div>
       <div class="toolbar">
-        <label class="search-wrap"><svg class="ic"><use href="#i-search"/></svg><span class="visually-hidden" data-i18n="places.search"></span><input id="place-search" class="search" type="search" data-i18n-placeholder="places.search" /></label>
+        <label class="search-wrap"><svg class="ic"><use href="#i-search"/></svg><span class="visually-hidden">Tìm địa điểm…</span><input id="place-search" class="search" type="search" placeholder="Tìm địa điểm…" /></label>
         <span id="place-count" class="count"></span>
       </div>
       <div id="places-grid" class="grid"></div>
@@ -225,11 +225,11 @@ const pages = {
     body: `
     <section class="container">
       <div class="page-head">
-        <h1 data-i18n="food.title"></h1>
-        <p class="lead" data-i18n="food.pageDesc"></p>
+        <h1>Ăn gì ở Hà Nội?</h1>
+        <p class="lead">Phở, bún chả, cà phê trứng và bia hơi. Mở Google Maps để tới quán hoặc đặt giao tận nơi.</p>
       </div>
       <div class="toolbar">
-        <label class="search-wrap"><svg class="ic"><use href="#i-search"/></svg><span class="visually-hidden" data-i18n="food.search"></span><input id="food-search" class="search" type="search" data-i18n-placeholder="food.search" /></label>
+        <label class="search-wrap"><svg class="ic"><use href="#i-search"/></svg><span class="visually-hidden">Tìm món hoặc quán…</span><input id="food-search" class="search" type="search" placeholder="Tìm món hoặc quán…" /></label>
         <span id="food-count" class="count"></span>
       </div>
       <div id="food-grid" class="grid"></div>
@@ -241,11 +241,11 @@ const pages = {
     body: `
     <section class="container">
       <div class="page-head">
-        <h1 data-i18n="hotels.title"></h1>
-        <p class="lead" data-i18n="hotels.pageDesc"></p>
+        <h1>Nơi ở tại Hà Nội</h1>
+        <p class="lead">Khách sạn, hostel và homestay ở phố cổ, Hồ Tây, Ba Đình và gần sân bay. Bấm nút đặt phòng để xem giá và phòng trống.</p>
       </div>
       <div id="hotels-grid" class="grid"></div>
-      <p class="note"><svg class="ic"><use href="#i-info"/></svg><span data-i18n="hotels.disclaimer"></span></p>
+      <p class="note"><svg class="ic"><use href="#i-info"/></svg><span>Giá chỉ mang tính tham khảo. Nhấn nút đặt phòng để xem giá thật trên trang đặt phòng. Website không xử lý đặt phòng hay thanh toán.</span></p>
     </section>`,
   },
 
@@ -254,18 +254,18 @@ const pages = {
     body: `
     <section class="container">
       <div class="page-head">
-        <h1 data-i18n="history.title"></h1>
-        <p class="lead" data-i18n="history.pageDesc"></p>
+        <h1>Dòng lịch sử Thăng Long, Hà Nội</h1>
+        <p class="lead">Từ chiếu dời đô năm 1010 tới thủ đô hiện đại. Bấm vào từng mốc để đọc chi tiết.</p>
       </div>
       <ol id="timeline" class="timeline"></ol>
     </section>
     <dialog id="tl-dialog" class="modal" aria-labelledby="tl-dialog-title">
       <div class="modal-box">
-        <button type="button" class="modal-close" data-close data-i18n-aria="history.close" aria-label="Đóng"><svg class="ic"><use href="#i-x"/></svg></button>
+        <button type="button" class="modal-close" data-close aria-label="Đóng"><svg class="ic"><use href="#i-x"/></svg></button>
         <div class="modal-body"></div>
         <footer class="modal-foot">
-          <button type="button" class="btn btn-outline btn-sm" data-step="-1"><svg class="ic ic-flip"><use href="#i-arrow"/></svg><span data-i18n="history.prev"></span></button>
-          <button type="button" class="btn btn-outline btn-sm" data-step="1"><span data-i18n="history.next"></span><svg class="ic"><use href="#i-arrow"/></svg></button>
+          <button type="button" class="btn btn-outline btn-sm" data-step="-1"><svg class="ic ic-flip"><use href="#i-arrow"/></svg><span>Mốc trước</span></button>
+          <button type="button" class="btn btn-outline btn-sm" data-step="1"><span>Mốc sau</span><svg class="ic"><use href="#i-arrow"/></svg></button>
         </footer>
       </div>
     </dialog>`,
@@ -277,14 +277,14 @@ const pages = {
     body: `
     <section class="container">
       <div class="page-head">
-        <h1 data-i18n="itinerary.title"></h1>
-        <p class="lead" data-i18n="itinerary.pageDesc"></p>
+        <h1>Lịch trình của tôi</h1>
+        <p class="lead">Kéo thả để sắp xếp, xem chi phí và thời gian ước tính, mở tuyến đường trên Google Maps.</p>
       </div>
       <div id="itinerary"></div>
     </section>
     <section class="section container">
       <div class="section-head">
-        <div><h2 data-i18n="itinerary.samples"></h2><p data-i18n="itinerary.samplesDesc"></p></div>
+        <div><h2>Lịch trình mẫu</h2><p>Nạp một lịch trình mẫu rồi tuỳ chỉnh.</p></div>
       </div>
       <div id="itin-samples" class="sample-grid"></div>
     </section>`,
