@@ -86,7 +86,7 @@ const MEMBERS = [
   { name: 'Nguyễn Đăng Trọng Nghĩa', id: '26110150' },
   { name: 'Văn Phước Vinh', id: '26110203' },
   { name: 'Nguyễn Thanh Nhàn', id: '26110115' },
-  { name: 'Vi Phước Thiện', id: '26110084' },
+  { name: 'Vi Phước Thiện', id: '26110184' },
   { name: 'Nguyễn Hoàng', id: '26110096' },
 ];
 

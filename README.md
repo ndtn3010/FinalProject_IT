@@ -97,5 +97,5 @@ Nhóm 2:
 | 2 | Nguyễn Đăng Trọng Nghĩa | 26110150 |
 | 3 | Văn Phước Vinh | 26110203 |
 | 4 | Nguyễn Thanh Nhàn | 26110115 |
-| 5 | Vi Phước Thiện | 26110084 |
+| 5 | Vi Phước Thiện | 26110184 |
 | 6 | Nguyễn Hoàng | 26110096 |
