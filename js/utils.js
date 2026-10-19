@@ -1,4 +1,4 @@
-// utils.js – các hàm nhỏ dùng ở nhiều nơi
+// utils.js 
 
 // Định dạng tiền Việt: 70000 -> "70.000 ₫"
 export function formatVND(amount) {
@@ -21,7 +21,6 @@ export function matchesSearch(text, keyword) {
   return removeAccents(text).includes(removeAccents(keyword));
 }
 
-// Đổi các ký tự đặc biệt của HTML thành mã an toàn, để chữ trong dữ liệu không bị hiểu nhầm thành thẻ HTML
 export function escapeHtml(text) {
   return String(text ?? '')
     .replace(/&/g, '&amp;')

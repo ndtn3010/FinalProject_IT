@@ -2,17 +2,46 @@
 import { writeFileSync, mkdirSync, readFileSync, readdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 
-/* Mã phiên bản = hash nội dung CSS, JS và dữ liệu. Gắn vào link (?v=) để trình duyệt tải bản mới sau mỗi lần deploy
-   thay vì dùng file cũ trong cache (GitHub Pages cho cache 10 phút). Sửa css/js/data xong phải chạy lại script này. */
-const MODULES = readdirSync('js').filter((f) => f.endsWith('.js')).sort();
-const VERSION = (() => {
-  const h = createHash('sha1');
-  // Bỏ \r để máy Windows (CRLF) và Linux (LF) ra cùng một mã
-  for (const dir of ['css', 'js', 'data']) for (const f of readdirSync(dir).sort()) h.update(f).update(readFileSync(`${dir}/${f}`, 'utf8').replace(/\r/g, ''));
-  return h.digest('hex').slice(0, 8);
-})();
-/** Import map: mọi module trong js/ (kể cả khi import lẫn nhau) đều được tải kèm ?v= */
-const importMap = (base) => JSON.stringify({ imports: Object.fromEntries(MODULES.map((m) => [`${base}js/${m}`, `${base}js/${m}?v=${VERSION}`])) });
+/* ---------- Mã phiên bản chống cache ----------
+   Trình duyệt giữ lại (cache) file CSS, JS, JSON cũ tới 10 phút để lần sau mở nhanh hơn.
+   Vì vậy ngay sau khi web cập nhật, người xem có thể nhận trang mới nhưng file cũ.
+   Cách sửa: gắn thêm "?v=<mã>" vào đường dẫn mỗi file, ví dụ style.css?v=84dfe8e2.
+   Mã được tính từ nội dung các file, nên sửa một chữ là mã đổi,
+   trình duyệt thấy đường dẫn mới và phải tải lại. Sửa css/js/data xong nhớ chạy lại script này. */
+
+// Các thư mục chứa file mà trình duyệt tải về
+const FOLDERS = ['css', 'js', 'data'];
+
+// Đọc nội dung mọi file trong các thư mục trên, tính "dấu vân tay" (hash SHA-1), lấy 8 ký tự đầu làm mã
+function computeVersion() {
+  const fingerprint = createHash('sha1');
+  for (const folder of FOLDERS) {
+    for (const fileName of readdirSync(folder).sort()) {
+      const content = readFileSync(folder + '/' + fileName, 'utf8');
+      fingerprint.update(fileName);
+      // Bỏ ký tự xuống dòng kiểu Windows để máy Windows và máy Linux tính ra cùng một mã
+      fingerprint.update(content.replace(/\r/g, ''));
+    }
+  }
+  return fingerprint.digest('hex').slice(0, 8);
+}
+
+const VERSION = computeVersion();
+
+// Danh sách file JavaScript trong thư mục js/
+const JS_FILES = readdirSync('js').filter((name) => name.endsWith('.js')).sort();
+
+// Import map: "danh bạ" đặt trong trang, báo cho trình duyệt biết khi một file JS gọi file JS khác
+// (ví dụ app.js có dòng import ... from './api.js') thì phải tải bản có mã: api.js?v=<mã>.
+// Nhờ vậy mọi file JS đều là bản mới, không chỉ riêng app.js.
+function importMap(base) {
+  const imports = {};
+  for (const name of JS_FILES) {
+    const path = base + 'js/' + name;
+    imports[path] = path + '?v=' + VERSION;
+  }
+  return JSON.stringify({ imports });
+}
 
 /* Sprite icon dùng chung (nét 24px, ghép từ hình cơ bản). Dùng: <svg class="ic"><use href="#i-clock"/></svg> */
 const ICONS = `
