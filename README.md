@@ -6,6 +6,8 @@ Viết bằng HTML, CSS, JavaScript thuần (không framework), tiếng Việt, 
 
 **Live demo:** https://ndtn3010.github.io/FinalProject_IT/
 
+**Thiết kế giao diện (Figma):** https://www.figma.com/design/E6J0zkaOftYOCftBpzZ4F9/Untitled?node-id=0-1
+
 ## Tính năng
 
 | Module | Mô tả |
