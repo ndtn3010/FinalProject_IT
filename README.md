@@ -99,7 +99,3 @@ Nhóm 2:
 | 4 | Nguyễn Thanh Nhàn | 26110115 |
 | 5 | Vi Phước Thiện | 26110084 |
 | 6 | Nguyễn Hoàng | 26110096 |
-
-## Giấy phép
-
-MIT. Dữ liệu chỉ mang tính tham khảo, giá và giờ mở cửa có thể thay đổi. Bản đồ © OpenStreetMap contributors.
